@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/request/SendTransactionRequest.proto";
+import "qsn/entity/response/SendTransactionResponse.proto";
+
+
+service TransactionRpc {
+    rpc sendTransaction(SendTransactionRequest) returns (SendTransactionResponse);
+}

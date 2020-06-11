@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.customized";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/common/BInteger.proto";
+
+message SampleTxDataDto{
+    bytes from = 1;
+    bytes to = 2;
+    BInteger value = 3;
+    string stakeAddress = 4;
+    string nodeName = 5;
+    string validatorAddress = 6;
+
+}

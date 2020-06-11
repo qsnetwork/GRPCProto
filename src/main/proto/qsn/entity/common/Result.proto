@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.common";
+
+package org.qsn.protobuf;
+
+message Result {
+    int32 respCode = 1;
+    string respMsg = 2;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/request/GetAccountBalanceRequest.proto";
+import "qsn/entity/response/GetAccountBalanceResponse.proto";
+
+
+service AccountRpc {
+    rpc getAccountBalance(GetAccountBalanceRequest) returns (GetAccountBalanceResponse);
+}
