@@ -14,28 +14,16 @@ public interface TransactionDtoOrBuilder extends
   int getTxType();
 
   /**
-   * <pre>
-   *    google.protobuf.Any txData = 2;
-   * </pre>
-   *
    * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
    * @return Whether the txData field is set.
    */
   boolean hasTxData();
   /**
-   * <pre>
-   *    google.protobuf.Any txData = 2;
-   * </pre>
-   *
    * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
    * @return The txData.
    */
   org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto getTxData();
   /**
-   * <pre>
-   *    google.protobuf.Any txData = 2;
-   * </pre>
-   *
    * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
    */
   org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDtoOrBuilder getTxDataOrBuilder();

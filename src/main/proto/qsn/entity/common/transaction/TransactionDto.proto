@@ -7,12 +7,10 @@ package org.qsn.protobuf;
 
 import "qsn/entity/common/transaction/TransactionFeeDto.proto";
 import "qsn/entity/common/transaction/TransactionSignatureDto.proto";
-import "google/protobuf/any.proto";
 import "qsn/entity/common/transaction/TransactionDataDto.proto";
 
 message TransactionDto{
     int32 txType = 1;
-//    google.protobuf.Any txData = 2;
     TransactionDataDto txData = 2;
     bytes smartContractName = 3;
     bytes smartContractAction = 4;

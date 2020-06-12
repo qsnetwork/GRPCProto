@@ -32,25 +32,23 @@ public final class TransactionDtoOuterClass {
       "ionDto.proto\022\020org.qsn.protobuf\0325qsn/enti" +
       "ty/common/transaction/TransactionFeeDto." +
       "proto\032;qsn/entity/common/transaction/Tra" +
-      "nsactionSignatureDto.proto\032\031google/proto" +
-      "buf/any.proto\0326qsn/entity/common/transac" +
-      "tion/TransactionDataDto.proto\"\215\002\n\016Transa" +
-      "ctionDto\022\016\n\006txType\030\001 \001(\005\0224\n\006txData\030\002 \001(\013" +
-      "2$.org.qsn.protobuf.TransactionDataDto\022\031" +
-      "\n\021smartContractName\030\003 \001(\014\022\033\n\023smartContra" +
-      "ctAction\030\004 \001(\014\0220\n\003fee\030\005 \001(\0132#.org.qsn.pr" +
-      "otobuf.TransactionFeeDto\022\014\n\004memo\030\006 \001(\014\022=" +
-      "\n\nsignatures\030\007 \003(\0132).org.qsn.protobuf.Tr" +
-      "ansactionSignatureDtoB8\n4org.qsn.api.rpc" +
-      ".grpc.proto.entity.common.transactionP\001b" +
-      "\006proto3"
+      "nsactionSignatureDto.proto\0326qsn/entity/c" +
+      "ommon/transaction/TransactionDataDto.pro" +
+      "to\"\215\002\n\016TransactionDto\022\016\n\006txType\030\001 \001(\005\0224\n" +
+      "\006txData\030\002 \001(\0132$.org.qsn.protobuf.Transac" +
+      "tionDataDto\022\031\n\021smartContractName\030\003 \001(\014\022\033" +
+      "\n\023smartContractAction\030\004 \001(\014\0220\n\003fee\030\005 \001(\013" +
+      "2#.org.qsn.protobuf.TransactionFeeDto\022\014\n" +
+      "\004memo\030\006 \001(\014\022=\n\nsignatures\030\007 \003(\0132).org.qs" +
+      "n.protobuf.TransactionSignatureDtoB8\n4or" +
+      "g.qsn.api.rpc.grpc.proto.entity.common.t" +
+      "ransactionP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDtoOuterClass.getDescriptor(),
           org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOuterClass.getDescriptor(),
-          com.google.protobuf.AnyProto.getDescriptor(),
           org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDtoOuterClass.getDescriptor(),
         });
     internal_static_org_qsn_protobuf_TransactionDto_descriptor =
@@ -61,7 +59,6 @@ public final class TransactionDtoOuterClass {
         new java.lang.String[] { "TxType", "TxData", "SmartContractName", "SmartContractAction", "Fee", "Memo", "Signatures", });
     org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDtoOuterClass.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOuterClass.getDescriptor();
-    com.google.protobuf.AnyProto.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDtoOuterClass.getDescriptor();
   }
 

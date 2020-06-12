@@ -157,10 +157,6 @@ private static final long serialVersionUID = 0L;
   public static final int TXDATA_FIELD_NUMBER = 2;
   private org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto txData_;
   /**
-   * <pre>
-   *    google.protobuf.Any txData = 2;
-   * </pre>
-   *
    * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
    * @return Whether the txData field is set.
    */
@@ -169,10 +165,6 @@ private static final long serialVersionUID = 0L;
     return txData_ != null;
   }
   /**
-   * <pre>
-   *    google.protobuf.Any txData = 2;
-   * </pre>
-   *
    * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
    * @return The txData.
    */
@@ -181,10 +173,6 @@ private static final long serialVersionUID = 0L;
     return txData_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto.getDefaultInstance() : txData_;
   }
   /**
-   * <pre>
-   *    google.protobuf.Any txData = 2;
-   * </pre>
-   *
    * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
    */
   @java.lang.Override
@@ -796,10 +784,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDtoOrBuilder> txDataBuilder_;
     /**
-     * <pre>
-     *    google.protobuf.Any txData = 2;
-     * </pre>
-     *
      * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
      * @return Whether the txData field is set.
      */
@@ -807,10 +791,6 @@ private static final long serialVersionUID = 0L;
       return txDataBuilder_ != null || txData_ != null;
     }
     /**
-     * <pre>
-     *    google.protobuf.Any txData = 2;
-     * </pre>
-     *
      * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
      * @return The txData.
      */
@@ -822,10 +802,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    google.protobuf.Any txData = 2;
-     * </pre>
-     *
      * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
      */
     public Builder setTxData(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto value) {
@@ -842,10 +818,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    google.protobuf.Any txData = 2;
-     * </pre>
-     *
      * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
      */
     public Builder setTxData(
@@ -860,10 +832,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    google.protobuf.Any txData = 2;
-     * </pre>
-     *
      * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
      */
     public Builder mergeTxData(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto value) {
@@ -882,10 +850,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    google.protobuf.Any txData = 2;
-     * </pre>
-     *
      * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
      */
     public Builder clearTxData() {
@@ -900,10 +864,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    google.protobuf.Any txData = 2;
-     * </pre>
-     *
      * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto.Builder getTxDataBuilder() {
@@ -912,10 +872,6 @@ private static final long serialVersionUID = 0L;
       return getTxDataFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     *    google.protobuf.Any txData = 2;
-     * </pre>
-     *
      * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDtoOrBuilder getTxDataOrBuilder() {
@@ -927,10 +883,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    google.protobuf.Any txData = 2;
-     * </pre>
-     *
      * <code>.org.qsn.protobuf.TransactionDataDto txData = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
