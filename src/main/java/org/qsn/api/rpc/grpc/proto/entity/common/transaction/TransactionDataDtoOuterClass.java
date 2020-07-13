@@ -29,10 +29,10 @@ public final class TransactionDataDtoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n6qsn/entity/common/transaction/Transact" +
-      "ionDataDto.proto\022\020org.qsn.protobuf\"6\n\022Tr" +
-      "ansactionDataDto\022\022\n\ntxDataType\030\001 \001(\005\022\014\n\004" +
-      "data\030\002 \001(\tB8\n4org.qsn.api.rpc.grpc.proto" +
-      ".entity.common.transactionP\001b\006proto3"
+      "ionDataDto.proto\022\020org.qsn.protobuf\"\024\n\022Tr" +
+      "ansactionDataDtoB8\n4org.qsn.api.rpc.grpc" +
+      ".proto.entity.common.transactionP\001b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -43,7 +43,7 @@ public final class TransactionDataDtoOuterClass {
     internal_static_org_qsn_protobuf_TransactionDataDto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_TransactionDataDto_descriptor,
-        new java.lang.String[] { "TxDataType", "Data", });
+        new java.lang.String[] { });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
