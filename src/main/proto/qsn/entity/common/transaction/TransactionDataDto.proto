@@ -6,5 +6,5 @@ option java_package = "org.qsn.api.rpc.grpc.proto.entity.common.transaction";
 package org.qsn.protobuf;
 
 message TransactionDataDto{
-
+    string data = 1;
 }

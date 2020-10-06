@@ -6,4 +6,16 @@ package org.qsn.api.rpc.grpc.proto.entity.common.transaction;
 public interface TransactionDataDtoOrBuilder extends
     // @@protoc_insertion_point(interface_extends:org.qsn.protobuf.TransactionDataDto)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>string data = 1;</code>
+   * @return The data.
+   */
+  java.lang.String getData();
+  /**
+   * <code>string data = 1;</code>
+   * @return The bytes for data.
+   */
+  com.google.protobuf.ByteString
+      getDataBytes();
 }
