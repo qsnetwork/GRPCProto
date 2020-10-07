@@ -6,7 +6,7 @@ option java_package = "org.qsn.api.rpc.grpc.proto.entity.response";
 package org.qsn.protobuf;
 
 import "qsn/entity/common/Result.proto";
-import "qsn/entity/common/transactionReceipt/TransactionReceiptDto.proto";
+import "qsn/entity/common/transaction/TransactionReceiptDto.proto";
 
 message GetTransactionReceiptResponse{
     Result result = 1;

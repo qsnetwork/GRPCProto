@@ -31,9 +31,9 @@ public interface GetTransactionReceiptResponseOrBuilder extends
    * <code>.org.qsn.protobuf.TransactionReceiptDto transactionReceipt = 2;</code>
    * @return The transactionReceipt.
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto getTransactionReceipt();
+  org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto getTransactionReceipt();
   /**
    * <code>.org.qsn.protobuf.TransactionReceiptDto transactionReceipt = 2;</code>
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDtoOrBuilder getTransactionReceiptOrBuilder();
+  org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDtoOrBuilder getTransactionReceiptOrBuilder();
 }

@@ -58,6 +58,37 @@ public final class TransactionRpcGrpc {
     return getSendTransactionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse> getGetTransactionReceiptMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getTransactionReceipt",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse> getGetTransactionReceiptMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse> getGetTransactionReceiptMethod;
+    if ((getGetTransactionReceiptMethod = TransactionRpcGrpc.getGetTransactionReceiptMethod) == null) {
+      synchronized (TransactionRpcGrpc.class) {
+        if ((getGetTransactionReceiptMethod = TransactionRpcGrpc.getGetTransactionReceiptMethod) == null) {
+          TransactionRpcGrpc.getGetTransactionReceiptMethod = getGetTransactionReceiptMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getTransactionReceipt"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransactionRpcMethodDescriptorSupplier("getTransactionReceipt"))
+              .build();
+        }
+      }
+    }
+    return getGetTransactionReceiptMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -113,6 +144,13 @@ public final class TransactionRpcGrpc {
       asyncUnimplementedUnaryCall(getSendTransactionMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getTransactionReceipt(org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetTransactionReceiptMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -122,6 +160,13 @@ public final class TransactionRpcGrpc {
                 org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionRequest,
                 org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionResponse>(
                   this, METHODID_SEND_TRANSACTION)))
+          .addMethod(
+            getGetTransactionReceiptMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse>(
+                  this, METHODID_GET_TRANSACTION_RECEIPT)))
           .build();
     }
   }
@@ -147,6 +192,14 @@ public final class TransactionRpcGrpc {
       asyncUnaryCall(
           getChannel().newCall(getSendTransactionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getTransactionReceipt(org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetTransactionReceiptMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -168,6 +221,13 @@ public final class TransactionRpcGrpc {
     public org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionResponse sendTransaction(org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionRequest request) {
       return blockingUnaryCall(
           getChannel(), getSendTransactionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse getTransactionReceipt(org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetTransactionReceiptMethod(), getCallOptions(), request);
     }
   }
 
@@ -192,9 +252,18 @@ public final class TransactionRpcGrpc {
       return futureUnaryCall(
           getChannel().newCall(getSendTransactionMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse> getTransactionReceipt(
+        org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetTransactionReceiptMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEND_TRANSACTION = 0;
+  private static final int METHODID_GET_TRANSACTION_RECEIPT = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -216,6 +285,10 @@ public final class TransactionRpcGrpc {
         case METHODID_SEND_TRANSACTION:
           serviceImpl.sendTransaction((org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionRequest) request,
               (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionResponse>) responseObserver);
+          break;
+        case METHODID_GET_TRANSACTION_RECEIPT:
+          serviceImpl.getTransactionReceipt((org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -279,6 +352,7 @@ public final class TransactionRpcGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new TransactionRpcFileDescriptorSupplier())
               .addMethod(getSendTransactionMethod())
+              .addMethod(getGetTransactionReceiptMethod())
               .build();
         }
       }

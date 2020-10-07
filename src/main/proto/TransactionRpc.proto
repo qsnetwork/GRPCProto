@@ -7,8 +7,11 @@ package org.qsn.protobuf;
 
 import "qsn/entity/request/SendTransactionRequest.proto";
 import "qsn/entity/response/SendTransactionResponse.proto";
-
+import "qsn/entity/request/GetTransactionReceiptRequest.proto";
+import "qsn/entity/response/GetTransactionReceiptResponse.proto";
 
 service TransactionRpc {
     rpc sendTransaction(SendTransactionRequest) returns (SendTransactionResponse);
+
+    rpc getTransactionReceipt(GetTransactionReceiptRequest) returns (GetTransactionReceiptResponse);
 }

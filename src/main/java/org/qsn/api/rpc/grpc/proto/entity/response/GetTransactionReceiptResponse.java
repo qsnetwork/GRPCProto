@@ -62,11 +62,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto.Builder subBuilder = null;
+            org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto.Builder subBuilder = null;
             if (transactionReceipt_ != null) {
               subBuilder = transactionReceipt_.toBuilder();
             }
-            transactionReceipt_ = input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto.parser(), extensionRegistry);
+            transactionReceipt_ = input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(transactionReceipt_);
               transactionReceipt_ = subBuilder.buildPartial();
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRANSACTIONRECEIPT_FIELD_NUMBER = 2;
-  private org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto transactionReceipt_;
+  private org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto transactionReceipt_;
   /**
    * <code>.org.qsn.protobuf.TransactionReceiptDto transactionReceipt = 2;</code>
    * @return Whether the transactionReceipt field is set.
@@ -147,14 +147,14 @@ private static final long serialVersionUID = 0L;
    * @return The transactionReceipt.
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto getTransactionReceipt() {
-    return transactionReceipt_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto.getDefaultInstance() : transactionReceipt_;
+  public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto getTransactionReceipt() {
+    return transactionReceipt_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto.getDefaultInstance() : transactionReceipt_;
   }
   /**
    * <code>.org.qsn.protobuf.TransactionReceiptDto transactionReceipt = 2;</code>
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDtoOrBuilder getTransactionReceiptOrBuilder() {
+  public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDtoOrBuilder getTransactionReceiptOrBuilder() {
     return getTransactionReceipt();
   }
 
@@ -622,9 +622,9 @@ private static final long serialVersionUID = 0L;
       return resultBuilder_;
     }
 
-    private org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto transactionReceipt_;
+    private org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto transactionReceipt_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto, org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDtoOrBuilder> transactionReceiptBuilder_;
+        org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDtoOrBuilder> transactionReceiptBuilder_;
     /**
      * <code>.org.qsn.protobuf.TransactionReceiptDto transactionReceipt = 2;</code>
      * @return Whether the transactionReceipt field is set.
@@ -636,9 +636,9 @@ private static final long serialVersionUID = 0L;
      * <code>.org.qsn.protobuf.TransactionReceiptDto transactionReceipt = 2;</code>
      * @return The transactionReceipt.
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto getTransactionReceipt() {
+    public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto getTransactionReceipt() {
       if (transactionReceiptBuilder_ == null) {
-        return transactionReceipt_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto.getDefaultInstance() : transactionReceipt_;
+        return transactionReceipt_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto.getDefaultInstance() : transactionReceipt_;
       } else {
         return transactionReceiptBuilder_.getMessage();
       }
@@ -646,7 +646,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.org.qsn.protobuf.TransactionReceiptDto transactionReceipt = 2;</code>
      */
-    public Builder setTransactionReceipt(org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto value) {
+    public Builder setTransactionReceipt(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto value) {
       if (transactionReceiptBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -663,7 +663,7 @@ private static final long serialVersionUID = 0L;
      * <code>.org.qsn.protobuf.TransactionReceiptDto transactionReceipt = 2;</code>
      */
     public Builder setTransactionReceipt(
-        org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto.Builder builderForValue) {
+        org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto.Builder builderForValue) {
       if (transactionReceiptBuilder_ == null) {
         transactionReceipt_ = builderForValue.build();
         onChanged();
@@ -676,11 +676,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.org.qsn.protobuf.TransactionReceiptDto transactionReceipt = 2;</code>
      */
-    public Builder mergeTransactionReceipt(org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto value) {
+    public Builder mergeTransactionReceipt(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto value) {
       if (transactionReceiptBuilder_ == null) {
         if (transactionReceipt_ != null) {
           transactionReceipt_ =
-            org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto.newBuilder(transactionReceipt_).mergeFrom(value).buildPartial();
+            org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto.newBuilder(transactionReceipt_).mergeFrom(value).buildPartial();
         } else {
           transactionReceipt_ = value;
         }
@@ -708,7 +708,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.org.qsn.protobuf.TransactionReceiptDto transactionReceipt = 2;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto.Builder getTransactionReceiptBuilder() {
+    public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto.Builder getTransactionReceiptBuilder() {
       
       onChanged();
       return getTransactionReceiptFieldBuilder().getBuilder();
@@ -716,23 +716,23 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.org.qsn.protobuf.TransactionReceiptDto transactionReceipt = 2;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDtoOrBuilder getTransactionReceiptOrBuilder() {
+    public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDtoOrBuilder getTransactionReceiptOrBuilder() {
       if (transactionReceiptBuilder_ != null) {
         return transactionReceiptBuilder_.getMessageOrBuilder();
       } else {
         return transactionReceipt_ == null ?
-            org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto.getDefaultInstance() : transactionReceipt_;
+            org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto.getDefaultInstance() : transactionReceipt_;
       }
     }
     /**
      * <code>.org.qsn.protobuf.TransactionReceiptDto transactionReceipt = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto, org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDtoOrBuilder> 
+        org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDtoOrBuilder> 
         getTransactionReceiptFieldBuilder() {
       if (transactionReceiptBuilder_ == null) {
         transactionReceiptBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto, org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDtoOrBuilder>(
+            org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDtoOrBuilder>(
                 getTransactionReceipt(),
                 getParentForChildren(),
                 isClean());
