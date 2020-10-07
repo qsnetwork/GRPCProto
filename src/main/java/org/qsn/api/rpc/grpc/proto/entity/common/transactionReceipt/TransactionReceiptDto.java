@@ -59,17 +59,9 @@ private static final long serialVersionUID = 0L;
             blockHash_ = input.readBytes();
             break;
           }
-          case 18: {
-            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder subBuilder = null;
-            if (blockHeight_ != null) {
-              subBuilder = blockHeight_.toBuilder();
-            }
-            blockHeight_ = input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.BInteger.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(blockHeight_);
-              blockHeight_ = subBuilder.buildPartial();
-            }
+          case 16: {
 
+            blockHeight_ = input.readInt64();
             break;
           }
           case 26: {
@@ -87,17 +79,9 @@ private static final long serialVersionUID = 0L;
             sender_ = input.readBytes();
             break;
           }
-          case 50: {
-            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder subBuilder = null;
-            if (feeUsed_ != null) {
-              subBuilder = feeUsed_.toBuilder();
-            }
-            feeUsed_ = input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.BInteger.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(feeUsed_);
-              feeUsed_ = subBuilder.buildPartial();
-            }
+          case 48: {
 
+            feeUsed_ = input.readInt64();
             break;
           }
           case 56: {
@@ -164,29 +148,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BLOCKHEIGHT_FIELD_NUMBER = 2;
-  private org.qsn.api.rpc.grpc.proto.entity.common.BInteger blockHeight_;
+  private long blockHeight_;
   /**
-   * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
-   * @return Whether the blockHeight field is set.
-   */
-  @java.lang.Override
-  public boolean hasBlockHeight() {
-    return blockHeight_ != null;
-  }
-  /**
-   * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
+   * <code>int64 blockHeight = 2;</code>
    * @return The blockHeight.
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getBlockHeight() {
-    return blockHeight_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : blockHeight_;
-  }
-  /**
-   * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
-   */
-  @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getBlockHeightOrBuilder() {
-    return getBlockHeight();
+  public long getBlockHeight() {
+    return blockHeight_;
   }
 
   public static final int TRANSACTIONHASH_FIELD_NUMBER = 3;
@@ -223,29 +192,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FEEUSED_FIELD_NUMBER = 6;
-  private org.qsn.api.rpc.grpc.proto.entity.common.BInteger feeUsed_;
+  private long feeUsed_;
   /**
-   * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
-   * @return Whether the feeUsed field is set.
-   */
-  @java.lang.Override
-  public boolean hasFeeUsed() {
-    return feeUsed_ != null;
-  }
-  /**
-   * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
+   * <code>int64 feeUsed = 6;</code>
    * @return The feeUsed.
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getFeeUsed() {
-    return feeUsed_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : feeUsed_;
-  }
-  /**
-   * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
-   */
-  @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getFeeUsedOrBuilder() {
-    return getFeeUsed();
+  public long getFeeUsed() {
+    return feeUsed_;
   }
 
   public static final int STATUS_FIELD_NUMBER = 7;
@@ -309,8 +263,8 @@ private static final long serialVersionUID = 0L;
     if (!blockHash_.isEmpty()) {
       output.writeBytes(1, blockHash_);
     }
-    if (blockHeight_ != null) {
-      output.writeMessage(2, getBlockHeight());
+    if (blockHeight_ != 0L) {
+      output.writeInt64(2, blockHeight_);
     }
     if (!transactionHash_.isEmpty()) {
       output.writeBytes(3, transactionHash_);
@@ -321,8 +275,8 @@ private static final long serialVersionUID = 0L;
     if (!sender_.isEmpty()) {
       output.writeBytes(5, sender_);
     }
-    if (feeUsed_ != null) {
-      output.writeMessage(6, getFeeUsed());
+    if (feeUsed_ != 0L) {
+      output.writeInt64(6, feeUsed_);
     }
     if (status_ != 0) {
       output.writeInt32(7, status_);
@@ -349,9 +303,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(1, blockHash_);
     }
-    if (blockHeight_ != null) {
+    if (blockHeight_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getBlockHeight());
+        .computeInt64Size(2, blockHeight_);
     }
     if (!transactionHash_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
@@ -365,9 +319,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(5, sender_);
     }
-    if (feeUsed_ != null) {
+    if (feeUsed_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getFeeUsed());
+        .computeInt64Size(6, feeUsed_);
     }
     if (status_ != 0) {
       size += com.google.protobuf.CodedOutputStream
@@ -402,22 +356,16 @@ private static final long serialVersionUID = 0L;
 
     if (!getBlockHash()
         .equals(other.getBlockHash())) return false;
-    if (hasBlockHeight() != other.hasBlockHeight()) return false;
-    if (hasBlockHeight()) {
-      if (!getBlockHeight()
-          .equals(other.getBlockHeight())) return false;
-    }
+    if (getBlockHeight()
+        != other.getBlockHeight()) return false;
     if (!getTransactionHash()
         .equals(other.getTransactionHash())) return false;
     if (getTransactionIndex()
         != other.getTransactionIndex()) return false;
     if (!getSender()
         .equals(other.getSender())) return false;
-    if (hasFeeUsed() != other.hasFeeUsed()) return false;
-    if (hasFeeUsed()) {
-      if (!getFeeUsed()
-          .equals(other.getFeeUsed())) return false;
-    }
+    if (getFeeUsed()
+        != other.getFeeUsed()) return false;
     if (getStatus()
         != other.getStatus()) return false;
     if (!getContractAddress()
@@ -439,20 +387,18 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + BLOCKHASH_FIELD_NUMBER;
     hash = (53 * hash) + getBlockHash().hashCode();
-    if (hasBlockHeight()) {
-      hash = (37 * hash) + BLOCKHEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + getBlockHeight().hashCode();
-    }
+    hash = (37 * hash) + BLOCKHEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getBlockHeight());
     hash = (37 * hash) + TRANSACTIONHASH_FIELD_NUMBER;
     hash = (53 * hash) + getTransactionHash().hashCode();
     hash = (37 * hash) + TRANSACTIONINDEX_FIELD_NUMBER;
     hash = (53 * hash) + getTransactionIndex();
     hash = (37 * hash) + SENDER_FIELD_NUMBER;
     hash = (53 * hash) + getSender().hashCode();
-    if (hasFeeUsed()) {
-      hash = (37 * hash) + FEEUSED_FIELD_NUMBER;
-      hash = (53 * hash) + getFeeUsed().hashCode();
-    }
+    hash = (37 * hash) + FEEUSED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getFeeUsed());
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + getStatus();
     hash = (37 * hash) + CONTRACTADDRESS_FIELD_NUMBER;
@@ -596,24 +542,16 @@ private static final long serialVersionUID = 0L;
       super.clear();
       blockHash_ = com.google.protobuf.ByteString.EMPTY;
 
-      if (blockHeightBuilder_ == null) {
-        blockHeight_ = null;
-      } else {
-        blockHeight_ = null;
-        blockHeightBuilder_ = null;
-      }
+      blockHeight_ = 0L;
+
       transactionHash_ = com.google.protobuf.ByteString.EMPTY;
 
       transactionIndex_ = 0;
 
       sender_ = com.google.protobuf.ByteString.EMPTY;
 
-      if (feeUsedBuilder_ == null) {
-        feeUsed_ = null;
-      } else {
-        feeUsed_ = null;
-        feeUsedBuilder_ = null;
-      }
+      feeUsed_ = 0L;
+
       status_ = 0;
 
       contractAddress_ = com.google.protobuf.ByteString.EMPTY;
@@ -649,19 +587,11 @@ private static final long serialVersionUID = 0L;
     public org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto buildPartial() {
       org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto result = new org.qsn.api.rpc.grpc.proto.entity.common.transactionReceipt.TransactionReceiptDto(this);
       result.blockHash_ = blockHash_;
-      if (blockHeightBuilder_ == null) {
-        result.blockHeight_ = blockHeight_;
-      } else {
-        result.blockHeight_ = blockHeightBuilder_.build();
-      }
+      result.blockHeight_ = blockHeight_;
       result.transactionHash_ = transactionHash_;
       result.transactionIndex_ = transactionIndex_;
       result.sender_ = sender_;
-      if (feeUsedBuilder_ == null) {
-        result.feeUsed_ = feeUsed_;
-      } else {
-        result.feeUsed_ = feeUsedBuilder_.build();
-      }
+      result.feeUsed_ = feeUsed_;
       result.status_ = status_;
       result.contractAddress_ = contractAddress_;
       result.contractAction_ = contractAction_;
@@ -717,8 +647,8 @@ private static final long serialVersionUID = 0L;
       if (other.getBlockHash() != com.google.protobuf.ByteString.EMPTY) {
         setBlockHash(other.getBlockHash());
       }
-      if (other.hasBlockHeight()) {
-        mergeBlockHeight(other.getBlockHeight());
+      if (other.getBlockHeight() != 0L) {
+        setBlockHeight(other.getBlockHeight());
       }
       if (other.getTransactionHash() != com.google.protobuf.ByteString.EMPTY) {
         setTransactionHash(other.getTransactionHash());
@@ -729,8 +659,8 @@ private static final long serialVersionUID = 0L;
       if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
         setSender(other.getSender());
       }
-      if (other.hasFeeUsed()) {
-        mergeFeeUsed(other.getFeeUsed());
+      if (other.getFeeUsed() != 0L) {
+        setFeeUsed(other.getFeeUsed());
       }
       if (other.getStatus() != 0) {
         setStatus(other.getStatus());
@@ -807,123 +737,35 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private org.qsn.api.rpc.grpc.proto.entity.common.BInteger blockHeight_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> blockHeightBuilder_;
+    private long blockHeight_ ;
     /**
-     * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
-     * @return Whether the blockHeight field is set.
-     */
-    public boolean hasBlockHeight() {
-      return blockHeightBuilder_ != null || blockHeight_ != null;
-    }
-    /**
-     * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
+     * <code>int64 blockHeight = 2;</code>
      * @return The blockHeight.
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getBlockHeight() {
-      if (blockHeightBuilder_ == null) {
-        return blockHeight_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : blockHeight_;
-      } else {
-        return blockHeightBuilder_.getMessage();
-      }
+    @java.lang.Override
+    public long getBlockHeight() {
+      return blockHeight_;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
+     * <code>int64 blockHeight = 2;</code>
+     * @param value The blockHeight to set.
+     * @return This builder for chaining.
      */
-    public Builder setBlockHeight(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
-      if (blockHeightBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        blockHeight_ = value;
-        onChanged();
-      } else {
-        blockHeightBuilder_.setMessage(value);
-      }
-
+    public Builder setBlockHeight(long value) {
+      
+      blockHeight_ = value;
+      onChanged();
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
-     */
-    public Builder setBlockHeight(
-        org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder builderForValue) {
-      if (blockHeightBuilder_ == null) {
-        blockHeight_ = builderForValue.build();
-        onChanged();
-      } else {
-        blockHeightBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
-     */
-    public Builder mergeBlockHeight(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
-      if (blockHeightBuilder_ == null) {
-        if (blockHeight_ != null) {
-          blockHeight_ =
-            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.newBuilder(blockHeight_).mergeFrom(value).buildPartial();
-        } else {
-          blockHeight_ = value;
-        }
-        onChanged();
-      } else {
-        blockHeightBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
+     * <code>int64 blockHeight = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearBlockHeight() {
-      if (blockHeightBuilder_ == null) {
-        blockHeight_ = null;
-        onChanged();
-      } else {
-        blockHeight_ = null;
-        blockHeightBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
-     */
-    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder getBlockHeightBuilder() {
       
+      blockHeight_ = 0L;
       onChanged();
-      return getBlockHeightFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
-     */
-    public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getBlockHeightOrBuilder() {
-      if (blockHeightBuilder_ != null) {
-        return blockHeightBuilder_.getMessageOrBuilder();
-      } else {
-        return blockHeight_ == null ?
-            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : blockHeight_;
-      }
-    }
-    /**
-     * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> 
-        getBlockHeightFieldBuilder() {
-      if (blockHeightBuilder_ == null) {
-        blockHeightBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder>(
-                getBlockHeight(),
-                getParentForChildren(),
-                isClean());
-        blockHeight_ = null;
-      }
-      return blockHeightBuilder_;
+      return this;
     }
 
     private com.google.protobuf.ByteString transactionHash_ = com.google.protobuf.ByteString.EMPTY;
@@ -1025,123 +867,35 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private org.qsn.api.rpc.grpc.proto.entity.common.BInteger feeUsed_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> feeUsedBuilder_;
+    private long feeUsed_ ;
     /**
-     * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
-     * @return Whether the feeUsed field is set.
-     */
-    public boolean hasFeeUsed() {
-      return feeUsedBuilder_ != null || feeUsed_ != null;
-    }
-    /**
-     * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
+     * <code>int64 feeUsed = 6;</code>
      * @return The feeUsed.
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getFeeUsed() {
-      if (feeUsedBuilder_ == null) {
-        return feeUsed_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : feeUsed_;
-      } else {
-        return feeUsedBuilder_.getMessage();
-      }
+    @java.lang.Override
+    public long getFeeUsed() {
+      return feeUsed_;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
+     * <code>int64 feeUsed = 6;</code>
+     * @param value The feeUsed to set.
+     * @return This builder for chaining.
      */
-    public Builder setFeeUsed(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
-      if (feeUsedBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        feeUsed_ = value;
-        onChanged();
-      } else {
-        feeUsedBuilder_.setMessage(value);
-      }
-
+    public Builder setFeeUsed(long value) {
+      
+      feeUsed_ = value;
+      onChanged();
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
-     */
-    public Builder setFeeUsed(
-        org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder builderForValue) {
-      if (feeUsedBuilder_ == null) {
-        feeUsed_ = builderForValue.build();
-        onChanged();
-      } else {
-        feeUsedBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
-     */
-    public Builder mergeFeeUsed(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
-      if (feeUsedBuilder_ == null) {
-        if (feeUsed_ != null) {
-          feeUsed_ =
-            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.newBuilder(feeUsed_).mergeFrom(value).buildPartial();
-        } else {
-          feeUsed_ = value;
-        }
-        onChanged();
-      } else {
-        feeUsedBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
+     * <code>int64 feeUsed = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFeeUsed() {
-      if (feeUsedBuilder_ == null) {
-        feeUsed_ = null;
-        onChanged();
-      } else {
-        feeUsed_ = null;
-        feeUsedBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
-     */
-    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder getFeeUsedBuilder() {
       
+      feeUsed_ = 0L;
       onChanged();
-      return getFeeUsedFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
-     */
-    public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getFeeUsedOrBuilder() {
-      if (feeUsedBuilder_ != null) {
-        return feeUsedBuilder_.getMessageOrBuilder();
-      } else {
-        return feeUsed_ == null ?
-            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : feeUsed_;
-      }
-    }
-    /**
-     * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> 
-        getFeeUsedFieldBuilder() {
-      if (feeUsedBuilder_ == null) {
-        feeUsedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder>(
-                getFeeUsed(),
-                getParentForChildren(),
-                isClean());
-        feeUsed_ = null;
-      }
-      return feeUsedBuilder_;
+      return this;
     }
 
     private int status_ ;

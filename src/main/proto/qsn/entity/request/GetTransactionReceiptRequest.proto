@@ -6,7 +6,6 @@ option java_package = "org.qsn.api.rpc.grpc.proto.entity.request";
 package org.qsn.protobuf;
 
 import "qsn/entity/common/BaseRequest.proto";
-import "qsn/entity/common/transaction/TransactionDto.proto";
 
 message GetTransactionReceiptRequest{
     BaseRequest baseRequest = 1;

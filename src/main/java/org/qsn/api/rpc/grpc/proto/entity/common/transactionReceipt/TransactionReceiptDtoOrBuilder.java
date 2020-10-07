@@ -14,19 +14,10 @@ public interface TransactionReceiptDtoOrBuilder extends
   com.google.protobuf.ByteString getBlockHash();
 
   /**
-   * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
-   * @return Whether the blockHeight field is set.
-   */
-  boolean hasBlockHeight();
-  /**
-   * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
+   * <code>int64 blockHeight = 2;</code>
    * @return The blockHeight.
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.BInteger getBlockHeight();
-  /**
-   * <code>.org.qsn.protobuf.BInteger blockHeight = 2;</code>
-   */
-  org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getBlockHeightOrBuilder();
+  long getBlockHeight();
 
   /**
    * <code>bytes transactionHash = 3;</code>
@@ -47,19 +38,10 @@ public interface TransactionReceiptDtoOrBuilder extends
   com.google.protobuf.ByteString getSender();
 
   /**
-   * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
-   * @return Whether the feeUsed field is set.
-   */
-  boolean hasFeeUsed();
-  /**
-   * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
+   * <code>int64 feeUsed = 6;</code>
    * @return The feeUsed.
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.BInteger getFeeUsed();
-  /**
-   * <code>.org.qsn.protobuf.BInteger feeUsed = 6;</code>
-   */
-  org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getFeeUsedOrBuilder();
+  long getFeeUsed();
 
   /**
    * <code>int32 status = 7;</code>

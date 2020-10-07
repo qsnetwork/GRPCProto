@@ -30,19 +30,16 @@ public final class GetTransactionReceiptRequestOuterClass {
     java.lang.String[] descriptorData = {
       "\n5qsn/entity/request/GetTransactionRecei" +
       "ptRequest.proto\022\020org.qsn.protobuf\032#qsn/e" +
-      "ntity/common/BaseRequest.proto\0322qsn/enti" +
-      "ty/common/transaction/TransactionDto.pro" +
-      "to\"k\n\034GetTransactionReceiptRequest\0222\n\013ba" +
-      "seRequest\030\001 \001(\0132\035.org.qsn.protobuf.BaseR" +
-      "equest\022\027\n\017transactionHash\030\002 \001(\014B-\n)org.q" +
-      "sn.api.rpc.grpc.proto.entity.requestP\001b\006" +
-      "proto3"
+      "ntity/common/BaseRequest.proto\"k\n\034GetTra" +
+      "nsactionReceiptRequest\0222\n\013baseRequest\030\001 " +
+      "\001(\0132\035.org.qsn.protobuf.BaseRequest\022\027\n\017tr" +
+      "ansactionHash\030\002 \001(\014B-\n)org.qsn.api.rpc.g" +
+      "rpc.proto.entity.requestP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.qsn.api.rpc.grpc.proto.entity.common.BaseRequestOuterClass.getDescriptor(),
-          org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDtoOuterClass.getDescriptor(),
         });
     internal_static_org_qsn_protobuf_GetTransactionReceiptRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -51,7 +48,6 @@ public final class GetTransactionReceiptRequestOuterClass {
         internal_static_org_qsn_protobuf_GetTransactionReceiptRequest_descriptor,
         new java.lang.String[] { "BaseRequest", "TransactionHash", });
     org.qsn.api.rpc.grpc.proto.entity.common.BaseRequestOuterClass.getDescriptor();
-    org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDtoOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

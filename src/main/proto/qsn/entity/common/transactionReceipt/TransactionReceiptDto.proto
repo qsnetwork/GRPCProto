@@ -5,8 +5,6 @@ option java_package = "org.qsn.api.rpc.grpc.proto.entity.common.transactionRecei
 
 package org.qsn.protobuf;
 
-import "qsn/entity/common/BInteger.proto";
-
 message TransactionReceiptDto{
     bytes blockHash = 1;
     int64 blockHeight = 2;

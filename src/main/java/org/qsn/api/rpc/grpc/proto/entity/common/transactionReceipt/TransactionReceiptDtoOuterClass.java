@@ -30,21 +30,18 @@ public final class TransactionReceiptDtoOuterClass {
     java.lang.String[] descriptorData = {
       "\n@qsn/entity/common/transactionReceipt/T" +
       "ransactionReceiptDto.proto\022\020org.qsn.prot" +
-      "obuf\032 qsn/entity/common/BInteger.proto\"\232" +
-      "\002\n\025TransactionReceiptDto\022\021\n\tblockHash\030\001 " +
-      "\001(\014\022/\n\013blockHeight\030\002 \001(\0132\032.org.qsn.proto" +
-      "buf.BInteger\022\027\n\017transactionHash\030\003 \001(\014\022\030\n" +
-      "\020transactionIndex\030\004 \001(\005\022\016\n\006sender\030\005 \001(\014\022" +
-      "+\n\007feeUsed\030\006 \001(\0132\032.org.qsn.protobuf.BInt" +
-      "eger\022\016\n\006status\030\007 \001(\005\022\027\n\017contractAddress\030" +
-      "\010 \001(\014\022\026\n\016contractAction\030\t \001(\014\022\014\n\004logs\030\n " +
-      "\001(\014B?\n;org.qsn.api.rpc.grpc.proto.entity" +
-      ".common.transactionReceiptP\001b\006proto3"
+      "obuf\"\342\001\n\025TransactionReceiptDto\022\021\n\tblockH" +
+      "ash\030\001 \001(\014\022\023\n\013blockHeight\030\002 \001(\003\022\027\n\017transa" +
+      "ctionHash\030\003 \001(\014\022\030\n\020transactionIndex\030\004 \001(" +
+      "\005\022\016\n\006sender\030\005 \001(\014\022\017\n\007feeUsed\030\006 \001(\003\022\016\n\006st" +
+      "atus\030\007 \001(\005\022\027\n\017contractAddress\030\010 \001(\014\022\026\n\016c" +
+      "ontractAction\030\t \001(\014\022\014\n\004logs\030\n \001(\014B?\n;org" +
+      ".qsn.api.rpc.grpc.proto.entity.common.tr" +
+      "ansactionReceiptP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOuterClass.getDescriptor(),
         });
     internal_static_org_qsn_protobuf_TransactionReceiptDto_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +49,6 @@ public final class TransactionReceiptDtoOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_TransactionReceiptDto_descriptor,
         new java.lang.String[] { "BlockHash", "BlockHeight", "TransactionHash", "TransactionIndex", "Sender", "FeeUsed", "Status", "ContractAddress", "ContractAction", "Logs", });
-    org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
