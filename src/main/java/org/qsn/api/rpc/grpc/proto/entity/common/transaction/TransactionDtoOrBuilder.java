@@ -56,31 +56,46 @@ public interface TransactionDtoOrBuilder extends
   org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDtoOrBuilder getFeeOrBuilder();
 
   /**
-   * <code>bytes memo = 6;</code>
-   * @return The memo.
+   * <code>bytes info = 6;</code>
+   * @return The info.
    */
-  com.google.protobuf.ByteString getMemo();
+  com.google.protobuf.ByteString getInfo();
 
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 7;</code>
+   * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+   * @return Whether the attachment field is set.
+   */
+  boolean hasAttachment();
+  /**
+   * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+   * @return The attachment.
+   */
+  org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto getAttachment();
+  /**
+   * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+   */
+  org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDtoOrBuilder getAttachmentOrBuilder();
+
+  /**
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
    */
   java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto> 
       getSignaturesList();
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 7;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
    */
   org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto getSignatures(int index);
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 7;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
    */
   int getSignaturesCount();
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 7;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
    */
   java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder> 
       getSignaturesOrBuilderList();
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 7;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
    */
   org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder getSignaturesOrBuilder(
       int index);

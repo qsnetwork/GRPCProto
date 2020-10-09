@@ -8,6 +8,7 @@ package org.qsn.protobuf;
 import "qsn/entity/common/transaction/TransactionFeeDto.proto";
 import "qsn/entity/common/transaction/TransactionSignatureDto.proto";
 import "qsn/entity/common/transaction/TransactionDataDto.proto";
+import "qsn/entity/common/transaction/AttachmentDto.proto";
 
 message TransactionDto{
     int32 txType = 1;
@@ -15,6 +16,7 @@ message TransactionDto{
     bytes smartContractName = 3;
     bytes smartContractAction = 4;
     TransactionFeeDto fee = 5;
-    bytes memo = 6;
-    repeated TransactionSignatureDto signatures = 7;
+    bytes info = 6;
+    AttachmentDto attachment = 7;
+    repeated TransactionSignatureDto signatures = 8;
 }

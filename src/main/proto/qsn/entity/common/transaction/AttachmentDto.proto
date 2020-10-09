@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.common.transaction";
+
+package org.qsn.protobuf;
+
+message AttachmentDto{
+    bytes dataHash = 1;
+    bytes signature = 2;
+}
