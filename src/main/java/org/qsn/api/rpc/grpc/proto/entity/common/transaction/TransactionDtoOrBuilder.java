@@ -29,73 +29,102 @@ public interface TransactionDtoOrBuilder extends
   org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDtoOrBuilder getTxDataOrBuilder();
 
   /**
-   * <code>bytes smartContractName = 3;</code>
+   * <code>string smartContractName = 3;</code>
    * @return The smartContractName.
    */
-  com.google.protobuf.ByteString getSmartContractName();
+  java.lang.String getSmartContractName();
+  /**
+   * <code>string smartContractName = 3;</code>
+   * @return The bytes for smartContractName.
+   */
+  com.google.protobuf.ByteString
+      getSmartContractNameBytes();
 
   /**
-   * <code>bytes smartContractAction = 4;</code>
+   * <code>string smartContractAction = 4;</code>
    * @return The smartContractAction.
    */
-  com.google.protobuf.ByteString getSmartContractAction();
+  java.lang.String getSmartContractAction();
+  /**
+   * <code>string smartContractAction = 4;</code>
+   * @return The bytes for smartContractAction.
+   */
+  com.google.protobuf.ByteString
+      getSmartContractActionBytes();
 
   /**
-   * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+   * <code>repeated bytes smartContractArguments = 5;</code>
+   * @return A list containing the smartContractArguments.
+   */
+  java.util.List<com.google.protobuf.ByteString> getSmartContractArgumentsList();
+  /**
+   * <code>repeated bytes smartContractArguments = 5;</code>
+   * @return The count of smartContractArguments.
+   */
+  int getSmartContractArgumentsCount();
+  /**
+   * <code>repeated bytes smartContractArguments = 5;</code>
+   * @param index The index of the element to return.
+   * @return The smartContractArguments at the given index.
+   */
+  com.google.protobuf.ByteString getSmartContractArguments(int index);
+
+  /**
+   * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
    * @return Whether the fee field is set.
    */
   boolean hasFee();
   /**
-   * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+   * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
    * @return The fee.
    */
   org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto getFee();
   /**
-   * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+   * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
    */
   org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDtoOrBuilder getFeeOrBuilder();
 
   /**
-   * <code>bytes info = 6;</code>
+   * <code>bytes info = 7;</code>
    * @return The info.
    */
   com.google.protobuf.ByteString getInfo();
 
   /**
-   * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+   * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
    * @return Whether the attachment field is set.
    */
   boolean hasAttachment();
   /**
-   * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+   * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
    * @return The attachment.
    */
   org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto getAttachment();
   /**
-   * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+   * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
    */
   org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDtoOrBuilder getAttachmentOrBuilder();
 
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
    */
   java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto> 
       getSignaturesList();
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
    */
   org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto getSignatures(int index);
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
    */
   int getSignaturesCount();
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
    */
   java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder> 
       getSignaturesOrBuilderList();
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
    */
   org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder getSignaturesOrBuilder(
       int index);

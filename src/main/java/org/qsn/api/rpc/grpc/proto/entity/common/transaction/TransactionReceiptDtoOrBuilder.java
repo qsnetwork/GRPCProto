@@ -50,20 +50,63 @@ public interface TransactionReceiptDtoOrBuilder extends
   int getStatus();
 
   /**
-   * <code>bytes contractAddress = 8;</code>
-   * @return The contractAddress.
+   * <code>string contractName = 8;</code>
+   * @return The contractName.
    */
-  com.google.protobuf.ByteString getContractAddress();
+  java.lang.String getContractName();
+  /**
+   * <code>string contractName = 8;</code>
+   * @return The bytes for contractName.
+   */
+  com.google.protobuf.ByteString
+      getContractNameBytes();
 
   /**
-   * <code>bytes contractAction = 9;</code>
+   * <code>string contractAction = 9;</code>
    * @return The contractAction.
    */
-  com.google.protobuf.ByteString getContractAction();
+  java.lang.String getContractAction();
+  /**
+   * <code>string contractAction = 9;</code>
+   * @return The bytes for contractAction.
+   */
+  com.google.protobuf.ByteString
+      getContractActionBytes();
 
   /**
-   * <code>bytes logs = 10;</code>
-   * @return The logs.
+   * <code>bytes contractResult = 10;</code>
+   * @return The contractResult.
    */
-  com.google.protobuf.ByteString getLogs();
+  com.google.protobuf.ByteString getContractResult();
+
+  /**
+   * <code>bytes deployedContractAddress = 11;</code>
+   * @return The deployedContractAddress.
+   */
+  com.google.protobuf.ByteString getDeployedContractAddress();
+
+  /**
+   * <code>repeated string logs = 12;</code>
+   * @return A list containing the logs.
+   */
+  java.util.List<java.lang.String>
+      getLogsList();
+  /**
+   * <code>repeated string logs = 12;</code>
+   * @return The count of logs.
+   */
+  int getLogsCount();
+  /**
+   * <code>repeated string logs = 12;</code>
+   * @param index The index of the element to return.
+   * @return The logs at the given index.
+   */
+  java.lang.String getLogs(int index);
+  /**
+   * <code>repeated string logs = 12;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the logs at the given index.
+   */
+  com.google.protobuf.ByteString
+      getLogsBytes(int index);
 }

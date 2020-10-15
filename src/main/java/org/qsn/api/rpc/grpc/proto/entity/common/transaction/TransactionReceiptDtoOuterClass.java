@@ -29,15 +29,16 @@ public final class TransactionReceiptDtoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n9qsn/entity/common/transaction/Transact" +
-      "ionReceiptDto.proto\022\020org.qsn.protobuf\"\342\001" +
+      "ionReceiptDto.proto\022\020org.qsn.protobuf\"\230\002" +
       "\n\025TransactionReceiptDto\022\021\n\tblockHash\030\001 \001" +
       "(\014\022\023\n\013blockHeight\030\002 \001(\003\022\027\n\017transactionHa" +
       "sh\030\003 \001(\014\022\030\n\020transactionIndex\030\004 \001(\005\022\016\n\006se" +
       "nder\030\005 \001(\014\022\017\n\007feeUsed\030\006 \001(\003\022\016\n\006status\030\007 " +
-      "\001(\005\022\027\n\017contractAddress\030\010 \001(\014\022\026\n\016contract" +
-      "Action\030\t \001(\014\022\014\n\004logs\030\n \001(\014B8\n4org.qsn.ap" +
-      "i.rpc.grpc.proto.entity.common.transacti" +
-      "onP\001b\006proto3"
+      "\001(\005\022\024\n\014contractName\030\010 \001(\t\022\026\n\016contractAct" +
+      "ion\030\t \001(\t\022\026\n\016contractResult\030\n \001(\014\022\037\n\027dep" +
+      "loyedContractAddress\030\013 \001(\014\022\014\n\004logs\030\014 \003(\t" +
+      "B8\n4org.qsn.api.rpc.grpc.proto.entity.co" +
+      "mmon.transactionP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -48,7 +49,7 @@ public final class TransactionReceiptDtoOuterClass {
     internal_static_org_qsn_protobuf_TransactionReceiptDto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_TransactionReceiptDto_descriptor,
-        new java.lang.String[] { "BlockHash", "BlockHeight", "TransactionHash", "TransactionIndex", "Sender", "FeeUsed", "Status", "ContractAddress", "ContractAction", "Logs", });
+        new java.lang.String[] { "BlockHash", "BlockHeight", "TransactionHash", "TransactionIndex", "Sender", "FeeUsed", "Status", "ContractName", "ContractAction", "ContractResult", "DeployedContractAddress", "Logs", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
