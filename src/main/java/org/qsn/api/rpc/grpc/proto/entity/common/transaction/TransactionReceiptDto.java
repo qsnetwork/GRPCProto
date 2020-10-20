@@ -19,9 +19,11 @@ private static final long serialVersionUID = 0L;
     blockHash_ = com.google.protobuf.ByteString.EMPTY;
     transactionHash_ = com.google.protobuf.ByteString.EMPTY;
     sender_ = com.google.protobuf.ByteString.EMPTY;
-    contractAddress_ = com.google.protobuf.ByteString.EMPTY;
-    contractAction_ = com.google.protobuf.ByteString.EMPTY;
-    logs_ = com.google.protobuf.ByteString.EMPTY;
+    contractName_ = "";
+    contractAction_ = "";
+    contractResult_ = com.google.protobuf.ByteString.EMPTY;
+    deployedContractAddress_ = com.google.protobuf.ByteString.EMPTY;
+    logs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -44,6 +46,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -90,18 +93,34 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            contractAddress_ = input.readBytes();
+            contractName_ = s;
             break;
           }
           case 74: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            contractAction_ = input.readBytes();
+            contractAction_ = s;
             break;
           }
           case 82: {
 
-            logs_ = input.readBytes();
+            contractResult_ = input.readBytes();
+            break;
+          }
+          case 90: {
+
+            deployedContractAddress_ = input.readBytes();
+            break;
+          }
+          case 98: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              logs_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            logs_.add(s);
             break;
           }
           default: {
@@ -119,6 +138,9 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        logs_ = logs_.getUnmodifiableView();
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -213,37 +235,137 @@ private static final long serialVersionUID = 0L;
     return status_;
   }
 
-  public static final int CONTRACTADDRESS_FIELD_NUMBER = 8;
-  private com.google.protobuf.ByteString contractAddress_;
+  public static final int CONTRACTNAME_FIELD_NUMBER = 8;
+  private volatile java.lang.Object contractName_;
   /**
-   * <code>bytes contractAddress = 8;</code>
-   * @return The contractAddress.
+   * <code>string contractName = 8;</code>
+   * @return The contractName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getContractAddress() {
-    return contractAddress_;
+  public java.lang.String getContractName() {
+    java.lang.Object ref = contractName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      contractName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string contractName = 8;</code>
+   * @return The bytes for contractName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getContractNameBytes() {
+    java.lang.Object ref = contractName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      contractName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int CONTRACTACTION_FIELD_NUMBER = 9;
-  private com.google.protobuf.ByteString contractAction_;
+  private volatile java.lang.Object contractAction_;
   /**
-   * <code>bytes contractAction = 9;</code>
+   * <code>string contractAction = 9;</code>
    * @return The contractAction.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getContractAction() {
-    return contractAction_;
+  public java.lang.String getContractAction() {
+    java.lang.Object ref = contractAction_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      contractAction_ = s;
+      return s;
+    }
   }
-
-  public static final int LOGS_FIELD_NUMBER = 10;
-  private com.google.protobuf.ByteString logs_;
   /**
-   * <code>bytes logs = 10;</code>
-   * @return The logs.
+   * <code>string contractAction = 9;</code>
+   * @return The bytes for contractAction.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getLogs() {
+  public com.google.protobuf.ByteString
+      getContractActionBytes() {
+    java.lang.Object ref = contractAction_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      contractAction_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CONTRACTRESULT_FIELD_NUMBER = 10;
+  private com.google.protobuf.ByteString contractResult_;
+  /**
+   * <code>bytes contractResult = 10;</code>
+   * @return The contractResult.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getContractResult() {
+    return contractResult_;
+  }
+
+  public static final int DEPLOYEDCONTRACTADDRESS_FIELD_NUMBER = 11;
+  private com.google.protobuf.ByteString deployedContractAddress_;
+  /**
+   * <code>bytes deployedContractAddress = 11;</code>
+   * @return The deployedContractAddress.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getDeployedContractAddress() {
+    return deployedContractAddress_;
+  }
+
+  public static final int LOGS_FIELD_NUMBER = 12;
+  private com.google.protobuf.LazyStringList logs_;
+  /**
+   * <code>repeated string logs = 12;</code>
+   * @return A list containing the logs.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getLogsList() {
     return logs_;
+  }
+  /**
+   * <code>repeated string logs = 12;</code>
+   * @return The count of logs.
+   */
+  public int getLogsCount() {
+    return logs_.size();
+  }
+  /**
+   * <code>repeated string logs = 12;</code>
+   * @param index The index of the element to return.
+   * @return The logs at the given index.
+   */
+  public java.lang.String getLogs(int index) {
+    return logs_.get(index);
+  }
+  /**
+   * <code>repeated string logs = 12;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the logs at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getLogsBytes(int index) {
+    return logs_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -281,14 +403,20 @@ private static final long serialVersionUID = 0L;
     if (status_ != 0) {
       output.writeInt32(7, status_);
     }
-    if (!contractAddress_.isEmpty()) {
-      output.writeBytes(8, contractAddress_);
+    if (!getContractNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, contractName_);
     }
-    if (!contractAction_.isEmpty()) {
-      output.writeBytes(9, contractAction_);
+    if (!getContractActionBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, contractAction_);
     }
-    if (!logs_.isEmpty()) {
-      output.writeBytes(10, logs_);
+    if (!contractResult_.isEmpty()) {
+      output.writeBytes(10, contractResult_);
+    }
+    if (!deployedContractAddress_.isEmpty()) {
+      output.writeBytes(11, deployedContractAddress_);
+    }
+    for (int i = 0; i < logs_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, logs_.getRaw(i));
     }
     unknownFields.writeTo(output);
   }
@@ -327,17 +455,27 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(7, status_);
     }
-    if (!contractAddress_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(8, contractAddress_);
+    if (!getContractNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, contractName_);
     }
-    if (!contractAction_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(9, contractAction_);
+    if (!getContractActionBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, contractAction_);
     }
-    if (!logs_.isEmpty()) {
+    if (!contractResult_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(10, logs_);
+        .computeBytesSize(10, contractResult_);
+    }
+    if (!deployedContractAddress_.isEmpty()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(11, deployedContractAddress_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < logs_.size(); i++) {
+        dataSize += computeStringSizeNoTag(logs_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getLogsList().size();
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -368,12 +506,16 @@ private static final long serialVersionUID = 0L;
         != other.getFeeUsed()) return false;
     if (getStatus()
         != other.getStatus()) return false;
-    if (!getContractAddress()
-        .equals(other.getContractAddress())) return false;
+    if (!getContractName()
+        .equals(other.getContractName())) return false;
     if (!getContractAction()
         .equals(other.getContractAction())) return false;
-    if (!getLogs()
-        .equals(other.getLogs())) return false;
+    if (!getContractResult()
+        .equals(other.getContractResult())) return false;
+    if (!getDeployedContractAddress()
+        .equals(other.getDeployedContractAddress())) return false;
+    if (!getLogsList()
+        .equals(other.getLogsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -401,12 +543,18 @@ private static final long serialVersionUID = 0L;
         getFeeUsed());
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + getStatus();
-    hash = (37 * hash) + CONTRACTADDRESS_FIELD_NUMBER;
-    hash = (53 * hash) + getContractAddress().hashCode();
+    hash = (37 * hash) + CONTRACTNAME_FIELD_NUMBER;
+    hash = (53 * hash) + getContractName().hashCode();
     hash = (37 * hash) + CONTRACTACTION_FIELD_NUMBER;
     hash = (53 * hash) + getContractAction().hashCode();
-    hash = (37 * hash) + LOGS_FIELD_NUMBER;
-    hash = (53 * hash) + getLogs().hashCode();
+    hash = (37 * hash) + CONTRACTRESULT_FIELD_NUMBER;
+    hash = (53 * hash) + getContractResult().hashCode();
+    hash = (37 * hash) + DEPLOYEDCONTRACTADDRESS_FIELD_NUMBER;
+    hash = (53 * hash) + getDeployedContractAddress().hashCode();
+    if (getLogsCount() > 0) {
+      hash = (37 * hash) + LOGS_FIELD_NUMBER;
+      hash = (53 * hash) + getLogsList().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -554,12 +702,16 @@ private static final long serialVersionUID = 0L;
 
       status_ = 0;
 
-      contractAddress_ = com.google.protobuf.ByteString.EMPTY;
+      contractName_ = "";
 
-      contractAction_ = com.google.protobuf.ByteString.EMPTY;
+      contractAction_ = "";
 
-      logs_ = com.google.protobuf.ByteString.EMPTY;
+      contractResult_ = com.google.protobuf.ByteString.EMPTY;
 
+      deployedContractAddress_ = com.google.protobuf.ByteString.EMPTY;
+
+      logs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -586,6 +738,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto buildPartial() {
       org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto result = new org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDto(this);
+      int from_bitField0_ = bitField0_;
       result.blockHash_ = blockHash_;
       result.blockHeight_ = blockHeight_;
       result.transactionHash_ = transactionHash_;
@@ -593,8 +746,14 @@ private static final long serialVersionUID = 0L;
       result.sender_ = sender_;
       result.feeUsed_ = feeUsed_;
       result.status_ = status_;
-      result.contractAddress_ = contractAddress_;
+      result.contractName_ = contractName_;
       result.contractAction_ = contractAction_;
+      result.contractResult_ = contractResult_;
+      result.deployedContractAddress_ = deployedContractAddress_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        logs_ = logs_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
       result.logs_ = logs_;
       onBuilt();
       return result;
@@ -665,14 +824,29 @@ private static final long serialVersionUID = 0L;
       if (other.getStatus() != 0) {
         setStatus(other.getStatus());
       }
-      if (other.getContractAddress() != com.google.protobuf.ByteString.EMPTY) {
-        setContractAddress(other.getContractAddress());
+      if (!other.getContractName().isEmpty()) {
+        contractName_ = other.contractName_;
+        onChanged();
       }
-      if (other.getContractAction() != com.google.protobuf.ByteString.EMPTY) {
-        setContractAction(other.getContractAction());
+      if (!other.getContractAction().isEmpty()) {
+        contractAction_ = other.contractAction_;
+        onChanged();
       }
-      if (other.getLogs() != com.google.protobuf.ByteString.EMPTY) {
-        setLogs(other.getLogs());
+      if (other.getContractResult() != com.google.protobuf.ByteString.EMPTY) {
+        setContractResult(other.getContractResult());
+      }
+      if (other.getDeployedContractAddress() != com.google.protobuf.ByteString.EMPTY) {
+        setDeployedContractAddress(other.getDeployedContractAddress());
+      }
+      if (!other.logs_.isEmpty()) {
+        if (logs_.isEmpty()) {
+          logs_ = other.logs_;
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ensureLogsIsMutable();
+          logs_.addAll(other.logs_);
+        }
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -702,6 +876,7 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    private int bitField0_;
 
     private com.google.protobuf.ByteString blockHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -929,55 +1104,123 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.ByteString contractAddress_ = com.google.protobuf.ByteString.EMPTY;
+    private java.lang.Object contractName_ = "";
     /**
-     * <code>bytes contractAddress = 8;</code>
-     * @return The contractAddress.
+     * <code>string contractName = 8;</code>
+     * @return The contractName.
      */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getContractAddress() {
-      return contractAddress_;
+    public java.lang.String getContractName() {
+      java.lang.Object ref = contractName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
-     * <code>bytes contractAddress = 8;</code>
-     * @param value The contractAddress to set.
+     * <code>string contractName = 8;</code>
+     * @return The bytes for contractName.
+     */
+    public com.google.protobuf.ByteString
+        getContractNameBytes() {
+      java.lang.Object ref = contractName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string contractName = 8;</code>
+     * @param value The contractName to set.
      * @return This builder for chaining.
      */
-    public Builder setContractAddress(com.google.protobuf.ByteString value) {
+    public Builder setContractName(
+        java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      contractAddress_ = value;
+      contractName_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>bytes contractAddress = 8;</code>
+     * <code>string contractName = 8;</code>
      * @return This builder for chaining.
      */
-    public Builder clearContractAddress() {
+    public Builder clearContractName() {
       
-      contractAddress_ = getDefaultInstance().getContractAddress();
+      contractName_ = getDefaultInstance().getContractName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string contractName = 8;</code>
+     * @param value The bytes for contractName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContractNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      contractName_ = value;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.ByteString contractAction_ = com.google.protobuf.ByteString.EMPTY;
+    private java.lang.Object contractAction_ = "";
     /**
-     * <code>bytes contractAction = 9;</code>
+     * <code>string contractAction = 9;</code>
      * @return The contractAction.
      */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getContractAction() {
-      return contractAction_;
+    public java.lang.String getContractAction() {
+      java.lang.Object ref = contractAction_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAction_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
-     * <code>bytes contractAction = 9;</code>
+     * <code>string contractAction = 9;</code>
+     * @return The bytes for contractAction.
+     */
+    public com.google.protobuf.ByteString
+        getContractActionBytes() {
+      java.lang.Object ref = contractAction_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAction_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string contractAction = 9;</code>
      * @param value The contractAction to set.
      * @return This builder for chaining.
      */
-    public Builder setContractAction(com.google.protobuf.ByteString value) {
+    public Builder setContractAction(
+        java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -987,7 +1230,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes contractAction = 9;</code>
+     * <code>string contractAction = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearContractAction() {
@@ -996,37 +1239,197 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
-
-    private com.google.protobuf.ByteString logs_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes logs = 10;</code>
-     * @return The logs.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getLogs() {
-      return logs_;
-    }
-    /**
-     * <code>bytes logs = 10;</code>
-     * @param value The logs to set.
+     * <code>string contractAction = 9;</code>
+     * @param value The bytes for contractAction to set.
      * @return This builder for chaining.
      */
-    public Builder setLogs(com.google.protobuf.ByteString value) {
+    public Builder setContractActionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      contractAction_ = value;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.ByteString contractResult_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes contractResult = 10;</code>
+     * @return The contractResult.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getContractResult() {
+      return contractResult_;
+    }
+    /**
+     * <code>bytes contractResult = 10;</code>
+     * @param value The contractResult to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContractResult(com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      logs_ = value;
+      contractResult_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>bytes logs = 10;</code>
+     * <code>bytes contractResult = 10;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearContractResult() {
+      
+      contractResult_ = getDefaultInstance().getContractResult();
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.ByteString deployedContractAddress_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes deployedContractAddress = 11;</code>
+     * @return The deployedContractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getDeployedContractAddress() {
+      return deployedContractAddress_;
+    }
+    /**
+     * <code>bytes deployedContractAddress = 11;</code>
+     * @param value The deployedContractAddress to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeployedContractAddress(com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      deployedContractAddress_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bytes deployedContractAddress = 11;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDeployedContractAddress() {
+      
+      deployedContractAddress_ = getDefaultInstance().getDeployedContractAddress();
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringList logs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private void ensureLogsIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        logs_ = new com.google.protobuf.LazyStringArrayList(logs_);
+        bitField0_ |= 0x00000001;
+       }
+    }
+    /**
+     * <code>repeated string logs = 12;</code>
+     * @return A list containing the logs.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getLogsList() {
+      return logs_.getUnmodifiableView();
+    }
+    /**
+     * <code>repeated string logs = 12;</code>
+     * @return The count of logs.
+     */
+    public int getLogsCount() {
+      return logs_.size();
+    }
+    /**
+     * <code>repeated string logs = 12;</code>
+     * @param index The index of the element to return.
+     * @return The logs at the given index.
+     */
+    public java.lang.String getLogs(int index) {
+      return logs_.get(index);
+    }
+    /**
+     * <code>repeated string logs = 12;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the logs at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getLogsBytes(int index) {
+      return logs_.getByteString(index);
+    }
+    /**
+     * <code>repeated string logs = 12;</code>
+     * @param index The index to set the value at.
+     * @param value The logs to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLogs(
+        int index, java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLogsIsMutable();
+      logs_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string logs = 12;</code>
+     * @param value The logs to add.
+     * @return This builder for chaining.
+     */
+    public Builder addLogs(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLogsIsMutable();
+      logs_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string logs = 12;</code>
+     * @param values The logs to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllLogs(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureLogsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, logs_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string logs = 12;</code>
      * @return This builder for chaining.
      */
     public Builder clearLogs() {
-      
-      logs_ = getDefaultInstance().getLogs();
+      logs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string logs = 12;</code>
+     * @param value The bytes of the logs to add.
+     * @return This builder for chaining.
+     */
+    public Builder addLogsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      ensureLogsIsMutable();
+      logs_.add(value);
       onChanged();
       return this;
     }

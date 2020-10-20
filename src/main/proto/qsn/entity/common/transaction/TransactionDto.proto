@@ -10,13 +10,14 @@ import "qsn/entity/common/transaction/TransactionSignatureDto.proto";
 import "qsn/entity/common/transaction/TransactionDataDto.proto";
 import "qsn/entity/common/transaction/AttachmentDto.proto";
 
-message TransactionDto{
+message TransactionDto {
     int32 txType = 1;
     TransactionDataDto txData = 2;
-    bytes smartContractName = 3;
-    bytes smartContractAction = 4;
-    TransactionFeeDto fee = 5;
-    bytes info = 6;
-    AttachmentDto attachment = 7;
-    repeated TransactionSignatureDto signatures = 8;
+    string smartContractName = 3;
+    string smartContractAction = 4;
+    repeated bytes smartContractArguments = 5;
+    TransactionFeeDto fee = 6;
+    bytes info = 7;
+    AttachmentDto attachment = 8;
+    repeated TransactionSignatureDto signatures = 9;
 }

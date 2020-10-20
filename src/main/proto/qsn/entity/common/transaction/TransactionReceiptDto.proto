@@ -5,7 +5,7 @@ option java_package = "org.qsn.api.rpc.grpc.proto.entity.common.transaction";
 
 package org.qsn.protobuf;
 
-message TransactionReceiptDto{
+message TransactionReceiptDto {
     bytes blockHash = 1;
     int64 blockHeight = 2;
     bytes transactionHash = 3;
@@ -13,7 +13,9 @@ message TransactionReceiptDto{
     bytes sender = 5;
     int64 feeUsed = 6;
     int32 status = 7;
-    bytes contractAddress = 8;
-    bytes contractAction = 9;
-    bytes logs = 10;
+    string contractName = 8;
+    string contractAction = 9;
+    bytes contractResult = 10;
+    bytes deployedContractAddress = 11;
+    repeated string logs = 12;
 }
