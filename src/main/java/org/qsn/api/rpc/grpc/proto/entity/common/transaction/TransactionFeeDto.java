@@ -50,13 +50,13 @@ private static final long serialVersionUID = 0L;
             break;
           case 10: {
             org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder subBuilder = null;
-            if (charge_ != null) {
-              subBuilder = charge_.toBuilder();
+            if (maxCharge_ != null) {
+              subBuilder = maxCharge_.toBuilder();
             }
-            charge_ = input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.BInteger.parser(), extensionRegistry);
+            maxCharge_ = input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.BInteger.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(charge_);
-              charge_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(maxCharge_);
+              maxCharge_ = subBuilder.buildPartial();
             }
 
             break;
@@ -93,30 +93,30 @@ private static final long serialVersionUID = 0L;
             org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto.class, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto.Builder.class);
   }
 
-  public static final int CHARGE_FIELD_NUMBER = 1;
-  private org.qsn.api.rpc.grpc.proto.entity.common.BInteger charge_;
+  public static final int MAXCHARGE_FIELD_NUMBER = 1;
+  private org.qsn.api.rpc.grpc.proto.entity.common.BInteger maxCharge_;
   /**
-   * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
-   * @return Whether the charge field is set.
+   * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
+   * @return Whether the maxCharge field is set.
    */
   @java.lang.Override
-  public boolean hasCharge() {
-    return charge_ != null;
+  public boolean hasMaxCharge() {
+    return maxCharge_ != null;
   }
   /**
-   * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
-   * @return The charge.
+   * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
+   * @return The maxCharge.
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getCharge() {
-    return charge_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : charge_;
+  public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getMaxCharge() {
+    return maxCharge_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : maxCharge_;
   }
   /**
-   * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
+   * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getChargeOrBuilder() {
-    return getCharge();
+  public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getMaxChargeOrBuilder() {
+    return getMaxCharge();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -133,8 +133,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (charge_ != null) {
-      output.writeMessage(1, getCharge());
+    if (maxCharge_ != null) {
+      output.writeMessage(1, getMaxCharge());
     }
     unknownFields.writeTo(output);
   }
@@ -145,9 +145,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (charge_ != null) {
+    if (maxCharge_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getCharge());
+        .computeMessageSize(1, getMaxCharge());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -164,10 +164,10 @@ private static final long serialVersionUID = 0L;
     }
     org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto other = (org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto) obj;
 
-    if (hasCharge() != other.hasCharge()) return false;
-    if (hasCharge()) {
-      if (!getCharge()
-          .equals(other.getCharge())) return false;
+    if (hasMaxCharge() != other.hasMaxCharge()) return false;
+    if (hasMaxCharge()) {
+      if (!getMaxCharge()
+          .equals(other.getMaxCharge())) return false;
     }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -180,9 +180,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasCharge()) {
-      hash = (37 * hash) + CHARGE_FIELD_NUMBER;
-      hash = (53 * hash) + getCharge().hashCode();
+    if (hasMaxCharge()) {
+      hash = (37 * hash) + MAXCHARGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxCharge().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -317,11 +317,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (chargeBuilder_ == null) {
-        charge_ = null;
+      if (maxChargeBuilder_ == null) {
+        maxCharge_ = null;
       } else {
-        charge_ = null;
-        chargeBuilder_ = null;
+        maxCharge_ = null;
+        maxChargeBuilder_ = null;
       }
       return this;
     }
@@ -349,10 +349,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto buildPartial() {
       org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto result = new org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto(this);
-      if (chargeBuilder_ == null) {
-        result.charge_ = charge_;
+      if (maxChargeBuilder_ == null) {
+        result.maxCharge_ = maxCharge_;
       } else {
-        result.charge_ = chargeBuilder_.build();
+        result.maxCharge_ = maxChargeBuilder_.build();
       }
       onBuilt();
       return result;
@@ -402,8 +402,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto other) {
       if (other == org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto.getDefaultInstance()) return this;
-      if (other.hasCharge()) {
-        mergeCharge(other.getCharge());
+      if (other.hasMaxCharge()) {
+        mergeMaxCharge(other.getMaxCharge());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -434,123 +434,123 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private org.qsn.api.rpc.grpc.proto.entity.common.BInteger charge_;
+    private org.qsn.api.rpc.grpc.proto.entity.common.BInteger maxCharge_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> chargeBuilder_;
+        org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> maxChargeBuilder_;
     /**
-     * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
-     * @return Whether the charge field is set.
+     * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
+     * @return Whether the maxCharge field is set.
      */
-    public boolean hasCharge() {
-      return chargeBuilder_ != null || charge_ != null;
+    public boolean hasMaxCharge() {
+      return maxChargeBuilder_ != null || maxCharge_ != null;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
-     * @return The charge.
+     * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
+     * @return The maxCharge.
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getCharge() {
-      if (chargeBuilder_ == null) {
-        return charge_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : charge_;
+    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getMaxCharge() {
+      if (maxChargeBuilder_ == null) {
+        return maxCharge_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : maxCharge_;
       } else {
-        return chargeBuilder_.getMessage();
+        return maxChargeBuilder_.getMessage();
       }
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
+     * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
      */
-    public Builder setCharge(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
-      if (chargeBuilder_ == null) {
+    public Builder setMaxCharge(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
+      if (maxChargeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        charge_ = value;
+        maxCharge_ = value;
         onChanged();
       } else {
-        chargeBuilder_.setMessage(value);
+        maxChargeBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
+     * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
      */
-    public Builder setCharge(
+    public Builder setMaxCharge(
         org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder builderForValue) {
-      if (chargeBuilder_ == null) {
-        charge_ = builderForValue.build();
+      if (maxChargeBuilder_ == null) {
+        maxCharge_ = builderForValue.build();
         onChanged();
       } else {
-        chargeBuilder_.setMessage(builderForValue.build());
+        maxChargeBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
+     * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
      */
-    public Builder mergeCharge(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
-      if (chargeBuilder_ == null) {
-        if (charge_ != null) {
-          charge_ =
-            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.newBuilder(charge_).mergeFrom(value).buildPartial();
+    public Builder mergeMaxCharge(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
+      if (maxChargeBuilder_ == null) {
+        if (maxCharge_ != null) {
+          maxCharge_ =
+            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.newBuilder(maxCharge_).mergeFrom(value).buildPartial();
         } else {
-          charge_ = value;
+          maxCharge_ = value;
         }
         onChanged();
       } else {
-        chargeBuilder_.mergeFrom(value);
+        maxChargeBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
+     * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
      */
-    public Builder clearCharge() {
-      if (chargeBuilder_ == null) {
-        charge_ = null;
+    public Builder clearMaxCharge() {
+      if (maxChargeBuilder_ == null) {
+        maxCharge_ = null;
         onChanged();
       } else {
-        charge_ = null;
-        chargeBuilder_ = null;
+        maxCharge_ = null;
+        maxChargeBuilder_ = null;
       }
 
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
+     * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder getChargeBuilder() {
+    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder getMaxChargeBuilder() {
       
       onChanged();
-      return getChargeFieldBuilder().getBuilder();
+      return getMaxChargeFieldBuilder().getBuilder();
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
+     * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getChargeOrBuilder() {
-      if (chargeBuilder_ != null) {
-        return chargeBuilder_.getMessageOrBuilder();
+    public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getMaxChargeOrBuilder() {
+      if (maxChargeBuilder_ != null) {
+        return maxChargeBuilder_.getMessageOrBuilder();
       } else {
-        return charge_ == null ?
-            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : charge_;
+        return maxCharge_ == null ?
+            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : maxCharge_;
       }
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
+     * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> 
-        getChargeFieldBuilder() {
-      if (chargeBuilder_ == null) {
-        chargeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getMaxChargeFieldBuilder() {
+      if (maxChargeBuilder_ == null) {
+        maxChargeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder>(
-                getCharge(),
+                getMaxCharge(),
                 getParentForChildren(),
                 isClean());
-        charge_ = null;
+        maxCharge_ = null;
       }
-      return chargeBuilder_;
+      return maxChargeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

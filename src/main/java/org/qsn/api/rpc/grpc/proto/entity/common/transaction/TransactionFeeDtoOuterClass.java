@@ -30,10 +30,11 @@ public final class TransactionFeeDtoOuterClass {
     java.lang.String[] descriptorData = {
       "\n5qsn/entity/common/transaction/Transact" +
       "ionFeeDto.proto\022\020org.qsn.protobuf\032 qsn/e" +
-      "ntity/common/BInteger.proto\"?\n\021Transacti" +
-      "onFeeDto\022*\n\006charge\030\001 \001(\0132\032.org.qsn.proto" +
-      "buf.BIntegerB8\n4org.qsn.api.rpc.grpc.pro" +
-      "to.entity.common.transactionP\001b\006proto3"
+      "ntity/common/BInteger.proto\"B\n\021Transacti" +
+      "onFeeDto\022-\n\tmaxCharge\030\001 \001(\0132\032.org.qsn.pr" +
+      "otobuf.BIntegerB8\n4org.qsn.api.rpc.grpc." +
+      "proto.entity.common.transactionP\001b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -45,7 +46,7 @@ public final class TransactionFeeDtoOuterClass {
     internal_static_org_qsn_protobuf_TransactionFeeDto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_TransactionFeeDto_descriptor,
-        new java.lang.String[] { "Charge", });
+        new java.lang.String[] { "MaxCharge", });
     org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOuterClass.getDescriptor();
   }
 

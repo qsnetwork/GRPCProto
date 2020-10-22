@@ -8,17 +8,17 @@ public interface TransactionFeeDtoOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
-   * @return Whether the charge field is set.
+   * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
+   * @return Whether the maxCharge field is set.
    */
-  boolean hasCharge();
+  boolean hasMaxCharge();
   /**
-   * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
-   * @return The charge.
+   * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
+   * @return The maxCharge.
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.BInteger getCharge();
+  org.qsn.api.rpc.grpc.proto.entity.common.BInteger getMaxCharge();
   /**
-   * <code>.org.qsn.protobuf.BInteger charge = 1;</code>
+   * <code>.org.qsn.protobuf.BInteger maxCharge = 1;</code>
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getChargeOrBuilder();
+  org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getMaxChargeOrBuilder();
 }
