@@ -8,6 +8,5 @@ package org.qsn.protobuf;
 import "qsn/entity/common/BInteger.proto";
 
 message TransactionFeeDto{
-    BInteger price = 1;
-    int64 gas = 2;
+    BInteger maxCharge = 1;
 }
