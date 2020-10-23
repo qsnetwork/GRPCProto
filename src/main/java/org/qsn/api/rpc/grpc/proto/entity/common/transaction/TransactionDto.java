@@ -16,8 +16,9 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TransactionDto() {
-    smartContractName_ = com.google.protobuf.ByteString.EMPTY;
-    smartContractAction_ = com.google.protobuf.ByteString.EMPTY;
+    smartContractName_ = "";
+    smartContractAction_ = "";
+    smartContractArguments_ = java.util.Collections.emptyList();
     info_ = com.google.protobuf.ByteString.EMPTY;
     signatures_ = java.util.Collections.emptyList();
   }
@@ -72,16 +73,26 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            smartContractName_ = input.readBytes();
+            smartContractName_ = s;
             break;
           }
           case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            smartContractAction_ = input.readBytes();
+            smartContractAction_ = s;
             break;
           }
           case 42: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              smartContractArguments_ = new java.util.ArrayList<com.google.protobuf.ByteString>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            smartContractArguments_.add(input.readBytes());
+            break;
+          }
+          case 50: {
             org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto.Builder subBuilder = null;
             if (fee_ != null) {
               subBuilder = fee_.toBuilder();
@@ -94,12 +105,12 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
-          case 50: {
+          case 58: {
 
             info_ = input.readBytes();
             break;
           }
-          case 58: {
+          case 66: {
             org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.Builder subBuilder = null;
             if (attachment_ != null) {
               subBuilder = attachment_.toBuilder();
@@ -112,10 +123,10 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
-          case 66: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+          case 74: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               signatures_ = new java.util.ArrayList<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto>();
-              mutable_bitField0_ |= 0x00000001;
+              mutable_bitField0_ |= 0x00000002;
             }
             signatures_.add(
                 input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.parser(), extensionRegistry));
@@ -137,6 +148,9 @@ private static final long serialVersionUID = 0L;
           e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        smartContractArguments_ = java.util.Collections.unmodifiableList(smartContractArguments_); // C
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         signatures_ = java.util.Collections.unmodifiableList(signatures_);
       }
       this.unknownFields = unknownFields.build();
@@ -194,31 +208,112 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SMARTCONTRACTNAME_FIELD_NUMBER = 3;
-  private com.google.protobuf.ByteString smartContractName_;
+  private volatile java.lang.Object smartContractName_;
   /**
-   * <code>bytes smartContractName = 3;</code>
+   * <code>string smartContractName = 3;</code>
    * @return The smartContractName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getSmartContractName() {
-    return smartContractName_;
+  public java.lang.String getSmartContractName() {
+    java.lang.Object ref = smartContractName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      smartContractName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string smartContractName = 3;</code>
+   * @return The bytes for smartContractName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSmartContractNameBytes() {
+    java.lang.Object ref = smartContractName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      smartContractName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int SMARTCONTRACTACTION_FIELD_NUMBER = 4;
-  private com.google.protobuf.ByteString smartContractAction_;
+  private volatile java.lang.Object smartContractAction_;
   /**
-   * <code>bytes smartContractAction = 4;</code>
+   * <code>string smartContractAction = 4;</code>
    * @return The smartContractAction.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getSmartContractAction() {
-    return smartContractAction_;
+  public java.lang.String getSmartContractAction() {
+    java.lang.Object ref = smartContractAction_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      smartContractAction_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string smartContractAction = 4;</code>
+   * @return The bytes for smartContractAction.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSmartContractActionBytes() {
+    java.lang.Object ref = smartContractAction_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      smartContractAction_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
-  public static final int FEE_FIELD_NUMBER = 5;
+  public static final int SMARTCONTRACTARGUMENTS_FIELD_NUMBER = 5;
+  private java.util.List<com.google.protobuf.ByteString> smartContractArguments_;
+  /**
+   * <code>repeated bytes smartContractArguments = 5;</code>
+   * @return A list containing the smartContractArguments.
+   */
+  @java.lang.Override
+  public java.util.List<com.google.protobuf.ByteString>
+      getSmartContractArgumentsList() {
+    return smartContractArguments_;
+  }
+  /**
+   * <code>repeated bytes smartContractArguments = 5;</code>
+   * @return The count of smartContractArguments.
+   */
+  public int getSmartContractArgumentsCount() {
+    return smartContractArguments_.size();
+  }
+  /**
+   * <code>repeated bytes smartContractArguments = 5;</code>
+   * @param index The index of the element to return.
+   * @return The smartContractArguments at the given index.
+   */
+  public com.google.protobuf.ByteString getSmartContractArguments(int index) {
+    return smartContractArguments_.get(index);
+  }
+
+  public static final int FEE_FIELD_NUMBER = 6;
   private org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto fee_;
   /**
-   * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+   * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
    * @return Whether the fee field is set.
    */
   @java.lang.Override
@@ -226,7 +321,7 @@ private static final long serialVersionUID = 0L;
     return fee_ != null;
   }
   /**
-   * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+   * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
    * @return The fee.
    */
   @java.lang.Override
@@ -234,17 +329,17 @@ private static final long serialVersionUID = 0L;
     return fee_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto.getDefaultInstance() : fee_;
   }
   /**
-   * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+   * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
    */
   @java.lang.Override
   public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDtoOrBuilder getFeeOrBuilder() {
     return getFee();
   }
 
-  public static final int INFO_FIELD_NUMBER = 6;
+  public static final int INFO_FIELD_NUMBER = 7;
   private com.google.protobuf.ByteString info_;
   /**
-   * <code>bytes info = 6;</code>
+   * <code>bytes info = 7;</code>
    * @return The info.
    */
   @java.lang.Override
@@ -252,10 +347,10 @@ private static final long serialVersionUID = 0L;
     return info_;
   }
 
-  public static final int ATTACHMENT_FIELD_NUMBER = 7;
+  public static final int ATTACHMENT_FIELD_NUMBER = 8;
   private org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto attachment_;
   /**
-   * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+   * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
    * @return Whether the attachment field is set.
    */
   @java.lang.Override
@@ -263,7 +358,7 @@ private static final long serialVersionUID = 0L;
     return attachment_ != null;
   }
   /**
-   * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+   * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
    * @return The attachment.
    */
   @java.lang.Override
@@ -271,24 +366,24 @@ private static final long serialVersionUID = 0L;
     return attachment_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.getDefaultInstance() : attachment_;
   }
   /**
-   * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+   * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
    */
   @java.lang.Override
   public org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDtoOrBuilder getAttachmentOrBuilder() {
     return getAttachment();
   }
 
-  public static final int SIGNATURES_FIELD_NUMBER = 8;
+  public static final int SIGNATURES_FIELD_NUMBER = 9;
   private java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto> signatures_;
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
    */
   @java.lang.Override
   public java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto> getSignaturesList() {
     return signatures_;
   }
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder> 
@@ -296,21 +391,21 @@ private static final long serialVersionUID = 0L;
     return signatures_;
   }
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
    */
   @java.lang.Override
   public int getSignaturesCount() {
     return signatures_.size();
   }
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
    */
   @java.lang.Override
   public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto getSignatures(int index) {
     return signatures_.get(index);
   }
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
    */
   @java.lang.Override
   public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder getSignaturesOrBuilder(
@@ -338,23 +433,26 @@ private static final long serialVersionUID = 0L;
     if (txData_ != null) {
       output.writeMessage(2, getTxData());
     }
-    if (!smartContractName_.isEmpty()) {
-      output.writeBytes(3, smartContractName_);
+    if (!getSmartContractNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, smartContractName_);
     }
-    if (!smartContractAction_.isEmpty()) {
-      output.writeBytes(4, smartContractAction_);
+    if (!getSmartContractActionBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, smartContractAction_);
+    }
+    for (int i = 0; i < smartContractArguments_.size(); i++) {
+      output.writeBytes(5, smartContractArguments_.get(i));
     }
     if (fee_ != null) {
-      output.writeMessage(5, getFee());
+      output.writeMessage(6, getFee());
     }
     if (!info_.isEmpty()) {
-      output.writeBytes(6, info_);
+      output.writeBytes(7, info_);
     }
     if (attachment_ != null) {
-      output.writeMessage(7, getAttachment());
+      output.writeMessage(8, getAttachment());
     }
     for (int i = 0; i < signatures_.size(); i++) {
-      output.writeMessage(8, signatures_.get(i));
+      output.writeMessage(9, signatures_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -373,29 +471,36 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getTxData());
     }
-    if (!smartContractName_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(3, smartContractName_);
+    if (!getSmartContractNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, smartContractName_);
     }
-    if (!smartContractAction_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(4, smartContractAction_);
+    if (!getSmartContractActionBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, smartContractAction_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < smartContractArguments_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeBytesSizeNoTag(smartContractArguments_.get(i));
+      }
+      size += dataSize;
+      size += 1 * getSmartContractArgumentsList().size();
     }
     if (fee_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getFee());
+        .computeMessageSize(6, getFee());
     }
     if (!info_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(6, info_);
+        .computeBytesSize(7, info_);
     }
     if (attachment_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, getAttachment());
+        .computeMessageSize(8, getAttachment());
     }
     for (int i = 0; i < signatures_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, signatures_.get(i));
+        .computeMessageSize(9, signatures_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -423,6 +528,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSmartContractName())) return false;
     if (!getSmartContractAction()
         .equals(other.getSmartContractAction())) return false;
+    if (!getSmartContractArgumentsList()
+        .equals(other.getSmartContractArgumentsList())) return false;
     if (hasFee() != other.hasFee()) return false;
     if (hasFee()) {
       if (!getFee()
@@ -458,6 +565,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getSmartContractName().hashCode();
     hash = (37 * hash) + SMARTCONTRACTACTION_FIELD_NUMBER;
     hash = (53 * hash) + getSmartContractAction().hashCode();
+    if (getSmartContractArgumentsCount() > 0) {
+      hash = (37 * hash) + SMARTCONTRACTARGUMENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getSmartContractArgumentsList().hashCode();
+    }
     if (hasFee()) {
       hash = (37 * hash) + FEE_FIELD_NUMBER;
       hash = (53 * hash) + getFee().hashCode();
@@ -614,10 +725,12 @@ private static final long serialVersionUID = 0L;
         txData_ = null;
         txDataBuilder_ = null;
       }
-      smartContractName_ = com.google.protobuf.ByteString.EMPTY;
+      smartContractName_ = "";
 
-      smartContractAction_ = com.google.protobuf.ByteString.EMPTY;
+      smartContractAction_ = "";
 
+      smartContractArguments_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (feeBuilder_ == null) {
         fee_ = null;
       } else {
@@ -634,7 +747,7 @@ private static final long serialVersionUID = 0L;
       }
       if (signaturesBuilder_ == null) {
         signatures_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         signaturesBuilder_.clear();
       }
@@ -673,6 +786,11 @@ private static final long serialVersionUID = 0L;
       }
       result.smartContractName_ = smartContractName_;
       result.smartContractAction_ = smartContractAction_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        smartContractArguments_ = java.util.Collections.unmodifiableList(smartContractArguments_);
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.smartContractArguments_ = smartContractArguments_;
       if (feeBuilder_ == null) {
         result.fee_ = fee_;
       } else {
@@ -685,9 +803,9 @@ private static final long serialVersionUID = 0L;
         result.attachment_ = attachmentBuilder_.build();
       }
       if (signaturesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           signatures_ = java.util.Collections.unmodifiableList(signatures_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.signatures_ = signatures_;
       } else {
@@ -747,11 +865,23 @@ private static final long serialVersionUID = 0L;
       if (other.hasTxData()) {
         mergeTxData(other.getTxData());
       }
-      if (other.getSmartContractName() != com.google.protobuf.ByteString.EMPTY) {
-        setSmartContractName(other.getSmartContractName());
+      if (!other.getSmartContractName().isEmpty()) {
+        smartContractName_ = other.smartContractName_;
+        onChanged();
       }
-      if (other.getSmartContractAction() != com.google.protobuf.ByteString.EMPTY) {
-        setSmartContractAction(other.getSmartContractAction());
+      if (!other.getSmartContractAction().isEmpty()) {
+        smartContractAction_ = other.smartContractAction_;
+        onChanged();
+      }
+      if (!other.smartContractArguments_.isEmpty()) {
+        if (smartContractArguments_.isEmpty()) {
+          smartContractArguments_ = other.smartContractArguments_;
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ensureSmartContractArgumentsIsMutable();
+          smartContractArguments_.addAll(other.smartContractArguments_);
+        }
+        onChanged();
       }
       if (other.hasFee()) {
         mergeFee(other.getFee());
@@ -766,7 +896,7 @@ private static final long serialVersionUID = 0L;
         if (!other.signatures_.isEmpty()) {
           if (signatures_.isEmpty()) {
             signatures_ = other.signatures_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureSignaturesIsMutable();
             signatures_.addAll(other.signatures_);
@@ -779,7 +909,7 @@ private static final long serialVersionUID = 0L;
             signaturesBuilder_.dispose();
             signaturesBuilder_ = null;
             signatures_ = other.signatures_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             signaturesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSignaturesFieldBuilder() : null;
@@ -968,21 +1098,47 @@ private static final long serialVersionUID = 0L;
       return txDataBuilder_;
     }
 
-    private com.google.protobuf.ByteString smartContractName_ = com.google.protobuf.ByteString.EMPTY;
+    private java.lang.Object smartContractName_ = "";
     /**
-     * <code>bytes smartContractName = 3;</code>
+     * <code>string smartContractName = 3;</code>
      * @return The smartContractName.
      */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getSmartContractName() {
-      return smartContractName_;
+    public java.lang.String getSmartContractName() {
+      java.lang.Object ref = smartContractName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        smartContractName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
-     * <code>bytes smartContractName = 3;</code>
+     * <code>string smartContractName = 3;</code>
+     * @return The bytes for smartContractName.
+     */
+    public com.google.protobuf.ByteString
+        getSmartContractNameBytes() {
+      java.lang.Object ref = smartContractName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        smartContractName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string smartContractName = 3;</code>
      * @param value The smartContractName to set.
      * @return This builder for chaining.
      */
-    public Builder setSmartContractName(com.google.protobuf.ByteString value) {
+    public Builder setSmartContractName(
+        java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -992,7 +1148,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes smartContractName = 3;</code>
+     * <code>string smartContractName = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearSmartContractName() {
@@ -1001,22 +1157,64 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
-
-    private com.google.protobuf.ByteString smartContractAction_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes smartContractAction = 4;</code>
+     * <code>string smartContractName = 3;</code>
+     * @param value The bytes for smartContractName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSmartContractNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      smartContractName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object smartContractAction_ = "";
+    /**
+     * <code>string smartContractAction = 4;</code>
      * @return The smartContractAction.
      */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getSmartContractAction() {
-      return smartContractAction_;
+    public java.lang.String getSmartContractAction() {
+      java.lang.Object ref = smartContractAction_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        smartContractAction_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
-     * <code>bytes smartContractAction = 4;</code>
+     * <code>string smartContractAction = 4;</code>
+     * @return The bytes for smartContractAction.
+     */
+    public com.google.protobuf.ByteString
+        getSmartContractActionBytes() {
+      java.lang.Object ref = smartContractAction_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        smartContractAction_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string smartContractAction = 4;</code>
      * @param value The smartContractAction to set.
      * @return This builder for chaining.
      */
-    public Builder setSmartContractAction(com.google.protobuf.ByteString value) {
+    public Builder setSmartContractAction(
+        java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -1026,7 +1224,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes smartContractAction = 4;</code>
+     * <code>string smartContractAction = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearSmartContractAction() {
@@ -1035,19 +1233,120 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+    /**
+     * <code>string smartContractAction = 4;</code>
+     * @param value The bytes for smartContractAction to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSmartContractActionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      smartContractAction_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.google.protobuf.ByteString> smartContractArguments_ = java.util.Collections.emptyList();
+    private void ensureSmartContractArgumentsIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        smartContractArguments_ = new java.util.ArrayList<com.google.protobuf.ByteString>(smartContractArguments_);
+        bitField0_ |= 0x00000001;
+       }
+    }
+    /**
+     * <code>repeated bytes smartContractArguments = 5;</code>
+     * @return A list containing the smartContractArguments.
+     */
+    public java.util.List<com.google.protobuf.ByteString>
+        getSmartContractArgumentsList() {
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(smartContractArguments_) : smartContractArguments_;
+    }
+    /**
+     * <code>repeated bytes smartContractArguments = 5;</code>
+     * @return The count of smartContractArguments.
+     */
+    public int getSmartContractArgumentsCount() {
+      return smartContractArguments_.size();
+    }
+    /**
+     * <code>repeated bytes smartContractArguments = 5;</code>
+     * @param index The index of the element to return.
+     * @return The smartContractArguments at the given index.
+     */
+    public com.google.protobuf.ByteString getSmartContractArguments(int index) {
+      return smartContractArguments_.get(index);
+    }
+    /**
+     * <code>repeated bytes smartContractArguments = 5;</code>
+     * @param index The index to set the value at.
+     * @param value The smartContractArguments to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSmartContractArguments(
+        int index, com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSmartContractArgumentsIsMutable();
+      smartContractArguments_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated bytes smartContractArguments = 5;</code>
+     * @param value The smartContractArguments to add.
+     * @return This builder for chaining.
+     */
+    public Builder addSmartContractArguments(com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSmartContractArgumentsIsMutable();
+      smartContractArguments_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated bytes smartContractArguments = 5;</code>
+     * @param values The smartContractArguments to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllSmartContractArguments(
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+      ensureSmartContractArgumentsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, smartContractArguments_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated bytes smartContractArguments = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSmartContractArguments() {
+      smartContractArguments_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
 
     private org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto fee_;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDtoOrBuilder> feeBuilder_;
     /**
-     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
      * @return Whether the fee field is set.
      */
     public boolean hasFee() {
       return feeBuilder_ != null || fee_ != null;
     }
     /**
-     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
      * @return The fee.
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto getFee() {
@@ -1058,7 +1357,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
      */
     public Builder setFee(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto value) {
       if (feeBuilder_ == null) {
@@ -1074,7 +1373,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
      */
     public Builder setFee(
         org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto.Builder builderForValue) {
@@ -1088,7 +1387,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
      */
     public Builder mergeFee(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto value) {
       if (feeBuilder_ == null) {
@@ -1106,7 +1405,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
      */
     public Builder clearFee() {
       if (feeBuilder_ == null) {
@@ -1120,7 +1419,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto.Builder getFeeBuilder() {
       
@@ -1128,7 +1427,7 @@ private static final long serialVersionUID = 0L;
       return getFeeFieldBuilder().getBuilder();
     }
     /**
-     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDtoOrBuilder getFeeOrBuilder() {
       if (feeBuilder_ != null) {
@@ -1139,7 +1438,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 5;</code>
+     * <code>.org.qsn.protobuf.TransactionFeeDto fee = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDtoOrBuilder> 
@@ -1157,7 +1456,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString info_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes info = 6;</code>
+     * <code>bytes info = 7;</code>
      * @return The info.
      */
     @java.lang.Override
@@ -1165,7 +1464,7 @@ private static final long serialVersionUID = 0L;
       return info_;
     }
     /**
-     * <code>bytes info = 6;</code>
+     * <code>bytes info = 7;</code>
      * @param value The info to set.
      * @return This builder for chaining.
      */
@@ -1179,7 +1478,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes info = 6;</code>
+     * <code>bytes info = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearInfo() {
@@ -1193,14 +1492,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDtoOrBuilder> attachmentBuilder_;
     /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
      * @return Whether the attachment field is set.
      */
     public boolean hasAttachment() {
       return attachmentBuilder_ != null || attachment_ != null;
     }
     /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
      * @return The attachment.
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto getAttachment() {
@@ -1211,7 +1510,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
      */
     public Builder setAttachment(org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto value) {
       if (attachmentBuilder_ == null) {
@@ -1227,7 +1526,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
      */
     public Builder setAttachment(
         org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.Builder builderForValue) {
@@ -1241,7 +1540,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
      */
     public Builder mergeAttachment(org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto value) {
       if (attachmentBuilder_ == null) {
@@ -1259,7 +1558,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
      */
     public Builder clearAttachment() {
       if (attachmentBuilder_ == null) {
@@ -1273,7 +1572,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.Builder getAttachmentBuilder() {
       
@@ -1281,7 +1580,7 @@ private static final long serialVersionUID = 0L;
       return getAttachmentFieldBuilder().getBuilder();
     }
     /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDtoOrBuilder getAttachmentOrBuilder() {
       if (attachmentBuilder_ != null) {
@@ -1292,7 +1591,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 7;</code>
+     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDtoOrBuilder> 
@@ -1311,9 +1610,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto> signatures_ =
       java.util.Collections.emptyList();
     private void ensureSignaturesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         signatures_ = new java.util.ArrayList<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto>(signatures_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -1321,7 +1620,7 @@ private static final long serialVersionUID = 0L;
         org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder> signaturesBuilder_;
 
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto> getSignaturesList() {
       if (signaturesBuilder_ == null) {
@@ -1331,7 +1630,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public int getSignaturesCount() {
       if (signaturesBuilder_ == null) {
@@ -1341,7 +1640,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto getSignatures(int index) {
       if (signaturesBuilder_ == null) {
@@ -1351,7 +1650,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public Builder setSignatures(
         int index, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto value) {
@@ -1368,7 +1667,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public Builder setSignatures(
         int index, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder builderForValue) {
@@ -1382,7 +1681,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public Builder addSignatures(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto value) {
       if (signaturesBuilder_ == null) {
@@ -1398,7 +1697,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public Builder addSignatures(
         int index, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto value) {
@@ -1415,7 +1714,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public Builder addSignatures(
         org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder builderForValue) {
@@ -1429,7 +1728,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public Builder addSignatures(
         int index, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder builderForValue) {
@@ -1443,7 +1742,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public Builder addAllSignatures(
         java.lang.Iterable<? extends org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto> values) {
@@ -1458,12 +1757,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public Builder clearSignatures() {
       if (signaturesBuilder_ == null) {
         signatures_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         signaturesBuilder_.clear();
@@ -1471,7 +1770,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public Builder removeSignatures(int index) {
       if (signaturesBuilder_ == null) {
@@ -1484,14 +1783,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder getSignaturesBuilder(
         int index) {
       return getSignaturesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder getSignaturesOrBuilder(
         int index) {
@@ -1501,7 +1800,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder> 
          getSignaturesOrBuilderList() {
@@ -1512,14 +1811,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder addSignaturesBuilder() {
       return getSignaturesFieldBuilder().addBuilder(
           org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.getDefaultInstance());
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder addSignaturesBuilder(
         int index) {
@@ -1527,7 +1826,7 @@ private static final long serialVersionUID = 0L;
           index, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.getDefaultInstance());
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
      */
     public java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder> 
          getSignaturesBuilderList() {
@@ -1540,7 +1839,7 @@ private static final long serialVersionUID = 0L;
         signaturesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder>(
                 signatures_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         signatures_ = null;
