@@ -7,7 +7,7 @@ package org.qsn.protobuf;
 
 import "qsn/entity/common/BaseRequest.proto";
 
-message GetAccountBalanceRequest{
+message GetAccountInfoRequest {
     BaseRequest baseRequest = 1;
     bytes address = 2;
 }

@@ -23,23 +23,29 @@ public final class AccountRpcOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020AccountRpc.proto\022\020org.qsn.protobuf\0321qs" +
-      "n/entity/request/GetAccountBalanceReques" +
-      "t.proto\0323qsn/entity/response/GetAccountB" +
-      "alanceResponse.proto2z\n\nAccountRpc\022l\n\021ge" +
-      "tAccountBalance\022*.org.qsn.protobuf.GetAc" +
-      "countBalanceRequest\032+.org.qsn.protobuf.G" +
-      "etAccountBalanceResponseB\036\n\032org.qsn.api." +
-      "rpc.grpc.protoP\001b\006proto3"
+      "\n\020AccountRpc.proto\022\020org.qsn.protobuf\032.qs" +
+      "n/entity/request/GetAccountInfoRequest.p" +
+      "roto\0323qsn/entity/response/GetAccountBala" +
+      "nceResponse.proto\0321qsn/entity/response/G" +
+      "etAccountNonceResponse.proto2\336\001\n\nAccount" +
+      "Rpc\022i\n\021getAccountBalance\022\'.org.qsn.proto" +
+      "buf.GetAccountInfoRequest\032+.org.qsn.prot" +
+      "obuf.GetAccountBalanceResponse\022e\n\017getAcc" +
+      "ountNonce\022\'.org.qsn.protobuf.GetAccountI" +
+      "nfoRequest\032).org.qsn.protobuf.GetAccount" +
+      "NonceResponseB\036\n\032org.qsn.api.rpc.grpc.pr" +
+      "otoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequestOuterClass.getDescriptor(),
+          org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequestOuterClass.getDescriptor(),
           org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponseOuterClass.getDescriptor(),
+          org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponseOuterClass.getDescriptor(),
         });
-    org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequestOuterClass.getDescriptor();
+    org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequestOuterClass.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponseOuterClass.getDescriptor();
+    org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponseOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -27,27 +27,27 @@ public final class AccountRpcGrpc {
   public static final String SERVICE_NAME = "org.qsn.protobuf.AccountRpc";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequest,
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest,
       org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse> getGetAccountBalanceMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getAccountBalance",
-      requestType = org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequest.class,
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest.class,
       responseType = org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequest,
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest,
       org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse> getGetAccountBalanceMethod() {
-    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse> getGetAccountBalanceMethod;
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse> getGetAccountBalanceMethod;
     if ((getGetAccountBalanceMethod = AccountRpcGrpc.getGetAccountBalanceMethod) == null) {
       synchronized (AccountRpcGrpc.class) {
         if ((getGetAccountBalanceMethod = AccountRpcGrpc.getGetAccountBalanceMethod) == null) {
           AccountRpcGrpc.getGetAccountBalanceMethod = getGetAccountBalanceMethod =
-              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse>newBuilder()
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAccountBalance"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequest.getDefaultInstance()))
+                  org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse.getDefaultInstance()))
               .setSchemaDescriptor(new AccountRpcMethodDescriptorSupplier("getAccountBalance"))
@@ -56,6 +56,37 @@ public final class AccountRpcGrpc {
       }
     }
     return getGetAccountBalanceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponse> getGetAccountNonceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getAccountNonce",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponse> getGetAccountNonceMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponse> getGetAccountNonceMethod;
+    if ((getGetAccountNonceMethod = AccountRpcGrpc.getGetAccountNonceMethod) == null) {
+      synchronized (AccountRpcGrpc.class) {
+        if ((getGetAccountNonceMethod = AccountRpcGrpc.getGetAccountNonceMethod) == null) {
+          AccountRpcGrpc.getGetAccountNonceMethod = getGetAccountNonceMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAccountNonce"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AccountRpcMethodDescriptorSupplier("getAccountNonce"))
+              .build();
+        }
+      }
+    }
+    return getGetAccountNonceMethod;
   }
 
   /**
@@ -108,9 +139,16 @@ public final class AccountRpcGrpc {
 
     /**
      */
-    public void getAccountBalance(org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequest request,
+    public void getAccountBalance(org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest request,
         io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetAccountBalanceMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getAccountNonce(org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetAccountNonceMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -119,9 +157,16 @@ public final class AccountRpcGrpc {
             getGetAccountBalanceMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequest,
+                org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest,
                 org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse>(
                   this, METHODID_GET_ACCOUNT_BALANCE)))
+          .addMethod(
+            getGetAccountNonceMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponse>(
+                  this, METHODID_GET_ACCOUNT_NONCE)))
           .build();
     }
   }
@@ -142,10 +187,18 @@ public final class AccountRpcGrpc {
 
     /**
      */
-    public void getAccountBalance(org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequest request,
+    public void getAccountBalance(org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest request,
         io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetAccountBalanceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getAccountNonce(org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetAccountNonceMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -165,9 +218,16 @@ public final class AccountRpcGrpc {
 
     /**
      */
-    public org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse getAccountBalance(org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequest request) {
+    public org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse getAccountBalance(org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetAccountBalanceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponse getAccountNonce(org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetAccountNonceMethod(), getCallOptions(), request);
     }
   }
 
@@ -188,13 +248,22 @@ public final class AccountRpcGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse> getAccountBalance(
-        org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequest request) {
+        org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetAccountBalanceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponse> getAccountNonce(
+        org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetAccountNonceMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_GET_ACCOUNT_BALANCE = 0;
+  private static final int METHODID_GET_ACCOUNT_NONCE = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -214,8 +283,12 @@ public final class AccountRpcGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_ACCOUNT_BALANCE:
-          serviceImpl.getAccountBalance((org.qsn.api.rpc.grpc.proto.entity.request.GetAccountBalanceRequest) request,
+          serviceImpl.getAccountBalance((org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest) request,
               (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponse>) responseObserver);
+          break;
+        case METHODID_GET_ACCOUNT_NONCE:
+          serviceImpl.getAccountNonce((org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -279,6 +352,7 @@ public final class AccountRpcGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AccountRpcFileDescriptorSupplier())
               .addMethod(getGetAccountBalanceMethod())
+              .addMethod(getGetAccountNonceMethod())
               .build();
         }
       }
