@@ -25,7 +25,7 @@ public final class BlockRpcOuterClass {
     java.lang.String[] descriptorData = {
       "\n\016BlockRpc.proto\022\020org.qsn.protobuf\032&qsn/" +
       "entity/request/BlockRequests.proto\032(qsn/" +
-      "entity/response/BlockResponses.proto2\316\003\n" +
+      "entity/response/BlockResponses.proto2\263\004\n" +
       "\010BlockRpc\022u\n\024getBlockHeaderByHash\022-.org." +
       "qsn.protobuf.GetBlockHeaderByHashRequest" +
       "\032..org.qsn.protobuf.GetBlockHeaderByHash" +
@@ -37,8 +37,11 @@ public final class BlockRpcOuterClass {
       "sn.protobuf.GetBlockByHashResponse\022i\n\020ge" +
       "tBlockByHeight\022).org.qsn.protobuf.GetBlo" +
       "ckByHeightRequest\032*.org.qsn.protobuf.Get" +
-      "BlockByHeightResponseB\036\n\032org.qsn.api.rpc" +
-      ".grpc.protoP\001b\006proto3"
+      "BlockByHeightResponse\022c\n\016getBlockHeight\022" +
+      "\'.org.qsn.protobuf.GetBlockHeightRequest" +
+      "\032(.org.qsn.protobuf.GetBlockHeightRespon" +
+      "seB\036\n\032org.qsn.api.rpc.grpc.protoP\001b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

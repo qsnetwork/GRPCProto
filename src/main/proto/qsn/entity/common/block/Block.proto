@@ -8,7 +8,7 @@ package org.qsn.protobuf;
 import "qsn/entity/common/transaction/TransactionDto.proto";
 
 message BlockHeaderVersion {
-  int32 bloc = 1;
+  int32 block = 1;
   int32 app = 2;
 }
 

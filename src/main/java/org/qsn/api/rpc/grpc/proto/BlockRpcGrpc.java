@@ -151,6 +151,37 @@ public final class BlockRpcGrpc {
     return getGetBlockByHeightMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse> getGetBlockHeightMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getBlockHeight",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse> getGetBlockHeightMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse> getGetBlockHeightMethod;
+    if ((getGetBlockHeightMethod = BlockRpcGrpc.getGetBlockHeightMethod) == null) {
+      synchronized (BlockRpcGrpc.class) {
+        if ((getGetBlockHeightMethod = BlockRpcGrpc.getGetBlockHeightMethod) == null) {
+          BlockRpcGrpc.getGetBlockHeightMethod = getGetBlockHeightMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getBlockHeight"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BlockRpcMethodDescriptorSupplier("getBlockHeight"))
+              .build();
+        }
+      }
+    }
+    return getGetBlockHeightMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -227,6 +258,13 @@ public final class BlockRpcGrpc {
       asyncUnimplementedUnaryCall(getGetBlockByHeightMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getBlockHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetBlockHeightMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -257,6 +295,13 @@ public final class BlockRpcGrpc {
                 org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest,
                 org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse>(
                   this, METHODID_GET_BLOCK_BY_HEIGHT)))
+          .addMethod(
+            getGetBlockHeightMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse>(
+                  this, METHODID_GET_BLOCK_HEIGHT)))
           .build();
     }
   }
@@ -306,6 +351,14 @@ public final class BlockRpcGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetBlockByHeightMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getBlockHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetBlockHeightMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -348,6 +401,13 @@ public final class BlockRpcGrpc {
     public org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse getBlockByHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetBlockByHeightMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse getBlockHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetBlockHeightMethod(), getCallOptions(), request);
     }
   }
 
@@ -396,12 +456,21 @@ public final class BlockRpcGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetBlockByHeightMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse> getBlockHeight(
+        org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetBlockHeightMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_BLOCK_HEADER_BY_HASH = 0;
   private static final int METHODID_GET_BLOCK_HEADER_BY_HEIGHT = 1;
   private static final int METHODID_GET_BLOCK_BY_HASH = 2;
   private static final int METHODID_GET_BLOCK_BY_HEIGHT = 3;
+  private static final int METHODID_GET_BLOCK_HEIGHT = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -435,6 +504,10 @@ public final class BlockRpcGrpc {
         case METHODID_GET_BLOCK_BY_HEIGHT:
           serviceImpl.getBlockByHeight((org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest) request,
               (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse>) responseObserver);
+          break;
+        case METHODID_GET_BLOCK_HEIGHT:
+          serviceImpl.getBlockHeight((org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -501,6 +574,7 @@ public final class BlockRpcGrpc {
               .addMethod(getGetBlockHeaderByHeightMethod())
               .addMethod(getGetBlockByHashMethod())
               .addMethod(getGetBlockByHeightMethod())
+              .addMethod(getGetBlockHeightMethod())
               .build();
         }
       }

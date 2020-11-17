@@ -34,6 +34,11 @@ public final class BlockRequests {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_qsn_protobuf_GetBlockByHeightRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_GetBlockHeightRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_GetBlockHeightRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -54,9 +59,11 @@ public final class BlockRequests {
       "\n\013baseRequest\030\001 \001(\0132\035.org.qsn.protobuf.B" +
       "aseRequest\022\014\n\004hash\030\002 \001(\014\"]\n\027GetBlockByHe" +
       "ightRequest\0222\n\013baseRequest\030\001 \001(\0132\035.org.q" +
-      "sn.protobuf.BaseRequest\022\016\n\006height\030\002 \001(\003B" +
-      "-\n)org.qsn.api.rpc.grpc.proto.entity.req" +
-      "uestP\001b\006proto3"
+      "sn.protobuf.BaseRequest\022\016\n\006height\030\002 \001(\003\"" +
+      "K\n\025GetBlockHeightRequest\0222\n\013baseRequest\030" +
+      "\001 \001(\0132\035.org.qsn.protobuf.BaseRequestB-\n)" +
+      "org.qsn.api.rpc.grpc.proto.entity.reques" +
+      "tP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -87,6 +94,12 @@ public final class BlockRequests {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_GetBlockByHeightRequest_descriptor,
         new java.lang.String[] { "BaseRequest", "Height", });
+    internal_static_org_qsn_protobuf_GetBlockHeightRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_org_qsn_protobuf_GetBlockHeightRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_GetBlockHeightRequest_descriptor,
+        new java.lang.String[] { "BaseRequest", });
     org.qsn.api.rpc.grpc.proto.entity.common.BaseRequestOuterClass.getDescriptor();
   }
 

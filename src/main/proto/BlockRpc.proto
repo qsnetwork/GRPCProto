@@ -13,4 +13,5 @@ service BlockRpc {
   rpc getBlockHeaderByHeight(GetBlockHeaderByHeightRequest) returns (GetBlockHeaderByHeightResponse);
   rpc getBlockByHash(GetBlockByHashRequest) returns (GetBlockByHashResponse);
   rpc getBlockByHeight(GetBlockByHeightRequest) returns (GetBlockByHeightResponse);
+  rpc getBlockHeight(GetBlockHeightRequest) returns (GetBlockHeightResponse);
 }

@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
             break;
           case 8: {
 
-            bloc_ = input.readInt32();
+            block_ = input.readInt32();
             break;
           }
           case 16: {
@@ -90,15 +90,15 @@ private static final long serialVersionUID = 0L;
             org.qsn.api.rpc.grpc.proto.entity.common.block.BlockHeaderVersion.class, org.qsn.api.rpc.grpc.proto.entity.common.block.BlockHeaderVersion.Builder.class);
   }
 
-  public static final int BLOC_FIELD_NUMBER = 1;
-  private int bloc_;
+  public static final int BLOCK_FIELD_NUMBER = 1;
+  private int block_;
   /**
-   * <code>int32 bloc = 1;</code>
-   * @return The bloc.
+   * <code>int32 block = 1;</code>
+   * @return The block.
    */
   @java.lang.Override
-  public int getBloc() {
-    return bloc_;
+  public int getBlock() {
+    return block_;
   }
 
   public static final int APP_FIELD_NUMBER = 2;
@@ -126,8 +126,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (bloc_ != 0) {
-      output.writeInt32(1, bloc_);
+    if (block_ != 0) {
+      output.writeInt32(1, block_);
     }
     if (app_ != 0) {
       output.writeInt32(2, app_);
@@ -141,9 +141,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (bloc_ != 0) {
+    if (block_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, bloc_);
+        .computeInt32Size(1, block_);
     }
     if (app_ != 0) {
       size += com.google.protobuf.CodedOutputStream
@@ -164,8 +164,8 @@ private static final long serialVersionUID = 0L;
     }
     org.qsn.api.rpc.grpc.proto.entity.common.block.BlockHeaderVersion other = (org.qsn.api.rpc.grpc.proto.entity.common.block.BlockHeaderVersion) obj;
 
-    if (getBloc()
-        != other.getBloc()) return false;
+    if (getBlock()
+        != other.getBlock()) return false;
     if (getApp()
         != other.getApp()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -179,8 +179,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + BLOC_FIELD_NUMBER;
-    hash = (53 * hash) + getBloc();
+    hash = (37 * hash) + BLOCK_FIELD_NUMBER;
+    hash = (53 * hash) + getBlock();
     hash = (37 * hash) + APP_FIELD_NUMBER;
     hash = (53 * hash) + getApp();
     hash = (29 * hash) + unknownFields.hashCode();
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bloc_ = 0;
+      block_ = 0;
 
       app_ = 0;
 
@@ -346,7 +346,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.qsn.api.rpc.grpc.proto.entity.common.block.BlockHeaderVersion buildPartial() {
       org.qsn.api.rpc.grpc.proto.entity.common.block.BlockHeaderVersion result = new org.qsn.api.rpc.grpc.proto.entity.common.block.BlockHeaderVersion(this);
-      result.bloc_ = bloc_;
+      result.block_ = block_;
       result.app_ = app_;
       onBuilt();
       return result;
@@ -396,8 +396,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(org.qsn.api.rpc.grpc.proto.entity.common.block.BlockHeaderVersion other) {
       if (other == org.qsn.api.rpc.grpc.proto.entity.common.block.BlockHeaderVersion.getDefaultInstance()) return this;
-      if (other.getBloc() != 0) {
-        setBloc(other.getBloc());
+      if (other.getBlock() != 0) {
+        setBlock(other.getBlock());
       }
       if (other.getApp() != 0) {
         setApp(other.getApp());
@@ -431,33 +431,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bloc_ ;
+    private int block_ ;
     /**
-     * <code>int32 bloc = 1;</code>
-     * @return The bloc.
+     * <code>int32 block = 1;</code>
+     * @return The block.
      */
     @java.lang.Override
-    public int getBloc() {
-      return bloc_;
+    public int getBlock() {
+      return block_;
     }
     /**
-     * <code>int32 bloc = 1;</code>
-     * @param value The bloc to set.
+     * <code>int32 block = 1;</code>
+     * @param value The block to set.
      * @return This builder for chaining.
      */
-    public Builder setBloc(int value) {
+    public Builder setBlock(int value) {
       
-      bloc_ = value;
+      block_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 bloc = 1;</code>
+     * <code>int32 block = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearBloc() {
+    public Builder clearBlock() {
       
-      bloc_ = 0;
+      block_ = 0;
       onChanged();
       return this;
     }

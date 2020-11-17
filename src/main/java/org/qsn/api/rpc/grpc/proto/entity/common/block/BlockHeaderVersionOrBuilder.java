@@ -8,10 +8,10 @@ public interface BlockHeaderVersionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 bloc = 1;</code>
-   * @return The bloc.
+   * <code>int32 block = 1;</code>
+   * @return The block.
    */
-  int getBloc();
+  int getBlock();
 
   /**
    * <code>int32 app = 2;</code>

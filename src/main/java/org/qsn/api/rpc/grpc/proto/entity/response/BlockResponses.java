@@ -34,6 +34,11 @@ public final class BlockResponses {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_qsn_protobuf_GetBlockByHeightResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_GetBlockHeightResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_GetBlockHeightResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -58,8 +63,10 @@ public final class BlockResponses {
       "f.BlockDto\"o\n\030GetBlockByHeightResponse\022(" +
       "\n\006result\030\001 \001(\0132\030.org.qsn.protobuf.Result" +
       "\022)\n\005block\030\002 \001(\0132\032.org.qsn.protobuf.Block" +
-      "DtoB.\n*org.qsn.api.rpc.grpc.proto.entity" +
-      ".responseP\001b\006proto3"
+      "Dto\"R\n\026GetBlockHeightResponse\022(\n\006result\030" +
+      "\001 \001(\0132\030.org.qsn.protobuf.Result\022\016\n\006heigh" +
+      "t\030\002 \001(\003B.\n*org.qsn.api.rpc.grpc.proto.en" +
+      "tity.responseP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -91,6 +98,12 @@ public final class BlockResponses {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_GetBlockByHeightResponse_descriptor,
         new java.lang.String[] { "Result", "Block", });
+    internal_static_org_qsn_protobuf_GetBlockHeightResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_org_qsn_protobuf_GetBlockHeightResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_GetBlockHeightResponse_descriptor,
+        new java.lang.String[] { "Result", "Height", });
     org.qsn.api.rpc.grpc.proto.entity.common.ResultOuterClass.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.common.block.Block.getDescriptor();
   }
