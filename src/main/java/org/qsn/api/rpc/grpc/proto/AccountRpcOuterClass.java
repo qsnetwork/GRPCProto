@@ -23,29 +23,27 @@ public final class AccountRpcOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020AccountRpc.proto\022\020org.qsn.protobuf\032.qs" +
-      "n/entity/request/GetAccountInfoRequest.p" +
-      "roto\0323qsn/entity/response/GetAccountBala" +
-      "nceResponse.proto\0321qsn/entity/response/G" +
-      "etAccountNonceResponse.proto2\336\001\n\nAccount" +
-      "Rpc\022i\n\021getAccountBalance\022\'.org.qsn.proto" +
-      "buf.GetAccountInfoRequest\032+.org.qsn.prot" +
-      "obuf.GetAccountBalanceResponse\022e\n\017getAcc" +
-      "ountNonce\022\'.org.qsn.protobuf.GetAccountI" +
-      "nfoRequest\032).org.qsn.protobuf.GetAccount" +
-      "NonceResponseB\036\n\032org.qsn.api.rpc.grpc.pr" +
-      "otoP\001b\006proto3"
+      "\n\020AccountRpc.proto\022\020org.qsn.protobuf\032(qs" +
+      "n/entity/request/AccountRequests.proto\032*" +
+      "qsn/entity/response/AccountResponses.pro" +
+      "to2\273\002\n\nAccountRpc\022l\n\021getAccountBalance\022*" +
+      ".org.qsn.protobuf.GetAccountBalanceReque" +
+      "st\032+.org.qsn.protobuf.GetAccountBalanceR" +
+      "esponse\022f\n\017getAccountNonce\022(.org.qsn.pro" +
+      "tobuf.GetAccountNonceRequest\032).org.qsn.p" +
+      "rotobuf.GetAccountNonceResponse\022W\n\ngetAc" +
+      "count\022#.org.qsn.protobuf.GetAccountReque" +
+      "st\032$.org.qsn.protobuf.GetAccountResponse" +
+      "B\036\n\032org.qsn.api.rpc.grpc.protoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequestOuterClass.getDescriptor(),
-          org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponseOuterClass.getDescriptor(),
-          org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponseOuterClass.getDescriptor(),
+          org.qsn.api.rpc.grpc.proto.entity.request.AccountRequests.getDescriptor(),
+          org.qsn.api.rpc.grpc.proto.entity.response.AccountResponses.getDescriptor(),
         });
-    org.qsn.api.rpc.grpc.proto.entity.request.GetAccountInfoRequestOuterClass.getDescriptor();
-    org.qsn.api.rpc.grpc.proto.entity.response.GetAccountBalanceResponseOuterClass.getDescriptor();
-    org.qsn.api.rpc.grpc.proto.entity.response.GetAccountNonceResponseOuterClass.getDescriptor();
+    org.qsn.api.rpc.grpc.proto.entity.request.AccountRequests.getDescriptor();
+    org.qsn.api.rpc.grpc.proto.entity.response.AccountResponses.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

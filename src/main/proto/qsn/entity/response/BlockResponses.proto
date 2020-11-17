@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.response";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/common/Result.proto";
+import "qsn/entity/common/block/Block.proto";
+
+
+message GetBlockHeaderByHashResponse {
+  Result result = 1;
+  BlockHeaderDto header = 2;
+}
+
+message GetBlockHeaderByHeightResponse {
+  Result result = 1;
+  BlockHeaderDto header = 2;
+}
+
+message GetBlockByHashResponse {
+  Result result = 1;
+  BlockDto block = 2;
+}
+
+message GetBlockByHeightResponse {
+  Result result = 1;
+  BlockDto block = 2;
+}
+

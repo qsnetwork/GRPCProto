@@ -89,6 +89,68 @@ public final class TransactionRpcGrpc {
     return getGetTransactionReceiptMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionResponse> getGetTransactionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getTransaction",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionResponse> getGetTransactionMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionResponse> getGetTransactionMethod;
+    if ((getGetTransactionMethod = TransactionRpcGrpc.getGetTransactionMethod) == null) {
+      synchronized (TransactionRpcGrpc.class) {
+        if ((getGetTransactionMethod = TransactionRpcGrpc.getGetTransactionMethod) == null) {
+          TransactionRpcGrpc.getGetTransactionMethod = getGetTransactionMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getTransaction"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransactionRpcMethodDescriptorSupplier("getTransaction"))
+              .build();
+        }
+      }
+    }
+    return getGetTransactionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse> getCreateRawTransferTxMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "createRawTransferTx",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse> getCreateRawTransferTxMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest, org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse> getCreateRawTransferTxMethod;
+    if ((getCreateRawTransferTxMethod = TransactionRpcGrpc.getCreateRawTransferTxMethod) == null) {
+      synchronized (TransactionRpcGrpc.class) {
+        if ((getCreateRawTransferTxMethod = TransactionRpcGrpc.getCreateRawTransferTxMethod) == null) {
+          TransactionRpcGrpc.getCreateRawTransferTxMethod = getCreateRawTransferTxMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest, org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createRawTransferTx"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransactionRpcMethodDescriptorSupplier("createRawTransferTx"))
+              .build();
+        }
+      }
+    }
+    return getCreateRawTransferTxMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -151,6 +213,20 @@ public final class TransactionRpcGrpc {
       asyncUnimplementedUnaryCall(getGetTransactionReceiptMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getTransaction(org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetTransactionMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void createRawTransferTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateRawTransferTxMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -167,6 +243,20 @@ public final class TransactionRpcGrpc {
                 org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest,
                 org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse>(
                   this, METHODID_GET_TRANSACTION_RECEIPT)))
+          .addMethod(
+            getGetTransactionMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionResponse>(
+                  this, METHODID_GET_TRANSACTION)))
+          .addMethod(
+            getCreateRawTransferTxMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse>(
+                  this, METHODID_CREATE_RAW_TRANSFER_TX)))
           .build();
     }
   }
@@ -200,6 +290,22 @@ public final class TransactionRpcGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetTransactionReceiptMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getTransaction(org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetTransactionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void createRawTransferTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateRawTransferTxMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -228,6 +334,20 @@ public final class TransactionRpcGrpc {
     public org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse getTransactionReceipt(org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetTransactionReceiptMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionResponse getTransaction(org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetTransactionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse createRawTransferTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateRawTransferTxMethod(), getCallOptions(), request);
     }
   }
 
@@ -260,10 +380,28 @@ public final class TransactionRpcGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetTransactionReceiptMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionResponse> getTransaction(
+        org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetTransactionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse> createRawTransferTx(
+        org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateRawTransferTxMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEND_TRANSACTION = 0;
   private static final int METHODID_GET_TRANSACTION_RECEIPT = 1;
+  private static final int METHODID_GET_TRANSACTION = 2;
+  private static final int METHODID_CREATE_RAW_TRANSFER_TX = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -289,6 +427,14 @@ public final class TransactionRpcGrpc {
         case METHODID_GET_TRANSACTION_RECEIPT:
           serviceImpl.getTransactionReceipt((org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequest) request,
               (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponse>) responseObserver);
+          break;
+        case METHODID_GET_TRANSACTION:
+          serviceImpl.getTransaction((org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_RAW_TRANSFER_TX:
+          serviceImpl.createRawTransferTx((org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -353,6 +499,8 @@ public final class TransactionRpcGrpc {
               .setSchemaDescriptor(new TransactionRpcFileDescriptorSupplier())
               .addMethod(getSendTransactionMethod())
               .addMethod(getGetTransactionReceiptMethod())
+              .addMethod(getGetTransactionMethod())
+              .addMethod(getCreateRawTransferTxMethod())
               .build();
         }
       }

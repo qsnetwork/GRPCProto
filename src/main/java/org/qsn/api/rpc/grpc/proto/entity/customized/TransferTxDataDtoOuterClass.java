@@ -30,11 +30,10 @@ public final class TransferTxDataDtoOuterClass {
     java.lang.String[] descriptorData = {
       "\n-qsn/entity/customized/TransferTxDataDt" +
       "o.proto\022\020org.qsn.protobuf\032 qsn/entity/co" +
-      "mmon/BInteger.proto\"X\n\021TransferTxDataDto" +
-      "\022\014\n\004from\030\001 \001(\014\022\n\n\002to\030\002 \001(\014\022)\n\005value\030\003 \001(" +
-      "\0132\032.org.qsn.protobuf.BIntegerB0\n,org.qsn" +
-      ".api.rpc.grpc.proto.entity.customizedP\001b" +
-      "\006proto3"
+      "mmon/BInteger.proto\"J\n\021TransferTxDataDto" +
+      "\022\n\n\002to\030\001 \001(\014\022)\n\005value\030\002 \001(\0132\032.org.qsn.pr" +
+      "otobuf.BIntegerB0\n,org.qsn.api.rpc.grpc." +
+      "proto.entity.customizedP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -46,7 +45,7 @@ public final class TransferTxDataDtoOuterClass {
     internal_static_org_qsn_protobuf_TransferTxDataDto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_TransferTxDataDto_descriptor,
-        new java.lang.String[] { "From", "To", "Value", });
+        new java.lang.String[] { "To", "Value", });
     org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOuterClass.getDescriptor();
   }
 

@@ -5,12 +5,12 @@ option java_package = "org.qsn.api.rpc.grpc.proto";
 
 package org.qsn.protobuf;
 
-import "qsn/entity/request/GetAccountInfoRequest.proto";
-import "qsn/entity/response/GetAccountBalanceResponse.proto";
-import "qsn/entity/response/GetAccountNonceResponse.proto";
+import "qsn/entity/request/AccountRequests.proto";
+import "qsn/entity/response/AccountResponses.proto";
 
 
 service AccountRpc {
-    rpc getAccountBalance(GetAccountInfoRequest) returns (GetAccountBalanceResponse);
-    rpc getAccountNonce(GetAccountInfoRequest) returns (GetAccountNonceResponse);
+    rpc getAccountBalance(GetAccountBalanceRequest) returns (GetAccountBalanceResponse);
+    rpc getAccountNonce(GetAccountNonceRequest) returns (GetAccountNonceResponse);
+    rpc getAccount(GetAccountRequest) returns (GetAccountResponse);
 }

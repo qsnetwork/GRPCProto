@@ -5,13 +5,12 @@ option java_package = "org.qsn.api.rpc.grpc.proto";
 
 package org.qsn.protobuf;
 
-import "qsn/entity/request/SendTransactionRequest.proto";
-import "qsn/entity/response/SendTransactionResponse.proto";
-import "qsn/entity/request/GetTransactionReceiptRequest.proto";
-import "qsn/entity/response/GetTransactionReceiptResponse.proto";
+import "qsn/entity/request/TransactionRequests.proto";
+import "qsn/entity/response/TransactionResponses.proto";
 
 service TransactionRpc {
     rpc sendTransaction(SendTransactionRequest) returns (SendTransactionResponse);
-
     rpc getTransactionReceipt(GetTransactionReceiptRequest) returns (GetTransactionReceiptResponse);
+    rpc getTransaction(GetTransactionRequest) returns (GetTransactionResponse);
+    rpc createRawTransferTx(CreateRawTransferTxRequest) returns (CreateRawTransferTxResponse);
 }

@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.common.block";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/common/transaction/TransactionDto.proto";
+
+message BlockHeaderVersion {
+  int32 bloc = 1;
+  int32 app = 2;
+}
+
+message BlockHeaderDto{
+  BlockHeaderVersion version = 1;
+  string chainId = 2;
+  int64 height = 3;
+  int64 time = 4;
+  int64 numTxs = 5;
+  int64 totalTxs = 6;
+  bytes lastBlockhash = 7;
+  bytes lastCommitHash = 8;
+  bytes dataHash = 9;
+  bytes validatorsHash = 10;
+  bytes nextValidatorsHash = 11;
+  bytes accountHash = 12;
+  bytes contractHash = 13;
+  bytes storageHash = 14;
+  bytes transactionHash = 15;
+  bytes transactionReceiptHash = 16;
+  bytes blockRewardHash = 17;
+}
+
+message BlockDataDto{
+  repeated TransactionDto transactions = 1;
+}
+
+message PrecommitDto {
+  int32 type = 1;
+  int64 height = 2;
+  int32 round = 3;
+  bytes blockHash = 4;
+  int64 timestamp = 5;
+  bytes validatorAddress = 6;
+  int32 validatorIndex = 7;
+  bytes signature = 8;
+}
+
+message LastCommitDto {
+  int64 height = 1;
+  bytes blockHash = 2;
+  repeated PrecommitDto precommits = 3;
+}
+
+message BlockDto {
+  BlockHeaderDto header = 1;
+  BlockDataDto data = 2;
+  LastCommitDto lastCommit = 3;
+}

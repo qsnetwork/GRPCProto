@@ -24,32 +24,30 @@ public final class TransactionRpcOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024TransactionRpc.proto\022\020org.qsn.protobuf" +
-      "\032/qsn/entity/request/SendTransactionRequ" +
-      "est.proto\0321qsn/entity/response/SendTrans" +
-      "actionResponse.proto\0325qsn/entity/request" +
-      "/GetTransactionReceiptRequest.proto\0327qsn" +
-      "/entity/response/GetTransactionReceiptRe" +
-      "sponse.proto2\362\001\n\016TransactionRpc\022f\n\017sendT" +
-      "ransaction\022(.org.qsn.protobuf.SendTransa" +
-      "ctionRequest\032).org.qsn.protobuf.SendTran" +
-      "sactionResponse\022x\n\025getTransactionReceipt" +
-      "\022..org.qsn.protobuf.GetTransactionReceip" +
-      "tRequest\032/.org.qsn.protobuf.GetTransacti" +
-      "onReceiptResponseB\036\n\032org.qsn.api.rpc.grp" +
-      "c.protoP\001b\006proto3"
+      "\032,qsn/entity/request/TransactionRequests" +
+      ".proto\032.qsn/entity/response/TransactionR" +
+      "esponses.proto2\313\003\n\016TransactionRpc\022f\n\017sen" +
+      "dTransaction\022(.org.qsn.protobuf.SendTran" +
+      "sactionRequest\032).org.qsn.protobuf.SendTr" +
+      "ansactionResponse\022x\n\025getTransactionRecei" +
+      "pt\022..org.qsn.protobuf.GetTransactionRece" +
+      "iptRequest\032/.org.qsn.protobuf.GetTransac" +
+      "tionReceiptResponse\022c\n\016getTransaction\022\'." +
+      "org.qsn.protobuf.GetTransactionRequest\032(" +
+      ".org.qsn.protobuf.GetTransactionResponse" +
+      "\022r\n\023createRawTransferTx\022,.org.qsn.protob" +
+      "uf.CreateRawTransferTxRequest\032-.org.qsn." +
+      "protobuf.CreateRawTransferTxResponseB\036\n\032" +
+      "org.qsn.api.rpc.grpc.protoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionRequestOuterClass.getDescriptor(),
-          org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionResponseOuterClass.getDescriptor(),
-          org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequestOuterClass.getDescriptor(),
-          org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponseOuterClass.getDescriptor(),
+          org.qsn.api.rpc.grpc.proto.entity.request.TransactionRequests.getDescriptor(),
+          org.qsn.api.rpc.grpc.proto.entity.response.TransactionResponses.getDescriptor(),
         });
-    org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionRequestOuterClass.getDescriptor();
-    org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionResponseOuterClass.getDescriptor();
-    org.qsn.api.rpc.grpc.proto.entity.request.GetTransactionReceiptRequestOuterClass.getDescriptor();
-    org.qsn.api.rpc.grpc.proto.entity.response.GetTransactionReceiptResponseOuterClass.getDescriptor();
+    org.qsn.api.rpc.grpc.proto.entity.request.TransactionRequests.getDescriptor();
+    org.qsn.api.rpc.grpc.proto.entity.response.TransactionResponses.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

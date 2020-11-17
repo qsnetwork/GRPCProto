@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.request";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/common/BaseRequest.proto";
+import "qsn/entity/common/BInteger.proto";
+import "qsn/entity/common/transaction/TransactionDto.proto";
+
+message SendTransactionRequest{
+    BaseRequest baseRequest = 1;
+    TransactionDto transactionDto = 2;
+}
+
+message GetTransactionReceiptRequest{
+    BaseRequest baseRequest = 1;
+    bytes transactionHash = 2;
+}
+
+message GetTransactionRequest{
+    BaseRequest baseRequest = 1;
+    bytes transactionHash = 2;
+}
+
+message CreateRawTransferTxRequest{
+    BaseRequest baseRequest = 1;
+    bytes from = 2;
+    bytes to = 3;
+    BInteger amount = 4;
+}

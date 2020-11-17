@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.customized";
+
+package org.qsn.protobuf;
+
+message DeployContractTxDataDto {
+  bytes contractCode = 1;
+  string contractName = 2;
+  string contractClassName = 3;
+}

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.request";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/common/BaseRequest.proto";
+
+message GetBlockHeaderByHashRequest {
+    BaseRequest baseRequest = 1;
+    bytes hash = 2;
+}
+
+message GetBlockHeaderByHeightRequest {
+    BaseRequest baseRequest = 1;
+    int64 height = 2;
+}
+
+message GetBlockByHashRequest {
+    BaseRequest baseRequest = 1;
+    bytes hash = 2;
+}
+
+message GetBlockByHeightRequest {
+    BaseRequest baseRequest = 1;
+    int64 height = 2;
+}

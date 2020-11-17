@@ -27,6 +27,130 @@ public final class BlockRpcGrpc {
   public static final String SERVICE_NAME = "org.qsn.protobuf.BlockRpc";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHashRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHashResponse> getGetBlockHeaderByHashMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getBlockHeaderByHash",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHashRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHashResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHashRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHashResponse> getGetBlockHeaderByHashMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHashRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHashResponse> getGetBlockHeaderByHashMethod;
+    if ((getGetBlockHeaderByHashMethod = BlockRpcGrpc.getGetBlockHeaderByHashMethod) == null) {
+      synchronized (BlockRpcGrpc.class) {
+        if ((getGetBlockHeaderByHashMethod = BlockRpcGrpc.getGetBlockHeaderByHashMethod) == null) {
+          BlockRpcGrpc.getGetBlockHeaderByHashMethod = getGetBlockHeaderByHashMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHashRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHashResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getBlockHeaderByHash"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHashRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHashResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BlockRpcMethodDescriptorSupplier("getBlockHeaderByHash"))
+              .build();
+        }
+      }
+    }
+    return getGetBlockHeaderByHashMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHeightRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHeightResponse> getGetBlockHeaderByHeightMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getBlockHeaderByHeight",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHeightRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHeightResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHeightRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHeightResponse> getGetBlockHeaderByHeightMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHeightRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHeightResponse> getGetBlockHeaderByHeightMethod;
+    if ((getGetBlockHeaderByHeightMethod = BlockRpcGrpc.getGetBlockHeaderByHeightMethod) == null) {
+      synchronized (BlockRpcGrpc.class) {
+        if ((getGetBlockHeaderByHeightMethod = BlockRpcGrpc.getGetBlockHeaderByHeightMethod) == null) {
+          BlockRpcGrpc.getGetBlockHeaderByHeightMethod = getGetBlockHeaderByHeightMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHeightRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHeightResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getBlockHeaderByHeight"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHeightRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHeightResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BlockRpcMethodDescriptorSupplier("getBlockHeaderByHeight"))
+              .build();
+        }
+      }
+    }
+    return getGetBlockHeaderByHeightMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHashRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHashResponse> getGetBlockByHashMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getBlockByHash",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHashRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHashResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHashRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHashResponse> getGetBlockByHashMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHashRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHashResponse> getGetBlockByHashMethod;
+    if ((getGetBlockByHashMethod = BlockRpcGrpc.getGetBlockByHashMethod) == null) {
+      synchronized (BlockRpcGrpc.class) {
+        if ((getGetBlockByHashMethod = BlockRpcGrpc.getGetBlockByHashMethod) == null) {
+          BlockRpcGrpc.getGetBlockByHashMethod = getGetBlockByHashMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHashRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHashResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getBlockByHash"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHashRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHashResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BlockRpcMethodDescriptorSupplier("getBlockByHash"))
+              .build();
+        }
+      }
+    }
+    return getGetBlockByHashMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse> getGetBlockByHeightMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getBlockByHeight",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse> getGetBlockByHeightMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse> getGetBlockByHeightMethod;
+    if ((getGetBlockByHeightMethod = BlockRpcGrpc.getGetBlockByHeightMethod) == null) {
+      synchronized (BlockRpcGrpc.class) {
+        if ((getGetBlockByHeightMethod = BlockRpcGrpc.getGetBlockByHeightMethod) == null) {
+          BlockRpcGrpc.getGetBlockByHeightMethod = getGetBlockByHeightMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getBlockByHeight"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BlockRpcMethodDescriptorSupplier("getBlockByHeight"))
+              .build();
+        }
+      }
+    }
+    return getGetBlockByHeightMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -75,8 +199,64 @@ public final class BlockRpcGrpc {
    */
   public static abstract class BlockRpcImplBase implements io.grpc.BindableService {
 
+    /**
+     */
+    public void getBlockHeaderByHash(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHashRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHashResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetBlockHeaderByHashMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getBlockHeaderByHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHeightRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHeightResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetBlockHeaderByHeightMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getBlockByHash(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHashRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHashResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetBlockByHashMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getBlockByHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetBlockByHeightMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getGetBlockHeaderByHashMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHashRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHashResponse>(
+                  this, METHODID_GET_BLOCK_HEADER_BY_HASH)))
+          .addMethod(
+            getGetBlockHeaderByHeightMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHeightRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHeightResponse>(
+                  this, METHODID_GET_BLOCK_HEADER_BY_HEIGHT)))
+          .addMethod(
+            getGetBlockByHashMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHashRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHashResponse>(
+                  this, METHODID_GET_BLOCK_BY_HASH)))
+          .addMethod(
+            getGetBlockByHeightMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse>(
+                  this, METHODID_GET_BLOCK_BY_HEIGHT)))
           .build();
     }
   }
@@ -94,6 +274,38 @@ public final class BlockRpcGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BlockRpcStub(channel, callOptions);
     }
+
+    /**
+     */
+    public void getBlockHeaderByHash(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHashRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHashResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetBlockHeaderByHashMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getBlockHeaderByHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHeightRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHeightResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetBlockHeaderByHeightMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getBlockByHash(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHashRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHashResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetBlockByHashMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getBlockByHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetBlockByHeightMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -108,6 +320,34 @@ public final class BlockRpcGrpc {
     protected BlockRpcBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BlockRpcBlockingStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHashResponse getBlockHeaderByHash(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHashRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetBlockHeaderByHashMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHeightResponse getBlockHeaderByHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHeightRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetBlockHeaderByHeightMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHashResponse getBlockByHash(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHashRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetBlockByHashMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse getBlockByHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetBlockByHeightMethod(), getCallOptions(), request);
     }
   }
 
@@ -124,8 +364,44 @@ public final class BlockRpcGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BlockRpcFutureStub(channel, callOptions);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHashResponse> getBlockHeaderByHash(
+        org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHashRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetBlockHeaderByHashMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHeightResponse> getBlockHeaderByHeight(
+        org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHeightRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetBlockHeaderByHeightMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHashResponse> getBlockByHash(
+        org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHashRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetBlockByHashMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse> getBlockByHeight(
+        org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetBlockByHeightMethod(), getCallOptions()), request);
+    }
   }
 
+  private static final int METHODID_GET_BLOCK_HEADER_BY_HASH = 0;
+  private static final int METHODID_GET_BLOCK_HEADER_BY_HEIGHT = 1;
+  private static final int METHODID_GET_BLOCK_BY_HASH = 2;
+  private static final int METHODID_GET_BLOCK_BY_HEIGHT = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -144,6 +420,22 @@ public final class BlockRpcGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_GET_BLOCK_HEADER_BY_HASH:
+          serviceImpl.getBlockHeaderByHash((org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHashRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHashResponse>) responseObserver);
+          break;
+        case METHODID_GET_BLOCK_HEADER_BY_HEIGHT:
+          serviceImpl.getBlockHeaderByHeight((org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeaderByHeightRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeaderByHeightResponse>) responseObserver);
+          break;
+        case METHODID_GET_BLOCK_BY_HASH:
+          serviceImpl.getBlockByHash((org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHashRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHashResponse>) responseObserver);
+          break;
+        case METHODID_GET_BLOCK_BY_HEIGHT:
+          serviceImpl.getBlockByHeight((org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -205,6 +497,10 @@ public final class BlockRpcGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new BlockRpcFileDescriptorSupplier())
+              .addMethod(getGetBlockHeaderByHashMethod())
+              .addMethod(getGetBlockHeaderByHeightMethod())
+              .addMethod(getGetBlockByHashMethod())
+              .addMethod(getGetBlockByHeightMethod())
               .build();
         }
       }
