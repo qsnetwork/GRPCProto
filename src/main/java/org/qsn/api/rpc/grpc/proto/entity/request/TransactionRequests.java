@@ -34,6 +34,21 @@ public final class TransactionRequests {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_qsn_protobuf_CreateRawTransferTxRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_CreateRawDeployContractTxRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_CreateRawDeployContractTxRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_CreateRawValidatorTxRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_CreateRawValidatorTxRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_CreateRawWithdrawTxRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_CreateRawWithdrawTxRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -60,8 +75,21 @@ public final class TransactionRequests {
       "equest\0222\n\013baseRequest\030\001 \001(\0132\035.org.qsn.pr" +
       "otobuf.BaseRequest\022\014\n\004from\030\002 \001(\014\022\n\n\002to\030\003" +
       " \001(\014\022*\n\006amount\030\004 \001(\0132\032.org.qsn.protobuf." +
-      "BIntegerB-\n)org.qsn.api.rpc.grpc.proto.e" +
-      "ntity.requestP\001b\006proto3"
+      "BInteger\"\235\001\n CreateRawDeployContractTxRe" +
+      "quest\0222\n\013baseRequest\030\001 \001(\0132\035.org.qsn.pro" +
+      "tobuf.BaseRequest\022\024\n\014contractCode\030\002 \001(\014\022" +
+      "\024\n\014contractName\030\003 \001(\t\022\031\n\021contractClassNa" +
+      "me\030\004 \001(\t\"\346\001\n\033CreateRawValidatorTxRequest" +
+      "\0222\n\013baseRequest\030\001 \001(\0132\035.org.qsn.protobuf" +
+      ".BaseRequest\022\014\n\004type\030\002 \001(\010\022\030\n\020validatorA" +
+      "ddress\030\003 \001(\014\022\027\n\017validatorPubKey\030\004 \001(\014\022\031\n" +
+      "\021delegationAddress\030\005 \001(\014\022)\n\005stake\030\006 \001(\0132" +
+      "\032.org.qsn.protobuf.BInteger\022\014\n\004name\030\007 \001(" +
+      "\t\"\215\001\n\032CreateRawWithdrawTxRequest\0222\n\013base" +
+      "Request\030\001 \001(\0132\035.org.qsn.protobuf.BaseReq" +
+      "uest\022\020\n\010coinBase\030\002 \001(\014\022)\n\005value\030\003 \001(\0132\032." +
+      "org.qsn.protobuf.BIntegerB-\n)org.qsn.api" +
+      ".rpc.grpc.proto.entity.requestP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -94,6 +122,24 @@ public final class TransactionRequests {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_CreateRawTransferTxRequest_descriptor,
         new java.lang.String[] { "BaseRequest", "From", "To", "Amount", });
+    internal_static_org_qsn_protobuf_CreateRawDeployContractTxRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_org_qsn_protobuf_CreateRawDeployContractTxRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_CreateRawDeployContractTxRequest_descriptor,
+        new java.lang.String[] { "BaseRequest", "ContractCode", "ContractName", "ContractClassName", });
+    internal_static_org_qsn_protobuf_CreateRawValidatorTxRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_org_qsn_protobuf_CreateRawValidatorTxRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_CreateRawValidatorTxRequest_descriptor,
+        new java.lang.String[] { "BaseRequest", "Type", "ValidatorAddress", "ValidatorPubKey", "DelegationAddress", "Stake", "Name", });
+    internal_static_org_qsn_protobuf_CreateRawWithdrawTxRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_org_qsn_protobuf_CreateRawWithdrawTxRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_CreateRawWithdrawTxRequest_descriptor,
+        new java.lang.String[] { "BaseRequest", "CoinBase", "Value", });
     org.qsn.api.rpc.grpc.proto.entity.common.BaseRequestOuterClass.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOuterClass.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDtoOuterClass.getDescriptor();

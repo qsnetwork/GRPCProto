@@ -26,7 +26,7 @@ public final class TransactionRpcOuterClass {
       "\n\024TransactionRpc.proto\022\020org.qsn.protobuf" +
       "\032,qsn/entity/request/TransactionRequests" +
       ".proto\032.qsn/entity/response/TransactionR" +
-      "esponses.proto2\313\003\n\016TransactionRpc\022f\n\017sen" +
+      "esponses.proto2\275\006\n\016TransactionRpc\022f\n\017sen" +
       "dTransaction\022(.org.qsn.protobuf.SendTran" +
       "sactionRequest\032).org.qsn.protobuf.SendTr" +
       "ansactionResponse\022x\n\025getTransactionRecei" +
@@ -37,8 +37,18 @@ public final class TransactionRpcOuterClass {
       ".org.qsn.protobuf.GetTransactionResponse" +
       "\022r\n\023createRawTransferTx\022,.org.qsn.protob" +
       "uf.CreateRawTransferTxRequest\032-.org.qsn." +
-      "protobuf.CreateRawTransferTxResponseB\036\n\032" +
-      "org.qsn.api.rpc.grpc.protoP\001b\006proto3"
+      "protobuf.CreateRawTransferTxResponse\022\204\001\n" +
+      "\031createRawDeployContractTx\0222.org.qsn.pro" +
+      "tobuf.CreateRawDeployContractTxRequest\0323" +
+      ".org.qsn.protobuf.CreateRawDeployContrac" +
+      "tTxResponse\022u\n\024createRawValidatorTx\022-.or" +
+      "g.qsn.protobuf.CreateRawValidatorTxReque" +
+      "st\032..org.qsn.protobuf.CreateRawValidator" +
+      "TxResponse\022r\n\023createRawWithdrawTx\022,.org." +
+      "qsn.protobuf.CreateRawWithdrawTxRequest\032" +
+      "-.org.qsn.protobuf.CreateRawWithdrawTxRe" +
+      "sponseB\036\n\032org.qsn.api.rpc.grpc.protoP\001b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

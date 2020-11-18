@@ -34,6 +34,21 @@ public final class TransactionResponses {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_qsn_protobuf_CreateRawTransferTxResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_CreateRawDeployContractTxResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_CreateRawDeployContractTxResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_CreateRawValidatorTxResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_CreateRawValidatorTxResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_CreateRawWithdrawTxResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_CreateRawWithdrawTxResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -59,9 +74,19 @@ public final class TransactionResponses {
       "sn.protobuf.TransactionDto\"~\n\033CreateRawT" +
       "ransferTxResponse\022(\n\006result\030\001 \001(\0132\030.org." +
       "qsn.protobuf.Result\0225\n\013transaction\030\002 \001(\013" +
-      "2 .org.qsn.protobuf.TransactionDtoB.\n*or" +
-      "g.qsn.api.rpc.grpc.proto.entity.response" +
-      "P\001b\006proto3"
+      "2 .org.qsn.protobuf.TransactionDto\"\204\001\n!C" +
+      "reateRawDeployContractTxResponse\022(\n\006resu" +
+      "lt\030\001 \001(\0132\030.org.qsn.protobuf.Result\0225\n\013tr" +
+      "ansaction\030\002 \001(\0132 .org.qsn.protobuf.Trans" +
+      "actionDto\"\177\n\034CreateRawValidatorTxRespons" +
+      "e\022(\n\006result\030\001 \001(\0132\030.org.qsn.protobuf.Res" +
+      "ult\0225\n\013transaction\030\002 \001(\0132 .org.qsn.proto" +
+      "buf.TransactionDto\"~\n\033CreateRawWithdrawT" +
+      "xResponse\022(\n\006result\030\001 \001(\0132\030.org.qsn.prot" +
+      "obuf.Result\0225\n\013transaction\030\002 \001(\0132 .org.q" +
+      "sn.protobuf.TransactionDtoB.\n*org.qsn.ap" +
+      "i.rpc.grpc.proto.entity.responseP\001b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -93,6 +118,24 @@ public final class TransactionResponses {
     internal_static_org_qsn_protobuf_CreateRawTransferTxResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_CreateRawTransferTxResponse_descriptor,
+        new java.lang.String[] { "Result", "Transaction", });
+    internal_static_org_qsn_protobuf_CreateRawDeployContractTxResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_org_qsn_protobuf_CreateRawDeployContractTxResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_CreateRawDeployContractTxResponse_descriptor,
+        new java.lang.String[] { "Result", "Transaction", });
+    internal_static_org_qsn_protobuf_CreateRawValidatorTxResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_org_qsn_protobuf_CreateRawValidatorTxResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_CreateRawValidatorTxResponse_descriptor,
+        new java.lang.String[] { "Result", "Transaction", });
+    internal_static_org_qsn_protobuf_CreateRawWithdrawTxResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_org_qsn_protobuf_CreateRawWithdrawTxResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_CreateRawWithdrawTxResponse_descriptor,
         new java.lang.String[] { "Result", "Transaction", });
     org.qsn.api.rpc.grpc.proto.entity.common.ResultOuterClass.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDtoOuterClass.getDescriptor();

@@ -13,4 +13,7 @@ service TransactionRpc {
     rpc getTransactionReceipt(GetTransactionReceiptRequest) returns (GetTransactionReceiptResponse);
     rpc getTransaction(GetTransactionRequest) returns (GetTransactionResponse);
     rpc createRawTransferTx(CreateRawTransferTxRequest) returns (CreateRawTransferTxResponse);
+    rpc createRawDeployContractTx(CreateRawDeployContractTxRequest) returns (CreateRawDeployContractTxResponse);
+    rpc createRawValidatorTx(CreateRawValidatorTxRequest) returns (CreateRawValidatorTxResponse);
+    rpc createRawWithdrawTx(CreateRawWithdrawTxRequest) returns (CreateRawWithdrawTxResponse);
 }

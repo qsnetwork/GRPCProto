@@ -151,6 +151,99 @@ public final class TransactionRpcGrpc {
     return getCreateRawTransferTxMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawDeployContractTxRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.CreateRawDeployContractTxResponse> getCreateRawDeployContractTxMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "createRawDeployContractTx",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.CreateRawDeployContractTxRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.CreateRawDeployContractTxResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawDeployContractTxRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.CreateRawDeployContractTxResponse> getCreateRawDeployContractTxMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawDeployContractTxRequest, org.qsn.api.rpc.grpc.proto.entity.response.CreateRawDeployContractTxResponse> getCreateRawDeployContractTxMethod;
+    if ((getCreateRawDeployContractTxMethod = TransactionRpcGrpc.getCreateRawDeployContractTxMethod) == null) {
+      synchronized (TransactionRpcGrpc.class) {
+        if ((getCreateRawDeployContractTxMethod = TransactionRpcGrpc.getCreateRawDeployContractTxMethod) == null) {
+          TransactionRpcGrpc.getCreateRawDeployContractTxMethod = getCreateRawDeployContractTxMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawDeployContractTxRequest, org.qsn.api.rpc.grpc.proto.entity.response.CreateRawDeployContractTxResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createRawDeployContractTx"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.CreateRawDeployContractTxRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.CreateRawDeployContractTxResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransactionRpcMethodDescriptorSupplier("createRawDeployContractTx"))
+              .build();
+        }
+      }
+    }
+    return getCreateRawDeployContractTxMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawValidatorTxRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.CreateRawValidatorTxResponse> getCreateRawValidatorTxMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "createRawValidatorTx",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.CreateRawValidatorTxRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.CreateRawValidatorTxResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawValidatorTxRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.CreateRawValidatorTxResponse> getCreateRawValidatorTxMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawValidatorTxRequest, org.qsn.api.rpc.grpc.proto.entity.response.CreateRawValidatorTxResponse> getCreateRawValidatorTxMethod;
+    if ((getCreateRawValidatorTxMethod = TransactionRpcGrpc.getCreateRawValidatorTxMethod) == null) {
+      synchronized (TransactionRpcGrpc.class) {
+        if ((getCreateRawValidatorTxMethod = TransactionRpcGrpc.getCreateRawValidatorTxMethod) == null) {
+          TransactionRpcGrpc.getCreateRawValidatorTxMethod = getCreateRawValidatorTxMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawValidatorTxRequest, org.qsn.api.rpc.grpc.proto.entity.response.CreateRawValidatorTxResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createRawValidatorTx"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.CreateRawValidatorTxRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.CreateRawValidatorTxResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransactionRpcMethodDescriptorSupplier("createRawValidatorTx"))
+              .build();
+        }
+      }
+    }
+    return getCreateRawValidatorTxMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse> getCreateRawWithdrawTxMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "createRawWithdrawTx",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse> getCreateRawWithdrawTxMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest, org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse> getCreateRawWithdrawTxMethod;
+    if ((getCreateRawWithdrawTxMethod = TransactionRpcGrpc.getCreateRawWithdrawTxMethod) == null) {
+      synchronized (TransactionRpcGrpc.class) {
+        if ((getCreateRawWithdrawTxMethod = TransactionRpcGrpc.getCreateRawWithdrawTxMethod) == null) {
+          TransactionRpcGrpc.getCreateRawWithdrawTxMethod = getCreateRawWithdrawTxMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest, org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createRawWithdrawTx"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransactionRpcMethodDescriptorSupplier("createRawWithdrawTx"))
+              .build();
+        }
+      }
+    }
+    return getCreateRawWithdrawTxMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -227,6 +320,27 @@ public final class TransactionRpcGrpc {
       asyncUnimplementedUnaryCall(getCreateRawTransferTxMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void createRawDeployContractTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawDeployContractTxRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawDeployContractTxResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateRawDeployContractTxMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void createRawValidatorTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawValidatorTxRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawValidatorTxResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateRawValidatorTxMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void createRawWithdrawTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateRawWithdrawTxMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -257,6 +371,27 @@ public final class TransactionRpcGrpc {
                 org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest,
                 org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse>(
                   this, METHODID_CREATE_RAW_TRANSFER_TX)))
+          .addMethod(
+            getCreateRawDeployContractTxMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.CreateRawDeployContractTxRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.CreateRawDeployContractTxResponse>(
+                  this, METHODID_CREATE_RAW_DEPLOY_CONTRACT_TX)))
+          .addMethod(
+            getCreateRawValidatorTxMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.CreateRawValidatorTxRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.CreateRawValidatorTxResponse>(
+                  this, METHODID_CREATE_RAW_VALIDATOR_TX)))
+          .addMethod(
+            getCreateRawWithdrawTxMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse>(
+                  this, METHODID_CREATE_RAW_WITHDRAW_TX)))
           .build();
     }
   }
@@ -306,6 +441,30 @@ public final class TransactionRpcGrpc {
       asyncUnaryCall(
           getChannel().newCall(getCreateRawTransferTxMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void createRawDeployContractTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawDeployContractTxRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawDeployContractTxResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateRawDeployContractTxMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void createRawValidatorTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawValidatorTxRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawValidatorTxResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateRawValidatorTxMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void createRawWithdrawTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateRawWithdrawTxMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -348,6 +507,27 @@ public final class TransactionRpcGrpc {
     public org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse createRawTransferTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateRawTransferTxMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.CreateRawDeployContractTxResponse createRawDeployContractTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawDeployContractTxRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateRawDeployContractTxMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.CreateRawValidatorTxResponse createRawValidatorTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawValidatorTxRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateRawValidatorTxMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse createRawWithdrawTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateRawWithdrawTxMethod(), getCallOptions(), request);
     }
   }
 
@@ -396,12 +576,39 @@ public final class TransactionRpcGrpc {
       return futureUnaryCall(
           getChannel().newCall(getCreateRawTransferTxMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawDeployContractTxResponse> createRawDeployContractTx(
+        org.qsn.api.rpc.grpc.proto.entity.request.CreateRawDeployContractTxRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateRawDeployContractTxMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawValidatorTxResponse> createRawValidatorTx(
+        org.qsn.api.rpc.grpc.proto.entity.request.CreateRawValidatorTxRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateRawValidatorTxMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse> createRawWithdrawTx(
+        org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateRawWithdrawTxMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEND_TRANSACTION = 0;
   private static final int METHODID_GET_TRANSACTION_RECEIPT = 1;
   private static final int METHODID_GET_TRANSACTION = 2;
   private static final int METHODID_CREATE_RAW_TRANSFER_TX = 3;
+  private static final int METHODID_CREATE_RAW_DEPLOY_CONTRACT_TX = 4;
+  private static final int METHODID_CREATE_RAW_VALIDATOR_TX = 5;
+  private static final int METHODID_CREATE_RAW_WITHDRAW_TX = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -435,6 +642,18 @@ public final class TransactionRpcGrpc {
         case METHODID_CREATE_RAW_TRANSFER_TX:
           serviceImpl.createRawTransferTx((org.qsn.api.rpc.grpc.proto.entity.request.CreateRawTransferTxRequest) request,
               (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawTransferTxResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_RAW_DEPLOY_CONTRACT_TX:
+          serviceImpl.createRawDeployContractTx((org.qsn.api.rpc.grpc.proto.entity.request.CreateRawDeployContractTxRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawDeployContractTxResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_RAW_VALIDATOR_TX:
+          serviceImpl.createRawValidatorTx((org.qsn.api.rpc.grpc.proto.entity.request.CreateRawValidatorTxRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawValidatorTxResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_RAW_WITHDRAW_TX:
+          serviceImpl.createRawWithdrawTx((org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -501,6 +720,9 @@ public final class TransactionRpcGrpc {
               .addMethod(getGetTransactionReceiptMethod())
               .addMethod(getGetTransactionMethod())
               .addMethod(getCreateRawTransferTxMethod())
+              .addMethod(getCreateRawDeployContractTxMethod())
+              .addMethod(getCreateRawValidatorTxMethod())
+              .addMethod(getCreateRawWithdrawTxMethod())
               .build();
         }
       }

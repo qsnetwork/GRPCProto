@@ -30,3 +30,26 @@ message CreateRawTransferTxRequest{
     bytes to = 3;
     BInteger amount = 4;
 }
+
+message CreateRawDeployContractTxRequest{
+    BaseRequest baseRequest = 1;
+    bytes contractCode = 2;
+    string contractName = 3;
+    string contractClassName = 4;
+}
+
+message CreateRawValidatorTxRequest {
+    BaseRequest baseRequest = 1;
+    bool  type = 2;
+    bytes validatorAddress = 3;
+    bytes validatorPubKey = 4;
+    bytes delegationAddress = 5;
+    BInteger stake = 6;
+    string name = 7;
+}
+
+message CreateRawWithdrawTxRequest{
+    BaseRequest baseRequest = 1;
+    bytes coinBase = 2;
+    BInteger value = 3;
+}

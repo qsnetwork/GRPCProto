@@ -27,3 +27,18 @@ message CreateRawTransferTxResponse{
     Result result = 1;
     TransactionDto transaction = 2;
 }
+
+message CreateRawDeployContractTxResponse{
+    Result result = 1;
+    TransactionDto transaction = 2;
+}
+
+message CreateRawValidatorTxResponse{
+    Result result = 1;
+    TransactionDto transaction = 2;
+}
+
+message CreateRawWithdrawTxResponse{
+    Result result = 1;
+    TransactionDto transaction = 2;
+}
