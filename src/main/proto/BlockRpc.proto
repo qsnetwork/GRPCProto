@@ -5,6 +5,13 @@ option java_package = "org.qsn.api.rpc.grpc.proto";
 
 package org.qsn.protobuf;
 
-service BlockRpc {
+import "qsn/entity/request/BlockRequests.proto";
+import "qsn/entity/response/BlockResponses.proto";
 
+service BlockRpc {
+  rpc getBlockHeaderByHash(GetBlockHeaderByHashRequest) returns (GetBlockHeaderByHashResponse);
+  rpc getBlockHeaderByHeight(GetBlockHeaderByHeightRequest) returns (GetBlockHeaderByHeightResponse);
+  rpc getBlockByHash(GetBlockByHashRequest) returns (GetBlockByHashResponse);
+  rpc getBlockByHeight(GetBlockByHeightRequest) returns (GetBlockByHeightResponse);
+  rpc getBlockHeight(GetBlockHeightRequest) returns (GetBlockHeightResponse);
 }

@@ -23,14 +23,34 @@ public final class BlockRpcOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016BlockRpc.proto\022\020org.qsn.protobuf2\n\n\010Bl" +
-      "ockRpcB\036\n\032org.qsn.api.rpc.grpc.protoP\001b\006" +
-      "proto3"
+      "\n\016BlockRpc.proto\022\020org.qsn.protobuf\032&qsn/" +
+      "entity/request/BlockRequests.proto\032(qsn/" +
+      "entity/response/BlockResponses.proto2\263\004\n" +
+      "\010BlockRpc\022u\n\024getBlockHeaderByHash\022-.org." +
+      "qsn.protobuf.GetBlockHeaderByHashRequest" +
+      "\032..org.qsn.protobuf.GetBlockHeaderByHash" +
+      "Response\022{\n\026getBlockHeaderByHeight\022/.org" +
+      ".qsn.protobuf.GetBlockHeaderByHeightRequ" +
+      "est\0320.org.qsn.protobuf.GetBlockHeaderByH" +
+      "eightResponse\022c\n\016getBlockByHash\022\'.org.qs" +
+      "n.protobuf.GetBlockByHashRequest\032(.org.q" +
+      "sn.protobuf.GetBlockByHashResponse\022i\n\020ge" +
+      "tBlockByHeight\022).org.qsn.protobuf.GetBlo" +
+      "ckByHeightRequest\032*.org.qsn.protobuf.Get" +
+      "BlockByHeightResponse\022c\n\016getBlockHeight\022" +
+      "\'.org.qsn.protobuf.GetBlockHeightRequest" +
+      "\032(.org.qsn.protobuf.GetBlockHeightRespon" +
+      "seB\036\n\032org.qsn.api.rpc.grpc.protoP\001b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          org.qsn.api.rpc.grpc.proto.entity.request.BlockRequests.getDescriptor(),
+          org.qsn.api.rpc.grpc.proto.entity.response.BlockResponses.getDescriptor(),
         });
+    org.qsn.api.rpc.grpc.proto.entity.request.BlockRequests.getDescriptor();
+    org.qsn.api.rpc.grpc.proto.entity.response.BlockResponses.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

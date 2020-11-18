@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.common.account";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/common/BInteger.proto";
+
+message AccountDto{
+  BInteger balance = 1;
+  BInteger nonce = 2;
+}

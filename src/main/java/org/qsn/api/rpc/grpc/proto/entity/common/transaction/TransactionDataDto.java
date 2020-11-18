@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TransactionDataDto() {
-    data_ = "";
+    sender_ = com.google.protobuf.ByteString.EMPTY;
   }
 
   @java.lang.Override
@@ -50,9 +50,34 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
 
-            data_ = s;
+            sender_ = input.readBytes();
+            break;
+          }
+          case 18: {
+            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder subBuilder = null;
+            if (nonce_ != null) {
+              subBuilder = nonce_.toBuilder();
+            }
+            nonce_ = input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.BInteger.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(nonce_);
+              nonce_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 26: {
+            com.google.protobuf.Any.Builder subBuilder = null;
+            if (data_ != null) {
+              subBuilder = data_.toBuilder();
+            }
+            data_ = input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(data_);
+              data_ = subBuilder.buildPartial();
+            }
+
             break;
           }
           default: {
@@ -87,42 +112,67 @@ private static final long serialVersionUID = 0L;
             org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto.class, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto.Builder.class);
   }
 
-  public static final int DATA_FIELD_NUMBER = 1;
-  private volatile java.lang.Object data_;
+  public static final int SENDER_FIELD_NUMBER = 1;
+  private com.google.protobuf.ByteString sender_;
   /**
-   * <code>string data = 1;</code>
+   * <code>bytes sender = 1;</code>
+   * @return The sender.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getSender() {
+    return sender_;
+  }
+
+  public static final int NONCE_FIELD_NUMBER = 2;
+  private org.qsn.api.rpc.grpc.proto.entity.common.BInteger nonce_;
+  /**
+   * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+   * @return Whether the nonce field is set.
+   */
+  @java.lang.Override
+  public boolean hasNonce() {
+    return nonce_ != null;
+  }
+  /**
+   * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+   * @return The nonce.
+   */
+  @java.lang.Override
+  public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getNonce() {
+    return nonce_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : nonce_;
+  }
+  /**
+   * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+   */
+  @java.lang.Override
+  public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getNonceOrBuilder() {
+    return getNonce();
+  }
+
+  public static final int DATA_FIELD_NUMBER = 3;
+  private com.google.protobuf.Any data_;
+  /**
+   * <code>.google.protobuf.Any data = 3;</code>
+   * @return Whether the data field is set.
+   */
+  @java.lang.Override
+  public boolean hasData() {
+    return data_ != null;
+  }
+  /**
+   * <code>.google.protobuf.Any data = 3;</code>
    * @return The data.
    */
   @java.lang.Override
-  public java.lang.String getData() {
-    java.lang.Object ref = data_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      data_ = s;
-      return s;
-    }
+  public com.google.protobuf.Any getData() {
+    return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
   }
   /**
-   * <code>string data = 1;</code>
-   * @return The bytes for data.
+   * <code>.google.protobuf.Any data = 3;</code>
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDataBytes() {
-    java.lang.Object ref = data_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      data_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
+    return getData();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -139,8 +189,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getDataBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, data_);
+    if (!sender_.isEmpty()) {
+      output.writeBytes(1, sender_);
+    }
+    if (nonce_ != null) {
+      output.writeMessage(2, getNonce());
+    }
+    if (data_ != null) {
+      output.writeMessage(3, getData());
     }
     unknownFields.writeTo(output);
   }
@@ -151,8 +207,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getDataBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, data_);
+    if (!sender_.isEmpty()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(1, sender_);
+    }
+    if (nonce_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getNonce());
+    }
+    if (data_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getData());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -169,8 +234,18 @@ private static final long serialVersionUID = 0L;
     }
     org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto other = (org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto) obj;
 
-    if (!getData()
-        .equals(other.getData())) return false;
+    if (!getSender()
+        .equals(other.getSender())) return false;
+    if (hasNonce() != other.hasNonce()) return false;
+    if (hasNonce()) {
+      if (!getNonce()
+          .equals(other.getNonce())) return false;
+    }
+    if (hasData() != other.hasData()) return false;
+    if (hasData()) {
+      if (!getData()
+          .equals(other.getData())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -182,8 +257,16 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + DATA_FIELD_NUMBER;
-    hash = (53 * hash) + getData().hashCode();
+    hash = (37 * hash) + SENDER_FIELD_NUMBER;
+    hash = (53 * hash) + getSender().hashCode();
+    if (hasNonce()) {
+      hash = (37 * hash) + NONCE_FIELD_NUMBER;
+      hash = (53 * hash) + getNonce().hashCode();
+    }
+    if (hasData()) {
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -317,8 +400,20 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      data_ = "";
+      sender_ = com.google.protobuf.ByteString.EMPTY;
 
+      if (nonceBuilder_ == null) {
+        nonce_ = null;
+      } else {
+        nonce_ = null;
+        nonceBuilder_ = null;
+      }
+      if (dataBuilder_ == null) {
+        data_ = null;
+      } else {
+        data_ = null;
+        dataBuilder_ = null;
+      }
       return this;
     }
 
@@ -345,7 +440,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto buildPartial() {
       org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto result = new org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto(this);
-      result.data_ = data_;
+      result.sender_ = sender_;
+      if (nonceBuilder_ == null) {
+        result.nonce_ = nonce_;
+      } else {
+        result.nonce_ = nonceBuilder_.build();
+      }
+      if (dataBuilder_ == null) {
+        result.data_ = data_;
+      } else {
+        result.data_ = dataBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -394,9 +499,14 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto other) {
       if (other == org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDto.getDefaultInstance()) return this;
-      if (!other.getData().isEmpty()) {
-        data_ = other.data_;
-        onChanged();
+      if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+        setSender(other.getSender());
+      }
+      if (other.hasNonce()) {
+        mergeNonce(other.getNonce());
+      }
+      if (other.hasData()) {
+        mergeData(other.getData());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -427,80 +537,276 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object data_ = "";
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>string data = 1;</code>
-     * @return The data.
+     * <code>bytes sender = 1;</code>
+     * @return The sender.
      */
-    public java.lang.String getData() {
-      java.lang.Object ref = data_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        data_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
     }
     /**
-     * <code>string data = 1;</code>
-     * @return The bytes for data.
-     */
-    public com.google.protobuf.ByteString
-        getDataBytes() {
-      java.lang.Object ref = data_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        data_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string data = 1;</code>
-     * @param value The data to set.
+     * <code>bytes sender = 1;</code>
+     * @param value The sender to set.
      * @return This builder for chaining.
      */
-    public Builder setData(
-        java.lang.String value) {
+    public Builder setSender(com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      data_ = value;
+      sender_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string data = 1;</code>
+     * <code>bytes sender = 1;</code>
      * @return This builder for chaining.
+     */
+    public Builder clearSender() {
+      
+      sender_ = getDefaultInstance().getSender();
+      onChanged();
+      return this;
+    }
+
+    private org.qsn.api.rpc.grpc.proto.entity.common.BInteger nonce_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> nonceBuilder_;
+    /**
+     * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+     * @return Whether the nonce field is set.
+     */
+    public boolean hasNonce() {
+      return nonceBuilder_ != null || nonce_ != null;
+    }
+    /**
+     * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+     * @return The nonce.
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getNonce() {
+      if (nonceBuilder_ == null) {
+        return nonce_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : nonce_;
+      } else {
+        return nonceBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+     */
+    public Builder setNonce(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
+      if (nonceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        nonce_ = value;
+        onChanged();
+      } else {
+        nonceBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+     */
+    public Builder setNonce(
+        org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder builderForValue) {
+      if (nonceBuilder_ == null) {
+        nonce_ = builderForValue.build();
+        onChanged();
+      } else {
+        nonceBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+     */
+    public Builder mergeNonce(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
+      if (nonceBuilder_ == null) {
+        if (nonce_ != null) {
+          nonce_ =
+            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.newBuilder(nonce_).mergeFrom(value).buildPartial();
+        } else {
+          nonce_ = value;
+        }
+        onChanged();
+      } else {
+        nonceBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+     */
+    public Builder clearNonce() {
+      if (nonceBuilder_ == null) {
+        nonce_ = null;
+        onChanged();
+      } else {
+        nonce_ = null;
+        nonceBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder getNonceBuilder() {
+      
+      onChanged();
+      return getNonceFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getNonceOrBuilder() {
+      if (nonceBuilder_ != null) {
+        return nonceBuilder_.getMessageOrBuilder();
+      } else {
+        return nonce_ == null ?
+            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : nonce_;
+      }
+    }
+    /**
+     * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> 
+        getNonceFieldBuilder() {
+      if (nonceBuilder_ == null) {
+        nonceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder>(
+                getNonce(),
+                getParentForChildren(),
+                isClean());
+        nonce_ = null;
+      }
+      return nonceBuilder_;
+    }
+
+    private com.google.protobuf.Any data_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> dataBuilder_;
+    /**
+     * <code>.google.protobuf.Any data = 3;</code>
+     * @return Whether the data field is set.
+     */
+    public boolean hasData() {
+      return dataBuilder_ != null || data_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Any data = 3;</code>
+     * @return The data.
+     */
+    public com.google.protobuf.Any getData() {
+      if (dataBuilder_ == null) {
+        return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
+      } else {
+        return dataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.Any data = 3;</code>
+     */
+    public Builder setData(com.google.protobuf.Any value) {
+      if (dataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        data_ = value;
+        onChanged();
+      } else {
+        dataBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Any data = 3;</code>
+     */
+    public Builder setData(
+        com.google.protobuf.Any.Builder builderForValue) {
+      if (dataBuilder_ == null) {
+        data_ = builderForValue.build();
+        onChanged();
+      } else {
+        dataBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Any data = 3;</code>
+     */
+    public Builder mergeData(com.google.protobuf.Any value) {
+      if (dataBuilder_ == null) {
+        if (data_ != null) {
+          data_ =
+            com.google.protobuf.Any.newBuilder(data_).mergeFrom(value).buildPartial();
+        } else {
+          data_ = value;
+        }
+        onChanged();
+      } else {
+        dataBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Any data = 3;</code>
      */
     public Builder clearData() {
-      
-      data_ = getDefaultInstance().getData();
-      onChanged();
+      if (dataBuilder_ == null) {
+        data_ = null;
+        onChanged();
+      } else {
+        data_ = null;
+        dataBuilder_ = null;
+      }
+
       return this;
     }
     /**
-     * <code>string data = 1;</code>
-     * @param value The bytes for data to set.
-     * @return This builder for chaining.
+     * <code>.google.protobuf.Any data = 3;</code>
      */
-    public Builder setDataBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+    public com.google.protobuf.Any.Builder getDataBuilder() {
       
-      data_ = value;
       onChanged();
-      return this;
+      return getDataFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.Any data = 3;</code>
+     */
+    public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
+      if (dataBuilder_ != null) {
+        return dataBuilder_.getMessageOrBuilder();
+      } else {
+        return data_ == null ?
+            com.google.protobuf.Any.getDefaultInstance() : data_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.Any data = 3;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+        getDataFieldBuilder() {
+      if (dataBuilder_ == null) {
+        dataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                getData(),
+                getParentForChildren(),
+                isClean());
+        data_ = null;
+      }
+      return dataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

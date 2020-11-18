@@ -8,29 +8,23 @@ public interface TransferTxDataDtoOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>bytes from = 1;</code>
-   * @return The from.
-   */
-  com.google.protobuf.ByteString getFrom();
-
-  /**
-   * <code>bytes to = 2;</code>
+   * <code>bytes to = 1;</code>
    * @return The to.
    */
   com.google.protobuf.ByteString getTo();
 
   /**
-   * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+   * <code>.org.qsn.protobuf.BInteger value = 2;</code>
    * @return Whether the value field is set.
    */
   boolean hasValue();
   /**
-   * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+   * <code>.org.qsn.protobuf.BInteger value = 2;</code>
    * @return The value.
    */
   org.qsn.api.rpc.grpc.proto.entity.common.BInteger getValue();
   /**
-   * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+   * <code>.org.qsn.protobuf.BInteger value = 2;</code>
    */
   org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getValueOrBuilder();
 }

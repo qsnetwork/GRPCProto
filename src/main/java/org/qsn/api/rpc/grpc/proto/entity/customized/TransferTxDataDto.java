@@ -16,7 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TransferTxDataDto() {
-    from_ = com.google.protobuf.ByteString.EMPTY;
     to_ = com.google.protobuf.ByteString.EMPTY;
   }
 
@@ -52,15 +51,10 @@ private static final long serialVersionUID = 0L;
             break;
           case 10: {
 
-            from_ = input.readBytes();
-            break;
-          }
-          case 18: {
-
             to_ = input.readBytes();
             break;
           }
-          case 26: {
+          case 18: {
             org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder subBuilder = null;
             if (value_ != null) {
               subBuilder = value_.toBuilder();
@@ -105,21 +99,10 @@ private static final long serialVersionUID = 0L;
             org.qsn.api.rpc.grpc.proto.entity.customized.TransferTxDataDto.class, org.qsn.api.rpc.grpc.proto.entity.customized.TransferTxDataDto.Builder.class);
   }
 
-  public static final int FROM_FIELD_NUMBER = 1;
-  private com.google.protobuf.ByteString from_;
-  /**
-   * <code>bytes from = 1;</code>
-   * @return The from.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString getFrom() {
-    return from_;
-  }
-
-  public static final int TO_FIELD_NUMBER = 2;
+  public static final int TO_FIELD_NUMBER = 1;
   private com.google.protobuf.ByteString to_;
   /**
-   * <code>bytes to = 2;</code>
+   * <code>bytes to = 1;</code>
    * @return The to.
    */
   @java.lang.Override
@@ -127,10 +110,10 @@ private static final long serialVersionUID = 0L;
     return to_;
   }
 
-  public static final int VALUE_FIELD_NUMBER = 3;
+  public static final int VALUE_FIELD_NUMBER = 2;
   private org.qsn.api.rpc.grpc.proto.entity.common.BInteger value_;
   /**
-   * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+   * <code>.org.qsn.protobuf.BInteger value = 2;</code>
    * @return Whether the value field is set.
    */
   @java.lang.Override
@@ -138,7 +121,7 @@ private static final long serialVersionUID = 0L;
     return value_ != null;
   }
   /**
-   * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+   * <code>.org.qsn.protobuf.BInteger value = 2;</code>
    * @return The value.
    */
   @java.lang.Override
@@ -146,7 +129,7 @@ private static final long serialVersionUID = 0L;
     return value_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : value_;
   }
   /**
-   * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+   * <code>.org.qsn.protobuf.BInteger value = 2;</code>
    */
   @java.lang.Override
   public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getValueOrBuilder() {
@@ -167,14 +150,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!from_.isEmpty()) {
-      output.writeBytes(1, from_);
-    }
     if (!to_.isEmpty()) {
-      output.writeBytes(2, to_);
+      output.writeBytes(1, to_);
     }
     if (value_ != null) {
-      output.writeMessage(3, getValue());
+      output.writeMessage(2, getValue());
     }
     unknownFields.writeTo(output);
   }
@@ -185,17 +165,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!from_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(1, from_);
-    }
     if (!to_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(2, to_);
+        .computeBytesSize(1, to_);
     }
     if (value_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getValue());
+        .computeMessageSize(2, getValue());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -212,8 +188,6 @@ private static final long serialVersionUID = 0L;
     }
     org.qsn.api.rpc.grpc.proto.entity.customized.TransferTxDataDto other = (org.qsn.api.rpc.grpc.proto.entity.customized.TransferTxDataDto) obj;
 
-    if (!getFrom()
-        .equals(other.getFrom())) return false;
     if (!getTo()
         .equals(other.getTo())) return false;
     if (hasValue() != other.hasValue()) return false;
@@ -232,8 +206,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + FROM_FIELD_NUMBER;
-    hash = (53 * hash) + getFrom().hashCode();
     hash = (37 * hash) + TO_FIELD_NUMBER;
     hash = (53 * hash) + getTo().hashCode();
     if (hasValue()) {
@@ -373,8 +345,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      from_ = com.google.protobuf.ByteString.EMPTY;
-
       to_ = com.google.protobuf.ByteString.EMPTY;
 
       if (valueBuilder_ == null) {
@@ -409,7 +379,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.qsn.api.rpc.grpc.proto.entity.customized.TransferTxDataDto buildPartial() {
       org.qsn.api.rpc.grpc.proto.entity.customized.TransferTxDataDto result = new org.qsn.api.rpc.grpc.proto.entity.customized.TransferTxDataDto(this);
-      result.from_ = from_;
       result.to_ = to_;
       if (valueBuilder_ == null) {
         result.value_ = value_;
@@ -464,9 +433,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(org.qsn.api.rpc.grpc.proto.entity.customized.TransferTxDataDto other) {
       if (other == org.qsn.api.rpc.grpc.proto.entity.customized.TransferTxDataDto.getDefaultInstance()) return this;
-      if (other.getFrom() != com.google.protobuf.ByteString.EMPTY) {
-        setFrom(other.getFrom());
-      }
       if (other.getTo() != com.google.protobuf.ByteString.EMPTY) {
         setTo(other.getTo());
       }
@@ -502,43 +468,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.ByteString from_ = com.google.protobuf.ByteString.EMPTY;
-    /**
-     * <code>bytes from = 1;</code>
-     * @return The from.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getFrom() {
-      return from_;
-    }
-    /**
-     * <code>bytes from = 1;</code>
-     * @param value The from to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFrom(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      from_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bytes from = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearFrom() {
-      
-      from_ = getDefaultInstance().getFrom();
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.ByteString to_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes to = 2;</code>
+     * <code>bytes to = 1;</code>
      * @return The to.
      */
     @java.lang.Override
@@ -546,7 +478,7 @@ private static final long serialVersionUID = 0L;
       return to_;
     }
     /**
-     * <code>bytes to = 2;</code>
+     * <code>bytes to = 1;</code>
      * @param value The to to set.
      * @return This builder for chaining.
      */
@@ -560,7 +492,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes to = 2;</code>
+     * <code>bytes to = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearTo() {
@@ -574,14 +506,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> valueBuilder_;
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+     * <code>.org.qsn.protobuf.BInteger value = 2;</code>
      * @return Whether the value field is set.
      */
     public boolean hasValue() {
       return valueBuilder_ != null || value_ != null;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+     * <code>.org.qsn.protobuf.BInteger value = 2;</code>
      * @return The value.
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getValue() {
@@ -592,7 +524,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+     * <code>.org.qsn.protobuf.BInteger value = 2;</code>
      */
     public Builder setValue(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
       if (valueBuilder_ == null) {
@@ -608,7 +540,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+     * <code>.org.qsn.protobuf.BInteger value = 2;</code>
      */
     public Builder setValue(
         org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder builderForValue) {
@@ -622,7 +554,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+     * <code>.org.qsn.protobuf.BInteger value = 2;</code>
      */
     public Builder mergeValue(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
       if (valueBuilder_ == null) {
@@ -640,7 +572,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+     * <code>.org.qsn.protobuf.BInteger value = 2;</code>
      */
     public Builder clearValue() {
       if (valueBuilder_ == null) {
@@ -654,7 +586,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+     * <code>.org.qsn.protobuf.BInteger value = 2;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder getValueBuilder() {
       
@@ -662,7 +594,7 @@ private static final long serialVersionUID = 0L;
       return getValueFieldBuilder().getBuilder();
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+     * <code>.org.qsn.protobuf.BInteger value = 2;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getValueOrBuilder() {
       if (valueBuilder_ != null) {
@@ -673,7 +605,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 3;</code>
+     * <code>.org.qsn.protobuf.BInteger value = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> 

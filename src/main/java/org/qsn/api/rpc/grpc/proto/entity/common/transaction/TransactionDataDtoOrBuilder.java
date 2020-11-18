@@ -8,14 +8,38 @@ public interface TransactionDataDtoOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string data = 1;</code>
+   * <code>bytes sender = 1;</code>
+   * @return The sender.
+   */
+  com.google.protobuf.ByteString getSender();
+
+  /**
+   * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+   * @return Whether the nonce field is set.
+   */
+  boolean hasNonce();
+  /**
+   * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+   * @return The nonce.
+   */
+  org.qsn.api.rpc.grpc.proto.entity.common.BInteger getNonce();
+  /**
+   * <code>.org.qsn.protobuf.BInteger nonce = 2;</code>
+   */
+  org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getNonceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.Any data = 3;</code>
+   * @return Whether the data field is set.
+   */
+  boolean hasData();
+  /**
+   * <code>.google.protobuf.Any data = 3;</code>
    * @return The data.
    */
-  java.lang.String getData();
+  com.google.protobuf.Any getData();
   /**
-   * <code>string data = 1;</code>
-   * @return The bytes for data.
+   * <code>.google.protobuf.Any data = 3;</code>
    */
-  com.google.protobuf.ByteString
-      getDataBytes();
+  com.google.protobuf.AnyOrBuilder getDataOrBuilder();
 }

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.request";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/common/BaseRequest.proto";
+
+message GetAccountRequest{
+    BaseRequest baseRequest = 1;
+    bytes address = 2;
+}
+
+message GetAccountBalanceRequest {
+    BaseRequest baseRequest = 1;
+    bytes address = 2;
+}
+
+message GetAccountNonceRequest {
+    BaseRequest baseRequest = 1;
+    bytes address = 2;
+}

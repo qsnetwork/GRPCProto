@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.response";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/common/Result.proto";
+import "qsn/entity/common/transaction/TransactionReceiptDto.proto";
+import "qsn/entity/common/transaction/TransactionDto.proto";
+
+message SendTransactionResponse{
+    Result result = 1;
+}
+
+message GetTransactionReceiptResponse{
+    Result result = 1;
+    TransactionReceiptDto transactionReceipt = 2;
+}
+
+message GetTransactionResponse{
+    Result result = 1;
+    TransactionDto transaction = 2;
+}
+
+message CreateRawTransferTxResponse{
+    Result result = 1;
+    TransactionDto transaction = 2;
+}
+
+message CreateRawDeployContractTxResponse{
+    Result result = 1;
+    TransactionDto transaction = 2;
+}
+
+message CreateRawValidatorTxResponse{
+    Result result = 1;
+    TransactionDto transaction = 2;
+}
+
+message CreateRawWithdrawTxResponse{
+    Result result = 1;
+    TransactionDto transaction = 2;
+}
