@@ -197,3 +197,25 @@ public class TransactionRpcClientImpl implements TransactionRpcClient {
     }
 }
 </code></pre>
+
+
+
+=========================================================
+
+### Client code Example for python
+
+to build the python package, refer to [compile-python.sh](https://github.com/qsnetwork/GRPCProto/tree/master/jenkins/compile-python.sh)
+
+<pre>//python code example, the same logic for block rpc and transaction rpc<code>
+import grpc
+import AccountRpc_pb2
+import AccountRpc_pb2_grpc
+from qsn.entity.request import AccountRequests_pb2
+// the current path are supposed to be the same folder of AccountRpc_pb2.py
+
+def run():
+    channel = grpc.insecure_channel('ip:port')
+    stub = AccountRpc_pb2_grpc.AccountRpcStub(channel)
+    response = stub.getAccount(AccountRequests_pb2.GetAccountRequest(address=bytes.fromhex("deadbeef")))
+
+</code></pre>
