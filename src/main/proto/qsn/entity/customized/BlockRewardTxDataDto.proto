@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.customized";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/common/BInteger.proto";
+
+message  BlockReward {
+  int64 blockHeight = 1;
+  int64 matureHeight = 2;
+  repeated BlockRewardData blockRewardDataList = 3;
+}
+
+message BlockRewardData {
+  bytes coinBase = 1;
+  BInteger reward = 2;
+}
+
+message BlockRewardTxDataDto {
+  BlockReward blockReward = 1;
+}
