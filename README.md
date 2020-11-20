@@ -199,7 +199,6 @@ public class TransactionRpcClientImpl implements TransactionRpcClient {
 </code></pre>
 
 
-
 ___
 
 ### Client code Example for python
