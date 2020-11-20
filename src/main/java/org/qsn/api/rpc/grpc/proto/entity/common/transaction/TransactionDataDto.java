@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private TransactionDataDto() {
     sender_ = com.google.protobuf.ByteString.EMPTY;
+    data_ = com.google.protobuf.ByteString.EMPTY;
   }
 
   @java.lang.Override
@@ -68,16 +69,8 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            com.google.protobuf.Any.Builder subBuilder = null;
-            if (data_ != null) {
-              subBuilder = data_.toBuilder();
-            }
-            data_ = input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(data_);
-              data_ = subBuilder.buildPartial();
-            }
 
+            data_ = input.readBytes();
             break;
           }
           default: {
@@ -150,29 +143,18 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DATA_FIELD_NUMBER = 3;
-  private com.google.protobuf.Any data_;
+  private com.google.protobuf.ByteString data_;
   /**
-   * <code>.google.protobuf.Any data = 3;</code>
-   * @return Whether the data field is set.
-   */
-  @java.lang.Override
-  public boolean hasData() {
-    return data_ != null;
-  }
-  /**
-   * <code>.google.protobuf.Any data = 3;</code>
+   * <pre>
+   *    google.protobuf.Any data = 3;
+   * </pre>
+   *
+   * <code>bytes data = 3;</code>
    * @return The data.
    */
   @java.lang.Override
-  public com.google.protobuf.Any getData() {
-    return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
-  }
-  /**
-   * <code>.google.protobuf.Any data = 3;</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
-    return getData();
+  public com.google.protobuf.ByteString getData() {
+    return data_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -195,8 +177,8 @@ private static final long serialVersionUID = 0L;
     if (nonce_ != null) {
       output.writeMessage(2, getNonce());
     }
-    if (data_ != null) {
-      output.writeMessage(3, getData());
+    if (!data_.isEmpty()) {
+      output.writeBytes(3, data_);
     }
     unknownFields.writeTo(output);
   }
@@ -215,9 +197,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getNonce());
     }
-    if (data_ != null) {
+    if (!data_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getData());
+        .computeBytesSize(3, data_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -241,11 +223,8 @@ private static final long serialVersionUID = 0L;
       if (!getNonce()
           .equals(other.getNonce())) return false;
     }
-    if (hasData() != other.hasData()) return false;
-    if (hasData()) {
-      if (!getData()
-          .equals(other.getData())) return false;
-    }
+    if (!getData()
+        .equals(other.getData())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -263,10 +242,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + NONCE_FIELD_NUMBER;
       hash = (53 * hash) + getNonce().hashCode();
     }
-    if (hasData()) {
-      hash = (37 * hash) + DATA_FIELD_NUMBER;
-      hash = (53 * hash) + getData().hashCode();
-    }
+    hash = (37 * hash) + DATA_FIELD_NUMBER;
+    hash = (53 * hash) + getData().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -408,12 +385,8 @@ private static final long serialVersionUID = 0L;
         nonce_ = null;
         nonceBuilder_ = null;
       }
-      if (dataBuilder_ == null) {
-        data_ = null;
-      } else {
-        data_ = null;
-        dataBuilder_ = null;
-      }
+      data_ = com.google.protobuf.ByteString.EMPTY;
+
       return this;
     }
 
@@ -446,11 +419,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.nonce_ = nonceBuilder_.build();
       }
-      if (dataBuilder_ == null) {
-        result.data_ = data_;
-      } else {
-        result.data_ = dataBuilder_.build();
-      }
+      result.data_ = data_;
       onBuilt();
       return result;
     }
@@ -505,8 +474,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasNonce()) {
         mergeNonce(other.getNonce());
       }
-      if (other.hasData()) {
-        mergeData(other.getData());
+      if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+        setData(other.getData());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -690,123 +659,50 @@ private static final long serialVersionUID = 0L;
       return nonceBuilder_;
     }
 
-    private com.google.protobuf.Any data_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> dataBuilder_;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>.google.protobuf.Any data = 3;</code>
-     * @return Whether the data field is set.
-     */
-    public boolean hasData() {
-      return dataBuilder_ != null || data_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Any data = 3;</code>
+     * <pre>
+     *    google.protobuf.Any data = 3;
+     * </pre>
+     *
+     * <code>bytes data = 3;</code>
      * @return The data.
      */
-    public com.google.protobuf.Any getData() {
-      if (dataBuilder_ == null) {
-        return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
-      } else {
-        return dataBuilder_.getMessage();
-      }
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
     }
     /**
-     * <code>.google.protobuf.Any data = 3;</code>
+     * <pre>
+     *    google.protobuf.Any data = 3;
+     * </pre>
+     *
+     * <code>bytes data = 3;</code>
+     * @param value The data to set.
+     * @return This builder for chaining.
      */
-    public Builder setData(com.google.protobuf.Any value) {
-      if (dataBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        data_ = value;
-        onChanged();
-      } else {
-        dataBuilder_.setMessage(value);
-      }
-
+    public Builder setData(com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      data_ = value;
+      onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Any data = 3;</code>
-     */
-    public Builder setData(
-        com.google.protobuf.Any.Builder builderForValue) {
-      if (dataBuilder_ == null) {
-        data_ = builderForValue.build();
-        onChanged();
-      } else {
-        dataBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Any data = 3;</code>
-     */
-    public Builder mergeData(com.google.protobuf.Any value) {
-      if (dataBuilder_ == null) {
-        if (data_ != null) {
-          data_ =
-            com.google.protobuf.Any.newBuilder(data_).mergeFrom(value).buildPartial();
-        } else {
-          data_ = value;
-        }
-        onChanged();
-      } else {
-        dataBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Any data = 3;</code>
+     * <pre>
+     *    google.protobuf.Any data = 3;
+     * </pre>
+     *
+     * <code>bytes data = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearData() {
-      if (dataBuilder_ == null) {
-        data_ = null;
-        onChanged();
-      } else {
-        data_ = null;
-        dataBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Any data = 3;</code>
-     */
-    public com.google.protobuf.Any.Builder getDataBuilder() {
       
+      data_ = getDefaultInstance().getData();
       onChanged();
-      return getDataFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.google.protobuf.Any data = 3;</code>
-     */
-    public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
-      if (dataBuilder_ != null) {
-        return dataBuilder_.getMessageOrBuilder();
-      } else {
-        return data_ == null ?
-            com.google.protobuf.Any.getDefaultInstance() : data_;
-      }
-    }
-    /**
-     * <code>.google.protobuf.Any data = 3;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
-        getDataFieldBuilder() {
-      if (dataBuilder_ == null) {
-        dataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
-                getData(),
-                getParentForChildren(),
-                isClean());
-        data_ = null;
-      }
-      return dataBuilder_;
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

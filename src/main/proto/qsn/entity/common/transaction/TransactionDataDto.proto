@@ -6,7 +6,6 @@ option java_package = "org.qsn.api.rpc.grpc.proto.entity.common.transaction";
 package org.qsn.protobuf;
 
 import "qsn/entity/common/BInteger.proto";
-import "google/protobuf/any.proto";
 
 message TransactionDataDto{
     bytes sender = 1;
