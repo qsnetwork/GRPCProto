@@ -6,6 +6,11 @@ option java_package = "org.qsn.api.rpc.grpc.proto.entity.common";
 package org.qsn.protobuf;
 
 message Result {
-    int32 respCode = 1;
+    enum RespCode {
+        SUCCESS = 0;
+        ERROR = 1;
+        WRONG_VERSION = 99;
+    }
+    RespCode respCode = 1;
     string respMsg = 2;
 }

@@ -8,10 +8,15 @@ public interface ResultOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 respCode = 1;</code>
+   * <code>.org.qsn.protobuf.Result.RespCode respCode = 1;</code>
+   * @return The enum numeric value on the wire for respCode.
+   */
+  int getRespCodeValue();
+  /**
+   * <code>.org.qsn.protobuf.Result.RespCode respCode = 1;</code>
    * @return The respCode.
    */
-  int getRespCode();
+  org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode getRespCode();
 
   /**
    * <code>string respMsg = 2;</code>

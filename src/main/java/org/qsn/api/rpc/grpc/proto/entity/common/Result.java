@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Result() {
+    respCode_ = 0;
     respMsg_ = "";
   }
 
@@ -50,8 +51,9 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 8: {
+            int rawValue = input.readEnum();
 
-            respCode_ = input.readInt32();
+            respCode_ = rawValue;
             break;
           }
           case 18: {
@@ -92,15 +94,140 @@ private static final long serialVersionUID = 0L;
             org.qsn.api.rpc.grpc.proto.entity.common.Result.class, org.qsn.api.rpc.grpc.proto.entity.common.Result.Builder.class);
   }
 
+  /**
+   * Protobuf enum {@code org.qsn.protobuf.Result.RespCode}
+   */
+  public enum RespCode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SUCCESS = 0;</code>
+     */
+    SUCCESS(0),
+    /**
+     * <code>ERROR = 1;</code>
+     */
+    ERROR(1),
+    /**
+     * <code>WRONG_VERSION = 99;</code>
+     */
+    WRONG_VERSION(99),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>SUCCESS = 0;</code>
+     */
+    public static final int SUCCESS_VALUE = 0;
+    /**
+     * <code>ERROR = 1;</code>
+     */
+    public static final int ERROR_VALUE = 1;
+    /**
+     * <code>WRONG_VERSION = 99;</code>
+     */
+    public static final int WRONG_VERSION_VALUE = 99;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static RespCode valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static RespCode forNumber(int value) {
+      switch (value) {
+        case 0: return SUCCESS;
+        case 1: return ERROR;
+        case 99: return WRONG_VERSION;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RespCode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        RespCode> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RespCode>() {
+            public RespCode findValueByNumber(int number) {
+              return RespCode.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return org.qsn.api.rpc.grpc.proto.entity.common.Result.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final RespCode[] VALUES = values();
+
+    public static RespCode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private RespCode(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:org.qsn.protobuf.Result.RespCode)
+  }
+
   public static final int RESPCODE_FIELD_NUMBER = 1;
   private int respCode_;
   /**
-   * <code>int32 respCode = 1;</code>
+   * <code>.org.qsn.protobuf.Result.RespCode respCode = 1;</code>
+   * @return The enum numeric value on the wire for respCode.
+   */
+  @java.lang.Override public int getRespCodeValue() {
+    return respCode_;
+  }
+  /**
+   * <code>.org.qsn.protobuf.Result.RespCode respCode = 1;</code>
    * @return The respCode.
    */
-  @java.lang.Override
-  public int getRespCode() {
-    return respCode_;
+  @java.lang.Override public org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode getRespCode() {
+    @SuppressWarnings("deprecation")
+    org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode result = org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode.valueOf(respCode_);
+    return result == null ? org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode.UNRECOGNIZED : result;
   }
 
   public static final int RESPMSG_FIELD_NUMBER = 2;
@@ -155,8 +282,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (respCode_ != 0) {
-      output.writeInt32(1, respCode_);
+    if (respCode_ != org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode.SUCCESS.getNumber()) {
+      output.writeEnum(1, respCode_);
     }
     if (!getRespMsgBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, respMsg_);
@@ -170,9 +297,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (respCode_ != 0) {
+    if (respCode_ != org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode.SUCCESS.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, respCode_);
+        .computeEnumSize(1, respCode_);
     }
     if (!getRespMsgBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, respMsg_);
@@ -192,8 +319,7 @@ private static final long serialVersionUID = 0L;
     }
     org.qsn.api.rpc.grpc.proto.entity.common.Result other = (org.qsn.api.rpc.grpc.proto.entity.common.Result) obj;
 
-    if (getRespCode()
-        != other.getRespCode()) return false;
+    if (respCode_ != other.respCode_) return false;
     if (!getRespMsg()
         .equals(other.getRespMsg())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -208,7 +334,7 @@ private static final long serialVersionUID = 0L;
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RESPCODE_FIELD_NUMBER;
-    hash = (53 * hash) + getRespCode();
+    hash = (53 * hash) + respCode_;
     hash = (37 * hash) + RESPMSG_FIELD_NUMBER;
     hash = (53 * hash) + getRespMsg().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
@@ -424,8 +550,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(org.qsn.api.rpc.grpc.proto.entity.common.Result other) {
       if (other == org.qsn.api.rpc.grpc.proto.entity.common.Result.getDefaultInstance()) return this;
-      if (other.getRespCode() != 0) {
-        setRespCode(other.getRespCode());
+      if (other.respCode_ != 0) {
+        setRespCodeValue(other.getRespCodeValue());
       }
       if (!other.getRespMsg().isEmpty()) {
         respMsg_ = other.respMsg_;
@@ -460,28 +586,51 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int respCode_ ;
+    private int respCode_ = 0;
     /**
-     * <code>int32 respCode = 1;</code>
-     * @return The respCode.
+     * <code>.org.qsn.protobuf.Result.RespCode respCode = 1;</code>
+     * @return The enum numeric value on the wire for respCode.
      */
-    @java.lang.Override
-    public int getRespCode() {
+    @java.lang.Override public int getRespCodeValue() {
       return respCode_;
     }
     /**
-     * <code>int32 respCode = 1;</code>
-     * @param value The respCode to set.
+     * <code>.org.qsn.protobuf.Result.RespCode respCode = 1;</code>
+     * @param value The enum numeric value on the wire for respCode to set.
      * @return This builder for chaining.
      */
-    public Builder setRespCode(int value) {
+    public Builder setRespCodeValue(int value) {
       
       respCode_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 respCode = 1;</code>
+     * <code>.org.qsn.protobuf.Result.RespCode respCode = 1;</code>
+     * @return The respCode.
+     */
+    @java.lang.Override
+    public org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode getRespCode() {
+      @SuppressWarnings("deprecation")
+      org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode result = org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode.valueOf(respCode_);
+      return result == null ? org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.org.qsn.protobuf.Result.RespCode respCode = 1;</code>
+     * @param value The respCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRespCode(org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      respCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.org.qsn.protobuf.Result.RespCode respCode = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearRespCode() {
