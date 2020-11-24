@@ -23,30 +23,36 @@ public interface CreateRawDeployContractTxRequestOrBuilder extends
   org.qsn.api.rpc.grpc.proto.entity.common.BaseRequestOrBuilder getBaseRequestOrBuilder();
 
   /**
-   * <code>bytes contractCode = 2;</code>
+   * <code>bytes sender = 2;</code>
+   * @return The sender.
+   */
+  com.google.protobuf.ByteString getSender();
+
+  /**
+   * <code>bytes contractCode = 3;</code>
    * @return The contractCode.
    */
   com.google.protobuf.ByteString getContractCode();
 
   /**
-   * <code>string contractName = 3;</code>
+   * <code>string contractName = 4;</code>
    * @return The contractName.
    */
   java.lang.String getContractName();
   /**
-   * <code>string contractName = 3;</code>
+   * <code>string contractName = 4;</code>
    * @return The bytes for contractName.
    */
   com.google.protobuf.ByteString
       getContractNameBytes();
 
   /**
-   * <code>string contractClassName = 4;</code>
+   * <code>string contractClassName = 5;</code>
    * @return The contractClassName.
    */
   java.lang.String getContractClassName();
   /**
-   * <code>string contractClassName = 4;</code>
+   * <code>string contractClassName = 5;</code>
    * @return The bytes for contractClassName.
    */
   com.google.protobuf.ByteString

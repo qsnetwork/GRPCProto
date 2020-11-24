@@ -56,32 +56,33 @@ public final class Block {
       "\n#qsn/entity/common/block/Block.proto\022\020o" +
       "rg.qsn.protobuf\0322qsn/entity/common/trans" +
       "action/TransactionDto.proto\"0\n\022BlockHead" +
-      "erVersion\022\r\n\005block\030\001 \001(\005\022\013\n\003app\030\002 \001(\005\"\237\003" +
+      "erVersion\022\r\n\005block\030\001 \001(\005\022\013\n\003app\030\002 \001(\005\"\277\003" +
       "\n\016BlockHeaderDto\0225\n\007version\030\001 \001(\0132$.org." +
       "qsn.protobuf.BlockHeaderVersion\022\017\n\007chain" +
       "Id\030\002 \001(\t\022\016\n\006height\030\003 \001(\003\022\014\n\004time\030\004 \001(\003\022\016" +
-      "\n\006numTxs\030\005 \001(\003\022\020\n\010totalTxs\030\006 \001(\003\022\025\n\rlast" +
-      "Blockhash\030\007 \001(\014\022\026\n\016lastCommitHash\030\010 \001(\014\022" +
-      "\020\n\010dataHash\030\t \001(\014\022\026\n\016validatorsHash\030\n \001(" +
-      "\014\022\032\n\022nextValidatorsHash\030\013 \001(\014\022\023\n\013account" +
-      "Hash\030\014 \001(\014\022\024\n\014contractHash\030\r \001(\014\022\023\n\013stor" +
-      "ageHash\030\016 \001(\014\022\027\n\017transactionHash\030\017 \001(\014\022\036" +
-      "\n\026transactionReceiptHash\030\020 \001(\014\022\027\n\017blockR" +
-      "ewardHash\030\021 \001(\014\"F\n\014BlockDataDto\0226\n\014trans" +
-      "actions\030\001 \003(\0132 .org.qsn.protobuf.Transac" +
-      "tionDto\"\246\001\n\014PrecommitDto\022\014\n\004type\030\001 \001(\005\022\016" +
-      "\n\006height\030\002 \001(\003\022\r\n\005round\030\003 \001(\005\022\021\n\tblockHa" +
-      "sh\030\004 \001(\014\022\021\n\ttimestamp\030\005 \001(\003\022\030\n\020validator" +
-      "Address\030\006 \001(\014\022\026\n\016validatorIndex\030\007 \001(\005\022\021\n" +
-      "\tsignature\030\010 \001(\014\"f\n\rLastCommitDto\022\016\n\006hei" +
-      "ght\030\001 \001(\003\022\021\n\tblockHash\030\002 \001(\014\0222\n\nprecommi" +
-      "ts\030\003 \003(\0132\036.org.qsn.protobuf.PrecommitDto" +
-      "\"\237\001\n\010BlockDto\0220\n\006header\030\001 \001(\0132 .org.qsn." +
-      "protobuf.BlockHeaderDto\022,\n\004data\030\002 \001(\0132\036." +
-      "org.qsn.protobuf.BlockDataDto\0223\n\nlastCom" +
-      "mit\030\003 \001(\0132\037.org.qsn.protobuf.LastCommitD" +
-      "toB2\n.org.qsn.api.rpc.grpc.proto.entity." +
-      "common.blockP\001b\006proto3"
+      "\n\006numTxs\030\005 \001(\003\022\020\n\010totalTxs\030\006 \001(\003\022\036\n\026prop" +
+      "oserSequenceNumber\030\007 \001(\003\022\025\n\rlastBlockhas" +
+      "h\030\010 \001(\014\022\026\n\016lastCommitHash\030\t \001(\014\022\020\n\010dataH" +
+      "ash\030\n \001(\014\022\026\n\016validatorsHash\030\013 \001(\014\022\032\n\022nex" +
+      "tValidatorsHash\030\014 \001(\014\022\023\n\013accountHash\030\r \001" +
+      "(\014\022\024\n\014contractHash\030\016 \001(\014\022\023\n\013storageHash\030" +
+      "\017 \001(\014\022\027\n\017transactionHash\030\020 \001(\014\022\036\n\026transa" +
+      "ctionReceiptHash\030\021 \001(\014\022\027\n\017blockRewardHas" +
+      "h\030\022 \001(\014\"F\n\014BlockDataDto\0226\n\014transactions\030" +
+      "\001 \003(\0132 .org.qsn.protobuf.TransactionDto\"" +
+      "\246\001\n\014PrecommitDto\022\014\n\004type\030\001 \001(\005\022\016\n\006height" +
+      "\030\002 \001(\003\022\r\n\005round\030\003 \001(\005\022\021\n\tblockHash\030\004 \001(\014" +
+      "\022\021\n\ttimestamp\030\005 \001(\003\022\030\n\020validatorAddress\030" +
+      "\006 \001(\014\022\026\n\016validatorIndex\030\007 \001(\005\022\021\n\tsignatu" +
+      "re\030\010 \001(\014\"f\n\rLastCommitDto\022\016\n\006height\030\001 \001(" +
+      "\003\022\021\n\tblockHash\030\002 \001(\014\0222\n\nprecommits\030\003 \003(\013" +
+      "2\036.org.qsn.protobuf.PrecommitDto\"\237\001\n\010Blo" +
+      "ckDto\0220\n\006header\030\001 \001(\0132 .org.qsn.protobuf" +
+      ".BlockHeaderDto\022,\n\004data\030\002 \001(\0132\036.org.qsn." +
+      "protobuf.BlockDataDto\0223\n\nlastCommit\030\003 \001(" +
+      "\0132\037.org.qsn.protobuf.LastCommitDtoB2\n.or" +
+      "g.qsn.api.rpc.grpc.proto.entity.common.b" +
+      "lockP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -99,7 +100,7 @@ public final class Block {
     internal_static_org_qsn_protobuf_BlockHeaderDto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_BlockHeaderDto_descriptor,
-        new java.lang.String[] { "Version", "ChainId", "Height", "Time", "NumTxs", "TotalTxs", "LastBlockhash", "LastCommitHash", "DataHash", "ValidatorsHash", "NextValidatorsHash", "AccountHash", "ContractHash", "StorageHash", "TransactionHash", "TransactionReceiptHash", "BlockRewardHash", });
+        new java.lang.String[] { "Version", "ChainId", "Height", "Time", "NumTxs", "TotalTxs", "ProposerSequenceNumber", "LastBlockhash", "LastCommitHash", "DataHash", "ValidatorsHash", "NextValidatorsHash", "AccountHash", "ContractHash", "StorageHash", "TransactionHash", "TransactionReceiptHash", "BlockRewardHash", });
     internal_static_org_qsn_protobuf_BlockDataDto_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_org_qsn_protobuf_BlockDataDto_fieldAccessorTable = new

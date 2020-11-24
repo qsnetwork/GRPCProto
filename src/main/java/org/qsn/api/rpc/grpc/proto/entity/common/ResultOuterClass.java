@@ -29,9 +29,11 @@ public final class ResultOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\036qsn/entity/common/Result.proto\022\020org.qs" +
-      "n.protobuf\"+\n\006Result\022\020\n\010respCode\030\001 \001(\005\022\017" +
-      "\n\007respMsg\030\002 \001(\tB,\n(org.qsn.api.rpc.grpc." +
-      "proto.entity.commonP\001b\006proto3"
+      "n.protobuf\"\205\001\n\006Result\0223\n\010respCode\030\001 \001(\0162" +
+      "!.org.qsn.protobuf.Result.RespCode\022\017\n\007re" +
+      "spMsg\030\002 \001(\t\"5\n\010RespCode\022\013\n\007SUCCESS\020\000\022\t\n\005" +
+      "ERROR\020\001\022\021\n\rWRONG_VERSION\020cB,\n(org.qsn.ap" +
+      "i.rpc.grpc.proto.entity.commonP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

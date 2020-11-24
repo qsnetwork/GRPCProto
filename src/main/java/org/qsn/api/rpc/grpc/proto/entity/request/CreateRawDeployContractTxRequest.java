@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateRawDeployContractTxRequest() {
+    sender_ = com.google.protobuf.ByteString.EMPTY;
     contractCode_ = com.google.protobuf.ByteString.EMPTY;
     contractName_ = "";
     contractClassName_ = "";
@@ -66,16 +67,21 @@ private static final long serialVersionUID = 0L;
           }
           case 18: {
 
-            contractCode_ = input.readBytes();
+            sender_ = input.readBytes();
             break;
           }
           case 26: {
+
+            contractCode_ = input.readBytes();
+            break;
+          }
+          case 34: {
             java.lang.String s = input.readStringRequireUtf8();
 
             contractName_ = s;
             break;
           }
-          case 34: {
+          case 42: {
             java.lang.String s = input.readStringRequireUtf8();
 
             contractClassName_ = s;
@@ -139,10 +145,21 @@ private static final long serialVersionUID = 0L;
     return getBaseRequest();
   }
 
-  public static final int CONTRACTCODE_FIELD_NUMBER = 2;
+  public static final int SENDER_FIELD_NUMBER = 2;
+  private com.google.protobuf.ByteString sender_;
+  /**
+   * <code>bytes sender = 2;</code>
+   * @return The sender.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getSender() {
+    return sender_;
+  }
+
+  public static final int CONTRACTCODE_FIELD_NUMBER = 3;
   private com.google.protobuf.ByteString contractCode_;
   /**
-   * <code>bytes contractCode = 2;</code>
+   * <code>bytes contractCode = 3;</code>
    * @return The contractCode.
    */
   @java.lang.Override
@@ -150,10 +167,10 @@ private static final long serialVersionUID = 0L;
     return contractCode_;
   }
 
-  public static final int CONTRACTNAME_FIELD_NUMBER = 3;
+  public static final int CONTRACTNAME_FIELD_NUMBER = 4;
   private volatile java.lang.Object contractName_;
   /**
-   * <code>string contractName = 3;</code>
+   * <code>string contractName = 4;</code>
    * @return The contractName.
    */
   @java.lang.Override
@@ -170,7 +187,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string contractName = 3;</code>
+   * <code>string contractName = 4;</code>
    * @return The bytes for contractName.
    */
   @java.lang.Override
@@ -188,10 +205,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CONTRACTCLASSNAME_FIELD_NUMBER = 4;
+  public static final int CONTRACTCLASSNAME_FIELD_NUMBER = 5;
   private volatile java.lang.Object contractClassName_;
   /**
-   * <code>string contractClassName = 4;</code>
+   * <code>string contractClassName = 5;</code>
    * @return The contractClassName.
    */
   @java.lang.Override
@@ -208,7 +225,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string contractClassName = 4;</code>
+   * <code>string contractClassName = 5;</code>
    * @return The bytes for contractClassName.
    */
   @java.lang.Override
@@ -243,14 +260,17 @@ private static final long serialVersionUID = 0L;
     if (baseRequest_ != null) {
       output.writeMessage(1, getBaseRequest());
     }
+    if (!sender_.isEmpty()) {
+      output.writeBytes(2, sender_);
+    }
     if (!contractCode_.isEmpty()) {
-      output.writeBytes(2, contractCode_);
+      output.writeBytes(3, contractCode_);
     }
     if (!getContractNameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, contractName_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, contractName_);
     }
     if (!getContractClassNameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, contractClassName_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, contractClassName_);
     }
     unknownFields.writeTo(output);
   }
@@ -265,15 +285,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getBaseRequest());
     }
+    if (!sender_.isEmpty()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(2, sender_);
+    }
     if (!contractCode_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(2, contractCode_);
+        .computeBytesSize(3, contractCode_);
     }
     if (!getContractNameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, contractName_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, contractName_);
     }
     if (!getContractClassNameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, contractClassName_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, contractClassName_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -295,6 +319,8 @@ private static final long serialVersionUID = 0L;
       if (!getBaseRequest()
           .equals(other.getBaseRequest())) return false;
     }
+    if (!getSender()
+        .equals(other.getSender())) return false;
     if (!getContractCode()
         .equals(other.getContractCode())) return false;
     if (!getContractName()
@@ -316,6 +342,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BASEREQUEST_FIELD_NUMBER;
       hash = (53 * hash) + getBaseRequest().hashCode();
     }
+    hash = (37 * hash) + SENDER_FIELD_NUMBER;
+    hash = (53 * hash) + getSender().hashCode();
     hash = (37 * hash) + CONTRACTCODE_FIELD_NUMBER;
     hash = (53 * hash) + getContractCode().hashCode();
     hash = (37 * hash) + CONTRACTNAME_FIELD_NUMBER;
@@ -461,6 +489,8 @@ private static final long serialVersionUID = 0L;
         baseRequest_ = null;
         baseRequestBuilder_ = null;
       }
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+
       contractCode_ = com.google.protobuf.ByteString.EMPTY;
 
       contractName_ = "";
@@ -498,6 +528,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.baseRequest_ = baseRequestBuilder_.build();
       }
+      result.sender_ = sender_;
       result.contractCode_ = contractCode_;
       result.contractName_ = contractName_;
       result.contractClassName_ = contractClassName_;
@@ -551,6 +582,9 @@ private static final long serialVersionUID = 0L;
       if (other == org.qsn.api.rpc.grpc.proto.entity.request.CreateRawDeployContractTxRequest.getDefaultInstance()) return this;
       if (other.hasBaseRequest()) {
         mergeBaseRequest(other.getBaseRequest());
+      }
+      if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+        setSender(other.getSender());
       }
       if (other.getContractCode() != com.google.protobuf.ByteString.EMPTY) {
         setContractCode(other.getContractCode());
@@ -711,9 +745,43 @@ private static final long serialVersionUID = 0L;
       return baseRequestBuilder_;
     }
 
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes sender = 2;</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+    /**
+     * <code>bytes sender = 2;</code>
+     * @param value The sender to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSender(com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      sender_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bytes sender = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSender() {
+      
+      sender_ = getDefaultInstance().getSender();
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.ByteString contractCode_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes contractCode = 2;</code>
+     * <code>bytes contractCode = 3;</code>
      * @return The contractCode.
      */
     @java.lang.Override
@@ -721,7 +789,7 @@ private static final long serialVersionUID = 0L;
       return contractCode_;
     }
     /**
-     * <code>bytes contractCode = 2;</code>
+     * <code>bytes contractCode = 3;</code>
      * @param value The contractCode to set.
      * @return This builder for chaining.
      */
@@ -735,7 +803,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes contractCode = 2;</code>
+     * <code>bytes contractCode = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearContractCode() {
@@ -747,7 +815,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object contractName_ = "";
     /**
-     * <code>string contractName = 3;</code>
+     * <code>string contractName = 4;</code>
      * @return The contractName.
      */
     public java.lang.String getContractName() {
@@ -763,7 +831,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string contractName = 3;</code>
+     * <code>string contractName = 4;</code>
      * @return The bytes for contractName.
      */
     public com.google.protobuf.ByteString
@@ -780,7 +848,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string contractName = 3;</code>
+     * <code>string contractName = 4;</code>
      * @param value The contractName to set.
      * @return This builder for chaining.
      */
@@ -795,7 +863,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string contractName = 3;</code>
+     * <code>string contractName = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearContractName() {
@@ -805,7 +873,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string contractName = 3;</code>
+     * <code>string contractName = 4;</code>
      * @param value The bytes for contractName to set.
      * @return This builder for chaining.
      */
@@ -823,7 +891,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object contractClassName_ = "";
     /**
-     * <code>string contractClassName = 4;</code>
+     * <code>string contractClassName = 5;</code>
      * @return The contractClassName.
      */
     public java.lang.String getContractClassName() {
@@ -839,7 +907,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string contractClassName = 4;</code>
+     * <code>string contractClassName = 5;</code>
      * @return The bytes for contractClassName.
      */
     public com.google.protobuf.ByteString
@@ -856,7 +924,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string contractClassName = 4;</code>
+     * <code>string contractClassName = 5;</code>
      * @param value The contractClassName to set.
      * @return This builder for chaining.
      */
@@ -871,7 +939,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string contractClassName = 4;</code>
+     * <code>string contractClassName = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearContractClassName() {
@@ -881,7 +949,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string contractClassName = 4;</code>
+     * <code>string contractClassName = 5;</code>
      * @param value The bytes for contractClassName to set.
      * @return This builder for chaining.
      */

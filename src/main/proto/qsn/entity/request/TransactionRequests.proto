@@ -33,9 +33,10 @@ message CreateRawTransferTxRequest{
 
 message CreateRawDeployContractTxRequest{
     BaseRequest baseRequest = 1;
-    bytes contractCode = 2;
-    string contractName = 3;
-    string contractClassName = 4;
+    bytes sender = 2;
+    bytes contractCode = 3;
+    string contractName = 4;
+    string contractClassName = 5;
 }
 
 message CreateRawValidatorTxRequest {

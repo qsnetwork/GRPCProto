@@ -19,17 +19,18 @@ message BlockHeaderDto{
   int64 time = 4;
   int64 numTxs = 5;
   int64 totalTxs = 6;
-  bytes lastBlockhash = 7;
-  bytes lastCommitHash = 8;
-  bytes dataHash = 9;
-  bytes validatorsHash = 10;
-  bytes nextValidatorsHash = 11;
-  bytes accountHash = 12;
-  bytes contractHash = 13;
-  bytes storageHash = 14;
-  bytes transactionHash = 15;
-  bytes transactionReceiptHash = 16;
-  bytes blockRewardHash = 17;
+  int64 proposerSequenceNumber = 7;
+  bytes lastBlockhash = 8;
+  bytes lastCommitHash = 9;
+  bytes dataHash = 10;
+  bytes validatorsHash = 11;
+  bytes nextValidatorsHash = 12;
+  bytes accountHash = 13;
+  bytes contractHash = 14;
+  bytes storageHash = 15;
+  bytes transactionHash = 16;
+  bytes transactionReceiptHash = 17;
+  bytes blockRewardHash = 18;
 }
 
 message BlockDataDto{
