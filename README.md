@@ -10,10 +10,11 @@ Please reference to https://grpc.io/docs/languages/ for tutorial of using gRPC i
 * [Transaction](#Transaction)
 
 
-all the request include a BaseRequest 
+All the request include a BaseRequest 
+Right now, only version="1" is allowed in all requests.
 <pre><code>
 message BaseRequest {
-    string version = 1;
+    string version = 1; 
 }
 </code></pre>
 
@@ -167,11 +168,11 @@ public class AccountRpcClientImpl implements AccountRpcClient {
     @Override
     public BigInteger getAccountBalance(byte[] addr) {
         GetAccountBalanceRequest req = GetAccountBalanceRequest.newBuilder()
+                .setBaseRequest(BaseRequest.newBuilder().setVersion("1").build())
                 .setAddress(ByteString.copyFrom(addr))
                 .build();
         GetAccountBalanceResponse resp = stub.getAccountBalance(req);
         BigInteger balance = TypeUtil.transBInteger2BigInteger(resp.getBalance());
-        return balance;
     }
 
 
@@ -190,6 +191,7 @@ public class TransactionRpcClientImpl implements TransactionRpcClient {
     @Override
     public TransactionReceiptDto getTransactionReceipt(byte[] transactionHash) {
         GetTransactionReceiptRequest req = GetTransactionReceiptRequest.newBuilder()
+                .setBaseRequest(BaseRequest.newBuilder().setVersion("1").build())
                 .setTransactionHash(ByteString.copyFrom(transactionHash))
                 .build();
         GetTransactionReceiptResponse resp = stub.getTransactionReceipt(req);
@@ -214,7 +216,8 @@ from qsn.entity.request import AccountRequests_pb2
 
 def run():
     channel = grpc.insecure_channel('ip:port')
-    stub = AccountRpc_pb2_grpc.AccountRpcStub(channel)
-    response = stub.getAccount(AccountRequests_pb2.GetAccountRequest(address=bytes.fromhex("deadbeef")))
-
+    response = stub.getAccount(AccountRequests_pb2.GetAccountRequest( baseRequest=BaseRequest_pb2.BaseRequest(version="1"), address=bytes.fromhex("70e85308ef0502397cac5632bd7307c1dc391c49")))
+    print(response)
+    balance = int.from_bytes(response.account.balance.value, byteorder="big")
+    print(balance)
 </code></pre>
