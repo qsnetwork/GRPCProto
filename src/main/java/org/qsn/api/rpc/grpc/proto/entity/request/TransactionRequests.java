@@ -49,6 +49,11 @@ public final class TransactionRequests {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_qsn_protobuf_CreateRawWithdrawTxRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_FileUploadTxRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_FileUploadTxRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -89,8 +94,10 @@ public final class TransactionRequests {
       "xRequest\0222\n\013baseRequest\030\001 \001(\0132\035.org.qsn." +
       "protobuf.BaseRequest\022\020\n\010coinBase\030\002 \001(\014\022)" +
       "\n\005value\030\003 \001(\0132\032.org.qsn.protobuf.BIntege" +
-      "rB-\n)org.qsn.api.rpc.grpc.proto.entity.r" +
-      "equestP\001b\006proto3"
+      "r\"[\n\023FileUploadTxRequest\0222\n\013baseRequest\030" +
+      "\001 \001(\0132\035.org.qsn.protobuf.BaseRequest\022\020\n\010" +
+      "fileHash\030\002 \001(\014B-\n)org.qsn.api.rpc.grpc.p" +
+      "roto.entity.requestP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -141,6 +148,12 @@ public final class TransactionRequests {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_CreateRawWithdrawTxRequest_descriptor,
         new java.lang.String[] { "BaseRequest", "CoinBase", "Value", });
+    internal_static_org_qsn_protobuf_FileUploadTxRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_org_qsn_protobuf_FileUploadTxRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_FileUploadTxRequest_descriptor,
+        new java.lang.String[] { "BaseRequest", "FileHash", });
     org.qsn.api.rpc.grpc.proto.entity.common.BaseRequestOuterClass.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOuterClass.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDtoOuterClass.getDescriptor();

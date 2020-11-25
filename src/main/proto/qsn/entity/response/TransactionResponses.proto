@@ -42,3 +42,8 @@ message CreateRawWithdrawTxResponse{
     Result result = 1;
     TransactionDto transaction = 2;
 }
+
+message FileUploadTxResponse{
+    Result result = 1;
+    TransactionDto transaction = 2;
+}

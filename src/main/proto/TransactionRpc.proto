@@ -16,4 +16,5 @@ service TransactionRpc {
     rpc createRawDeployContractTx(CreateRawDeployContractTxRequest) returns (CreateRawDeployContractTxResponse);
     rpc createRawValidatorTx(CreateRawValidatorTxRequest) returns (CreateRawValidatorTxResponse);
     rpc createRawWithdrawTx(CreateRawWithdrawTxRequest) returns (CreateRawWithdrawTxResponse);
+    rpc fileUploadTx(FileUploadTxRequest) returns (FileUploadTxResponse);
 }

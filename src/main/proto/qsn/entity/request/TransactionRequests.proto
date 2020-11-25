@@ -54,3 +54,8 @@ message CreateRawWithdrawTxRequest{
     bytes coinBase = 2;
     BInteger value = 3;
 }
+
+message FileUploadTxRequest{
+    BaseRequest baseRequest = 1;
+    bytes fileHash = 2;
+}
