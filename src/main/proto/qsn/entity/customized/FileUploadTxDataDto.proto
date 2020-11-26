@@ -8,7 +8,6 @@ package org.qsn.protobuf;
 import "qsn/entity/common/BInteger.proto";
 
 
-message TokenIssueTxDataDto {
-  bytes address = 1;
-  BInteger amount = 2;
+message FileUploadTxDataDto {
+    bytes fileHash = 1;
 }

@@ -244,37 +244,6 @@ public final class TransactionRpcGrpc {
     return getCreateRawWithdrawTxMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.FileUploadTxRequest,
-      org.qsn.api.rpc.grpc.proto.entity.response.FileUploadTxResponse> getFileUploadTxMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "fileUploadTx",
-      requestType = org.qsn.api.rpc.grpc.proto.entity.request.FileUploadTxRequest.class,
-      responseType = org.qsn.api.rpc.grpc.proto.entity.response.FileUploadTxResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.FileUploadTxRequest,
-      org.qsn.api.rpc.grpc.proto.entity.response.FileUploadTxResponse> getFileUploadTxMethod() {
-    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.FileUploadTxRequest, org.qsn.api.rpc.grpc.proto.entity.response.FileUploadTxResponse> getFileUploadTxMethod;
-    if ((getFileUploadTxMethod = TransactionRpcGrpc.getFileUploadTxMethod) == null) {
-      synchronized (TransactionRpcGrpc.class) {
-        if ((getFileUploadTxMethod = TransactionRpcGrpc.getFileUploadTxMethod) == null) {
-          TransactionRpcGrpc.getFileUploadTxMethod = getFileUploadTxMethod =
-              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.FileUploadTxRequest, org.qsn.api.rpc.grpc.proto.entity.response.FileUploadTxResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "fileUploadTx"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.qsn.api.rpc.grpc.proto.entity.request.FileUploadTxRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.qsn.api.rpc.grpc.proto.entity.response.FileUploadTxResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new TransactionRpcMethodDescriptorSupplier("fileUploadTx"))
-              .build();
-        }
-      }
-    }
-    return getFileUploadTxMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -372,13 +341,6 @@ public final class TransactionRpcGrpc {
       asyncUnimplementedUnaryCall(getCreateRawWithdrawTxMethod(), responseObserver);
     }
 
-    /**
-     */
-    public void fileUploadTx(org.qsn.api.rpc.grpc.proto.entity.request.FileUploadTxRequest request,
-        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.FileUploadTxResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getFileUploadTxMethod(), responseObserver);
-    }
-
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -430,13 +392,6 @@ public final class TransactionRpcGrpc {
                 org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest,
                 org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse>(
                   this, METHODID_CREATE_RAW_WITHDRAW_TX)))
-          .addMethod(
-            getFileUploadTxMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                org.qsn.api.rpc.grpc.proto.entity.request.FileUploadTxRequest,
-                org.qsn.api.rpc.grpc.proto.entity.response.FileUploadTxResponse>(
-                  this, METHODID_FILE_UPLOAD_TX)))
           .build();
     }
   }
@@ -510,14 +465,6 @@ public final class TransactionRpcGrpc {
       asyncUnaryCall(
           getChannel().newCall(getCreateRawWithdrawTxMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     */
-    public void fileUploadTx(org.qsn.api.rpc.grpc.proto.entity.request.FileUploadTxRequest request,
-        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.FileUploadTxResponse> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getFileUploadTxMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -581,13 +528,6 @@ public final class TransactionRpcGrpc {
     public org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse createRawWithdrawTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateRawWithdrawTxMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public org.qsn.api.rpc.grpc.proto.entity.response.FileUploadTxResponse fileUploadTx(org.qsn.api.rpc.grpc.proto.entity.request.FileUploadTxRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getFileUploadTxMethod(), getCallOptions(), request);
     }
   }
 
@@ -660,14 +600,6 @@ public final class TransactionRpcGrpc {
       return futureUnaryCall(
           getChannel().newCall(getCreateRawWithdrawTxMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.FileUploadTxResponse> fileUploadTx(
-        org.qsn.api.rpc.grpc.proto.entity.request.FileUploadTxRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getFileUploadTxMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_SEND_TRANSACTION = 0;
@@ -677,7 +609,6 @@ public final class TransactionRpcGrpc {
   private static final int METHODID_CREATE_RAW_DEPLOY_CONTRACT_TX = 4;
   private static final int METHODID_CREATE_RAW_VALIDATOR_TX = 5;
   private static final int METHODID_CREATE_RAW_WITHDRAW_TX = 6;
-  private static final int METHODID_FILE_UPLOAD_TX = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -723,10 +654,6 @@ public final class TransactionRpcGrpc {
         case METHODID_CREATE_RAW_WITHDRAW_TX:
           serviceImpl.createRawWithdrawTx((org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest) request,
               (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse>) responseObserver);
-          break;
-        case METHODID_FILE_UPLOAD_TX:
-          serviceImpl.fileUploadTx((org.qsn.api.rpc.grpc.proto.entity.request.FileUploadTxRequest) request,
-              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.FileUploadTxResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -796,7 +723,6 @@ public final class TransactionRpcGrpc {
               .addMethod(getCreateRawDeployContractTxMethod())
               .addMethod(getCreateRawValidatorTxMethod())
               .addMethod(getCreateRawWithdrawTxMethod())
-              .addMethod(getFileUploadTxMethod())
               .build();
         }
       }
