@@ -15,20 +15,20 @@ public final class BlockRewardTxDataDtoOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_qsn_protobuf_BlockReward_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_org_qsn_protobuf_BlockReward_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_qsn_protobuf_BlockRewardData_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_org_qsn_protobuf_BlockRewardData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_org_qsn_protobuf_BlockRewardTxDataDto_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_qsn_protobuf_BlockRewardTxDataDto_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_BlockRewardDto_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_BlockRewardDto_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_BlockRewardDataDto_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_BlockRewardDataDto_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -40,39 +40,40 @@ public final class BlockRewardTxDataDtoOuterClass {
     java.lang.String[] descriptorData = {
       "\n0qsn/entity/customized/BlockRewardTxDat" +
       "aDto.proto\022\020org.qsn.protobuf\032 qsn/entity" +
-      "/common/BInteger.proto\"x\n\013BlockReward\022\023\n" +
-      "\013blockHeight\030\001 \001(\003\022\024\n\014matureHeight\030\002 \001(\003" +
-      "\022>\n\023blockRewardDataList\030\003 \003(\0132!.org.qsn." +
-      "protobuf.BlockRewardData\"O\n\017BlockRewardD" +
-      "ata\022\020\n\010coinBase\030\001 \001(\014\022*\n\006reward\030\002 \001(\0132\032." +
-      "org.qsn.protobuf.BInteger\"J\n\024BlockReward" +
-      "TxDataDto\0222\n\013blockReward\030\001 \001(\0132\035.org.qsn" +
-      ".protobuf.BlockRewardB0\n,org.qsn.api.rpc" +
-      ".grpc.proto.entity.customizedP\001b\006proto3"
+      "/common/BInteger.proto\"M\n\024BlockRewardTxD" +
+      "ataDto\0225\n\013blockReward\030\001 \001(\0132 .org.qsn.pr" +
+      "otobuf.BlockRewardDto\"~\n\016BlockRewardDto\022" +
+      "\023\n\013blockHeight\030\001 \001(\003\022\024\n\014matureHeight\030\002 \001" +
+      "(\003\022A\n\023blockRewardDataList\030\003 \003(\0132$.org.qs" +
+      "n.protobuf.BlockRewardDataDto\"R\n\022BlockRe" +
+      "wardDataDto\022\020\n\010coinBase\030\001 \001(\014\022*\n\006reward\030" +
+      "\002 \001(\0132\032.org.qsn.protobuf.BIntegerB0\n,org" +
+      ".qsn.api.rpc.grpc.proto.entity.customize" +
+      "dP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOuterClass.getDescriptor(),
         });
-    internal_static_org_qsn_protobuf_BlockReward_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_org_qsn_protobuf_BlockReward_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_org_qsn_protobuf_BlockReward_descriptor,
-        new java.lang.String[] { "BlockHeight", "MatureHeight", "BlockRewardDataList", });
-    internal_static_org_qsn_protobuf_BlockRewardData_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_org_qsn_protobuf_BlockRewardData_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_org_qsn_protobuf_BlockRewardData_descriptor,
-        new java.lang.String[] { "CoinBase", "Reward", });
     internal_static_org_qsn_protobuf_BlockRewardTxDataDto_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_org_qsn_protobuf_BlockRewardTxDataDto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_BlockRewardTxDataDto_descriptor,
         new java.lang.String[] { "BlockReward", });
+    internal_static_org_qsn_protobuf_BlockRewardDto_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_org_qsn_protobuf_BlockRewardDto_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_BlockRewardDto_descriptor,
+        new java.lang.String[] { "BlockHeight", "MatureHeight", "BlockRewardDataList", });
+    internal_static_org_qsn_protobuf_BlockRewardDataDto_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_org_qsn_protobuf_BlockRewardDataDto_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_BlockRewardDataDto_descriptor,
+        new java.lang.String[] { "CoinBase", "Reward", });
     org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOuterClass.getDescriptor();
   }
 

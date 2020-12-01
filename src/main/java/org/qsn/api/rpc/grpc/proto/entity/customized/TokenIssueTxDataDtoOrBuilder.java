@@ -3,8 +3,8 @@
 
 package org.qsn.api.rpc.grpc.proto.entity.customized;
 
-public interface TokenIssueTxDataOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:org.qsn.protobuf.TokenIssueTxData)
+public interface TokenIssueTxDataDtoOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:org.qsn.protobuf.TokenIssueTxDataDto)
     com.google.protobuf.MessageOrBuilder {
 
   /**

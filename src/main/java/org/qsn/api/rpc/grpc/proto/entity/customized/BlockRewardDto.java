@@ -4,18 +4,18 @@
 package org.qsn.api.rpc.grpc.proto.entity.customized;
 
 /**
- * Protobuf type {@code org.qsn.protobuf.BlockReward}
+ * Protobuf type {@code org.qsn.protobuf.BlockRewardDto}
  */
-public final class BlockReward extends
+public final class BlockRewardDto extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:org.qsn.protobuf.BlockReward)
-    BlockRewardOrBuilder {
+    // @@protoc_insertion_point(message_implements:org.qsn.protobuf.BlockRewardDto)
+    BlockRewardDtoOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use BlockReward.newBuilder() to construct.
-  private BlockReward(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use BlockRewardDto.newBuilder() to construct.
+  private BlockRewardDto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private BlockReward() {
+  private BlockRewardDto() {
     blockRewardDataList_ = java.util.Collections.emptyList();
   }
 
@@ -23,7 +23,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new BlockReward();
+    return new BlockRewardDto();
   }
 
   @java.lang.Override
@@ -31,7 +31,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private BlockReward(
+  private BlockRewardDto(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -62,11 +62,11 @@ private static final long serialVersionUID = 0L;
           }
           case 26: {
             if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              blockRewardDataList_ = new java.util.ArrayList<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData>();
+              blockRewardDataList_ = new java.util.ArrayList<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto>();
               mutable_bitField0_ |= 0x00000001;
             }
             blockRewardDataList_.add(
-                input.readMessage(org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData.parser(), extensionRegistry));
+                input.readMessage(org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto.parser(), extensionRegistry));
             break;
           }
           default: {
@@ -93,15 +93,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardTxDataDtoOuterClass.internal_static_org_qsn_protobuf_BlockReward_descriptor;
+    return org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardTxDataDtoOuterClass.internal_static_org_qsn_protobuf_BlockRewardDto_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardTxDataDtoOuterClass.internal_static_org_qsn_protobuf_BlockReward_fieldAccessorTable
+    return org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardTxDataDtoOuterClass.internal_static_org_qsn_protobuf_BlockRewardDto_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.class, org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.Builder.class);
+            org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.class, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.Builder.class);
   }
 
   public static final int BLOCKHEIGHT_FIELD_NUMBER = 1;
@@ -127,41 +127,41 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BLOCKREWARDDATALIST_FIELD_NUMBER = 3;
-  private java.util.List<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData> blockRewardDataList_;
+  private java.util.List<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto> blockRewardDataList_;
   /**
-   * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+   * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
    */
   @java.lang.Override
-  public java.util.List<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData> getBlockRewardDataListList() {
+  public java.util.List<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto> getBlockRewardDataListList() {
     return blockRewardDataList_;
   }
   /**
-   * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+   * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataOrBuilder> 
+  public java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDtoOrBuilder> 
       getBlockRewardDataListOrBuilderList() {
     return blockRewardDataList_;
   }
   /**
-   * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+   * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
    */
   @java.lang.Override
   public int getBlockRewardDataListCount() {
     return blockRewardDataList_.size();
   }
   /**
-   * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+   * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData getBlockRewardDataList(int index) {
+  public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto getBlockRewardDataList(int index) {
     return blockRewardDataList_.get(index);
   }
   /**
-   * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+   * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataOrBuilder getBlockRewardDataListOrBuilder(
+  public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDtoOrBuilder getBlockRewardDataListOrBuilder(
       int index) {
     return blockRewardDataList_.get(index);
   }
@@ -220,10 +220,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward)) {
+    if (!(obj instanceof org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto)) {
       return super.equals(obj);
     }
-    org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward other = (org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward) obj;
+    org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto other = (org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto) obj;
 
     if (getBlockHeight()
         != other.getBlockHeight()) return false;
@@ -257,69 +257,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward parseFrom(
+  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward parseFrom(
+  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward parseFrom(
+  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward parseFrom(
+  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward parseFrom(byte[] data)
+  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward parseFrom(
+  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward parseFrom(java.io.InputStream input)
+  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward parseFrom(
+  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward parseDelimitedFrom(java.io.InputStream input)
+  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward parseDelimitedFrom(
+  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward parseFrom(
+  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward parseFrom(
+  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -332,7 +332,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward prototype) {
+  public static Builder newBuilder(org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -348,26 +348,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code org.qsn.protobuf.BlockReward}
+   * Protobuf type {@code org.qsn.protobuf.BlockRewardDto}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:org.qsn.protobuf.BlockReward)
-      org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardOrBuilder {
+      // @@protoc_insertion_point(builder_implements:org.qsn.protobuf.BlockRewardDto)
+      org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDtoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardTxDataDtoOuterClass.internal_static_org_qsn_protobuf_BlockReward_descriptor;
+      return org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardTxDataDtoOuterClass.internal_static_org_qsn_protobuf_BlockRewardDto_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardTxDataDtoOuterClass.internal_static_org_qsn_protobuf_BlockReward_fieldAccessorTable
+      return org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardTxDataDtoOuterClass.internal_static_org_qsn_protobuf_BlockRewardDto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.class, org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.Builder.class);
+              org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.class, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.Builder.class);
     }
 
-    // Construct using org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.newBuilder()
+    // Construct using org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -402,17 +402,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardTxDataDtoOuterClass.internal_static_org_qsn_protobuf_BlockReward_descriptor;
+      return org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardTxDataDtoOuterClass.internal_static_org_qsn_protobuf_BlockRewardDto_descriptor;
     }
 
     @java.lang.Override
-    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward getDefaultInstanceForType() {
-      return org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.getDefaultInstance();
+    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto getDefaultInstanceForType() {
+      return org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.getDefaultInstance();
     }
 
     @java.lang.Override
-    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward build() {
-      org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward result = buildPartial();
+    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto build() {
+      org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -420,8 +420,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward buildPartial() {
-      org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward result = new org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward(this);
+    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto buildPartial() {
+      org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto result = new org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto(this);
       int from_bitField0_ = bitField0_;
       result.blockHeight_ = blockHeight_;
       result.matureHeight_ = matureHeight_;
@@ -472,16 +472,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward) {
-        return mergeFrom((org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward)other);
+      if (other instanceof org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto) {
+        return mergeFrom((org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward other) {
-      if (other == org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.getDefaultInstance()) return this;
+    public Builder mergeFrom(org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto other) {
+      if (other == org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.getDefaultInstance()) return this;
       if (other.getBlockHeight() != 0L) {
         setBlockHeight(other.getBlockHeight());
       }
@@ -529,11 +529,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward parsedMessage = null;
+      org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward) e.getUnfinishedMessage();
+        parsedMessage = (org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -606,22 +606,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData> blockRewardDataList_ =
+    private java.util.List<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto> blockRewardDataList_ =
       java.util.Collections.emptyList();
     private void ensureBlockRewardDataListIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        blockRewardDataList_ = new java.util.ArrayList<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData>(blockRewardDataList_);
+        blockRewardDataList_ = new java.util.ArrayList<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto>(blockRewardDataList_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData.Builder, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataOrBuilder> blockRewardDataListBuilder_;
+        org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto.Builder, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDtoOrBuilder> blockRewardDataListBuilder_;
 
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
-    public java.util.List<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData> getBlockRewardDataListList() {
+    public java.util.List<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto> getBlockRewardDataListList() {
       if (blockRewardDataListBuilder_ == null) {
         return java.util.Collections.unmodifiableList(blockRewardDataList_);
       } else {
@@ -629,7 +629,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
     public int getBlockRewardDataListCount() {
       if (blockRewardDataListBuilder_ == null) {
@@ -639,9 +639,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData getBlockRewardDataList(int index) {
+    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto getBlockRewardDataList(int index) {
       if (blockRewardDataListBuilder_ == null) {
         return blockRewardDataList_.get(index);
       } else {
@@ -649,10 +649,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
     public Builder setBlockRewardDataList(
-        int index, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData value) {
+        int index, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto value) {
       if (blockRewardDataListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -666,10 +666,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
     public Builder setBlockRewardDataList(
-        int index, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData.Builder builderForValue) {
+        int index, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto.Builder builderForValue) {
       if (blockRewardDataListBuilder_ == null) {
         ensureBlockRewardDataListIsMutable();
         blockRewardDataList_.set(index, builderForValue.build());
@@ -680,9 +680,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
-    public Builder addBlockRewardDataList(org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData value) {
+    public Builder addBlockRewardDataList(org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto value) {
       if (blockRewardDataListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -696,10 +696,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
     public Builder addBlockRewardDataList(
-        int index, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData value) {
+        int index, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto value) {
       if (blockRewardDataListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -713,10 +713,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
     public Builder addBlockRewardDataList(
-        org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData.Builder builderForValue) {
+        org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto.Builder builderForValue) {
       if (blockRewardDataListBuilder_ == null) {
         ensureBlockRewardDataListIsMutable();
         blockRewardDataList_.add(builderForValue.build());
@@ -727,10 +727,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
     public Builder addBlockRewardDataList(
-        int index, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData.Builder builderForValue) {
+        int index, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto.Builder builderForValue) {
       if (blockRewardDataListBuilder_ == null) {
         ensureBlockRewardDataListIsMutable();
         blockRewardDataList_.add(index, builderForValue.build());
@@ -741,10 +741,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
     public Builder addAllBlockRewardDataList(
-        java.lang.Iterable<? extends org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData> values) {
+        java.lang.Iterable<? extends org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto> values) {
       if (blockRewardDataListBuilder_ == null) {
         ensureBlockRewardDataListIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -756,7 +756,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
     public Builder clearBlockRewardDataList() {
       if (blockRewardDataListBuilder_ == null) {
@@ -769,7 +769,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
     public Builder removeBlockRewardDataList(int index) {
       if (blockRewardDataListBuilder_ == null) {
@@ -782,16 +782,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData.Builder getBlockRewardDataListBuilder(
+    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto.Builder getBlockRewardDataListBuilder(
         int index) {
       return getBlockRewardDataListFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataOrBuilder getBlockRewardDataListOrBuilder(
+    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDtoOrBuilder getBlockRewardDataListOrBuilder(
         int index) {
       if (blockRewardDataListBuilder_ == null) {
         return blockRewardDataList_.get(index);  } else {
@@ -799,9 +799,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
-    public java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataOrBuilder> 
+    public java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDtoOrBuilder> 
          getBlockRewardDataListOrBuilderList() {
       if (blockRewardDataListBuilder_ != null) {
         return blockRewardDataListBuilder_.getMessageOrBuilderList();
@@ -810,33 +810,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData.Builder addBlockRewardDataListBuilder() {
+    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto.Builder addBlockRewardDataListBuilder() {
       return getBlockRewardDataListFieldBuilder().addBuilder(
-          org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData.getDefaultInstance());
+          org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto.getDefaultInstance());
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData.Builder addBlockRewardDataListBuilder(
+    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto.Builder addBlockRewardDataListBuilder(
         int index) {
       return getBlockRewardDataListFieldBuilder().addBuilder(
-          index, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData.getDefaultInstance());
+          index, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto.getDefaultInstance());
     }
     /**
-     * <code>repeated .org.qsn.protobuf.BlockRewardData blockRewardDataList = 3;</code>
+     * <code>repeated .org.qsn.protobuf.BlockRewardDataDto blockRewardDataList = 3;</code>
      */
-    public java.util.List<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData.Builder> 
+    public java.util.List<org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto.Builder> 
          getBlockRewardDataListBuilderList() {
       return getBlockRewardDataListFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData.Builder, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataOrBuilder> 
+        org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto.Builder, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDtoOrBuilder> 
         getBlockRewardDataListFieldBuilder() {
       if (blockRewardDataListBuilder_ == null) {
         blockRewardDataListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardData.Builder, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataOrBuilder>(
+            org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDto.Builder, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDataDtoOrBuilder>(
                 blockRewardDataList_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -858,41 +858,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:org.qsn.protobuf.BlockReward)
+    // @@protoc_insertion_point(builder_scope:org.qsn.protobuf.BlockRewardDto)
   }
 
-  // @@protoc_insertion_point(class_scope:org.qsn.protobuf.BlockReward)
-  private static final org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:org.qsn.protobuf.BlockRewardDto)
+  private static final org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward();
+    DEFAULT_INSTANCE = new org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto();
   }
 
-  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward getDefaultInstance() {
+  public static org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<BlockReward>
-      PARSER = new com.google.protobuf.AbstractParser<BlockReward>() {
+  private static final com.google.protobuf.Parser<BlockRewardDto>
+      PARSER = new com.google.protobuf.AbstractParser<BlockRewardDto>() {
     @java.lang.Override
-    public BlockReward parsePartialFrom(
+    public BlockRewardDto parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new BlockReward(input, extensionRegistry);
+      return new BlockRewardDto(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<BlockReward> parser() {
+  public static com.google.protobuf.Parser<BlockRewardDto> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<BlockReward> getParserForType() {
+  public com.google.protobuf.Parser<BlockRewardDto> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward getDefaultInstanceForType() {
+  public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -8,17 +8,17 @@ public interface BlockRewardTxDataDtoOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+   * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
    * @return Whether the blockReward field is set.
    */
   boolean hasBlockReward();
   /**
-   * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+   * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
    * @return The blockReward.
    */
-  org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward getBlockReward();
+  org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto getBlockReward();
   /**
-   * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+   * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
    */
-  org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardOrBuilder getBlockRewardOrBuilder();
+  org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDtoOrBuilder getBlockRewardOrBuilder();
 }
