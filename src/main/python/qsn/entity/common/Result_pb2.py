@@ -19,10 +19,40 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n(org.qsn.api.rpc.grpc.proto.entity.commonP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1eqsn/entity/common/Result.proto\x12\x10org.qsn.protobuf\"+\n\x06Result\x12\x10\n\x08respCode\x18\x01 \x01(\x05\x12\x0f\n\x07respMsg\x18\x02 \x01(\tB,\n(org.qsn.api.rpc.grpc.proto.entity.commonP\x01\x62\x06proto3'
+  serialized_pb=b'\n\x1eqsn/entity/common/Result.proto\x12\x10org.qsn.protobuf\"\x85\x01\n\x06Result\x12\x33\n\x08respCode\x18\x01 \x01(\x0e\x32!.org.qsn.protobuf.Result.RespCode\x12\x0f\n\x07respMsg\x18\x02 \x01(\t\"5\n\x08RespCode\x12\x0b\n\x07SUCCESS\x10\x00\x12\t\n\x05\x45RROR\x10\x01\x12\x11\n\rWRONG_VERSION\x10\x63\x42,\n(org.qsn.api.rpc.grpc.proto.entity.commonP\x01\x62\x06proto3'
 )
 
 
+
+_RESULT_RESPCODE = _descriptor.EnumDescriptor(
+  name='RespCode',
+  full_name='org.qsn.protobuf.Result.RespCode',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='WRONG_VERSION', index=2, number=99,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=133,
+  serialized_end=186,
+)
+_sym_db.RegisterEnumDescriptor(_RESULT_RESPCODE)
 
 
 _RESULT = _descriptor.Descriptor(
@@ -35,7 +65,7 @@ _RESULT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='respCode', full_name='org.qsn.protobuf.Result.respCode', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -52,6 +82,7 @@ _RESULT = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
+    _RESULT_RESPCODE,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -59,10 +90,12 @@ _RESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=52,
-  serialized_end=95,
+  serialized_start=53,
+  serialized_end=186,
 )
 
+_RESULT.fields_by_name['respCode'].enum_type = _RESULT_RESPCODE
+_RESULT_RESPCODE.containing_type = _RESULT
 DESCRIPTOR.message_types_by_name['Result'] = _RESULT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 

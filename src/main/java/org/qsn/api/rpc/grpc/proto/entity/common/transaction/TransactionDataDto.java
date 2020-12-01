@@ -152,10 +152,6 @@ private static final long serialVersionUID = 0L;
   public static final int DATA_FIELD_NUMBER = 3;
   private com.google.protobuf.Any data_;
   /**
-   * <pre>
-   *    bytes data = 3;
-   * </pre>
-   *
    * <code>.google.protobuf.Any data = 3;</code>
    * @return Whether the data field is set.
    */
@@ -164,10 +160,6 @@ private static final long serialVersionUID = 0L;
     return data_ != null;
   }
   /**
-   * <pre>
-   *    bytes data = 3;
-   * </pre>
-   *
    * <code>.google.protobuf.Any data = 3;</code>
    * @return The data.
    */
@@ -176,10 +168,6 @@ private static final long serialVersionUID = 0L;
     return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
   }
   /**
-   * <pre>
-   *    bytes data = 3;
-   * </pre>
-   *
    * <code>.google.protobuf.Any data = 3;</code>
    */
   @java.lang.Override
@@ -706,10 +694,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> dataBuilder_;
     /**
-     * <pre>
-     *    bytes data = 3;
-     * </pre>
-     *
      * <code>.google.protobuf.Any data = 3;</code>
      * @return Whether the data field is set.
      */
@@ -717,10 +701,6 @@ private static final long serialVersionUID = 0L;
       return dataBuilder_ != null || data_ != null;
     }
     /**
-     * <pre>
-     *    bytes data = 3;
-     * </pre>
-     *
      * <code>.google.protobuf.Any data = 3;</code>
      * @return The data.
      */
@@ -732,10 +712,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    bytes data = 3;
-     * </pre>
-     *
      * <code>.google.protobuf.Any data = 3;</code>
      */
     public Builder setData(com.google.protobuf.Any value) {
@@ -752,10 +728,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    bytes data = 3;
-     * </pre>
-     *
      * <code>.google.protobuf.Any data = 3;</code>
      */
     public Builder setData(
@@ -770,10 +742,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    bytes data = 3;
-     * </pre>
-     *
      * <code>.google.protobuf.Any data = 3;</code>
      */
     public Builder mergeData(com.google.protobuf.Any value) {
@@ -792,10 +760,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    bytes data = 3;
-     * </pre>
-     *
      * <code>.google.protobuf.Any data = 3;</code>
      */
     public Builder clearData() {
@@ -810,10 +774,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    bytes data = 3;
-     * </pre>
-     *
      * <code>.google.protobuf.Any data = 3;</code>
      */
     public com.google.protobuf.Any.Builder getDataBuilder() {
@@ -822,10 +782,6 @@ private static final long serialVersionUID = 0L;
       return getDataFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     *    bytes data = 3;
-     * </pre>
-     *
      * <code>.google.protobuf.Any data = 3;</code>
      */
     public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
@@ -837,10 +793,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    bytes data = 3;
-     * </pre>
-     *
      * <code>.google.protobuf.Any data = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

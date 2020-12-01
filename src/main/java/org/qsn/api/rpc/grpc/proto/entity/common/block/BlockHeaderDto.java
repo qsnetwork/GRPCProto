@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private BlockHeaderDto() {
+    blockAddress_ = com.google.protobuf.ByteString.EMPTY;
     chainId_ = "";
     lastBlockhash_ = com.google.protobuf.ByteString.EMPTY;
     lastCommitHash_ = com.google.protobuf.ByteString.EMPTY;
@@ -74,87 +75,92 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
+
+            blockAddress_ = input.readBytes();
+            break;
+          }
+          case 26: {
             java.lang.String s = input.readStringRequireUtf8();
 
             chainId_ = s;
             break;
           }
-          case 24: {
+          case 32: {
 
             height_ = input.readInt64();
             break;
           }
-          case 32: {
+          case 40: {
 
             time_ = input.readInt64();
             break;
           }
-          case 40: {
+          case 48: {
 
             numTxs_ = input.readInt64();
             break;
           }
-          case 48: {
+          case 56: {
 
             totalTxs_ = input.readInt64();
             break;
           }
-          case 56: {
+          case 64: {
 
             proposerSequenceNumber_ = input.readInt64();
             break;
           }
-          case 66: {
+          case 74: {
 
             lastBlockhash_ = input.readBytes();
             break;
           }
-          case 74: {
+          case 82: {
 
             lastCommitHash_ = input.readBytes();
             break;
           }
-          case 82: {
+          case 90: {
 
             dataHash_ = input.readBytes();
             break;
           }
-          case 90: {
+          case 98: {
 
             validatorsHash_ = input.readBytes();
             break;
           }
-          case 98: {
+          case 106: {
 
             nextValidatorsHash_ = input.readBytes();
             break;
           }
-          case 106: {
+          case 114: {
 
             accountHash_ = input.readBytes();
             break;
           }
-          case 114: {
+          case 122: {
 
             contractHash_ = input.readBytes();
             break;
           }
-          case 122: {
+          case 130: {
 
             storageHash_ = input.readBytes();
             break;
           }
-          case 130: {
+          case 138: {
 
             transactionHash_ = input.readBytes();
             break;
           }
-          case 138: {
+          case 146: {
 
             transactionReceiptHash_ = input.readBytes();
             break;
           }
-          case 146: {
+          case 154: {
 
             blockRewardHash_ = input.readBytes();
             break;
@@ -217,10 +223,21 @@ private static final long serialVersionUID = 0L;
     return getVersion();
   }
 
-  public static final int CHAINID_FIELD_NUMBER = 2;
+  public static final int BLOCKADDRESS_FIELD_NUMBER = 2;
+  private com.google.protobuf.ByteString blockAddress_;
+  /**
+   * <code>bytes blockAddress = 2;</code>
+   * @return The blockAddress.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getBlockAddress() {
+    return blockAddress_;
+  }
+
+  public static final int CHAINID_FIELD_NUMBER = 3;
   private volatile java.lang.Object chainId_;
   /**
-   * <code>string chainId = 2;</code>
+   * <code>string chainId = 3;</code>
    * @return The chainId.
    */
   @java.lang.Override
@@ -237,7 +254,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string chainId = 2;</code>
+   * <code>string chainId = 3;</code>
    * @return The bytes for chainId.
    */
   @java.lang.Override
@@ -255,10 +272,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int HEIGHT_FIELD_NUMBER = 3;
+  public static final int HEIGHT_FIELD_NUMBER = 4;
   private long height_;
   /**
-   * <code>int64 height = 3;</code>
+   * <code>int64 height = 4;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -266,10 +283,10 @@ private static final long serialVersionUID = 0L;
     return height_;
   }
 
-  public static final int TIME_FIELD_NUMBER = 4;
+  public static final int TIME_FIELD_NUMBER = 5;
   private long time_;
   /**
-   * <code>int64 time = 4;</code>
+   * <code>int64 time = 5;</code>
    * @return The time.
    */
   @java.lang.Override
@@ -277,10 +294,10 @@ private static final long serialVersionUID = 0L;
     return time_;
   }
 
-  public static final int NUMTXS_FIELD_NUMBER = 5;
+  public static final int NUMTXS_FIELD_NUMBER = 6;
   private long numTxs_;
   /**
-   * <code>int64 numTxs = 5;</code>
+   * <code>int64 numTxs = 6;</code>
    * @return The numTxs.
    */
   @java.lang.Override
@@ -288,10 +305,10 @@ private static final long serialVersionUID = 0L;
     return numTxs_;
   }
 
-  public static final int TOTALTXS_FIELD_NUMBER = 6;
+  public static final int TOTALTXS_FIELD_NUMBER = 7;
   private long totalTxs_;
   /**
-   * <code>int64 totalTxs = 6;</code>
+   * <code>int64 totalTxs = 7;</code>
    * @return The totalTxs.
    */
   @java.lang.Override
@@ -299,10 +316,10 @@ private static final long serialVersionUID = 0L;
     return totalTxs_;
   }
 
-  public static final int PROPOSERSEQUENCENUMBER_FIELD_NUMBER = 7;
+  public static final int PROPOSERSEQUENCENUMBER_FIELD_NUMBER = 8;
   private long proposerSequenceNumber_;
   /**
-   * <code>int64 proposerSequenceNumber = 7;</code>
+   * <code>int64 proposerSequenceNumber = 8;</code>
    * @return The proposerSequenceNumber.
    */
   @java.lang.Override
@@ -310,10 +327,10 @@ private static final long serialVersionUID = 0L;
     return proposerSequenceNumber_;
   }
 
-  public static final int LASTBLOCKHASH_FIELD_NUMBER = 8;
+  public static final int LASTBLOCKHASH_FIELD_NUMBER = 9;
   private com.google.protobuf.ByteString lastBlockhash_;
   /**
-   * <code>bytes lastBlockhash = 8;</code>
+   * <code>bytes lastBlockhash = 9;</code>
    * @return The lastBlockhash.
    */
   @java.lang.Override
@@ -321,10 +338,10 @@ private static final long serialVersionUID = 0L;
     return lastBlockhash_;
   }
 
-  public static final int LASTCOMMITHASH_FIELD_NUMBER = 9;
+  public static final int LASTCOMMITHASH_FIELD_NUMBER = 10;
   private com.google.protobuf.ByteString lastCommitHash_;
   /**
-   * <code>bytes lastCommitHash = 9;</code>
+   * <code>bytes lastCommitHash = 10;</code>
    * @return The lastCommitHash.
    */
   @java.lang.Override
@@ -332,10 +349,10 @@ private static final long serialVersionUID = 0L;
     return lastCommitHash_;
   }
 
-  public static final int DATAHASH_FIELD_NUMBER = 10;
+  public static final int DATAHASH_FIELD_NUMBER = 11;
   private com.google.protobuf.ByteString dataHash_;
   /**
-   * <code>bytes dataHash = 10;</code>
+   * <code>bytes dataHash = 11;</code>
    * @return The dataHash.
    */
   @java.lang.Override
@@ -343,10 +360,10 @@ private static final long serialVersionUID = 0L;
     return dataHash_;
   }
 
-  public static final int VALIDATORSHASH_FIELD_NUMBER = 11;
+  public static final int VALIDATORSHASH_FIELD_NUMBER = 12;
   private com.google.protobuf.ByteString validatorsHash_;
   /**
-   * <code>bytes validatorsHash = 11;</code>
+   * <code>bytes validatorsHash = 12;</code>
    * @return The validatorsHash.
    */
   @java.lang.Override
@@ -354,10 +371,10 @@ private static final long serialVersionUID = 0L;
     return validatorsHash_;
   }
 
-  public static final int NEXTVALIDATORSHASH_FIELD_NUMBER = 12;
+  public static final int NEXTVALIDATORSHASH_FIELD_NUMBER = 13;
   private com.google.protobuf.ByteString nextValidatorsHash_;
   /**
-   * <code>bytes nextValidatorsHash = 12;</code>
+   * <code>bytes nextValidatorsHash = 13;</code>
    * @return The nextValidatorsHash.
    */
   @java.lang.Override
@@ -365,10 +382,10 @@ private static final long serialVersionUID = 0L;
     return nextValidatorsHash_;
   }
 
-  public static final int ACCOUNTHASH_FIELD_NUMBER = 13;
+  public static final int ACCOUNTHASH_FIELD_NUMBER = 14;
   private com.google.protobuf.ByteString accountHash_;
   /**
-   * <code>bytes accountHash = 13;</code>
+   * <code>bytes accountHash = 14;</code>
    * @return The accountHash.
    */
   @java.lang.Override
@@ -376,10 +393,10 @@ private static final long serialVersionUID = 0L;
     return accountHash_;
   }
 
-  public static final int CONTRACTHASH_FIELD_NUMBER = 14;
+  public static final int CONTRACTHASH_FIELD_NUMBER = 15;
   private com.google.protobuf.ByteString contractHash_;
   /**
-   * <code>bytes contractHash = 14;</code>
+   * <code>bytes contractHash = 15;</code>
    * @return The contractHash.
    */
   @java.lang.Override
@@ -387,10 +404,10 @@ private static final long serialVersionUID = 0L;
     return contractHash_;
   }
 
-  public static final int STORAGEHASH_FIELD_NUMBER = 15;
+  public static final int STORAGEHASH_FIELD_NUMBER = 16;
   private com.google.protobuf.ByteString storageHash_;
   /**
-   * <code>bytes storageHash = 15;</code>
+   * <code>bytes storageHash = 16;</code>
    * @return The storageHash.
    */
   @java.lang.Override
@@ -398,10 +415,10 @@ private static final long serialVersionUID = 0L;
     return storageHash_;
   }
 
-  public static final int TRANSACTIONHASH_FIELD_NUMBER = 16;
+  public static final int TRANSACTIONHASH_FIELD_NUMBER = 17;
   private com.google.protobuf.ByteString transactionHash_;
   /**
-   * <code>bytes transactionHash = 16;</code>
+   * <code>bytes transactionHash = 17;</code>
    * @return The transactionHash.
    */
   @java.lang.Override
@@ -409,10 +426,10 @@ private static final long serialVersionUID = 0L;
     return transactionHash_;
   }
 
-  public static final int TRANSACTIONRECEIPTHASH_FIELD_NUMBER = 17;
+  public static final int TRANSACTIONRECEIPTHASH_FIELD_NUMBER = 18;
   private com.google.protobuf.ByteString transactionReceiptHash_;
   /**
-   * <code>bytes transactionReceiptHash = 17;</code>
+   * <code>bytes transactionReceiptHash = 18;</code>
    * @return The transactionReceiptHash.
    */
   @java.lang.Override
@@ -420,10 +437,10 @@ private static final long serialVersionUID = 0L;
     return transactionReceiptHash_;
   }
 
-  public static final int BLOCKREWARDHASH_FIELD_NUMBER = 18;
+  public static final int BLOCKREWARDHASH_FIELD_NUMBER = 19;
   private com.google.protobuf.ByteString blockRewardHash_;
   /**
-   * <code>bytes blockRewardHash = 18;</code>
+   * <code>bytes blockRewardHash = 19;</code>
    * @return The blockRewardHash.
    */
   @java.lang.Override
@@ -448,56 +465,59 @@ private static final long serialVersionUID = 0L;
     if (version_ != null) {
       output.writeMessage(1, getVersion());
     }
+    if (!blockAddress_.isEmpty()) {
+      output.writeBytes(2, blockAddress_);
+    }
     if (!getChainIdBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chainId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, chainId_);
     }
     if (height_ != 0L) {
-      output.writeInt64(3, height_);
+      output.writeInt64(4, height_);
     }
     if (time_ != 0L) {
-      output.writeInt64(4, time_);
+      output.writeInt64(5, time_);
     }
     if (numTxs_ != 0L) {
-      output.writeInt64(5, numTxs_);
+      output.writeInt64(6, numTxs_);
     }
     if (totalTxs_ != 0L) {
-      output.writeInt64(6, totalTxs_);
+      output.writeInt64(7, totalTxs_);
     }
     if (proposerSequenceNumber_ != 0L) {
-      output.writeInt64(7, proposerSequenceNumber_);
+      output.writeInt64(8, proposerSequenceNumber_);
     }
     if (!lastBlockhash_.isEmpty()) {
-      output.writeBytes(8, lastBlockhash_);
+      output.writeBytes(9, lastBlockhash_);
     }
     if (!lastCommitHash_.isEmpty()) {
-      output.writeBytes(9, lastCommitHash_);
+      output.writeBytes(10, lastCommitHash_);
     }
     if (!dataHash_.isEmpty()) {
-      output.writeBytes(10, dataHash_);
+      output.writeBytes(11, dataHash_);
     }
     if (!validatorsHash_.isEmpty()) {
-      output.writeBytes(11, validatorsHash_);
+      output.writeBytes(12, validatorsHash_);
     }
     if (!nextValidatorsHash_.isEmpty()) {
-      output.writeBytes(12, nextValidatorsHash_);
+      output.writeBytes(13, nextValidatorsHash_);
     }
     if (!accountHash_.isEmpty()) {
-      output.writeBytes(13, accountHash_);
+      output.writeBytes(14, accountHash_);
     }
     if (!contractHash_.isEmpty()) {
-      output.writeBytes(14, contractHash_);
+      output.writeBytes(15, contractHash_);
     }
     if (!storageHash_.isEmpty()) {
-      output.writeBytes(15, storageHash_);
+      output.writeBytes(16, storageHash_);
     }
     if (!transactionHash_.isEmpty()) {
-      output.writeBytes(16, transactionHash_);
+      output.writeBytes(17, transactionHash_);
     }
     if (!transactionReceiptHash_.isEmpty()) {
-      output.writeBytes(17, transactionReceiptHash_);
+      output.writeBytes(18, transactionReceiptHash_);
     }
     if (!blockRewardHash_.isEmpty()) {
-      output.writeBytes(18, blockRewardHash_);
+      output.writeBytes(19, blockRewardHash_);
     }
     unknownFields.writeTo(output);
   }
@@ -512,72 +532,76 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getVersion());
     }
+    if (!blockAddress_.isEmpty()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(2, blockAddress_);
+    }
     if (!getChainIdBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, chainId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, chainId_);
     }
     if (height_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(3, height_);
+        .computeInt64Size(4, height_);
     }
     if (time_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(4, time_);
+        .computeInt64Size(5, time_);
     }
     if (numTxs_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(5, numTxs_);
+        .computeInt64Size(6, numTxs_);
     }
     if (totalTxs_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(6, totalTxs_);
+        .computeInt64Size(7, totalTxs_);
     }
     if (proposerSequenceNumber_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(7, proposerSequenceNumber_);
+        .computeInt64Size(8, proposerSequenceNumber_);
     }
     if (!lastBlockhash_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(8, lastBlockhash_);
+        .computeBytesSize(9, lastBlockhash_);
     }
     if (!lastCommitHash_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(9, lastCommitHash_);
+        .computeBytesSize(10, lastCommitHash_);
     }
     if (!dataHash_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(10, dataHash_);
+        .computeBytesSize(11, dataHash_);
     }
     if (!validatorsHash_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(11, validatorsHash_);
+        .computeBytesSize(12, validatorsHash_);
     }
     if (!nextValidatorsHash_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(12, nextValidatorsHash_);
+        .computeBytesSize(13, nextValidatorsHash_);
     }
     if (!accountHash_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(13, accountHash_);
+        .computeBytesSize(14, accountHash_);
     }
     if (!contractHash_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(14, contractHash_);
+        .computeBytesSize(15, contractHash_);
     }
     if (!storageHash_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(15, storageHash_);
+        .computeBytesSize(16, storageHash_);
     }
     if (!transactionHash_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(16, transactionHash_);
+        .computeBytesSize(17, transactionHash_);
     }
     if (!transactionReceiptHash_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(17, transactionReceiptHash_);
+        .computeBytesSize(18, transactionReceiptHash_);
     }
     if (!blockRewardHash_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(18, blockRewardHash_);
+        .computeBytesSize(19, blockRewardHash_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -599,6 +623,8 @@ private static final long serialVersionUID = 0L;
       if (!getVersion()
           .equals(other.getVersion())) return false;
     }
+    if (!getBlockAddress()
+        .equals(other.getBlockAddress())) return false;
     if (!getChainId()
         .equals(other.getChainId())) return false;
     if (getHeight()
@@ -648,6 +674,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getVersion().hashCode();
     }
+    hash = (37 * hash) + BLOCKADDRESS_FIELD_NUMBER;
+    hash = (53 * hash) + getBlockAddress().hashCode();
     hash = (37 * hash) + CHAINID_FIELD_NUMBER;
     hash = (53 * hash) + getChainId().hashCode();
     hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
@@ -826,6 +854,8 @@ private static final long serialVersionUID = 0L;
         version_ = null;
         versionBuilder_ = null;
       }
+      blockAddress_ = com.google.protobuf.ByteString.EMPTY;
+
       chainId_ = "";
 
       height_ = 0L;
@@ -891,6 +921,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.version_ = versionBuilder_.build();
       }
+      result.blockAddress_ = blockAddress_;
       result.chainId_ = chainId_;
       result.height_ = height_;
       result.time_ = time_;
@@ -958,6 +989,9 @@ private static final long serialVersionUID = 0L;
       if (other == org.qsn.api.rpc.grpc.proto.entity.common.block.BlockHeaderDto.getDefaultInstance()) return this;
       if (other.hasVersion()) {
         mergeVersion(other.getVersion());
+      }
+      if (other.getBlockAddress() != com.google.protobuf.ByteString.EMPTY) {
+        setBlockAddress(other.getBlockAddress());
       }
       if (!other.getChainId().isEmpty()) {
         chainId_ = other.chainId_;
@@ -1159,9 +1193,43 @@ private static final long serialVersionUID = 0L;
       return versionBuilder_;
     }
 
+    private com.google.protobuf.ByteString blockAddress_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes blockAddress = 2;</code>
+     * @return The blockAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getBlockAddress() {
+      return blockAddress_;
+    }
+    /**
+     * <code>bytes blockAddress = 2;</code>
+     * @param value The blockAddress to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBlockAddress(com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      blockAddress_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bytes blockAddress = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBlockAddress() {
+      
+      blockAddress_ = getDefaultInstance().getBlockAddress();
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object chainId_ = "";
     /**
-     * <code>string chainId = 2;</code>
+     * <code>string chainId = 3;</code>
      * @return The chainId.
      */
     public java.lang.String getChainId() {
@@ -1177,7 +1245,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string chainId = 2;</code>
+     * <code>string chainId = 3;</code>
      * @return The bytes for chainId.
      */
     public com.google.protobuf.ByteString
@@ -1194,7 +1262,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string chainId = 2;</code>
+     * <code>string chainId = 3;</code>
      * @param value The chainId to set.
      * @return This builder for chaining.
      */
@@ -1209,7 +1277,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string chainId = 2;</code>
+     * <code>string chainId = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearChainId() {
@@ -1219,7 +1287,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string chainId = 2;</code>
+     * <code>string chainId = 3;</code>
      * @param value The bytes for chainId to set.
      * @return This builder for chaining.
      */
@@ -1237,7 +1305,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>int64 height = 3;</code>
+     * <code>int64 height = 4;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -1245,7 +1313,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>int64 height = 3;</code>
+     * <code>int64 height = 4;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -1256,7 +1324,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 height = 3;</code>
+     * <code>int64 height = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -1268,7 +1336,7 @@ private static final long serialVersionUID = 0L;
 
     private long time_ ;
     /**
-     * <code>int64 time = 4;</code>
+     * <code>int64 time = 5;</code>
      * @return The time.
      */
     @java.lang.Override
@@ -1276,7 +1344,7 @@ private static final long serialVersionUID = 0L;
       return time_;
     }
     /**
-     * <code>int64 time = 4;</code>
+     * <code>int64 time = 5;</code>
      * @param value The time to set.
      * @return This builder for chaining.
      */
@@ -1287,7 +1355,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 time = 4;</code>
+     * <code>int64 time = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearTime() {
@@ -1299,7 +1367,7 @@ private static final long serialVersionUID = 0L;
 
     private long numTxs_ ;
     /**
-     * <code>int64 numTxs = 5;</code>
+     * <code>int64 numTxs = 6;</code>
      * @return The numTxs.
      */
     @java.lang.Override
@@ -1307,7 +1375,7 @@ private static final long serialVersionUID = 0L;
       return numTxs_;
     }
     /**
-     * <code>int64 numTxs = 5;</code>
+     * <code>int64 numTxs = 6;</code>
      * @param value The numTxs to set.
      * @return This builder for chaining.
      */
@@ -1318,7 +1386,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 numTxs = 5;</code>
+     * <code>int64 numTxs = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearNumTxs() {
@@ -1330,7 +1398,7 @@ private static final long serialVersionUID = 0L;
 
     private long totalTxs_ ;
     /**
-     * <code>int64 totalTxs = 6;</code>
+     * <code>int64 totalTxs = 7;</code>
      * @return The totalTxs.
      */
     @java.lang.Override
@@ -1338,7 +1406,7 @@ private static final long serialVersionUID = 0L;
       return totalTxs_;
     }
     /**
-     * <code>int64 totalTxs = 6;</code>
+     * <code>int64 totalTxs = 7;</code>
      * @param value The totalTxs to set.
      * @return This builder for chaining.
      */
@@ -1349,7 +1417,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 totalTxs = 6;</code>
+     * <code>int64 totalTxs = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearTotalTxs() {
@@ -1361,7 +1429,7 @@ private static final long serialVersionUID = 0L;
 
     private long proposerSequenceNumber_ ;
     /**
-     * <code>int64 proposerSequenceNumber = 7;</code>
+     * <code>int64 proposerSequenceNumber = 8;</code>
      * @return The proposerSequenceNumber.
      */
     @java.lang.Override
@@ -1369,7 +1437,7 @@ private static final long serialVersionUID = 0L;
       return proposerSequenceNumber_;
     }
     /**
-     * <code>int64 proposerSequenceNumber = 7;</code>
+     * <code>int64 proposerSequenceNumber = 8;</code>
      * @param value The proposerSequenceNumber to set.
      * @return This builder for chaining.
      */
@@ -1380,7 +1448,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 proposerSequenceNumber = 7;</code>
+     * <code>int64 proposerSequenceNumber = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearProposerSequenceNumber() {
@@ -1392,7 +1460,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString lastBlockhash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes lastBlockhash = 8;</code>
+     * <code>bytes lastBlockhash = 9;</code>
      * @return The lastBlockhash.
      */
     @java.lang.Override
@@ -1400,7 +1468,7 @@ private static final long serialVersionUID = 0L;
       return lastBlockhash_;
     }
     /**
-     * <code>bytes lastBlockhash = 8;</code>
+     * <code>bytes lastBlockhash = 9;</code>
      * @param value The lastBlockhash to set.
      * @return This builder for chaining.
      */
@@ -1414,7 +1482,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes lastBlockhash = 8;</code>
+     * <code>bytes lastBlockhash = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearLastBlockhash() {
@@ -1426,7 +1494,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString lastCommitHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes lastCommitHash = 9;</code>
+     * <code>bytes lastCommitHash = 10;</code>
      * @return The lastCommitHash.
      */
     @java.lang.Override
@@ -1434,7 +1502,7 @@ private static final long serialVersionUID = 0L;
       return lastCommitHash_;
     }
     /**
-     * <code>bytes lastCommitHash = 9;</code>
+     * <code>bytes lastCommitHash = 10;</code>
      * @param value The lastCommitHash to set.
      * @return This builder for chaining.
      */
@@ -1448,7 +1516,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes lastCommitHash = 9;</code>
+     * <code>bytes lastCommitHash = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearLastCommitHash() {
@@ -1460,7 +1528,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString dataHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes dataHash = 10;</code>
+     * <code>bytes dataHash = 11;</code>
      * @return The dataHash.
      */
     @java.lang.Override
@@ -1468,7 +1536,7 @@ private static final long serialVersionUID = 0L;
       return dataHash_;
     }
     /**
-     * <code>bytes dataHash = 10;</code>
+     * <code>bytes dataHash = 11;</code>
      * @param value The dataHash to set.
      * @return This builder for chaining.
      */
@@ -1482,7 +1550,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes dataHash = 10;</code>
+     * <code>bytes dataHash = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearDataHash() {
@@ -1494,7 +1562,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString validatorsHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes validatorsHash = 11;</code>
+     * <code>bytes validatorsHash = 12;</code>
      * @return The validatorsHash.
      */
     @java.lang.Override
@@ -1502,7 +1570,7 @@ private static final long serialVersionUID = 0L;
       return validatorsHash_;
     }
     /**
-     * <code>bytes validatorsHash = 11;</code>
+     * <code>bytes validatorsHash = 12;</code>
      * @param value The validatorsHash to set.
      * @return This builder for chaining.
      */
@@ -1516,7 +1584,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes validatorsHash = 11;</code>
+     * <code>bytes validatorsHash = 12;</code>
      * @return This builder for chaining.
      */
     public Builder clearValidatorsHash() {
@@ -1528,7 +1596,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString nextValidatorsHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes nextValidatorsHash = 12;</code>
+     * <code>bytes nextValidatorsHash = 13;</code>
      * @return The nextValidatorsHash.
      */
     @java.lang.Override
@@ -1536,7 +1604,7 @@ private static final long serialVersionUID = 0L;
       return nextValidatorsHash_;
     }
     /**
-     * <code>bytes nextValidatorsHash = 12;</code>
+     * <code>bytes nextValidatorsHash = 13;</code>
      * @param value The nextValidatorsHash to set.
      * @return This builder for chaining.
      */
@@ -1550,7 +1618,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes nextValidatorsHash = 12;</code>
+     * <code>bytes nextValidatorsHash = 13;</code>
      * @return This builder for chaining.
      */
     public Builder clearNextValidatorsHash() {
@@ -1562,7 +1630,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString accountHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes accountHash = 13;</code>
+     * <code>bytes accountHash = 14;</code>
      * @return The accountHash.
      */
     @java.lang.Override
@@ -1570,7 +1638,7 @@ private static final long serialVersionUID = 0L;
       return accountHash_;
     }
     /**
-     * <code>bytes accountHash = 13;</code>
+     * <code>bytes accountHash = 14;</code>
      * @param value The accountHash to set.
      * @return This builder for chaining.
      */
@@ -1584,7 +1652,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes accountHash = 13;</code>
+     * <code>bytes accountHash = 14;</code>
      * @return This builder for chaining.
      */
     public Builder clearAccountHash() {
@@ -1596,7 +1664,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString contractHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes contractHash = 14;</code>
+     * <code>bytes contractHash = 15;</code>
      * @return The contractHash.
      */
     @java.lang.Override
@@ -1604,7 +1672,7 @@ private static final long serialVersionUID = 0L;
       return contractHash_;
     }
     /**
-     * <code>bytes contractHash = 14;</code>
+     * <code>bytes contractHash = 15;</code>
      * @param value The contractHash to set.
      * @return This builder for chaining.
      */
@@ -1618,7 +1686,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes contractHash = 14;</code>
+     * <code>bytes contractHash = 15;</code>
      * @return This builder for chaining.
      */
     public Builder clearContractHash() {
@@ -1630,7 +1698,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString storageHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes storageHash = 15;</code>
+     * <code>bytes storageHash = 16;</code>
      * @return The storageHash.
      */
     @java.lang.Override
@@ -1638,7 +1706,7 @@ private static final long serialVersionUID = 0L;
       return storageHash_;
     }
     /**
-     * <code>bytes storageHash = 15;</code>
+     * <code>bytes storageHash = 16;</code>
      * @param value The storageHash to set.
      * @return This builder for chaining.
      */
@@ -1652,7 +1720,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes storageHash = 15;</code>
+     * <code>bytes storageHash = 16;</code>
      * @return This builder for chaining.
      */
     public Builder clearStorageHash() {
@@ -1664,7 +1732,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString transactionHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes transactionHash = 16;</code>
+     * <code>bytes transactionHash = 17;</code>
      * @return The transactionHash.
      */
     @java.lang.Override
@@ -1672,7 +1740,7 @@ private static final long serialVersionUID = 0L;
       return transactionHash_;
     }
     /**
-     * <code>bytes transactionHash = 16;</code>
+     * <code>bytes transactionHash = 17;</code>
      * @param value The transactionHash to set.
      * @return This builder for chaining.
      */
@@ -1686,7 +1754,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes transactionHash = 16;</code>
+     * <code>bytes transactionHash = 17;</code>
      * @return This builder for chaining.
      */
     public Builder clearTransactionHash() {
@@ -1698,7 +1766,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString transactionReceiptHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes transactionReceiptHash = 17;</code>
+     * <code>bytes transactionReceiptHash = 18;</code>
      * @return The transactionReceiptHash.
      */
     @java.lang.Override
@@ -1706,7 +1774,7 @@ private static final long serialVersionUID = 0L;
       return transactionReceiptHash_;
     }
     /**
-     * <code>bytes transactionReceiptHash = 17;</code>
+     * <code>bytes transactionReceiptHash = 18;</code>
      * @param value The transactionReceiptHash to set.
      * @return This builder for chaining.
      */
@@ -1720,7 +1788,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes transactionReceiptHash = 17;</code>
+     * <code>bytes transactionReceiptHash = 18;</code>
      * @return This builder for chaining.
      */
     public Builder clearTransactionReceiptHash() {
@@ -1732,7 +1800,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString blockRewardHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes blockRewardHash = 18;</code>
+     * <code>bytes blockRewardHash = 19;</code>
      * @return The blockRewardHash.
      */
     @java.lang.Override
@@ -1740,7 +1808,7 @@ private static final long serialVersionUID = 0L;
       return blockRewardHash_;
     }
     /**
-     * <code>bytes blockRewardHash = 18;</code>
+     * <code>bytes blockRewardHash = 19;</code>
      * @param value The blockRewardHash to set.
      * @return This builder for chaining.
      */
@@ -1754,7 +1822,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes blockRewardHash = 18;</code>
+     * <code>bytes blockRewardHash = 19;</code>
      * @return This builder for chaining.
      */
     public Builder clearBlockRewardHash() {

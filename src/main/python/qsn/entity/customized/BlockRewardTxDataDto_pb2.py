@@ -20,96 +20,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n,org.qsn.api.rpc.grpc.proto.entity.customizedP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n0qsn/entity/customized/BlockRewardTxDataDto.proto\x12\x10org.qsn.protobuf\x1a qsn/entity/common/BInteger.proto\"x\n\x0b\x42lockReward\x12\x13\n\x0b\x62lockHeight\x18\x01 \x01(\x03\x12\x14\n\x0cmatureHeight\x18\x02 \x01(\x03\x12>\n\x13\x62lockRewardDataList\x18\x03 \x03(\x0b\x32!.org.qsn.protobuf.BlockRewardData\"O\n\x0f\x42lockRewardData\x12\x10\n\x08\x63oinBase\x18\x01 \x01(\x0c\x12*\n\x06reward\x18\x02 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\"J\n\x14\x42lockRewardTxDataDto\x12\x32\n\x0b\x62lockReward\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BlockRewardB0\n,org.qsn.api.rpc.grpc.proto.entity.customizedP\x01\x62\x06proto3'
+  serialized_pb=b'\n0qsn/entity/customized/BlockRewardTxDataDto.proto\x12\x10org.qsn.protobuf\x1a qsn/entity/common/BInteger.proto\"M\n\x14\x42lockRewardTxDataDto\x12\x35\n\x0b\x62lockReward\x18\x01 \x01(\x0b\x32 .org.qsn.protobuf.BlockRewardDto\"~\n\x0e\x42lockRewardDto\x12\x13\n\x0b\x62lockHeight\x18\x01 \x01(\x03\x12\x14\n\x0cmatureHeight\x18\x02 \x01(\x03\x12\x41\n\x13\x62lockRewardDataList\x18\x03 \x03(\x0b\x32$.org.qsn.protobuf.BlockRewardDataDto\"R\n\x12\x42lockRewardDataDto\x12\x10\n\x08\x63oinBase\x18\x01 \x01(\x0c\x12*\n\x06reward\x18\x02 \x01(\x0b\x32\x1a.org.qsn.protobuf.BIntegerB0\n,org.qsn.api.rpc.grpc.proto.entity.customizedP\x01\x62\x06proto3'
   ,
   dependencies=[qsn_dot_entity_dot_common_dot_BInteger__pb2.DESCRIPTOR,])
 
 
-
-
-_BLOCKREWARD = _descriptor.Descriptor(
-  name='BlockReward',
-  full_name='org.qsn.protobuf.BlockReward',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='blockHeight', full_name='org.qsn.protobuf.BlockReward.blockHeight', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='matureHeight', full_name='org.qsn.protobuf.BlockReward.matureHeight', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='blockRewardDataList', full_name='org.qsn.protobuf.BlockReward.blockRewardDataList', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=104,
-  serialized_end=224,
-)
-
-
-_BLOCKREWARDDATA = _descriptor.Descriptor(
-  name='BlockRewardData',
-  full_name='org.qsn.protobuf.BlockRewardData',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='coinBase', full_name='org.qsn.protobuf.BlockRewardData.coinBase', index=0,
-      number=1, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"",
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='reward', full_name='org.qsn.protobuf.BlockRewardData.reward', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=226,
-  serialized_end=305,
-)
 
 
 _BLOCKREWARDTXDATADTO = _descriptor.Descriptor(
@@ -139,31 +54,102 @@ _BLOCKREWARDTXDATADTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=307,
-  serialized_end=381,
+  serialized_start=104,
+  serialized_end=181,
 )
 
-_BLOCKREWARD.fields_by_name['blockRewardDataList'].message_type = _BLOCKREWARDDATA
-_BLOCKREWARDDATA.fields_by_name['reward'].message_type = qsn_dot_entity_dot_common_dot_BInteger__pb2._BINTEGER
-_BLOCKREWARDTXDATADTO.fields_by_name['blockReward'].message_type = _BLOCKREWARD
-DESCRIPTOR.message_types_by_name['BlockReward'] = _BLOCKREWARD
-DESCRIPTOR.message_types_by_name['BlockRewardData'] = _BLOCKREWARDDATA
+
+_BLOCKREWARDDTO = _descriptor.Descriptor(
+  name='BlockRewardDto',
+  full_name='org.qsn.protobuf.BlockRewardDto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='blockHeight', full_name='org.qsn.protobuf.BlockRewardDto.blockHeight', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='matureHeight', full_name='org.qsn.protobuf.BlockRewardDto.matureHeight', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='blockRewardDataList', full_name='org.qsn.protobuf.BlockRewardDto.blockRewardDataList', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=183,
+  serialized_end=309,
+)
+
+
+_BLOCKREWARDDATADTO = _descriptor.Descriptor(
+  name='BlockRewardDataDto',
+  full_name='org.qsn.protobuf.BlockRewardDataDto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='coinBase', full_name='org.qsn.protobuf.BlockRewardDataDto.coinBase', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"",
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='reward', full_name='org.qsn.protobuf.BlockRewardDataDto.reward', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=311,
+  serialized_end=393,
+)
+
+_BLOCKREWARDTXDATADTO.fields_by_name['blockReward'].message_type = _BLOCKREWARDDTO
+_BLOCKREWARDDTO.fields_by_name['blockRewardDataList'].message_type = _BLOCKREWARDDATADTO
+_BLOCKREWARDDATADTO.fields_by_name['reward'].message_type = qsn_dot_entity_dot_common_dot_BInteger__pb2._BINTEGER
 DESCRIPTOR.message_types_by_name['BlockRewardTxDataDto'] = _BLOCKREWARDTXDATADTO
+DESCRIPTOR.message_types_by_name['BlockRewardDto'] = _BLOCKREWARDDTO
+DESCRIPTOR.message_types_by_name['BlockRewardDataDto'] = _BLOCKREWARDDATADTO
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
-BlockReward = _reflection.GeneratedProtocolMessageType('BlockReward', (_message.Message,), {
-  'DESCRIPTOR' : _BLOCKREWARD,
-  '__module__' : 'qsn.entity.customized.BlockRewardTxDataDto_pb2'
-  # @@protoc_insertion_point(class_scope:org.qsn.protobuf.BlockReward)
-  })
-_sym_db.RegisterMessage(BlockReward)
-
-BlockRewardData = _reflection.GeneratedProtocolMessageType('BlockRewardData', (_message.Message,), {
-  'DESCRIPTOR' : _BLOCKREWARDDATA,
-  '__module__' : 'qsn.entity.customized.BlockRewardTxDataDto_pb2'
-  # @@protoc_insertion_point(class_scope:org.qsn.protobuf.BlockRewardData)
-  })
-_sym_db.RegisterMessage(BlockRewardData)
 
 BlockRewardTxDataDto = _reflection.GeneratedProtocolMessageType('BlockRewardTxDataDto', (_message.Message,), {
   'DESCRIPTOR' : _BLOCKREWARDTXDATADTO,
@@ -171,6 +157,20 @@ BlockRewardTxDataDto = _reflection.GeneratedProtocolMessageType('BlockRewardTxDa
   # @@protoc_insertion_point(class_scope:org.qsn.protobuf.BlockRewardTxDataDto)
   })
 _sym_db.RegisterMessage(BlockRewardTxDataDto)
+
+BlockRewardDto = _reflection.GeneratedProtocolMessageType('BlockRewardDto', (_message.Message,), {
+  'DESCRIPTOR' : _BLOCKREWARDDTO,
+  '__module__' : 'qsn.entity.customized.BlockRewardTxDataDto_pb2'
+  # @@protoc_insertion_point(class_scope:org.qsn.protobuf.BlockRewardDto)
+  })
+_sym_db.RegisterMessage(BlockRewardDto)
+
+BlockRewardDataDto = _reflection.GeneratedProtocolMessageType('BlockRewardDataDto', (_message.Message,), {
+  'DESCRIPTOR' : _BLOCKREWARDDATADTO,
+  '__module__' : 'qsn.entity.customized.BlockRewardTxDataDto_pb2'
+  # @@protoc_insertion_point(class_scope:org.qsn.protobuf.BlockRewardDataDto)
+  })
+_sym_db.RegisterMessage(BlockRewardDataDto)
 
 
 DESCRIPTOR._options = None

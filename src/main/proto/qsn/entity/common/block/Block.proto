@@ -14,23 +14,24 @@ message BlockHeaderVersion {
 
 message BlockHeaderDto{
   BlockHeaderVersion version = 1;
-  string chainId = 2;
-  int64 height = 3;
-  int64 time = 4;
-  int64 numTxs = 5;
-  int64 totalTxs = 6;
-  int64 proposerSequenceNumber = 7;
-  bytes lastBlockhash = 8;
-  bytes lastCommitHash = 9;
-  bytes dataHash = 10;
-  bytes validatorsHash = 11;
-  bytes nextValidatorsHash = 12;
-  bytes accountHash = 13;
-  bytes contractHash = 14;
-  bytes storageHash = 15;
-  bytes transactionHash = 16;
-  bytes transactionReceiptHash = 17;
-  bytes blockRewardHash = 18;
+  bytes blockAddress =2;
+  string chainId = 3;
+  int64 height = 4;
+  int64 time = 5;
+  int64 numTxs = 6;
+  int64 totalTxs = 7;
+  int64 proposerSequenceNumber = 8;
+  bytes lastBlockhash = 9;
+  bytes lastCommitHash = 10;
+  bytes dataHash = 11;
+  bytes validatorsHash = 12;
+  bytes nextValidatorsHash = 13;
+  bytes accountHash = 14;
+  bytes contractHash = 15;
+  bytes storageHash = 16;
+  bytes transactionHash = 17;
+  bytes transactionReceiptHash = 18;
+  bytes blockRewardHash = 19;
 }
 
 message BlockDataDto{

@@ -20,30 +20,30 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n,org.qsn.api.rpc.grpc.proto.entity.customizedP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n/qsn/entity/customized/TokenIssueTxDataDto.proto\x12\x10org.qsn.protobuf\x1a qsn/entity/common/BInteger.proto\"O\n\x10TokenIssueTxData\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0c\x12*\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x1a.org.qsn.protobuf.BIntegerB0\n,org.qsn.api.rpc.grpc.proto.entity.customizedP\x01\x62\x06proto3'
+  serialized_pb=b'\n/qsn/entity/customized/TokenIssueTxDataDto.proto\x12\x10org.qsn.protobuf\x1a qsn/entity/common/BInteger.proto\"R\n\x13TokenIssueTxDataDto\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0c\x12*\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x1a.org.qsn.protobuf.BIntegerB0\n,org.qsn.api.rpc.grpc.proto.entity.customizedP\x01\x62\x06proto3'
   ,
   dependencies=[qsn_dot_entity_dot_common_dot_BInteger__pb2.DESCRIPTOR,])
 
 
 
 
-_TOKENISSUETXDATA = _descriptor.Descriptor(
-  name='TokenIssueTxData',
-  full_name='org.qsn.protobuf.TokenIssueTxData',
+_TOKENISSUETXDATADTO = _descriptor.Descriptor(
+  name='TokenIssueTxDataDto',
+  full_name='org.qsn.protobuf.TokenIssueTxDataDto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='address', full_name='org.qsn.protobuf.TokenIssueTxData.address', index=0,
+      name='address', full_name='org.qsn.protobuf.TokenIssueTxDataDto.address', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='amount', full_name='org.qsn.protobuf.TokenIssueTxData.amount', index=1,
+      name='amount', full_name='org.qsn.protobuf.TokenIssueTxDataDto.amount', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -62,19 +62,19 @@ _TOKENISSUETXDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=103,
-  serialized_end=182,
+  serialized_end=185,
 )
 
-_TOKENISSUETXDATA.fields_by_name['amount'].message_type = qsn_dot_entity_dot_common_dot_BInteger__pb2._BINTEGER
-DESCRIPTOR.message_types_by_name['TokenIssueTxData'] = _TOKENISSUETXDATA
+_TOKENISSUETXDATADTO.fields_by_name['amount'].message_type = qsn_dot_entity_dot_common_dot_BInteger__pb2._BINTEGER
+DESCRIPTOR.message_types_by_name['TokenIssueTxDataDto'] = _TOKENISSUETXDATADTO
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-TokenIssueTxData = _reflection.GeneratedProtocolMessageType('TokenIssueTxData', (_message.Message,), {
-  'DESCRIPTOR' : _TOKENISSUETXDATA,
+TokenIssueTxDataDto = _reflection.GeneratedProtocolMessageType('TokenIssueTxDataDto', (_message.Message,), {
+  'DESCRIPTOR' : _TOKENISSUETXDATADTO,
   '__module__' : 'qsn.entity.customized.TokenIssueTxDataDto_pb2'
-  # @@protoc_insertion_point(class_scope:org.qsn.protobuf.TokenIssueTxData)
+  # @@protoc_insertion_point(class_scope:org.qsn.protobuf.TokenIssueTxDataDto)
   })
-_sym_db.RegisterMessage(TokenIssueTxData)
+_sym_db.RegisterMessage(TokenIssueTxDataDto)
 
 
 DESCRIPTOR._options = None

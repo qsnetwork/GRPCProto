@@ -29,28 +29,16 @@ public interface TransactionDataDtoOrBuilder extends
   org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getNonceOrBuilder();
 
   /**
-   * <pre>
-   *    bytes data = 3;
-   * </pre>
-   *
    * <code>.google.protobuf.Any data = 3;</code>
    * @return Whether the data field is set.
    */
   boolean hasData();
   /**
-   * <pre>
-   *    bytes data = 3;
-   * </pre>
-   *
    * <code>.google.protobuf.Any data = 3;</code>
    * @return The data.
    */
   com.google.protobuf.Any getData();
   /**
-   * <pre>
-   *    bytes data = 3;
-   * </pre>
-   *
    * <code>.google.protobuf.Any data = 3;</code>
    */
   com.google.protobuf.AnyOrBuilder getDataOrBuilder();

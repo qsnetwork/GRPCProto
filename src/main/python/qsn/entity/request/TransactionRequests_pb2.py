@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n)org.qsn.api.rpc.grpc.proto.entity.requestP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n,qsn/entity/request/TransactionRequests.proto\x12\x10org.qsn.protobuf\x1a#qsn/entity/common/BaseRequest.proto\x1a qsn/entity/common/BInteger.proto\x1a\x32qsn/entity/common/transaction/TransactionDto.proto\"\x86\x01\n\x16SendTransactionRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x38\n\x0etransactionDto\x18\x02 \x01(\x0b\x32 .org.qsn.protobuf.TransactionDto\"k\n\x1cGetTransactionReceiptRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x17\n\x0ftransactionHash\x18\x02 \x01(\x0c\"d\n\x15GetTransactionRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x17\n\x0ftransactionHash\x18\x02 \x01(\x0c\"\x96\x01\n\x1a\x43reateRawTransferTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0c\n\x04\x66rom\x18\x02 \x01(\x0c\x12\n\n\x02to\x18\x03 \x01(\x0c\x12*\n\x06\x61mount\x18\x04 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\"\x9d\x01\n CreateRawDeployContractTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x14\n\x0c\x63ontractCode\x18\x02 \x01(\x0c\x12\x14\n\x0c\x63ontractName\x18\x03 \x01(\t\x12\x19\n\x11\x63ontractClassName\x18\x04 \x01(\t\"\xe6\x01\n\x1b\x43reateRawValidatorTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0c\n\x04type\x18\x02 \x01(\x08\x12\x18\n\x10validatorAddress\x18\x03 \x01(\x0c\x12\x17\n\x0fvalidatorPubKey\x18\x04 \x01(\x0c\x12\x19\n\x11\x64\x65legationAddress\x18\x05 \x01(\x0c\x12)\n\x05stake\x18\x06 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\x12\x0c\n\x04name\x18\x07 \x01(\t\"\x8d\x01\n\x1a\x43reateRawWithdrawTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x10\n\x08\x63oinBase\x18\x02 \x01(\x0c\x12)\n\x05value\x18\x03 \x01(\x0b\x32\x1a.org.qsn.protobuf.BIntegerB-\n)org.qsn.api.rpc.grpc.proto.entity.requestP\x01\x62\x06proto3'
+  serialized_pb=b'\n,qsn/entity/request/TransactionRequests.proto\x12\x10org.qsn.protobuf\x1a#qsn/entity/common/BaseRequest.proto\x1a qsn/entity/common/BInteger.proto\x1a\x32qsn/entity/common/transaction/TransactionDto.proto\"\x86\x01\n\x16SendTransactionRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x38\n\x0etransactionDto\x18\x02 \x01(\x0b\x32 .org.qsn.protobuf.TransactionDto\"k\n\x1cGetTransactionReceiptRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x17\n\x0ftransactionHash\x18\x02 \x01(\x0c\"d\n\x15GetTransactionRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x17\n\x0ftransactionHash\x18\x02 \x01(\x0c\"\x96\x01\n\x1a\x43reateRawTransferTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0c\n\x04\x66rom\x18\x02 \x01(\x0c\x12\n\n\x02to\x18\x03 \x01(\x0c\x12*\n\x06\x61mount\x18\x04 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\"\xad\x01\n CreateRawDeployContractTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0e\n\x06sender\x18\x02 \x01(\x0c\x12\x14\n\x0c\x63ontractCode\x18\x03 \x01(\x0c\x12\x14\n\x0c\x63ontractName\x18\x04 \x01(\t\x12\x19\n\x11\x63ontractClassName\x18\x05 \x01(\t\"\xe6\x01\n\x1b\x43reateRawValidatorTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0c\n\x04type\x18\x02 \x01(\x08\x12\x18\n\x10validatorAddress\x18\x03 \x01(\x0c\x12\x17\n\x0fvalidatorPubKey\x18\x04 \x01(\x0c\x12\x19\n\x11\x64\x65legationAddress\x18\x05 \x01(\x0c\x12)\n\x05stake\x18\x06 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\x12\x0c\n\x04name\x18\x07 \x01(\t\"\x8d\x01\n\x1a\x43reateRawWithdrawTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x10\n\x08\x63oinBase\x18\x02 \x01(\x0c\x12)\n\x05value\x18\x03 \x01(\x0b\x32\x1a.org.qsn.protobuf.BIntegerB-\n)org.qsn.api.rpc.grpc.proto.entity.requestP\x01\x62\x06proto3'
   ,
   dependencies=[qsn_dot_entity_dot_common_dot_BaseRequest__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_BInteger__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_transaction_dot_TransactionDto__pb2.DESCRIPTOR,])
 
@@ -215,22 +215,29 @@ _CREATERAWDEPLOYCONTRACTTXREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='contractCode', full_name='org.qsn.protobuf.CreateRawDeployContractTxRequest.contractCode', index=1,
+      name='sender', full_name='org.qsn.protobuf.CreateRawDeployContractTxRequest.sender', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='contractName', full_name='org.qsn.protobuf.CreateRawDeployContractTxRequest.contractName', index=2,
-      number=3, type=9, cpp_type=9, label=1,
+      name='contractCode', full_name='org.qsn.protobuf.CreateRawDeployContractTxRequest.contractCode', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"",
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='contractName', full_name='org.qsn.protobuf.CreateRawDeployContractTxRequest.contractName', index=3,
+      number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='contractClassName', full_name='org.qsn.protobuf.CreateRawDeployContractTxRequest.contractClassName', index=3,
-      number=4, type=9, cpp_type=9, label=1,
+      name='contractClassName', full_name='org.qsn.protobuf.CreateRawDeployContractTxRequest.contractClassName', index=4,
+      number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -248,7 +255,7 @@ _CREATERAWDEPLOYCONTRACTTXREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=691,
-  serialized_end=848,
+  serialized_end=864,
 )
 
 
@@ -321,8 +328,8 @@ _CREATERAWVALIDATORTXREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=851,
-  serialized_end=1081,
+  serialized_start=867,
+  serialized_end=1097,
 )
 
 
@@ -367,8 +374,8 @@ _CREATERAWWITHDRAWTXREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1084,
-  serialized_end=1225,
+  serialized_start=1100,
+  serialized_end=1241,
 )
 
 _SENDTRANSACTIONREQUEST.fields_by_name['baseRequest'].message_type = qsn_dot_entity_dot_common_dot_BaseRequest__pb2._BASEREQUEST

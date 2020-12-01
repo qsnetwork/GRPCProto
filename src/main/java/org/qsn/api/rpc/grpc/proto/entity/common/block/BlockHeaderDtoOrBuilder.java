@@ -23,109 +23,115 @@ public interface BlockHeaderDtoOrBuilder extends
   org.qsn.api.rpc.grpc.proto.entity.common.block.BlockHeaderVersionOrBuilder getVersionOrBuilder();
 
   /**
-   * <code>string chainId = 2;</code>
+   * <code>bytes blockAddress = 2;</code>
+   * @return The blockAddress.
+   */
+  com.google.protobuf.ByteString getBlockAddress();
+
+  /**
+   * <code>string chainId = 3;</code>
    * @return The chainId.
    */
   java.lang.String getChainId();
   /**
-   * <code>string chainId = 2;</code>
+   * <code>string chainId = 3;</code>
    * @return The bytes for chainId.
    */
   com.google.protobuf.ByteString
       getChainIdBytes();
 
   /**
-   * <code>int64 height = 3;</code>
+   * <code>int64 height = 4;</code>
    * @return The height.
    */
   long getHeight();
 
   /**
-   * <code>int64 time = 4;</code>
+   * <code>int64 time = 5;</code>
    * @return The time.
    */
   long getTime();
 
   /**
-   * <code>int64 numTxs = 5;</code>
+   * <code>int64 numTxs = 6;</code>
    * @return The numTxs.
    */
   long getNumTxs();
 
   /**
-   * <code>int64 totalTxs = 6;</code>
+   * <code>int64 totalTxs = 7;</code>
    * @return The totalTxs.
    */
   long getTotalTxs();
 
   /**
-   * <code>int64 proposerSequenceNumber = 7;</code>
+   * <code>int64 proposerSequenceNumber = 8;</code>
    * @return The proposerSequenceNumber.
    */
   long getProposerSequenceNumber();
 
   /**
-   * <code>bytes lastBlockhash = 8;</code>
+   * <code>bytes lastBlockhash = 9;</code>
    * @return The lastBlockhash.
    */
   com.google.protobuf.ByteString getLastBlockhash();
 
   /**
-   * <code>bytes lastCommitHash = 9;</code>
+   * <code>bytes lastCommitHash = 10;</code>
    * @return The lastCommitHash.
    */
   com.google.protobuf.ByteString getLastCommitHash();
 
   /**
-   * <code>bytes dataHash = 10;</code>
+   * <code>bytes dataHash = 11;</code>
    * @return The dataHash.
    */
   com.google.protobuf.ByteString getDataHash();
 
   /**
-   * <code>bytes validatorsHash = 11;</code>
+   * <code>bytes validatorsHash = 12;</code>
    * @return The validatorsHash.
    */
   com.google.protobuf.ByteString getValidatorsHash();
 
   /**
-   * <code>bytes nextValidatorsHash = 12;</code>
+   * <code>bytes nextValidatorsHash = 13;</code>
    * @return The nextValidatorsHash.
    */
   com.google.protobuf.ByteString getNextValidatorsHash();
 
   /**
-   * <code>bytes accountHash = 13;</code>
+   * <code>bytes accountHash = 14;</code>
    * @return The accountHash.
    */
   com.google.protobuf.ByteString getAccountHash();
 
   /**
-   * <code>bytes contractHash = 14;</code>
+   * <code>bytes contractHash = 15;</code>
    * @return The contractHash.
    */
   com.google.protobuf.ByteString getContractHash();
 
   /**
-   * <code>bytes storageHash = 15;</code>
+   * <code>bytes storageHash = 16;</code>
    * @return The storageHash.
    */
   com.google.protobuf.ByteString getStorageHash();
 
   /**
-   * <code>bytes transactionHash = 16;</code>
+   * <code>bytes transactionHash = 17;</code>
    * @return The transactionHash.
    */
   com.google.protobuf.ByteString getTransactionHash();
 
   /**
-   * <code>bytes transactionReceiptHash = 17;</code>
+   * <code>bytes transactionReceiptHash = 18;</code>
    * @return The transactionReceiptHash.
    */
   com.google.protobuf.ByteString getTransactionReceiptHash();
 
   /**
-   * <code>bytes blockRewardHash = 18;</code>
+   * <code>bytes blockRewardHash = 19;</code>
    * @return The blockRewardHash.
    */
   com.google.protobuf.ByteString getBlockRewardHash();
