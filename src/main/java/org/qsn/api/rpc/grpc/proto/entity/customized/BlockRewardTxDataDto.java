@@ -49,11 +49,11 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.Builder subBuilder = null;
+            org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.Builder subBuilder = null;
             if (blockReward_ != null) {
               subBuilder = blockReward_.toBuilder();
             }
-            blockReward_ = input.readMessage(org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.parser(), extensionRegistry);
+            blockReward_ = input.readMessage(org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(blockReward_);
               blockReward_ = subBuilder.buildPartial();
@@ -94,9 +94,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BLOCKREWARD_FIELD_NUMBER = 1;
-  private org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward blockReward_;
+  private org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto blockReward_;
   /**
-   * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+   * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
    * @return Whether the blockReward field is set.
    */
   @java.lang.Override
@@ -104,18 +104,18 @@ private static final long serialVersionUID = 0L;
     return blockReward_ != null;
   }
   /**
-   * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+   * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
    * @return The blockReward.
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward getBlockReward() {
-    return blockReward_ == null ? org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.getDefaultInstance() : blockReward_;
+  public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto getBlockReward() {
+    return blockReward_ == null ? org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.getDefaultInstance() : blockReward_;
   }
   /**
-   * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+   * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardOrBuilder getBlockRewardOrBuilder() {
+  public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDtoOrBuilder getBlockRewardOrBuilder() {
     return getBlockReward();
   }
 
@@ -434,31 +434,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward blockReward_;
+    private org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto blockReward_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward, org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.Builder, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardOrBuilder> blockRewardBuilder_;
+        org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.Builder, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDtoOrBuilder> blockRewardBuilder_;
     /**
-     * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+     * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
      * @return Whether the blockReward field is set.
      */
     public boolean hasBlockReward() {
       return blockRewardBuilder_ != null || blockReward_ != null;
     }
     /**
-     * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+     * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
      * @return The blockReward.
      */
-    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward getBlockReward() {
+    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto getBlockReward() {
       if (blockRewardBuilder_ == null) {
-        return blockReward_ == null ? org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.getDefaultInstance() : blockReward_;
+        return blockReward_ == null ? org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.getDefaultInstance() : blockReward_;
       } else {
         return blockRewardBuilder_.getMessage();
       }
     }
     /**
-     * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+     * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
      */
-    public Builder setBlockReward(org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward value) {
+    public Builder setBlockReward(org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto value) {
       if (blockRewardBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -472,10 +472,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+     * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
      */
     public Builder setBlockReward(
-        org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.Builder builderForValue) {
+        org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.Builder builderForValue) {
       if (blockRewardBuilder_ == null) {
         blockReward_ = builderForValue.build();
         onChanged();
@@ -486,13 +486,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+     * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
      */
-    public Builder mergeBlockReward(org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward value) {
+    public Builder mergeBlockReward(org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto value) {
       if (blockRewardBuilder_ == null) {
         if (blockReward_ != null) {
           blockReward_ =
-            org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.newBuilder(blockReward_).mergeFrom(value).buildPartial();
+            org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.newBuilder(blockReward_).mergeFrom(value).buildPartial();
         } else {
           blockReward_ = value;
         }
@@ -504,7 +504,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+     * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
      */
     public Builder clearBlockReward() {
       if (blockRewardBuilder_ == null) {
@@ -518,33 +518,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+     * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.Builder getBlockRewardBuilder() {
+    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.Builder getBlockRewardBuilder() {
       
       onChanged();
       return getBlockRewardFieldBuilder().getBuilder();
     }
     /**
-     * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+     * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardOrBuilder getBlockRewardOrBuilder() {
+    public org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDtoOrBuilder getBlockRewardOrBuilder() {
       if (blockRewardBuilder_ != null) {
         return blockRewardBuilder_.getMessageOrBuilder();
       } else {
         return blockReward_ == null ?
-            org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.getDefaultInstance() : blockReward_;
+            org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.getDefaultInstance() : blockReward_;
       }
     }
     /**
-     * <code>.org.qsn.protobuf.BlockReward blockReward = 1;</code>
+     * <code>.org.qsn.protobuf.BlockRewardDto blockReward = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward, org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.Builder, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardOrBuilder> 
+        org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.Builder, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDtoOrBuilder> 
         getBlockRewardFieldBuilder() {
       if (blockRewardBuilder_ == null) {
         blockRewardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward, org.qsn.api.rpc.grpc.proto.entity.customized.BlockReward.Builder, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardOrBuilder>(
+            org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDto.Builder, org.qsn.api.rpc.grpc.proto.entity.customized.BlockRewardDtoOrBuilder>(
                 getBlockReward(),
                 getParentForChildren(),
                 isClean());

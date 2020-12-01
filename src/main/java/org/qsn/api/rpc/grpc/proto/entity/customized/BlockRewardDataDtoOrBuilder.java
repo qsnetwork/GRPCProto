@@ -3,8 +3,8 @@
 
 package org.qsn.api.rpc.grpc.proto.entity.customized;
 
-public interface BlockRewardDataOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:org.qsn.protobuf.BlockRewardData)
+public interface BlockRewardDataDtoOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:org.qsn.protobuf.BlockRewardDataDto)
     com.google.protobuf.MessageOrBuilder {
 
   /**
