@@ -212,12 +212,39 @@ import grpc
 import AccountRpc_pb2
 import AccountRpc_pb2_grpc
 from qsn.entity.request import AccountRequests_pb2
-// the current path are supposed to be the same folder of AccountRpc_pb2.py
+from qsn.entity.common import BaseRequest_pb2
+import BlockRpc_pb2
+import BlockRpc_pb2_grpc
+from qsn.entity.request import BlockRequests_pb2
+import TransactionRpc_pb2
+import TransactionRpc_pb2_grpc
+from qsn.entity.request import TransactionRequests_pb2
 
-def run():
-    channel = grpc.insecure_channel('ip:port')
-    response = stub.getAccount(AccountRequests_pb2.GetAccountRequest( baseRequest=BaseRequest_pb2.BaseRequest(version="1"), address=bytes.fromhex("70e85308ef0502397cac5632bd7307c1dc391c49")))
+
+channel = grpc.insecure_channel('ip:port')
+
+def account(addr):
+    stub = AccountRpc_pb2_grpc.AccountRpcStub(channel)
+    response = stub.getAccount(AccountRequests_pb2.GetAccountRequest( baseRequest=BaseRequest_pb2.BaseRequest(version="1"), address=bytes.fromhex(addr)))
+
     print(response)
     balance = int.from_bytes(response.account.balance.value, byteorder="big")
     print(balance)
+
+def block(height):
+    stub = BlockRpc_pb2_grpc.BlockRpcStub(channel)
+    response = stub.getBlockByHeight(BlockRequests_pb2.GetBlockByHeightRequest(baseRequest=BaseRequest_pb2.BaseRequest(version="1"), height=height))
+    print(response)
+
+def current():
+    stub = BlockRpc_pb2_grpc.BlockRpcStub(channel)
+    response = stub.getBlockHeight(BlockRequests_pb2.GetBlockHeightRequest(baseRequest=BaseRequest_pb2.BaseRequest(version="1")))
+    print(response)
+    
+
+if __name__ == "__main__":
+    account("70e85308ef0502397cac5632bd7307c1dc391c49")
+    current()
+    block(30000) 
+    
 </code></pre>
