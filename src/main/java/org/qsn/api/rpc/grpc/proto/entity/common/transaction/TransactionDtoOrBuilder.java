@@ -128,4 +128,10 @@ public interface TransactionDtoOrBuilder extends
    */
   org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder getSignaturesOrBuilder(
       int index);
+
+  /**
+   * <code>bytes hash = 10;</code>
+   * @return The hash.
+   */
+  com.google.protobuf.ByteString getHash();
 }

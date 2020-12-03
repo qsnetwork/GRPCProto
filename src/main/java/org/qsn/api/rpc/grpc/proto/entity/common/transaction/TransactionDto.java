@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
     smartContractArguments_ = java.util.Collections.emptyList();
     info_ = com.google.protobuf.ByteString.EMPTY;
     signatures_ = java.util.Collections.emptyList();
+    hash_ = com.google.protobuf.ByteString.EMPTY;
   }
 
   @java.lang.Override
@@ -130,6 +131,11 @@ private static final long serialVersionUID = 0L;
             }
             signatures_.add(
                 input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.parser(), extensionRegistry));
+            break;
+          }
+          case 82: {
+
+            hash_ = input.readBytes();
             break;
           }
           default: {
@@ -413,6 +419,17 @@ private static final long serialVersionUID = 0L;
     return signatures_.get(index);
   }
 
+  public static final int HASH_FIELD_NUMBER = 10;
+  private com.google.protobuf.ByteString hash_;
+  /**
+   * <code>bytes hash = 10;</code>
+   * @return The hash.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getHash() {
+    return hash_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -453,6 +470,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < signatures_.size(); i++) {
       output.writeMessage(9, signatures_.get(i));
+    }
+    if (!hash_.isEmpty()) {
+      output.writeBytes(10, hash_);
     }
     unknownFields.writeTo(output);
   }
@@ -502,6 +522,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, signatures_.get(i));
     }
+    if (!hash_.isEmpty()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(10, hash_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -544,6 +568,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getSignaturesList()
         .equals(other.getSignaturesList())) return false;
+    if (!getHash()
+        .equals(other.getHash())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -583,6 +609,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SIGNATURES_FIELD_NUMBER;
       hash = (53 * hash) + getSignaturesList().hashCode();
     }
+    hash = (37 * hash) + HASH_FIELD_NUMBER;
+    hash = (53 * hash) + getHash().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -751,6 +779,8 @@ private static final long serialVersionUID = 0L;
       } else {
         signaturesBuilder_.clear();
       }
+      hash_ = com.google.protobuf.ByteString.EMPTY;
+
       return this;
     }
 
@@ -811,6 +841,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.signatures_ = signaturesBuilder_.build();
       }
+      result.hash_ = hash_;
       onBuilt();
       return result;
     }
@@ -917,6 +948,9 @@ private static final long serialVersionUID = 0L;
             signaturesBuilder_.addAllMessages(other.signatures_);
           }
         }
+      }
+      if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
+        setHash(other.getHash());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1845,6 +1879,40 @@ private static final long serialVersionUID = 0L;
         signatures_ = null;
       }
       return signaturesBuilder_;
+    }
+
+    private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes hash = 10;</code>
+     * @return The hash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getHash() {
+      return hash_;
+    }
+    /**
+     * <code>bytes hash = 10;</code>
+     * @param value The hash to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHash(com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      hash_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bytes hash = 10;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHash() {
+      
+      hash_ = getDefaultInstance().getHash();
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

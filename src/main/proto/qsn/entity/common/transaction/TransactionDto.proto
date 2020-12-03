@@ -20,4 +20,5 @@ message TransactionDto {
     bytes info = 7;
     AttachmentDto attachment = 8;
     repeated TransactionSignatureDto signatures = 9;
+    bytes hash = 10;
 }
