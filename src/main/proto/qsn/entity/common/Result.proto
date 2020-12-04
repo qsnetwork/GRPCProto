@@ -7,8 +7,9 @@ package org.qsn.protobuf;
 
 message Result {
     enum RespCode {
-        SUCCESS = 0;
-        ERROR = 1;
+        UNKNOWN_RESP_CODE = 0;
+        SUCCESS = 1;
+        ERROR = 2;
         WRONG_VERSION = 99;
     }
     RespCode respCode = 1;

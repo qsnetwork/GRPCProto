@@ -100,13 +100,17 @@ private static final long serialVersionUID = 0L;
   public enum RespCode
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>SUCCESS = 0;</code>
+     * <code>UNKNOWN_RESP_CODE = 0;</code>
      */
-    SUCCESS(0),
+    UNKNOWN_RESP_CODE(0),
     /**
-     * <code>ERROR = 1;</code>
+     * <code>SUCCESS = 1;</code>
      */
-    ERROR(1),
+    SUCCESS(1),
+    /**
+     * <code>ERROR = 2;</code>
+     */
+    ERROR(2),
     /**
      * <code>WRONG_VERSION = 99;</code>
      */
@@ -115,13 +119,17 @@ private static final long serialVersionUID = 0L;
     ;
 
     /**
-     * <code>SUCCESS = 0;</code>
+     * <code>UNKNOWN_RESP_CODE = 0;</code>
      */
-    public static final int SUCCESS_VALUE = 0;
+    public static final int UNKNOWN_RESP_CODE_VALUE = 0;
     /**
-     * <code>ERROR = 1;</code>
+     * <code>SUCCESS = 1;</code>
      */
-    public static final int ERROR_VALUE = 1;
+    public static final int SUCCESS_VALUE = 1;
+    /**
+     * <code>ERROR = 2;</code>
+     */
+    public static final int ERROR_VALUE = 2;
     /**
      * <code>WRONG_VERSION = 99;</code>
      */
@@ -152,8 +160,9 @@ private static final long serialVersionUID = 0L;
      */
     public static RespCode forNumber(int value) {
       switch (value) {
-        case 0: return SUCCESS;
-        case 1: return ERROR;
+        case 0: return UNKNOWN_RESP_CODE;
+        case 1: return SUCCESS;
+        case 2: return ERROR;
         case 99: return WRONG_VERSION;
         default: return null;
       }
@@ -282,7 +291,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (respCode_ != org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode.SUCCESS.getNumber()) {
+    if (respCode_ != org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode.UNKNOWN_RESP_CODE.getNumber()) {
       output.writeEnum(1, respCode_);
     }
     if (!getRespMsgBytes().isEmpty()) {
@@ -297,7 +306,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (respCode_ != org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode.SUCCESS.getNumber()) {
+    if (respCode_ != org.qsn.api.rpc.grpc.proto.entity.common.Result.RespCode.UNKNOWN_RESP_CODE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, respCode_);
     }
