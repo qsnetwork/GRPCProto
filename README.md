@@ -219,6 +219,8 @@ from qsn.entity.request import BlockRequests_pb2
 import TransactionRpc_pb2
 import TransactionRpc_pb2_grpc
 from qsn.entity.request import TransactionRequests_pb2
+from qsn.entity.customized import BlockRewardTxDataDto_pb2
+from google.protobuf.any_pb2 import Any
 
 
 channel = grpc.insecure_channel('ip:port')
@@ -235,16 +237,32 @@ def block(height):
     stub = BlockRpc_pb2_grpc.BlockRpcStub(channel)
     response = stub.getBlockByHeight(BlockRequests_pb2.GetBlockByHeightRequest(baseRequest=BaseRequest_pb2.BaseRequest(version="1"), height=height))
     print(response)
+    print("transactions= ", response.block.data.transactions[0].hash.hex())
 
 def current():
     stub = BlockRpc_pb2_grpc.BlockRpcStub(channel)
     response = stub.getBlockHeight(BlockRequests_pb2.GetBlockHeightRequest(baseRequest=BaseRequest_pb2.BaseRequest(version="1")))
     print(response)
-    
+
+def tx(hash):
+    stub = TransactionRpc_pb2_grpc.TransactionRpcStub(channel)
+    response = stub.getTransaction(TransactionRequests_pb2.GetTransactionRequest(baseRequest=BaseRequest_pb2.BaseRequest(version="1"), transactionHash=bytes.fromhex(hash)))
+    print(response)
+    return response.transaction
+
+def unpackBlockReward(data):
+    anyData = Any()
+    anyData.CopyFrom(data)
+    unpacked_data = BlockRewardTxDataDto_pb2.BlockRewardTxDataDto()
+    anyData.Unpack(unpacked_data)
+    print(unpacked_data)
 
 if __name__ == "__main__":
     account("70e85308ef0502397cac5632bd7307c1dc391c49")
     current()
-    block(30000) 
+    block(4)
+    t = tx("41e4513162c93949e9ee69e6a4c4a109935f08ca97bb8c89bbf0936f5d3a4763")
+    print(t.txData.data)
+    unpackBlockReward(t.txData.data)
     
 </code></pre>
