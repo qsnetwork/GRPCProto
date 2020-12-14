@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n.org.qsn.api.rpc.grpc.proto.entity.common.blockP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n#qsn/entity/common/block/Block.proto\x12\x10org.qsn.protobuf\x1a\x32qsn/entity/common/transaction/TransactionDto.proto\"0\n\x12\x42lockHeaderVersion\x12\r\n\x05\x62lock\x18\x01 \x01(\x05\x12\x0b\n\x03\x61pp\x18\x02 \x01(\x05\"\xd5\x03\n\x0e\x42lockHeaderDto\x12\x35\n\x07version\x18\x01 \x01(\x0b\x32$.org.qsn.protobuf.BlockHeaderVersion\x12\x14\n\x0c\x62lockAddress\x18\x02 \x01(\x0c\x12\x0f\n\x07\x63hainId\x18\x03 \x01(\t\x12\x0e\n\x06height\x18\x04 \x01(\x03\x12\x0c\n\x04time\x18\x05 \x01(\x03\x12\x0e\n\x06numTxs\x18\x06 \x01(\x03\x12\x10\n\x08totalTxs\x18\x07 \x01(\x03\x12\x1e\n\x16proposerSequenceNumber\x18\x08 \x01(\x03\x12\x15\n\rlastBlockhash\x18\t \x01(\x0c\x12\x16\n\x0elastCommitHash\x18\n \x01(\x0c\x12\x10\n\x08\x64\x61taHash\x18\x0b \x01(\x0c\x12\x16\n\x0evalidatorsHash\x18\x0c \x01(\x0c\x12\x1a\n\x12nextValidatorsHash\x18\r \x01(\x0c\x12\x13\n\x0b\x61\x63\x63ountHash\x18\x0e \x01(\x0c\x12\x14\n\x0c\x63ontractHash\x18\x0f \x01(\x0c\x12\x13\n\x0bstorageHash\x18\x10 \x01(\x0c\x12\x17\n\x0ftransactionHash\x18\x11 \x01(\x0c\x12\x1e\n\x16transactionReceiptHash\x18\x12 \x01(\x0c\x12\x17\n\x0f\x62lockRewardHash\x18\x13 \x01(\x0c\"F\n\x0c\x42lockDataDto\x12\x36\n\x0ctransactions\x18\x01 \x03(\x0b\x32 .org.qsn.protobuf.TransactionDto\"\xa6\x01\n\x0cPrecommitDto\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x0e\n\x06height\x18\x02 \x01(\x03\x12\r\n\x05round\x18\x03 \x01(\x05\x12\x11\n\tblockHash\x18\x04 \x01(\x0c\x12\x11\n\ttimestamp\x18\x05 \x01(\x03\x12\x18\n\x10validatorAddress\x18\x06 \x01(\x0c\x12\x16\n\x0evalidatorIndex\x18\x07 \x01(\x05\x12\x11\n\tsignature\x18\x08 \x01(\x0c\"f\n\rLastCommitDto\x12\x0e\n\x06height\x18\x01 \x01(\x03\x12\x11\n\tblockHash\x18\x02 \x01(\x0c\x12\x32\n\nprecommits\x18\x03 \x03(\x0b\x32\x1e.org.qsn.protobuf.PrecommitDto\"\x9f\x01\n\x08\x42lockDto\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .org.qsn.protobuf.BlockHeaderDto\x12,\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x1e.org.qsn.protobuf.BlockDataDto\x12\x33\n\nlastCommit\x18\x03 \x01(\x0b\x32\x1f.org.qsn.protobuf.LastCommitDtoB2\n.org.qsn.api.rpc.grpc.proto.entity.common.blockP\x01\x62\x06proto3'
+  serialized_pb=b'\n#qsn/entity/common/block/Block.proto\x12\x10org.qsn.protobuf\x1a\x32qsn/entity/common/transaction/TransactionDto.proto\"0\n\x12\x42lockHeaderVersion\x12\r\n\x05\x62lock\x18\x01 \x01(\x05\x12\x0b\n\x03\x61pp\x18\x02 \x01(\x05\"\xee\x03\n\x0e\x42lockHeaderDto\x12\x35\n\x07version\x18\x01 \x01(\x0b\x32$.org.qsn.protobuf.BlockHeaderVersion\x12\x14\n\x0c\x62lockAddress\x18\x02 \x01(\x0c\x12\x0f\n\x07\x63hainId\x18\x03 \x01(\t\x12\x0e\n\x06height\x18\x04 \x01(\x03\x12\x0c\n\x04time\x18\x05 \x01(\x03\x12\x0e\n\x06numTxs\x18\x06 \x01(\x03\x12\x10\n\x08totalTxs\x18\x07 \x01(\x03\x12\x1e\n\x16proposerSequenceNumber\x18\x08 \x01(\x03\x12\x15\n\rlastBlockhash\x18\t \x01(\x0c\x12\x16\n\x0elastCommitHash\x18\n \x01(\x0c\x12\x10\n\x08\x64\x61taHash\x18\x0b \x01(\x0c\x12\x16\n\x0evalidatorsHash\x18\x0c \x01(\x0c\x12\x1a\n\x12nextValidatorsHash\x18\r \x01(\x0c\x12\x13\n\x0b\x61\x63\x63ountHash\x18\x0e \x01(\x0c\x12\x14\n\x0c\x63ontractHash\x18\x0f \x01(\x0c\x12\x13\n\x0bstorageHash\x18\x10 \x01(\x0c\x12\x17\n\x0ftransactionHash\x18\x11 \x01(\x0c\x12\x1e\n\x16transactionReceiptHash\x18\x12 \x01(\x0c\x12\x17\n\x0f\x62lockRewardHash\x18\x13 \x01(\x0c\x12\x17\n\x0fproposerAddress\x18\x14 \x01(\x0c\"F\n\x0c\x42lockDataDto\x12\x36\n\x0ctransactions\x18\x01 \x03(\x0b\x32 .org.qsn.protobuf.TransactionDto\"\xa6\x01\n\x0cPrecommitDto\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x0e\n\x06height\x18\x02 \x01(\x03\x12\r\n\x05round\x18\x03 \x01(\x05\x12\x11\n\tblockHash\x18\x04 \x01(\x0c\x12\x11\n\ttimestamp\x18\x05 \x01(\x03\x12\x18\n\x10validatorAddress\x18\x06 \x01(\x0c\x12\x16\n\x0evalidatorIndex\x18\x07 \x01(\x05\x12\x11\n\tsignature\x18\x08 \x01(\x0c\"f\n\rLastCommitDto\x12\x0e\n\x06height\x18\x01 \x01(\x03\x12\x11\n\tblockHash\x18\x02 \x01(\x0c\x12\x32\n\nprecommits\x18\x03 \x03(\x0b\x32\x1e.org.qsn.protobuf.PrecommitDto\"\x9f\x01\n\x08\x42lockDto\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .org.qsn.protobuf.BlockHeaderDto\x12,\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x1e.org.qsn.protobuf.BlockDataDto\x12\x33\n\nlastCommit\x18\x03 \x01(\x0b\x32\x1f.org.qsn.protobuf.LastCommitDtoB2\n.org.qsn.api.rpc.grpc.proto.entity.common.blockP\x01\x62\x06proto3'
   ,
   dependencies=[qsn_dot_entity_dot_common_dot_transaction_dot_TransactionDto__pb2.DESCRIPTOR,])
 
@@ -207,6 +207,13 @@ _BLOCKHEADERDTO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='proposerAddress', full_name='org.qsn.protobuf.BlockHeaderDto.proposerAddress', index=19,
+      number=20, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"",
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -220,7 +227,7 @@ _BLOCKHEADERDTO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=160,
-  serialized_end=629,
+  serialized_end=654,
 )
 
 
@@ -251,8 +258,8 @@ _BLOCKDATADTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=631,
-  serialized_end=701,
+  serialized_start=656,
+  serialized_end=726,
 )
 
 
@@ -332,8 +339,8 @@ _PRECOMMITDTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=704,
-  serialized_end=870,
+  serialized_start=729,
+  serialized_end=895,
 )
 
 
@@ -378,8 +385,8 @@ _LASTCOMMITDTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=872,
-  serialized_end=974,
+  serialized_start=897,
+  serialized_end=999,
 )
 
 
@@ -424,8 +431,8 @@ _BLOCKDTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=977,
-  serialized_end=1136,
+  serialized_start=1002,
+  serialized_end=1161,
 )
 
 _BLOCKHEADERDTO.fields_by_name['version'].message_type = _BLOCKHEADERVERSION

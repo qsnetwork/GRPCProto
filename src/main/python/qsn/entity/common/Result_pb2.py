@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n(org.qsn.api.rpc.grpc.proto.entity.commonP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1eqsn/entity/common/Result.proto\x12\x10org.qsn.protobuf\"\x85\x01\n\x06Result\x12\x33\n\x08respCode\x18\x01 \x01(\x0e\x32!.org.qsn.protobuf.Result.RespCode\x12\x0f\n\x07respMsg\x18\x02 \x01(\t\"5\n\x08RespCode\x12\x0b\n\x07SUCCESS\x10\x00\x12\t\n\x05\x45RROR\x10\x01\x12\x11\n\rWRONG_VERSION\x10\x63\x42,\n(org.qsn.api.rpc.grpc.proto.entity.commonP\x01\x62\x06proto3'
+  serialized_pb=b'\n\x1eqsn/entity/common/Result.proto\x12\x10org.qsn.protobuf\"\x9c\x01\n\x06Result\x12\x33\n\x08respCode\x18\x01 \x01(\x0e\x32!.org.qsn.protobuf.Result.RespCode\x12\x0f\n\x07respMsg\x18\x02 \x01(\t\"L\n\x08RespCode\x12\x15\n\x11UNKNOWN_RESP_CODE\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x12\x11\n\rWRONG_VERSION\x10\x63\x42,\n(org.qsn.api.rpc.grpc.proto.entity.commonP\x01\x62\x06proto3'
 )
 
 
@@ -32,17 +32,22 @@ _RESULT_RESPCODE = _descriptor.EnumDescriptor(
   create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
+      name='UNKNOWN_RESP_CODE', index=0, number=0,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ERROR', index=1, number=1,
+      name='SUCCESS', index=1, number=1,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='WRONG_VERSION', index=2, number=99,
+      name='ERROR', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='WRONG_VERSION', index=3, number=99,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
@@ -50,7 +55,7 @@ _RESULT_RESPCODE = _descriptor.EnumDescriptor(
   containing_type=None,
   serialized_options=None,
   serialized_start=133,
-  serialized_end=186,
+  serialized_end=209,
 )
 _sym_db.RegisterEnumDescriptor(_RESULT_RESPCODE)
 
@@ -91,7 +96,7 @@ _RESULT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=53,
-  serialized_end=186,
+  serialized_end=209,
 )
 
 _RESULT.fields_by_name['respCode'].enum_type = _RESULT_RESPCODE

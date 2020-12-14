@@ -135,4 +135,10 @@ public interface BlockHeaderDtoOrBuilder extends
    * @return The blockRewardHash.
    */
   com.google.protobuf.ByteString getBlockRewardHash();
+
+  /**
+   * <code>bytes proposerAddress = 20;</code>
+   * @return The proposerAddress.
+   */
+  com.google.protobuf.ByteString getProposerAddress();
 }
