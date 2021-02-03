@@ -34,19 +34,16 @@ public final class TransactionDtoOuterClass {
       "proto\032;qsn/entity/common/transaction/Tra" +
       "nsactionSignatureDto.proto\0326qsn/entity/c" +
       "ommon/transaction/TransactionDataDto.pro" +
-      "to\0321qsn/entity/common/transaction/Attach" +
-      "mentDto.proto\"\360\002\n\016TransactionDto\022\016\n\006txTy" +
-      "pe\030\001 \001(\005\0224\n\006txData\030\002 \001(\0132$.org.qsn.proto" +
-      "buf.TransactionDataDto\022\031\n\021smartContractN" +
-      "ame\030\003 \001(\t\022\033\n\023smartContractAction\030\004 \001(\t\022\036" +
-      "\n\026smartContractArguments\030\005 \003(\014\0220\n\003fee\030\006 " +
-      "\001(\0132#.org.qsn.protobuf.TransactionFeeDto" +
-      "\022\014\n\004info\030\007 \001(\014\0223\n\nattachment\030\010 \001(\0132\037.org" +
-      ".qsn.protobuf.AttachmentDto\022=\n\nsignature" +
-      "s\030\t \003(\0132).org.qsn.protobuf.TransactionSi" +
-      "gnatureDto\022\014\n\004hash\030\n \001(\014B8\n4org.qsn.api." +
-      "rpc.grpc.proto.entity.common.transaction" +
-      "P\001b\006proto3"
+      "to\"\273\002\n\016TransactionDto\022\016\n\006txType\030\001 \001(\005\0224\n" +
+      "\006txData\030\002 \001(\0132$.org.qsn.protobuf.Transac" +
+      "tionDataDto\022\031\n\021smartContractName\030\003 \001(\t\022\033" +
+      "\n\023smartContractAction\030\004 \001(\t\022\036\n\026smartCont" +
+      "ractArguments\030\005 \003(\014\0220\n\003fee\030\006 \001(\0132#.org.q" +
+      "sn.protobuf.TransactionFeeDto\022\014\n\004info\030\007 " +
+      "\001(\014\022=\n\nsignatures\030\010 \003(\0132).org.qsn.protob" +
+      "uf.TransactionSignatureDto\022\014\n\004hash\030\t \001(\014" +
+      "B8\n4org.qsn.api.rpc.grpc.proto.entity.co" +
+      "mmon.transactionP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -54,18 +51,16 @@ public final class TransactionDtoOuterClass {
           org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDtoOuterClass.getDescriptor(),
           org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOuterClass.getDescriptor(),
           org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDtoOuterClass.getDescriptor(),
-          org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDtoOuterClass.getDescriptor(),
         });
     internal_static_org_qsn_protobuf_TransactionDto_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_org_qsn_protobuf_TransactionDto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_TransactionDto_descriptor,
-        new java.lang.String[] { "TxType", "TxData", "SmartContractName", "SmartContractAction", "SmartContractArguments", "Fee", "Info", "Attachment", "Signatures", "Hash", });
+        new java.lang.String[] { "TxType", "TxData", "SmartContractName", "SmartContractAction", "SmartContractArguments", "Fee", "Info", "Signatures", "Hash", });
     org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionFeeDtoOuterClass.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOuterClass.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDataDtoOuterClass.getDescriptor();
-    org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDtoOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
