@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.request";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/common/BaseRequest.proto";
+
+message SmartContractViewOnlyRequest {
+    BaseRequest baseRequest = 1;
+    string contractName = 2;
+    string contractAction = 3;
+    repeated bytes contractArguments = 4;
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/request/SmartContractRequests.proto";
+import "qsn/entity/response/SmartContractResponses.proto";
+
+service SmartContractRpc {
+    rpc executeViewOnly(SmartContractViewOnlyRequest) returns (SmartContractViewOnlyResponse);
+}
