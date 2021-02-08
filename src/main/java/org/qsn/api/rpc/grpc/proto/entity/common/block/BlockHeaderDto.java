@@ -29,6 +29,7 @@ private static final long serialVersionUID = 0L;
     transactionHash_ = com.google.protobuf.ByteString.EMPTY;
     transactionReceiptHash_ = com.google.protobuf.ByteString.EMPTY;
     blockRewardHash_ = com.google.protobuf.ByteString.EMPTY;
+    proposerAddress_ = com.google.protobuf.ByteString.EMPTY;
   }
 
   @java.lang.Override
@@ -163,6 +164,11 @@ private static final long serialVersionUID = 0L;
           case 154: {
 
             blockRewardHash_ = input.readBytes();
+            break;
+          }
+          case 162: {
+
+            proposerAddress_ = input.readBytes();
             break;
           }
           default: {
@@ -448,6 +454,17 @@ private static final long serialVersionUID = 0L;
     return blockRewardHash_;
   }
 
+  public static final int PROPOSERADDRESS_FIELD_NUMBER = 20;
+  private com.google.protobuf.ByteString proposerAddress_;
+  /**
+   * <code>bytes proposerAddress = 20;</code>
+   * @return The proposerAddress.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getProposerAddress() {
+    return proposerAddress_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -518,6 +535,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!blockRewardHash_.isEmpty()) {
       output.writeBytes(19, blockRewardHash_);
+    }
+    if (!proposerAddress_.isEmpty()) {
+      output.writeBytes(20, proposerAddress_);
     }
     unknownFields.writeTo(output);
   }
@@ -603,6 +623,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(19, blockRewardHash_);
     }
+    if (!proposerAddress_.isEmpty()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(20, proposerAddress_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -659,6 +683,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTransactionReceiptHash())) return false;
     if (!getBlockRewardHash()
         .equals(other.getBlockRewardHash())) return false;
+    if (!getProposerAddress()
+        .equals(other.getProposerAddress())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -715,6 +741,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getTransactionReceiptHash().hashCode();
     hash = (37 * hash) + BLOCKREWARDHASH_FIELD_NUMBER;
     hash = (53 * hash) + getBlockRewardHash().hashCode();
+    hash = (37 * hash) + PROPOSERADDRESS_FIELD_NUMBER;
+    hash = (53 * hash) + getProposerAddress().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -890,6 +918,8 @@ private static final long serialVersionUID = 0L;
 
       blockRewardHash_ = com.google.protobuf.ByteString.EMPTY;
 
+      proposerAddress_ = com.google.protobuf.ByteString.EMPTY;
+
       return this;
     }
 
@@ -939,6 +969,7 @@ private static final long serialVersionUID = 0L;
       result.transactionHash_ = transactionHash_;
       result.transactionReceiptHash_ = transactionReceiptHash_;
       result.blockRewardHash_ = blockRewardHash_;
+      result.proposerAddress_ = proposerAddress_;
       onBuilt();
       return result;
     }
@@ -1044,6 +1075,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getBlockRewardHash() != com.google.protobuf.ByteString.EMPTY) {
         setBlockRewardHash(other.getBlockRewardHash());
+      }
+      if (other.getProposerAddress() != com.google.protobuf.ByteString.EMPTY) {
+        setProposerAddress(other.getProposerAddress());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1828,6 +1862,40 @@ private static final long serialVersionUID = 0L;
     public Builder clearBlockRewardHash() {
       
       blockRewardHash_ = getDefaultInstance().getBlockRewardHash();
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.ByteString proposerAddress_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes proposerAddress = 20;</code>
+     * @return The proposerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getProposerAddress() {
+      return proposerAddress_;
+    }
+    /**
+     * <code>bytes proposerAddress = 20;</code>
+     * @param value The proposerAddress to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProposerAddress(com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      proposerAddress_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bytes proposerAddress = 20;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProposerAddress() {
+      
+      proposerAddress_ = getDefaultInstance().getProposerAddress();
       onChanged();
       return this;
     }

@@ -112,19 +112,6 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 66: {
-            org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.Builder subBuilder = null;
-            if (attachment_ != null) {
-              subBuilder = attachment_.toBuilder();
-            }
-            attachment_ = input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(attachment_);
-              attachment_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 74: {
             if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               signatures_ = new java.util.ArrayList<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto>();
               mutable_bitField0_ |= 0x00000002;
@@ -133,7 +120,7 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.parser(), extensionRegistry));
             break;
           }
-          case 82: {
+          case 74: {
 
             hash_ = input.readBytes();
             break;
@@ -353,43 +340,17 @@ private static final long serialVersionUID = 0L;
     return info_;
   }
 
-  public static final int ATTACHMENT_FIELD_NUMBER = 8;
-  private org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto attachment_;
-  /**
-   * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
-   * @return Whether the attachment field is set.
-   */
-  @java.lang.Override
-  public boolean hasAttachment() {
-    return attachment_ != null;
-  }
-  /**
-   * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
-   * @return The attachment.
-   */
-  @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto getAttachment() {
-    return attachment_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.getDefaultInstance() : attachment_;
-  }
-  /**
-   * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
-   */
-  @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDtoOrBuilder getAttachmentOrBuilder() {
-    return getAttachment();
-  }
-
-  public static final int SIGNATURES_FIELD_NUMBER = 9;
+  public static final int SIGNATURES_FIELD_NUMBER = 8;
   private java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto> signatures_;
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
    */
   @java.lang.Override
   public java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto> getSignaturesList() {
     return signatures_;
   }
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder> 
@@ -397,21 +358,21 @@ private static final long serialVersionUID = 0L;
     return signatures_;
   }
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
    */
   @java.lang.Override
   public int getSignaturesCount() {
     return signatures_.size();
   }
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
    */
   @java.lang.Override
   public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto getSignatures(int index) {
     return signatures_.get(index);
   }
   /**
-   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+   * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
    */
   @java.lang.Override
   public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder getSignaturesOrBuilder(
@@ -419,10 +380,10 @@ private static final long serialVersionUID = 0L;
     return signatures_.get(index);
   }
 
-  public static final int HASH_FIELD_NUMBER = 10;
+  public static final int HASH_FIELD_NUMBER = 9;
   private com.google.protobuf.ByteString hash_;
   /**
-   * <code>bytes hash = 10;</code>
+   * <code>bytes hash = 9;</code>
    * @return The hash.
    */
   @java.lang.Override
@@ -465,14 +426,11 @@ private static final long serialVersionUID = 0L;
     if (!info_.isEmpty()) {
       output.writeBytes(7, info_);
     }
-    if (attachment_ != null) {
-      output.writeMessage(8, getAttachment());
-    }
     for (int i = 0; i < signatures_.size(); i++) {
-      output.writeMessage(9, signatures_.get(i));
+      output.writeMessage(8, signatures_.get(i));
     }
     if (!hash_.isEmpty()) {
-      output.writeBytes(10, hash_);
+      output.writeBytes(9, hash_);
     }
     unknownFields.writeTo(output);
   }
@@ -514,17 +472,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(7, info_);
     }
-    if (attachment_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, getAttachment());
-    }
     for (int i = 0; i < signatures_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, signatures_.get(i));
+        .computeMessageSize(8, signatures_.get(i));
     }
     if (!hash_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(10, hash_);
+        .computeBytesSize(9, hash_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -561,11 +515,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!getInfo()
         .equals(other.getInfo())) return false;
-    if (hasAttachment() != other.hasAttachment()) return false;
-    if (hasAttachment()) {
-      if (!getAttachment()
-          .equals(other.getAttachment())) return false;
-    }
     if (!getSignaturesList()
         .equals(other.getSignaturesList())) return false;
     if (!getHash()
@@ -601,10 +550,6 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + INFO_FIELD_NUMBER;
     hash = (53 * hash) + getInfo().hashCode();
-    if (hasAttachment()) {
-      hash = (37 * hash) + ATTACHMENT_FIELD_NUMBER;
-      hash = (53 * hash) + getAttachment().hashCode();
-    }
     if (getSignaturesCount() > 0) {
       hash = (37 * hash) + SIGNATURES_FIELD_NUMBER;
       hash = (53 * hash) + getSignaturesList().hashCode();
@@ -767,12 +712,6 @@ private static final long serialVersionUID = 0L;
       }
       info_ = com.google.protobuf.ByteString.EMPTY;
 
-      if (attachmentBuilder_ == null) {
-        attachment_ = null;
-      } else {
-        attachment_ = null;
-        attachmentBuilder_ = null;
-      }
       if (signaturesBuilder_ == null) {
         signatures_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -827,11 +766,6 @@ private static final long serialVersionUID = 0L;
         result.fee_ = feeBuilder_.build();
       }
       result.info_ = info_;
-      if (attachmentBuilder_ == null) {
-        result.attachment_ = attachment_;
-      } else {
-        result.attachment_ = attachmentBuilder_.build();
-      }
       if (signaturesBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0)) {
           signatures_ = java.util.Collections.unmodifiableList(signatures_);
@@ -919,9 +853,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getInfo() != com.google.protobuf.ByteString.EMPTY) {
         setInfo(other.getInfo());
-      }
-      if (other.hasAttachment()) {
-        mergeAttachment(other.getAttachment());
       }
       if (signaturesBuilder_ == null) {
         if (!other.signatures_.isEmpty()) {
@@ -1522,125 +1453,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto attachment_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDtoOrBuilder> attachmentBuilder_;
-    /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
-     * @return Whether the attachment field is set.
-     */
-    public boolean hasAttachment() {
-      return attachmentBuilder_ != null || attachment_ != null;
-    }
-    /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
-     * @return The attachment.
-     */
-    public org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto getAttachment() {
-      if (attachmentBuilder_ == null) {
-        return attachment_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.getDefaultInstance() : attachment_;
-      } else {
-        return attachmentBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
-     */
-    public Builder setAttachment(org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto value) {
-      if (attachmentBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        attachment_ = value;
-        onChanged();
-      } else {
-        attachmentBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
-     */
-    public Builder setAttachment(
-        org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.Builder builderForValue) {
-      if (attachmentBuilder_ == null) {
-        attachment_ = builderForValue.build();
-        onChanged();
-      } else {
-        attachmentBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
-     */
-    public Builder mergeAttachment(org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto value) {
-      if (attachmentBuilder_ == null) {
-        if (attachment_ != null) {
-          attachment_ =
-            org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.newBuilder(attachment_).mergeFrom(value).buildPartial();
-        } else {
-          attachment_ = value;
-        }
-        onChanged();
-      } else {
-        attachmentBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
-     */
-    public Builder clearAttachment() {
-      if (attachmentBuilder_ == null) {
-        attachment_ = null;
-        onChanged();
-      } else {
-        attachment_ = null;
-        attachmentBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
-     */
-    public org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.Builder getAttachmentBuilder() {
-      
-      onChanged();
-      return getAttachmentFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
-     */
-    public org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDtoOrBuilder getAttachmentOrBuilder() {
-      if (attachmentBuilder_ != null) {
-        return attachmentBuilder_.getMessageOrBuilder();
-      } else {
-        return attachment_ == null ?
-            org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.getDefaultInstance() : attachment_;
-      }
-    }
-    /**
-     * <code>.org.qsn.protobuf.AttachmentDto attachment = 8;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDtoOrBuilder> 
-        getAttachmentFieldBuilder() {
-      if (attachmentBuilder_ == null) {
-        attachmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.AttachmentDtoOrBuilder>(
-                getAttachment(),
-                getParentForChildren(),
-                isClean());
-        attachment_ = null;
-      }
-      return attachmentBuilder_;
-    }
-
     private java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto> signatures_ =
       java.util.Collections.emptyList();
     private void ensureSignaturesIsMutable() {
@@ -1654,7 +1466,7 @@ private static final long serialVersionUID = 0L;
         org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder> signaturesBuilder_;
 
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto> getSignaturesList() {
       if (signaturesBuilder_ == null) {
@@ -1664,7 +1476,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public int getSignaturesCount() {
       if (signaturesBuilder_ == null) {
@@ -1674,7 +1486,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto getSignatures(int index) {
       if (signaturesBuilder_ == null) {
@@ -1684,7 +1496,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public Builder setSignatures(
         int index, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto value) {
@@ -1701,7 +1513,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public Builder setSignatures(
         int index, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder builderForValue) {
@@ -1715,7 +1527,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public Builder addSignatures(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto value) {
       if (signaturesBuilder_ == null) {
@@ -1731,7 +1543,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public Builder addSignatures(
         int index, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto value) {
@@ -1748,7 +1560,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public Builder addSignatures(
         org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder builderForValue) {
@@ -1762,7 +1574,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public Builder addSignatures(
         int index, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder builderForValue) {
@@ -1776,7 +1588,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public Builder addAllSignatures(
         java.lang.Iterable<? extends org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto> values) {
@@ -1791,7 +1603,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public Builder clearSignatures() {
       if (signaturesBuilder_ == null) {
@@ -1804,7 +1616,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public Builder removeSignatures(int index) {
       if (signaturesBuilder_ == null) {
@@ -1817,14 +1629,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder getSignaturesBuilder(
         int index) {
       return getSignaturesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder getSignaturesOrBuilder(
         int index) {
@@ -1834,7 +1646,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDtoOrBuilder> 
          getSignaturesOrBuilderList() {
@@ -1845,14 +1657,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder addSignaturesBuilder() {
       return getSignaturesFieldBuilder().addBuilder(
           org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.getDefaultInstance());
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder addSignaturesBuilder(
         int index) {
@@ -1860,7 +1672,7 @@ private static final long serialVersionUID = 0L;
           index, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.getDefaultInstance());
     }
     /**
-     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 9;</code>
+     * <code>repeated .org.qsn.protobuf.TransactionSignatureDto signatures = 8;</code>
      */
     public java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionSignatureDto.Builder> 
          getSignaturesBuilderList() {
@@ -1883,7 +1695,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes hash = 10;</code>
+     * <code>bytes hash = 9;</code>
      * @return The hash.
      */
     @java.lang.Override
@@ -1891,7 +1703,7 @@ private static final long serialVersionUID = 0L;
       return hash_;
     }
     /**
-     * <code>bytes hash = 10;</code>
+     * <code>bytes hash = 9;</code>
      * @param value The hash to set.
      * @return This builder for chaining.
      */
@@ -1905,7 +1717,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes hash = 10;</code>
+     * <code>bytes hash = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearHash() {

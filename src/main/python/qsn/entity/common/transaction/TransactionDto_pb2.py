@@ -14,7 +14,6 @@ _sym_db = _symbol_database.Default()
 from qsn.entity.common.transaction import TransactionFeeDto_pb2 as qsn_dot_entity_dot_common_dot_transaction_dot_TransactionFeeDto__pb2
 from qsn.entity.common.transaction import TransactionSignatureDto_pb2 as qsn_dot_entity_dot_common_dot_transaction_dot_TransactionSignatureDto__pb2
 from qsn.entity.common.transaction import TransactionDataDto_pb2 as qsn_dot_entity_dot_common_dot_transaction_dot_TransactionDataDto__pb2
-from qsn.entity.common.transaction import AttachmentDto_pb2 as qsn_dot_entity_dot_common_dot_transaction_dot_AttachmentDto__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -23,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n4org.qsn.api.rpc.grpc.proto.entity.common.transactionP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n2qsn/entity/common/transaction/TransactionDto.proto\x12\x10org.qsn.protobuf\x1a\x35qsn/entity/common/transaction/TransactionFeeDto.proto\x1a;qsn/entity/common/transaction/TransactionSignatureDto.proto\x1a\x36qsn/entity/common/transaction/TransactionDataDto.proto\x1a\x31qsn/entity/common/transaction/AttachmentDto.proto\"\xf0\x02\n\x0eTransactionDto\x12\x0e\n\x06txType\x18\x01 \x01(\x05\x12\x34\n\x06txData\x18\x02 \x01(\x0b\x32$.org.qsn.protobuf.TransactionDataDto\x12\x19\n\x11smartContractName\x18\x03 \x01(\t\x12\x1b\n\x13smartContractAction\x18\x04 \x01(\t\x12\x1e\n\x16smartContractArguments\x18\x05 \x03(\x0c\x12\x30\n\x03\x66\x65\x65\x18\x06 \x01(\x0b\x32#.org.qsn.protobuf.TransactionFeeDto\x12\x0c\n\x04info\x18\x07 \x01(\x0c\x12\x33\n\nattachment\x18\x08 \x01(\x0b\x32\x1f.org.qsn.protobuf.AttachmentDto\x12=\n\nsignatures\x18\t \x03(\x0b\x32).org.qsn.protobuf.TransactionSignatureDto\x12\x0c\n\x04hash\x18\n \x01(\x0c\x42\x38\n4org.qsn.api.rpc.grpc.proto.entity.common.transactionP\x01\x62\x06proto3'
+  serialized_pb=b'\n2qsn/entity/common/transaction/TransactionDto.proto\x12\x10org.qsn.protobuf\x1a\x35qsn/entity/common/transaction/TransactionFeeDto.proto\x1a;qsn/entity/common/transaction/TransactionSignatureDto.proto\x1a\x36qsn/entity/common/transaction/TransactionDataDto.proto\"\xbb\x02\n\x0eTransactionDto\x12\x0e\n\x06txType\x18\x01 \x01(\x05\x12\x34\n\x06txData\x18\x02 \x01(\x0b\x32$.org.qsn.protobuf.TransactionDataDto\x12\x19\n\x11smartContractName\x18\x03 \x01(\t\x12\x1b\n\x13smartContractAction\x18\x04 \x01(\t\x12\x1e\n\x16smartContractArguments\x18\x05 \x03(\x0c\x12\x30\n\x03\x66\x65\x65\x18\x06 \x01(\x0b\x32#.org.qsn.protobuf.TransactionFeeDto\x12\x0c\n\x04info\x18\x07 \x01(\x0c\x12=\n\nsignatures\x18\x08 \x03(\x0b\x32).org.qsn.protobuf.TransactionSignatureDto\x12\x0c\n\x04hash\x18\t \x01(\x0c\x42\x38\n4org.qsn.api.rpc.grpc.proto.entity.common.transactionP\x01\x62\x06proto3'
   ,
-  dependencies=[qsn_dot_entity_dot_common_dot_transaction_dot_TransactionFeeDto__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_transaction_dot_TransactionSignatureDto__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_transaction_dot_TransactionDataDto__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_transaction_dot_AttachmentDto__pb2.DESCRIPTOR,])
+  dependencies=[qsn_dot_entity_dot_common_dot_transaction_dot_TransactionFeeDto__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_transaction_dot_TransactionSignatureDto__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_transaction_dot_TransactionDataDto__pb2.DESCRIPTOR,])
 
 
 
@@ -88,22 +87,15 @@ _TRANSACTIONDTO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='attachment', full_name='org.qsn.protobuf.TransactionDto.attachment', index=7,
-      number=8, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='signatures', full_name='org.qsn.protobuf.TransactionDto.signatures', index=8,
-      number=9, type=11, cpp_type=10, label=3,
+      name='signatures', full_name='org.qsn.protobuf.TransactionDto.signatures', index=7,
+      number=8, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='hash', full_name='org.qsn.protobuf.TransactionDto.hash', index=9,
-      number=10, type=12, cpp_type=9, label=1,
+      name='hash', full_name='org.qsn.protobuf.TransactionDto.hash', index=8,
+      number=9, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -120,13 +112,12 @@ _TRANSACTIONDTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=296,
-  serialized_end=664,
+  serialized_start=245,
+  serialized_end=560,
 )
 
 _TRANSACTIONDTO.fields_by_name['txData'].message_type = qsn_dot_entity_dot_common_dot_transaction_dot_TransactionDataDto__pb2._TRANSACTIONDATADTO
 _TRANSACTIONDTO.fields_by_name['fee'].message_type = qsn_dot_entity_dot_common_dot_transaction_dot_TransactionFeeDto__pb2._TRANSACTIONFEEDTO
-_TRANSACTIONDTO.fields_by_name['attachment'].message_type = qsn_dot_entity_dot_common_dot_transaction_dot_AttachmentDto__pb2._ATTACHMENTDTO
 _TRANSACTIONDTO.fields_by_name['signatures'].message_type = qsn_dot_entity_dot_common_dot_transaction_dot_TransactionSignatureDto__pb2._TRANSACTIONSIGNATUREDTO
 DESCRIPTOR.message_types_by_name['TransactionDto'] = _TRANSACTIONDTO
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)

@@ -32,6 +32,7 @@ message BlockHeaderDto{
   bytes transactionHash = 17;
   bytes transactionReceiptHash = 18;
   bytes blockRewardHash = 19;
+  bytes proposerAddress = 20;
 }
 
 message BlockDataDto{
