@@ -26,19 +26,19 @@ public interface ValidatorTxDataDtoOrBuilder extends
   com.google.protobuf.ByteString getDelegationAddress();
 
   /**
-   * <code>.org.qsn.protobuf.BInteger value = 4;</code>
-   * @return Whether the value field is set.
+   * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
+   * @return Whether the stake field is set.
    */
-  boolean hasValue();
+  boolean hasStake();
   /**
-   * <code>.org.qsn.protobuf.BInteger value = 4;</code>
-   * @return The value.
+   * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
+   * @return The stake.
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.BInteger getValue();
+  org.qsn.api.rpc.grpc.proto.entity.common.BInteger getStake();
   /**
-   * <code>.org.qsn.protobuf.BInteger value = 4;</code>
+   * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getValueOrBuilder();
+  org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getStakeOrBuilder();
 
   /**
    * <code>string name = 5;</code>

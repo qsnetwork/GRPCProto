@@ -11,6 +11,6 @@ message ValidatorTxDataDto{
     bytes validatorAddress = 1;
     bytes validatorPubKey = 2;
     bytes delegationAddress = 3;
-    BInteger value = 4;
+    BInteger stake = 4;
     string name = 5;
 }

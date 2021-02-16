@@ -33,7 +33,7 @@ public final class ValidatorTxDataDtoOuterClass {
       "ommon/BInteger.proto\"\233\001\n\022ValidatorTxData" +
       "Dto\022\030\n\020validatorAddress\030\001 \001(\014\022\027\n\017validat" +
       "orPubKey\030\002 \001(\014\022\031\n\021delegationAddress\030\003 \001(" +
-      "\014\022)\n\005value\030\004 \001(\0132\032.org.qsn.protobuf.BInt" +
+      "\014\022)\n\005stake\030\004 \001(\0132\032.org.qsn.protobuf.BInt" +
       "eger\022\014\n\004name\030\005 \001(\tB0\n,org.qsn.api.rpc.gr" +
       "pc.proto.entity.customizedP\001b\006proto3"
     };
@@ -47,7 +47,7 @@ public final class ValidatorTxDataDtoOuterClass {
     internal_static_org_qsn_protobuf_ValidatorTxDataDto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_ValidatorTxDataDto_descriptor,
-        new java.lang.String[] { "ValidatorAddress", "ValidatorPubKey", "DelegationAddress", "Value", "Name", });
+        new java.lang.String[] { "ValidatorAddress", "ValidatorPubKey", "DelegationAddress", "Stake", "Name", });
     org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOuterClass.getDescriptor();
   }
 
