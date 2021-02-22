@@ -69,13 +69,13 @@ private static final long serialVersionUID = 0L;
           }
           case 34: {
             org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder subBuilder = null;
-            if (value_ != null) {
-              subBuilder = value_.toBuilder();
+            if (stake_ != null) {
+              subBuilder = stake_.toBuilder();
             }
-            value_ = input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.BInteger.parser(), extensionRegistry);
+            stake_ = input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.BInteger.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(value_);
-              value_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(stake_);
+              stake_ = subBuilder.buildPartial();
             }
 
             break;
@@ -151,30 +151,30 @@ private static final long serialVersionUID = 0L;
     return delegationAddress_;
   }
 
-  public static final int VALUE_FIELD_NUMBER = 4;
-  private org.qsn.api.rpc.grpc.proto.entity.common.BInteger value_;
+  public static final int STAKE_FIELD_NUMBER = 4;
+  private org.qsn.api.rpc.grpc.proto.entity.common.BInteger stake_;
   /**
-   * <code>.org.qsn.protobuf.BInteger value = 4;</code>
-   * @return Whether the value field is set.
+   * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
+   * @return Whether the stake field is set.
    */
   @java.lang.Override
-  public boolean hasValue() {
-    return value_ != null;
+  public boolean hasStake() {
+    return stake_ != null;
   }
   /**
-   * <code>.org.qsn.protobuf.BInteger value = 4;</code>
-   * @return The value.
+   * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
+   * @return The stake.
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getValue() {
-    return value_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : value_;
+  public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getStake() {
+    return stake_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : stake_;
   }
   /**
-   * <code>.org.qsn.protobuf.BInteger value = 4;</code>
+   * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getValueOrBuilder() {
-    return getValue();
+  public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getStakeOrBuilder() {
+    return getStake();
   }
 
   public static final int NAME_FIELD_NUMBER = 5;
@@ -238,8 +238,8 @@ private static final long serialVersionUID = 0L;
     if (!delegationAddress_.isEmpty()) {
       output.writeBytes(3, delegationAddress_);
     }
-    if (value_ != null) {
-      output.writeMessage(4, getValue());
+    if (stake_ != null) {
+      output.writeMessage(4, getStake());
     }
     if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
@@ -265,9 +265,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(3, delegationAddress_);
     }
-    if (value_ != null) {
+    if (stake_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getValue());
+        .computeMessageSize(4, getStake());
     }
     if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
@@ -293,10 +293,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getValidatorPubKey())) return false;
     if (!getDelegationAddress()
         .equals(other.getDelegationAddress())) return false;
-    if (hasValue() != other.hasValue()) return false;
-    if (hasValue()) {
-      if (!getValue()
-          .equals(other.getValue())) return false;
+    if (hasStake() != other.hasStake()) return false;
+    if (hasStake()) {
+      if (!getStake()
+          .equals(other.getStake())) return false;
     }
     if (!getName()
         .equals(other.getName())) return false;
@@ -317,9 +317,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getValidatorPubKey().hashCode();
     hash = (37 * hash) + DELEGATIONADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + getDelegationAddress().hashCode();
-    if (hasValue()) {
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
+    if (hasStake()) {
+      hash = (37 * hash) + STAKE_FIELD_NUMBER;
+      hash = (53 * hash) + getStake().hashCode();
     }
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
@@ -462,11 +462,11 @@ private static final long serialVersionUID = 0L;
 
       delegationAddress_ = com.google.protobuf.ByteString.EMPTY;
 
-      if (valueBuilder_ == null) {
-        value_ = null;
+      if (stakeBuilder_ == null) {
+        stake_ = null;
       } else {
-        value_ = null;
-        valueBuilder_ = null;
+        stake_ = null;
+        stakeBuilder_ = null;
       }
       name_ = "";
 
@@ -499,10 +499,10 @@ private static final long serialVersionUID = 0L;
       result.validatorAddress_ = validatorAddress_;
       result.validatorPubKey_ = validatorPubKey_;
       result.delegationAddress_ = delegationAddress_;
-      if (valueBuilder_ == null) {
-        result.value_ = value_;
+      if (stakeBuilder_ == null) {
+        result.stake_ = stake_;
       } else {
-        result.value_ = valueBuilder_.build();
+        result.stake_ = stakeBuilder_.build();
       }
       result.name_ = name_;
       onBuilt();
@@ -562,8 +562,8 @@ private static final long serialVersionUID = 0L;
       if (other.getDelegationAddress() != com.google.protobuf.ByteString.EMPTY) {
         setDelegationAddress(other.getDelegationAddress());
       }
-      if (other.hasValue()) {
-        mergeValue(other.getValue());
+      if (other.hasStake()) {
+        mergeStake(other.getStake());
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
@@ -700,123 +700,123 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private org.qsn.api.rpc.grpc.proto.entity.common.BInteger value_;
+    private org.qsn.api.rpc.grpc.proto.entity.common.BInteger stake_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> valueBuilder_;
+        org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> stakeBuilder_;
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 4;</code>
-     * @return Whether the value field is set.
+     * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
+     * @return Whether the stake field is set.
      */
-    public boolean hasValue() {
-      return valueBuilder_ != null || value_ != null;
+    public boolean hasStake() {
+      return stakeBuilder_ != null || stake_ != null;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 4;</code>
-     * @return The value.
+     * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
+     * @return The stake.
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getValue() {
-      if (valueBuilder_ == null) {
-        return value_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : value_;
+    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger getStake() {
+      if (stakeBuilder_ == null) {
+        return stake_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : stake_;
       } else {
-        return valueBuilder_.getMessage();
+        return stakeBuilder_.getMessage();
       }
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 4;</code>
+     * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
      */
-    public Builder setValue(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
-      if (valueBuilder_ == null) {
+    public Builder setStake(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
+      if (stakeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        value_ = value;
+        stake_ = value;
         onChanged();
       } else {
-        valueBuilder_.setMessage(value);
+        stakeBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 4;</code>
+     * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
      */
-    public Builder setValue(
+    public Builder setStake(
         org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder builderForValue) {
-      if (valueBuilder_ == null) {
-        value_ = builderForValue.build();
+      if (stakeBuilder_ == null) {
+        stake_ = builderForValue.build();
         onChanged();
       } else {
-        valueBuilder_.setMessage(builderForValue.build());
+        stakeBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 4;</code>
+     * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
      */
-    public Builder mergeValue(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
-      if (valueBuilder_ == null) {
-        if (value_ != null) {
-          value_ =
-            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.newBuilder(value_).mergeFrom(value).buildPartial();
+    public Builder mergeStake(org.qsn.api.rpc.grpc.proto.entity.common.BInteger value) {
+      if (stakeBuilder_ == null) {
+        if (stake_ != null) {
+          stake_ =
+            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.newBuilder(stake_).mergeFrom(value).buildPartial();
         } else {
-          value_ = value;
+          stake_ = value;
         }
         onChanged();
       } else {
-        valueBuilder_.mergeFrom(value);
+        stakeBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 4;</code>
+     * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
      */
-    public Builder clearValue() {
-      if (valueBuilder_ == null) {
-        value_ = null;
+    public Builder clearStake() {
+      if (stakeBuilder_ == null) {
+        stake_ = null;
         onChanged();
       } else {
-        value_ = null;
-        valueBuilder_ = null;
+        stake_ = null;
+        stakeBuilder_ = null;
       }
 
       return this;
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 4;</code>
+     * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder getValueBuilder() {
+    public org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder getStakeBuilder() {
       
       onChanged();
-      return getValueFieldBuilder().getBuilder();
+      return getStakeFieldBuilder().getBuilder();
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 4;</code>
+     * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getValueOrBuilder() {
-      if (valueBuilder_ != null) {
-        return valueBuilder_.getMessageOrBuilder();
+    public org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder getStakeOrBuilder() {
+      if (stakeBuilder_ != null) {
+        return stakeBuilder_.getMessageOrBuilder();
       } else {
-        return value_ == null ?
-            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : value_;
+        return stake_ == null ?
+            org.qsn.api.rpc.grpc.proto.entity.common.BInteger.getDefaultInstance() : stake_;
       }
     }
     /**
-     * <code>.org.qsn.protobuf.BInteger value = 4;</code>
+     * <code>.org.qsn.protobuf.BInteger stake = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder> 
-        getValueFieldBuilder() {
-      if (valueBuilder_ == null) {
-        valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getStakeFieldBuilder() {
+      if (stakeBuilder_ == null) {
+        stakeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             org.qsn.api.rpc.grpc.proto.entity.common.BInteger, org.qsn.api.rpc.grpc.proto.entity.common.BInteger.Builder, org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOrBuilder>(
-                getValue(),
+                getStake(),
                 getParentForChildren(),
                 isClean());
-        value_ = null;
+        stake_ = null;
       }
-      return valueBuilder_;
+      return stakeBuilder_;
     }
 
     private java.lang.Object name_ = "";
