@@ -31,9 +31,9 @@ public interface GetValidatorResponseOrBuilder extends
    * <code>.org.qsn.protobuf.ValidatorDto validator = 2;</code>
    * @return The validator.
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto getValidator();
+  org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto getValidator();
   /**
    * <code>.org.qsn.protobuf.ValidatorDto validator = 2;</code>
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDtoOrBuilder getValidatorOrBuilder();
+  org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDtoOrBuilder getValidatorOrBuilder();
 }

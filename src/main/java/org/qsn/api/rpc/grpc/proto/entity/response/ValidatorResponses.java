@@ -50,7 +50,7 @@ public final class ValidatorResponses {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.qsn.api.rpc.grpc.proto.entity.common.ResultOuterClass.getDescriptor(),
-          org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDtoOuterClass.getDescriptor(),
+          org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDtoOuterClass.getDescriptor(),
         });
     internal_static_org_qsn_protobuf_GetValidatorResponse_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -65,7 +65,7 @@ public final class ValidatorResponses {
         internal_static_org_qsn_protobuf_GetValidatorsByBlockHashResponse_descriptor,
         new java.lang.String[] { "Result", "Validators", });
     org.qsn.api.rpc.grpc.proto.entity.common.ResultOuterClass.getDescriptor();
-    org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDtoOuterClass.getDescriptor();
+    org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDtoOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

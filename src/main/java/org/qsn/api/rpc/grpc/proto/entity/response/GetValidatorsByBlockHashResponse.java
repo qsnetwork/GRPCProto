@@ -65,11 +65,11 @@ private static final long serialVersionUID = 0L;
           }
           case 18: {
             if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              validators_ = new java.util.ArrayList<org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto>();
+              validators_ = new java.util.ArrayList<org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto>();
               mutable_bitField0_ |= 0x00000001;
             }
             validators_.add(
-                input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto.parser(), extensionRegistry));
+                input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto.parser(), extensionRegistry));
             break;
           }
           default: {
@@ -134,19 +134,19 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALIDATORS_FIELD_NUMBER = 2;
-  private java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto> validators_;
+  private java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto> validators_;
   /**
    * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
    */
   @java.lang.Override
-  public java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto> getValidatorsList() {
+  public java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto> getValidatorsList() {
     return validators_;
   }
   /**
    * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDtoOrBuilder> 
+  public java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDtoOrBuilder> 
       getValidatorsOrBuilderList() {
     return validators_;
   }
@@ -161,14 +161,14 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto getValidators(int index) {
+  public org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto getValidators(int index) {
     return validators_.get(index);
   }
   /**
    * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
    */
   @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDtoOrBuilder getValidatorsOrBuilder(
+  public org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDtoOrBuilder getValidatorsOrBuilder(
       int index) {
     return validators_.get(index);
   }
@@ -664,22 +664,22 @@ private static final long serialVersionUID = 0L;
       return resultBuilder_;
     }
 
-    private java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto> validators_ =
+    private java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto> validators_ =
       java.util.Collections.emptyList();
     private void ensureValidatorsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        validators_ = new java.util.ArrayList<org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto>(validators_);
+        validators_ = new java.util.ArrayList<org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto>(validators_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto, org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDtoOrBuilder> validatorsBuilder_;
+        org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto, org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDtoOrBuilder> validatorsBuilder_;
 
     /**
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
-    public java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto> getValidatorsList() {
+    public java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto> getValidatorsList() {
       if (validatorsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(validators_);
       } else {
@@ -699,7 +699,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto getValidators(int index) {
+    public org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto getValidators(int index) {
       if (validatorsBuilder_ == null) {
         return validators_.get(index);
       } else {
@@ -710,7 +710,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
     public Builder setValidators(
-        int index, org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto value) {
+        int index, org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto value) {
       if (validatorsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -727,7 +727,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
     public Builder setValidators(
-        int index, org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto.Builder builderForValue) {
+        int index, org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto.Builder builderForValue) {
       if (validatorsBuilder_ == null) {
         ensureValidatorsIsMutable();
         validators_.set(index, builderForValue.build());
@@ -740,7 +740,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
-    public Builder addValidators(org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto value) {
+    public Builder addValidators(org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto value) {
       if (validatorsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -757,7 +757,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
     public Builder addValidators(
-        int index, org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto value) {
+        int index, org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto value) {
       if (validatorsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -774,7 +774,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
     public Builder addValidators(
-        org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto.Builder builderForValue) {
+        org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto.Builder builderForValue) {
       if (validatorsBuilder_ == null) {
         ensureValidatorsIsMutable();
         validators_.add(builderForValue.build());
@@ -788,7 +788,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
     public Builder addValidators(
-        int index, org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto.Builder builderForValue) {
+        int index, org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto.Builder builderForValue) {
       if (validatorsBuilder_ == null) {
         ensureValidatorsIsMutable();
         validators_.add(index, builderForValue.build());
@@ -802,7 +802,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
     public Builder addAllValidators(
-        java.lang.Iterable<? extends org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto> values) {
+        java.lang.Iterable<? extends org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto> values) {
       if (validatorsBuilder_ == null) {
         ensureValidatorsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -842,14 +842,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto.Builder getValidatorsBuilder(
+    public org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto.Builder getValidatorsBuilder(
         int index) {
       return getValidatorsFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDtoOrBuilder getValidatorsOrBuilder(
+    public org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDtoOrBuilder getValidatorsOrBuilder(
         int index) {
       if (validatorsBuilder_ == null) {
         return validators_.get(index);  } else {
@@ -859,7 +859,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
-    public java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDtoOrBuilder> 
+    public java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDtoOrBuilder> 
          getValidatorsOrBuilderList() {
       if (validatorsBuilder_ != null) {
         return validatorsBuilder_.getMessageOrBuilderList();
@@ -870,31 +870,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto.Builder addValidatorsBuilder() {
+    public org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto.Builder addValidatorsBuilder() {
       return getValidatorsFieldBuilder().addBuilder(
-          org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto.getDefaultInstance());
+          org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto.getDefaultInstance());
     }
     /**
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto.Builder addValidatorsBuilder(
+    public org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto.Builder addValidatorsBuilder(
         int index) {
       return getValidatorsFieldBuilder().addBuilder(
-          index, org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto.getDefaultInstance());
+          index, org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto.getDefaultInstance());
     }
     /**
      * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
      */
-    public java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto.Builder> 
+    public java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto.Builder> 
          getValidatorsBuilderList() {
       return getValidatorsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto, org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDtoOrBuilder> 
+        org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto, org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDtoOrBuilder> 
         getValidatorsFieldBuilder() {
       if (validatorsBuilder_ == null) {
         validatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto, org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDtoOrBuilder>(
+            org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto, org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDtoOrBuilder>(
                 validators_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),

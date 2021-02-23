@@ -25,12 +25,12 @@ public interface GetValidatorsByBlockHashResponseOrBuilder extends
   /**
    * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
    */
-  java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto> 
+  java.util.List<org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto> 
       getValidatorsList();
   /**
    * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDto getValidators(int index);
+  org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDto getValidators(int index);
   /**
    * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
    */
@@ -38,11 +38,11 @@ public interface GetValidatorsByBlockHashResponseOrBuilder extends
   /**
    * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
    */
-  java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDtoOrBuilder> 
+  java.util.List<? extends org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDtoOrBuilder> 
       getValidatorsOrBuilderList();
   /**
    * <code>repeated .org.qsn.protobuf.ValidatorDto validators = 2;</code>
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.account.ValidatorDtoOrBuilder getValidatorsOrBuilder(
+  org.qsn.api.rpc.grpc.proto.entity.common.validator.ValidatorDtoOrBuilder getValidatorsOrBuilder(
       int index);
 }
