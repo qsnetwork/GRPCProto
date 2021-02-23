@@ -6,7 +6,7 @@ option java_package = "org.qsn.api.rpc.grpc.proto.entity.response";
 package org.qsn.protobuf;
 
 import "qsn/entity/common/Result.proto";
-import "qsn/entity/common/block/Block.proto";
+import "qsn/entity/common/block/BlockDto.proto";
 
 
 message GetBlockHeaderByHashResponse {
@@ -29,7 +29,12 @@ message GetBlockByHeightResponse {
   BlockDto block = 2;
 }
 
-message GetBlockHeightResponse {
+message GetDoneHeightResponse {
   Result result = 1;
   int64 height = 2;
+}
+
+message GetBlockListResponse {
+  Result result = 1;
+  repeated BlockDto blockList = 2;
 }

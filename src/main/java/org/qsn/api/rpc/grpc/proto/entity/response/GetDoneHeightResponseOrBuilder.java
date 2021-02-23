@@ -3,8 +3,8 @@
 
 package org.qsn.api.rpc.grpc.proto.entity.response;
 
-public interface GetBlockHeightResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:org.qsn.protobuf.GetBlockHeightResponse)
+public interface GetDoneHeightResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:org.qsn.protobuf.GetDoneHeightResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

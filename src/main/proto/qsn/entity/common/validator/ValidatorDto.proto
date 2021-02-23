@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.common.account";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/common/BInteger.proto";
+
+message ValidatorDto{
+    bytes address = 1;
+    bytes publicKey = 2;
+    bytes coinBase = 3;
+    BInteger stake = 4;
+    string name = 5;
+    BInteger power = 6;
+}

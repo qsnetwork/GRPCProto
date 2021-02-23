@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto.entity.response";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/common/Result.proto";
+import "qsn/entity/common/validator/ValidatorDto.proto";
+
+message GetValidatorResponse{
+    Result result = 1;
+    ValidatorDto validator = 2;
+}
+
+message GetValidatorsByBlockHashResponse{
+    Result result = 1;
+    repeated ValidatorDto validators = 2;
+}

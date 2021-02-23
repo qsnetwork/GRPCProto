@@ -151,35 +151,66 @@ public final class BlockRpcGrpc {
     return getGetBlockByHeightMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest,
-      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse> getGetBlockHeightMethod;
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetDoneHeightRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetDoneHeightResponse> getGetDoneHeightMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "getBlockHeight",
-      requestType = org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest.class,
-      responseType = org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "getDoneHeight",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.GetDoneHeightRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.GetDoneHeightResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest,
-      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse> getGetBlockHeightMethod() {
-    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse> getGetBlockHeightMethod;
-    if ((getGetBlockHeightMethod = BlockRpcGrpc.getGetBlockHeightMethod) == null) {
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetDoneHeightRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetDoneHeightResponse> getGetDoneHeightMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetDoneHeightRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetDoneHeightResponse> getGetDoneHeightMethod;
+    if ((getGetDoneHeightMethod = BlockRpcGrpc.getGetDoneHeightMethod) == null) {
       synchronized (BlockRpcGrpc.class) {
-        if ((getGetBlockHeightMethod = BlockRpcGrpc.getGetBlockHeightMethod) == null) {
-          BlockRpcGrpc.getGetBlockHeightMethod = getGetBlockHeightMethod =
-              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse>newBuilder()
+        if ((getGetDoneHeightMethod = BlockRpcGrpc.getGetDoneHeightMethod) == null) {
+          BlockRpcGrpc.getGetDoneHeightMethod = getGetDoneHeightMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.GetDoneHeightRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetDoneHeightResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getBlockHeight"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getDoneHeight"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest.getDefaultInstance()))
+                  org.qsn.api.rpc.grpc.proto.entity.request.GetDoneHeightRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BlockRpcMethodDescriptorSupplier("getBlockHeight"))
+                  org.qsn.api.rpc.grpc.proto.entity.response.GetDoneHeightResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BlockRpcMethodDescriptorSupplier("getDoneHeight"))
               .build();
         }
       }
     }
-    return getGetBlockHeightMethod;
+    return getGetDoneHeightMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockListRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockListResponse> getGetBlockListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getBlockList",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.GetBlockListRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.GetBlockListResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockListRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.GetBlockListResponse> getGetBlockListMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockListRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockListResponse> getGetBlockListMethod;
+    if ((getGetBlockListMethod = BlockRpcGrpc.getGetBlockListMethod) == null) {
+      synchronized (BlockRpcGrpc.class) {
+        if ((getGetBlockListMethod = BlockRpcGrpc.getGetBlockListMethod) == null) {
+          BlockRpcGrpc.getGetBlockListMethod = getGetBlockListMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.GetBlockListRequest, org.qsn.api.rpc.grpc.proto.entity.response.GetBlockListResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getBlockList"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.GetBlockListRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.GetBlockListResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BlockRpcMethodDescriptorSupplier("getBlockList"))
+              .build();
+        }
+      }
+    }
+    return getGetBlockListMethod;
   }
 
   /**
@@ -260,9 +291,16 @@ public final class BlockRpcGrpc {
 
     /**
      */
-    public void getBlockHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest request,
-        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetBlockHeightMethod(), responseObserver);
+    public void getDoneHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetDoneHeightRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetDoneHeightResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetDoneHeightMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getBlockList(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockListRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockListResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetBlockListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -296,12 +334,19 @@ public final class BlockRpcGrpc {
                 org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse>(
                   this, METHODID_GET_BLOCK_BY_HEIGHT)))
           .addMethod(
-            getGetBlockHeightMethod(),
+            getGetDoneHeightMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest,
-                org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse>(
-                  this, METHODID_GET_BLOCK_HEIGHT)))
+                org.qsn.api.rpc.grpc.proto.entity.request.GetDoneHeightRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.GetDoneHeightResponse>(
+                  this, METHODID_GET_DONE_HEIGHT)))
+          .addMethod(
+            getGetBlockListMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.GetBlockListRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.GetBlockListResponse>(
+                  this, METHODID_GET_BLOCK_LIST)))
           .build();
     }
   }
@@ -354,10 +399,18 @@ public final class BlockRpcGrpc {
 
     /**
      */
-    public void getBlockHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest request,
-        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse> responseObserver) {
+    public void getDoneHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetDoneHeightRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetDoneHeightResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetBlockHeightMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetDoneHeightMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getBlockList(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockListRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockListResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetBlockListMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -405,9 +458,16 @@ public final class BlockRpcGrpc {
 
     /**
      */
-    public org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse getBlockHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest request) {
+    public org.qsn.api.rpc.grpc.proto.entity.response.GetDoneHeightResponse getDoneHeight(org.qsn.api.rpc.grpc.proto.entity.request.GetDoneHeightRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetBlockHeightMethod(), getCallOptions(), request);
+          getChannel(), getGetDoneHeightMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.GetBlockListResponse getBlockList(org.qsn.api.rpc.grpc.proto.entity.request.GetBlockListRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetBlockListMethod(), getCallOptions(), request);
     }
   }
 
@@ -459,10 +519,18 @@ public final class BlockRpcGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse> getBlockHeight(
-        org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.GetDoneHeightResponse> getDoneHeight(
+        org.qsn.api.rpc.grpc.proto.entity.request.GetDoneHeightRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetBlockHeightMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetDoneHeightMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockListResponse> getBlockList(
+        org.qsn.api.rpc.grpc.proto.entity.request.GetBlockListRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetBlockListMethod(), getCallOptions()), request);
     }
   }
 
@@ -470,7 +538,8 @@ public final class BlockRpcGrpc {
   private static final int METHODID_GET_BLOCK_HEADER_BY_HEIGHT = 1;
   private static final int METHODID_GET_BLOCK_BY_HASH = 2;
   private static final int METHODID_GET_BLOCK_BY_HEIGHT = 3;
-  private static final int METHODID_GET_BLOCK_HEIGHT = 4;
+  private static final int METHODID_GET_DONE_HEIGHT = 4;
+  private static final int METHODID_GET_BLOCK_LIST = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -505,9 +574,13 @@ public final class BlockRpcGrpc {
           serviceImpl.getBlockByHeight((org.qsn.api.rpc.grpc.proto.entity.request.GetBlockByHeightRequest) request,
               (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockByHeightResponse>) responseObserver);
           break;
-        case METHODID_GET_BLOCK_HEIGHT:
-          serviceImpl.getBlockHeight((org.qsn.api.rpc.grpc.proto.entity.request.GetBlockHeightRequest) request,
-              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockHeightResponse>) responseObserver);
+        case METHODID_GET_DONE_HEIGHT:
+          serviceImpl.getDoneHeight((org.qsn.api.rpc.grpc.proto.entity.request.GetDoneHeightRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetDoneHeightResponse>) responseObserver);
+          break;
+        case METHODID_GET_BLOCK_LIST:
+          serviceImpl.getBlockList((org.qsn.api.rpc.grpc.proto.entity.request.GetBlockListRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.GetBlockListResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -574,7 +647,8 @@ public final class BlockRpcGrpc {
               .addMethod(getGetBlockHeaderByHeightMethod())
               .addMethod(getGetBlockByHashMethod())
               .addMethod(getGetBlockByHeightMethod())
-              .addMethod(getGetBlockHeightMethod())
+              .addMethod(getGetDoneHeightMethod())
+              .addMethod(getGetBlockListMethod())
               .build();
         }
       }

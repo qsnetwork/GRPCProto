@@ -23,17 +23,17 @@ public interface SendTransactionRequestOrBuilder extends
   org.qsn.api.rpc.grpc.proto.entity.common.BaseRequestOrBuilder getBaseRequestOrBuilder();
 
   /**
-   * <code>.org.qsn.protobuf.TransactionDto transactionDto = 2;</code>
-   * @return Whether the transactionDto field is set.
+   * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
+   * @return Whether the transaction field is set.
    */
-  boolean hasTransactionDto();
+  boolean hasTransaction();
   /**
-   * <code>.org.qsn.protobuf.TransactionDto transactionDto = 2;</code>
-   * @return The transactionDto.
+   * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
+   * @return The transaction.
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto getTransactionDto();
+  org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto getTransaction();
   /**
-   * <code>.org.qsn.protobuf.TransactionDto transactionDto = 2;</code>
+   * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
    */
-  org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDtoOrBuilder getTransactionDtoOrBuilder();
+  org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDtoOrBuilder getTransactionOrBuilder();
 }

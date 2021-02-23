@@ -7,13 +7,13 @@ package org.qsn.protobuf;
 
 import "qsn/entity/common/transaction/TransactionDto.proto";
 
-message BlockHeaderVersion {
+message BlockHeaderVersionDto {
   int32 block = 1;
   int32 app = 2;
 }
 
 message BlockHeaderDto{
-  BlockHeaderVersion version = 1;
+  BlockHeaderVersionDto version = 1;
   bytes blockAddress =2;
   string chainId = 3;
   int64 height = 4;
@@ -21,7 +21,7 @@ message BlockHeaderDto{
   int64 numTxs = 6;
   int64 totalTxs = 7;
   int64 proposerSequenceNumber = 8;
-  bytes lastBlockhash = 9;
+  bytes lastBlockHash = 9;
   bytes lastCommitHash = 10;
   bytes dataHash = 11;
   bytes validatorsHash = 12;
@@ -39,7 +39,7 @@ message BlockDataDto{
   repeated TransactionDto transactions = 1;
 }
 
-message PrecommitDto {
+message VoteDto {
   int32 type = 1;
   int64 height = 2;
   int32 round = 3;
@@ -53,7 +53,7 @@ message PrecommitDto {
 message LastCommitDto {
   int64 height = 1;
   bytes blockHash = 2;
-  repeated PrecommitDto precommits = 3;
+  repeated VoteDto preCommits = 3;
 }
 
 message BlockDto {
