@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n0org.qsn.api.rpc.grpc.proto.entity.common.accountP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\'qsn/entity/common/account/AccountDto.proto\x12\x10org.qsn.protobuf\x1a qsn/entity/common/BInteger.proto\"d\n\nAccountDto\x12+\n\x07\x62\x61lance\x18\x01 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\x12)\n\x05nonce\x18\x02 \x01(\x0b\x32\x1a.org.qsn.protobuf.BIntegerB4\n0org.qsn.api.rpc.grpc.proto.entity.common.accountP\x01\x62\x06proto3'
+  serialized_pb=b'\n*qsn/entity/common/account/AccountDto.proto\x12\x10org.qsn.protobuf\x1a qsn/entity/common/BInteger.proto\"d\n\nAccountDto\x12+\n\x07\x62\x61lance\x18\x01 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\x12)\n\x05nonce\x18\x02 \x01(\x0b\x32\x1a.org.qsn.protobuf.BIntegerB4\n0org.qsn.api.rpc.grpc.proto.entity.common.accountP\x01\x62\x06proto3'
   ,
   dependencies=[qsn_dot_entity_dot_common_dot_BInteger__pb2.DESCRIPTOR,])
 
@@ -61,8 +61,8 @@ _ACCOUNTDTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=95,
-  serialized_end=195,
+  serialized_start=98,
+  serialized_end=198,
 )
 
 _ACCOUNTDTO.fields_by_name['balance'].message_type = qsn_dot_entity_dot_common_dot_BInteger__pb2._BINTEGER
@@ -72,7 +72,7 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 AccountDto = _reflection.GeneratedProtocolMessageType('AccountDto', (_message.Message,), {
   'DESCRIPTOR' : _ACCOUNTDTO,
-  '__module__' : 'qsn.entity.common.account.Account_pb2'
+  '__module__' : 'qsn.entity.common.account.AccountDto_pb2'
   # @@protoc_insertion_point(class_scope:org.qsn.protobuf.AccountDto)
   })
 _sym_db.RegisterMessage(AccountDto)

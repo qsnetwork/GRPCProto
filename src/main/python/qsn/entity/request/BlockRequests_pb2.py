@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n)org.qsn.api.rpc.grpc.proto.entity.requestP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n&qsn/entity/request/BlockRequests.proto\x12\x10org.qsn.protobuf\x1a#qsn/entity/common/BaseRequest.proto\"_\n\x1bGetBlockHeaderByHashRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0c\n\x04hash\x18\x02 \x01(\x0c\"c\n\x1dGetBlockHeaderByHeightRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0e\n\x06height\x18\x02 \x01(\x03\"Y\n\x15GetBlockByHashRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0c\n\x04hash\x18\x02 \x01(\x0c\"]\n\x17GetBlockByHeightRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0e\n\x06height\x18\x02 \x01(\x03\"K\n\x15GetBlockHeightRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequestB-\n)org.qsn.api.rpc.grpc.proto.entity.requestP\x01\x62\x06proto3'
+  serialized_pb=b'\n&qsn/entity/request/BlockRequests.proto\x12\x10org.qsn.protobuf\x1a#qsn/entity/common/BaseRequest.proto\"_\n\x1bGetBlockHeaderByHashRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0c\n\x04hash\x18\x02 \x01(\x0c\"c\n\x1dGetBlockHeaderByHeightRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0e\n\x06height\x18\x02 \x01(\x03\"Y\n\x15GetBlockByHashRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0c\n\x04hash\x18\x02 \x01(\x0c\"]\n\x17GetBlockByHeightRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0e\n\x06height\x18\x02 \x01(\x03\"J\n\x14GetDoneHeightRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\"q\n\x13GetBlockListRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x13\n\x0bstartHeight\x18\x02 \x01(\x03\x12\x11\n\tendHeight\x18\x03 \x01(\x03\x42-\n)org.qsn.api.rpc.grpc.proto.entity.requestP\x01\x62\x06proto3'
   ,
   dependencies=[qsn_dot_entity_dot_common_dot_BaseRequest__pb2.DESCRIPTOR,])
 
@@ -183,16 +183,16 @@ _GETBLOCKBYHEIGHTREQUEST = _descriptor.Descriptor(
 )
 
 
-_GETBLOCKHEIGHTREQUEST = _descriptor.Descriptor(
-  name='GetBlockHeightRequest',
-  full_name='org.qsn.protobuf.GetBlockHeightRequest',
+_GETDONEHEIGHTREQUEST = _descriptor.Descriptor(
+  name='GetDoneHeightRequest',
+  full_name='org.qsn.protobuf.GetDoneHeightRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='baseRequest', full_name='org.qsn.protobuf.GetBlockHeightRequest.baseRequest', index=0,
+      name='baseRequest', full_name='org.qsn.protobuf.GetDoneHeightRequest.baseRequest', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -211,19 +211,67 @@ _GETBLOCKHEIGHTREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=481,
-  serialized_end=556,
+  serialized_end=555,
+)
+
+
+_GETBLOCKLISTREQUEST = _descriptor.Descriptor(
+  name='GetBlockListRequest',
+  full_name='org.qsn.protobuf.GetBlockListRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='baseRequest', full_name='org.qsn.protobuf.GetBlockListRequest.baseRequest', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='startHeight', full_name='org.qsn.protobuf.GetBlockListRequest.startHeight', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='endHeight', full_name='org.qsn.protobuf.GetBlockListRequest.endHeight', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=557,
+  serialized_end=670,
 )
 
 _GETBLOCKHEADERBYHASHREQUEST.fields_by_name['baseRequest'].message_type = qsn_dot_entity_dot_common_dot_BaseRequest__pb2._BASEREQUEST
 _GETBLOCKHEADERBYHEIGHTREQUEST.fields_by_name['baseRequest'].message_type = qsn_dot_entity_dot_common_dot_BaseRequest__pb2._BASEREQUEST
 _GETBLOCKBYHASHREQUEST.fields_by_name['baseRequest'].message_type = qsn_dot_entity_dot_common_dot_BaseRequest__pb2._BASEREQUEST
 _GETBLOCKBYHEIGHTREQUEST.fields_by_name['baseRequest'].message_type = qsn_dot_entity_dot_common_dot_BaseRequest__pb2._BASEREQUEST
-_GETBLOCKHEIGHTREQUEST.fields_by_name['baseRequest'].message_type = qsn_dot_entity_dot_common_dot_BaseRequest__pb2._BASEREQUEST
+_GETDONEHEIGHTREQUEST.fields_by_name['baseRequest'].message_type = qsn_dot_entity_dot_common_dot_BaseRequest__pb2._BASEREQUEST
+_GETBLOCKLISTREQUEST.fields_by_name['baseRequest'].message_type = qsn_dot_entity_dot_common_dot_BaseRequest__pb2._BASEREQUEST
 DESCRIPTOR.message_types_by_name['GetBlockHeaderByHashRequest'] = _GETBLOCKHEADERBYHASHREQUEST
 DESCRIPTOR.message_types_by_name['GetBlockHeaderByHeightRequest'] = _GETBLOCKHEADERBYHEIGHTREQUEST
 DESCRIPTOR.message_types_by_name['GetBlockByHashRequest'] = _GETBLOCKBYHASHREQUEST
 DESCRIPTOR.message_types_by_name['GetBlockByHeightRequest'] = _GETBLOCKBYHEIGHTREQUEST
-DESCRIPTOR.message_types_by_name['GetBlockHeightRequest'] = _GETBLOCKHEIGHTREQUEST
+DESCRIPTOR.message_types_by_name['GetDoneHeightRequest'] = _GETDONEHEIGHTREQUEST
+DESCRIPTOR.message_types_by_name['GetBlockListRequest'] = _GETBLOCKLISTREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetBlockHeaderByHashRequest = _reflection.GeneratedProtocolMessageType('GetBlockHeaderByHashRequest', (_message.Message,), {
@@ -254,12 +302,19 @@ GetBlockByHeightRequest = _reflection.GeneratedProtocolMessageType('GetBlockByHe
   })
 _sym_db.RegisterMessage(GetBlockByHeightRequest)
 
-GetBlockHeightRequest = _reflection.GeneratedProtocolMessageType('GetBlockHeightRequest', (_message.Message,), {
-  'DESCRIPTOR' : _GETBLOCKHEIGHTREQUEST,
+GetDoneHeightRequest = _reflection.GeneratedProtocolMessageType('GetDoneHeightRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETDONEHEIGHTREQUEST,
   '__module__' : 'qsn.entity.request.BlockRequests_pb2'
-  # @@protoc_insertion_point(class_scope:org.qsn.protobuf.GetBlockHeightRequest)
+  # @@protoc_insertion_point(class_scope:org.qsn.protobuf.GetDoneHeightRequest)
   })
-_sym_db.RegisterMessage(GetBlockHeightRequest)
+_sym_db.RegisterMessage(GetDoneHeightRequest)
+
+GetBlockListRequest = _reflection.GeneratedProtocolMessageType('GetBlockListRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETBLOCKLISTREQUEST,
+  '__module__' : 'qsn.entity.request.BlockRequests_pb2'
+  # @@protoc_insertion_point(class_scope:org.qsn.protobuf.GetBlockListRequest)
+  })
+_sym_db.RegisterMessage(GetBlockListRequest)
 
 
 DESCRIPTOR._options = None
