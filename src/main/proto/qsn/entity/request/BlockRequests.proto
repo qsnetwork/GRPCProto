@@ -27,6 +27,12 @@ message GetBlockByHeightRequest {
     int64 height = 2;
 }
 
-message GetBlockHeightRequest {
+message GetDoneHeightRequest {
     BaseRequest baseRequest = 1;
+}
+
+message GetBlockListRequest {
+    BaseRequest baseRequest = 1;
+    int64 startHeight = 2;
+    int64 endHeight = 3;
 }

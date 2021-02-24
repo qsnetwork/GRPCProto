@@ -35,10 +35,15 @@ class BlockRpcStub(object):
                 request_serializer=qsn_dot_entity_dot_request_dot_BlockRequests__pb2.GetBlockByHeightRequest.SerializeToString,
                 response_deserializer=qsn_dot_entity_dot_response_dot_BlockResponses__pb2.GetBlockByHeightResponse.FromString,
                 )
-        self.getBlockHeight = channel.unary_unary(
-                '/org.qsn.protobuf.BlockRpc/getBlockHeight',
-                request_serializer=qsn_dot_entity_dot_request_dot_BlockRequests__pb2.GetBlockHeightRequest.SerializeToString,
-                response_deserializer=qsn_dot_entity_dot_response_dot_BlockResponses__pb2.GetBlockHeightResponse.FromString,
+        self.getDoneHeight = channel.unary_unary(
+                '/org.qsn.protobuf.BlockRpc/getDoneHeight',
+                request_serializer=qsn_dot_entity_dot_request_dot_BlockRequests__pb2.GetDoneHeightRequest.SerializeToString,
+                response_deserializer=qsn_dot_entity_dot_response_dot_BlockResponses__pb2.GetDoneHeightResponse.FromString,
+                )
+        self.getBlockList = channel.unary_unary(
+                '/org.qsn.protobuf.BlockRpc/getBlockList',
+                request_serializer=qsn_dot_entity_dot_request_dot_BlockRequests__pb2.GetBlockListRequest.SerializeToString,
+                response_deserializer=qsn_dot_entity_dot_response_dot_BlockResponses__pb2.GetBlockListResponse.FromString,
                 )
 
 
@@ -69,7 +74,13 @@ class BlockRpcServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def getBlockHeight(self, request, context):
+    def getDoneHeight(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def getBlockList(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -98,10 +109,15 @@ def add_BlockRpcServicer_to_server(servicer, server):
                     request_deserializer=qsn_dot_entity_dot_request_dot_BlockRequests__pb2.GetBlockByHeightRequest.FromString,
                     response_serializer=qsn_dot_entity_dot_response_dot_BlockResponses__pb2.GetBlockByHeightResponse.SerializeToString,
             ),
-            'getBlockHeight': grpc.unary_unary_rpc_method_handler(
-                    servicer.getBlockHeight,
-                    request_deserializer=qsn_dot_entity_dot_request_dot_BlockRequests__pb2.GetBlockHeightRequest.FromString,
-                    response_serializer=qsn_dot_entity_dot_response_dot_BlockResponses__pb2.GetBlockHeightResponse.SerializeToString,
+            'getDoneHeight': grpc.unary_unary_rpc_method_handler(
+                    servicer.getDoneHeight,
+                    request_deserializer=qsn_dot_entity_dot_request_dot_BlockRequests__pb2.GetDoneHeightRequest.FromString,
+                    response_serializer=qsn_dot_entity_dot_response_dot_BlockResponses__pb2.GetDoneHeightResponse.SerializeToString,
+            ),
+            'getBlockList': grpc.unary_unary_rpc_method_handler(
+                    servicer.getBlockList,
+                    request_deserializer=qsn_dot_entity_dot_request_dot_BlockRequests__pb2.GetBlockListRequest.FromString,
+                    response_serializer=qsn_dot_entity_dot_response_dot_BlockResponses__pb2.GetBlockListResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -182,7 +198,7 @@ class BlockRpc(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def getBlockHeight(request,
+    def getDoneHeight(request,
             target,
             options=(),
             channel_credentials=None,
@@ -192,8 +208,25 @@ class BlockRpc(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/org.qsn.protobuf.BlockRpc/getBlockHeight',
-            qsn_dot_entity_dot_request_dot_BlockRequests__pb2.GetBlockHeightRequest.SerializeToString,
-            qsn_dot_entity_dot_response_dot_BlockResponses__pb2.GetBlockHeightResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/org.qsn.protobuf.BlockRpc/getDoneHeight',
+            qsn_dot_entity_dot_request_dot_BlockRequests__pb2.GetDoneHeightRequest.SerializeToString,
+            qsn_dot_entity_dot_response_dot_BlockResponses__pb2.GetDoneHeightResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def getBlockList(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/org.qsn.protobuf.BlockRpc/getBlockList',
+            qsn_dot_entity_dot_request_dot_BlockRequests__pb2.GetBlockListRequest.SerializeToString,
+            qsn_dot_entity_dot_response_dot_BlockResponses__pb2.GetBlockListResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

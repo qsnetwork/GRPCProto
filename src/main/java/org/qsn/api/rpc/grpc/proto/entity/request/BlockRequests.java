@@ -35,10 +35,15 @@ public final class BlockRequests {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_qsn_protobuf_GetBlockByHeightRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_qsn_protobuf_GetBlockHeightRequest_descriptor;
+    internal_static_org_qsn_protobuf_GetDoneHeightRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_org_qsn_protobuf_GetBlockHeightRequest_fieldAccessorTable;
+      internal_static_org_qsn_protobuf_GetDoneHeightRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_GetBlockListRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_GetBlockListRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -60,10 +65,13 @@ public final class BlockRequests {
       "aseRequest\022\014\n\004hash\030\002 \001(\014\"]\n\027GetBlockByHe" +
       "ightRequest\0222\n\013baseRequest\030\001 \001(\0132\035.org.q" +
       "sn.protobuf.BaseRequest\022\016\n\006height\030\002 \001(\003\"" +
-      "K\n\025GetBlockHeightRequest\0222\n\013baseRequest\030" +
-      "\001 \001(\0132\035.org.qsn.protobuf.BaseRequestB-\n)" +
-      "org.qsn.api.rpc.grpc.proto.entity.reques" +
-      "tP\001b\006proto3"
+      "J\n\024GetDoneHeightRequest\0222\n\013baseRequest\030\001" +
+      " \001(\0132\035.org.qsn.protobuf.BaseRequest\"q\n\023G" +
+      "etBlockListRequest\0222\n\013baseRequest\030\001 \001(\0132" +
+      "\035.org.qsn.protobuf.BaseRequest\022\023\n\013startH" +
+      "eight\030\002 \001(\003\022\021\n\tendHeight\030\003 \001(\003B-\n)org.qs" +
+      "n.api.rpc.grpc.proto.entity.requestP\001b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -94,12 +102,18 @@ public final class BlockRequests {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_GetBlockByHeightRequest_descriptor,
         new java.lang.String[] { "BaseRequest", "Height", });
-    internal_static_org_qsn_protobuf_GetBlockHeightRequest_descriptor =
+    internal_static_org_qsn_protobuf_GetDoneHeightRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_org_qsn_protobuf_GetBlockHeightRequest_fieldAccessorTable = new
+    internal_static_org_qsn_protobuf_GetDoneHeightRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_org_qsn_protobuf_GetBlockHeightRequest_descriptor,
+        internal_static_org_qsn_protobuf_GetDoneHeightRequest_descriptor,
         new java.lang.String[] { "BaseRequest", });
+    internal_static_org_qsn_protobuf_GetBlockListRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_org_qsn_protobuf_GetBlockListRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_GetBlockListRequest_descriptor,
+        new java.lang.String[] { "BaseRequest", "StartHeight", "EndHeight", });
     org.qsn.api.rpc.grpc.proto.entity.common.BaseRequestOuterClass.getDescriptor();
   }
 

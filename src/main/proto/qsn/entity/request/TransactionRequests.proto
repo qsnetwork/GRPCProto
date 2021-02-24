@@ -11,7 +11,7 @@ import "qsn/entity/common/transaction/TransactionDto.proto";
 
 message SendTransactionRequest{
     BaseRequest baseRequest = 1;
-    TransactionDto transactionDto = 2;
+    TransactionDto transaction = 2;
 }
 
 message GetTransactionReceiptRequest{

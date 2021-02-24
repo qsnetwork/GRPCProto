@@ -7,7 +7,7 @@ package org.qsn.protobuf;
 
 import "qsn/entity/common/Result.proto";
 import "qsn/entity/common/BInteger.proto";
-import "qsn/entity/common/account/Account.proto";
+import "qsn/entity/common/account/AccountDto.proto";
 
 message GetAccountResponse{
   Result result = 1;

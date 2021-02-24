@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n\032org.qsn.api.rpc.grpc.protoP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0e\x42lockRpc.proto\x12\x10org.qsn.protobuf\x1a&qsn/entity/request/BlockRequests.proto\x1a(qsn/entity/response/BlockResponses.proto2\xb3\x04\n\x08\x42lockRpc\x12u\n\x14getBlockHeaderByHash\x12-.org.qsn.protobuf.GetBlockHeaderByHashRequest\x1a..org.qsn.protobuf.GetBlockHeaderByHashResponse\x12{\n\x16getBlockHeaderByHeight\x12/.org.qsn.protobuf.GetBlockHeaderByHeightRequest\x1a\x30.org.qsn.protobuf.GetBlockHeaderByHeightResponse\x12\x63\n\x0egetBlockByHash\x12\'.org.qsn.protobuf.GetBlockByHashRequest\x1a(.org.qsn.protobuf.GetBlockByHashResponse\x12i\n\x10getBlockByHeight\x12).org.qsn.protobuf.GetBlockByHeightRequest\x1a*.org.qsn.protobuf.GetBlockByHeightResponse\x12\x63\n\x0egetBlockHeight\x12\'.org.qsn.protobuf.GetBlockHeightRequest\x1a(.org.qsn.protobuf.GetBlockHeightResponseB\x1e\n\x1aorg.qsn.api.rpc.grpc.protoP\x01\x62\x06proto3'
+  serialized_pb=b'\n\x0e\x42lockRpc.proto\x12\x10org.qsn.protobuf\x1a&qsn/entity/request/BlockRequests.proto\x1a(qsn/entity/response/BlockResponses.proto2\x8f\x05\n\x08\x42lockRpc\x12u\n\x14getBlockHeaderByHash\x12-.org.qsn.protobuf.GetBlockHeaderByHashRequest\x1a..org.qsn.protobuf.GetBlockHeaderByHashResponse\x12{\n\x16getBlockHeaderByHeight\x12/.org.qsn.protobuf.GetBlockHeaderByHeightRequest\x1a\x30.org.qsn.protobuf.GetBlockHeaderByHeightResponse\x12\x63\n\x0egetBlockByHash\x12\'.org.qsn.protobuf.GetBlockByHashRequest\x1a(.org.qsn.protobuf.GetBlockByHashResponse\x12i\n\x10getBlockByHeight\x12).org.qsn.protobuf.GetBlockByHeightRequest\x1a*.org.qsn.protobuf.GetBlockByHeightResponse\x12`\n\rgetDoneHeight\x12&.org.qsn.protobuf.GetDoneHeightRequest\x1a\'.org.qsn.protobuf.GetDoneHeightResponse\x12]\n\x0cgetBlockList\x12%.org.qsn.protobuf.GetBlockListRequest\x1a&.org.qsn.protobuf.GetBlockListResponseB\x1e\n\x1aorg.qsn.api.rpc.grpc.protoP\x01\x62\x06proto3'
   ,
   dependencies=[qsn_dot_entity_dot_request_dot_BlockRequests__pb2.DESCRIPTOR,qsn_dot_entity_dot_response_dot_BlockResponses__pb2.DESCRIPTOR,])
 
@@ -40,7 +40,7 @@ _BLOCKRPC = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=119,
-  serialized_end=682,
+  serialized_end=774,
   methods=[
   _descriptor.MethodDescriptor(
     name='getBlockHeaderByHash',
@@ -83,12 +83,22 @@ _BLOCKRPC = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
-    name='getBlockHeight',
-    full_name='org.qsn.protobuf.BlockRpc.getBlockHeight',
+    name='getDoneHeight',
+    full_name='org.qsn.protobuf.BlockRpc.getDoneHeight',
     index=4,
     containing_service=None,
-    input_type=qsn_dot_entity_dot_request_dot_BlockRequests__pb2._GETBLOCKHEIGHTREQUEST,
-    output_type=qsn_dot_entity_dot_response_dot_BlockResponses__pb2._GETBLOCKHEIGHTRESPONSE,
+    input_type=qsn_dot_entity_dot_request_dot_BlockRequests__pb2._GETDONEHEIGHTREQUEST,
+    output_type=qsn_dot_entity_dot_response_dot_BlockResponses__pb2._GETDONEHEIGHTRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='getBlockList',
+    full_name='org.qsn.protobuf.BlockRpc.getBlockList',
+    index=5,
+    containing_service=None,
+    input_type=qsn_dot_entity_dot_request_dot_BlockRequests__pb2._GETBLOCKLISTREQUEST,
+    output_type=qsn_dot_entity_dot_response_dot_BlockResponses__pb2._GETBLOCKLISTRESPONSE,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),
