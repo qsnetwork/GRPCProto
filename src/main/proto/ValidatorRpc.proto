@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.qsn.api.rpc.grpc.proto";
+
+package org.qsn.protobuf;
+
+import "qsn/entity/request/ValidatorRequests.proto";
+import "qsn/entity/response/ValidatorResponses.proto";
+
+
+service ValidatorRpc {
+    rpc getValidator(GetValidatorRequest) returns (GetValidatorResponse);
+    rpc getValidatorsByBlockHash(GetValidatorsByBlockHashRequest) returns (GetValidatorsByBlockHashResponse);
+}

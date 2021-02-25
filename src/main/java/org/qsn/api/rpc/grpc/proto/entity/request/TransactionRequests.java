@@ -62,35 +62,35 @@ public final class TransactionRequests {
       ".proto\022\020org.qsn.protobuf\032#qsn/entity/com" +
       "mon/BaseRequest.proto\032 qsn/entity/common" +
       "/BInteger.proto\0322qsn/entity/common/trans" +
-      "action/TransactionDto.proto\"\206\001\n\026SendTran" +
+      "action/TransactionDto.proto\"\203\001\n\026SendTran" +
       "sactionRequest\0222\n\013baseRequest\030\001 \001(\0132\035.or" +
-      "g.qsn.protobuf.BaseRequest\0228\n\016transactio" +
-      "nDto\030\002 \001(\0132 .org.qsn.protobuf.Transactio" +
-      "nDto\"k\n\034GetTransactionReceiptRequest\0222\n\013" +
-      "baseRequest\030\001 \001(\0132\035.org.qsn.protobuf.Bas" +
-      "eRequest\022\027\n\017transactionHash\030\002 \001(\014\"d\n\025Get" +
-      "TransactionRequest\0222\n\013baseRequest\030\001 \001(\0132" +
-      "\035.org.qsn.protobuf.BaseRequest\022\027\n\017transa" +
-      "ctionHash\030\002 \001(\014\"\226\001\n\032CreateRawTransferTxR" +
-      "equest\0222\n\013baseRequest\030\001 \001(\0132\035.org.qsn.pr" +
-      "otobuf.BaseRequest\022\014\n\004from\030\002 \001(\014\022\n\n\002to\030\003" +
-      " \001(\014\022*\n\006amount\030\004 \001(\0132\032.org.qsn.protobuf." +
-      "BInteger\"\255\001\n CreateRawDeployContractTxRe" +
+      "g.qsn.protobuf.BaseRequest\0225\n\013transactio" +
+      "n\030\002 \001(\0132 .org.qsn.protobuf.TransactionDt" +
+      "o\"k\n\034GetTransactionReceiptRequest\0222\n\013bas" +
+      "eRequest\030\001 \001(\0132\035.org.qsn.protobuf.BaseRe" +
+      "quest\022\027\n\017transactionHash\030\002 \001(\014\"d\n\025GetTra" +
+      "nsactionRequest\0222\n\013baseRequest\030\001 \001(\0132\035.o" +
+      "rg.qsn.protobuf.BaseRequest\022\027\n\017transacti" +
+      "onHash\030\002 \001(\014\"\226\001\n\032CreateRawTransferTxRequ" +
+      "est\0222\n\013baseRequest\030\001 \001(\0132\035.org.qsn.proto" +
+      "buf.BaseRequest\022\014\n\004from\030\002 \001(\014\022\n\n\002to\030\003 \001(" +
+      "\014\022*\n\006amount\030\004 \001(\0132\032.org.qsn.protobuf.BIn" +
+      "teger\"\255\001\n CreateRawDeployContractTxReque" +
+      "st\0222\n\013baseRequest\030\001 \001(\0132\035.org.qsn.protob" +
+      "uf.BaseRequest\022\016\n\006sender\030\002 \001(\014\022\024\n\014contra" +
+      "ctCode\030\003 \001(\014\022\024\n\014contractName\030\004 \001(\t\022\031\n\021co" +
+      "ntractClassName\030\005 \001(\t\"\346\001\n\033CreateRawValid" +
+      "atorTxRequest\0222\n\013baseRequest\030\001 \001(\0132\035.org" +
+      ".qsn.protobuf.BaseRequest\022\014\n\004type\030\002 \001(\010\022" +
+      "\030\n\020validatorAddress\030\003 \001(\014\022\027\n\017validatorPu" +
+      "bKey\030\004 \001(\014\022\031\n\021delegationAddress\030\005 \001(\014\022)\n" +
+      "\005stake\030\006 \001(\0132\032.org.qsn.protobuf.BInteger" +
+      "\022\014\n\004name\030\007 \001(\t\"\215\001\n\032CreateRawWithdrawTxRe" +
       "quest\0222\n\013baseRequest\030\001 \001(\0132\035.org.qsn.pro" +
-      "tobuf.BaseRequest\022\016\n\006sender\030\002 \001(\014\022\024\n\014con" +
-      "tractCode\030\003 \001(\014\022\024\n\014contractName\030\004 \001(\t\022\031\n" +
-      "\021contractClassName\030\005 \001(\t\"\346\001\n\033CreateRawVa" +
-      "lidatorTxRequest\0222\n\013baseRequest\030\001 \001(\0132\035." +
-      "org.qsn.protobuf.BaseRequest\022\014\n\004type\030\002 \001" +
-      "(\010\022\030\n\020validatorAddress\030\003 \001(\014\022\027\n\017validato" +
-      "rPubKey\030\004 \001(\014\022\031\n\021delegationAddress\030\005 \001(\014" +
-      "\022)\n\005stake\030\006 \001(\0132\032.org.qsn.protobuf.BInte" +
-      "ger\022\014\n\004name\030\007 \001(\t\"\215\001\n\032CreateRawWithdrawT" +
-      "xRequest\0222\n\013baseRequest\030\001 \001(\0132\035.org.qsn." +
-      "protobuf.BaseRequest\022\020\n\010coinBase\030\002 \001(\014\022)" +
-      "\n\005value\030\003 \001(\0132\032.org.qsn.protobuf.BIntege" +
-      "rB-\n)org.qsn.api.rpc.grpc.proto.entity.r" +
-      "equestP\001b\006proto3"
+      "tobuf.BaseRequest\022\020\n\010coinBase\030\002 \001(\014\022)\n\005v" +
+      "alue\030\003 \001(\0132\032.org.qsn.protobuf.BIntegerB-" +
+      "\n)org.qsn.api.rpc.grpc.proto.entity.requ" +
+      "estP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -104,7 +104,7 @@ public final class TransactionRequests {
     internal_static_org_qsn_protobuf_SendTransactionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_SendTransactionRequest_descriptor,
-        new java.lang.String[] { "BaseRequest", "TransactionDto", });
+        new java.lang.String[] { "BaseRequest", "Transaction", });
     internal_static_org_qsn_protobuf_GetTransactionReceiptRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_org_qsn_protobuf_GetTransactionReceiptRequest_fieldAccessorTable = new

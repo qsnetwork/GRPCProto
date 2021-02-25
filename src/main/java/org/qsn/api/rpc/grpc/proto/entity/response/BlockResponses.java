@@ -35,10 +35,15 @@ public final class BlockResponses {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_qsn_protobuf_GetBlockByHeightResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_qsn_protobuf_GetBlockHeightResponse_descriptor;
+    internal_static_org_qsn_protobuf_GetDoneHeightResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_org_qsn_protobuf_GetBlockHeightResponse_fieldAccessorTable;
+      internal_static_org_qsn_protobuf_GetDoneHeightResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_GetBlockListResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_GetBlockListResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -50,29 +55,32 @@ public final class BlockResponses {
     java.lang.String[] descriptorData = {
       "\n(qsn/entity/response/BlockResponses.pro" +
       "to\022\020org.qsn.protobuf\032\036qsn/entity/common/" +
-      "Result.proto\032#qsn/entity/common/block/Bl" +
-      "ock.proto\"z\n\034GetBlockHeaderByHashRespons" +
+      "Result.proto\032&qsn/entity/common/block/Bl" +
+      "ockDto.proto\"z\n\034GetBlockHeaderByHashResp" +
+      "onse\022(\n\006result\030\001 \001(\0132\030.org.qsn.protobuf." +
+      "Result\0220\n\006header\030\002 \001(\0132 .org.qsn.protobu" +
+      "f.BlockHeaderDto\"|\n\036GetBlockHeaderByHeig" +
+      "htResponse\022(\n\006result\030\001 \001(\0132\030.org.qsn.pro" +
+      "tobuf.Result\0220\n\006header\030\002 \001(\0132 .org.qsn.p" +
+      "rotobuf.BlockHeaderDto\"m\n\026GetBlockByHash" +
+      "Response\022(\n\006result\030\001 \001(\0132\030.org.qsn.proto" +
+      "buf.Result\022)\n\005block\030\002 \001(\0132\032.org.qsn.prot" +
+      "obuf.BlockDto\"o\n\030GetBlockByHeightRespons" +
       "e\022(\n\006result\030\001 \001(\0132\030.org.qsn.protobuf.Res" +
-      "ult\0220\n\006header\030\002 \001(\0132 .org.qsn.protobuf.B" +
-      "lockHeaderDto\"|\n\036GetBlockHeaderByHeightR" +
-      "esponse\022(\n\006result\030\001 \001(\0132\030.org.qsn.protob" +
-      "uf.Result\0220\n\006header\030\002 \001(\0132 .org.qsn.prot" +
-      "obuf.BlockHeaderDto\"m\n\026GetBlockByHashRes" +
-      "ponse\022(\n\006result\030\001 \001(\0132\030.org.qsn.protobuf" +
-      ".Result\022)\n\005block\030\002 \001(\0132\032.org.qsn.protobu" +
-      "f.BlockDto\"o\n\030GetBlockByHeightResponse\022(" +
-      "\n\006result\030\001 \001(\0132\030.org.qsn.protobuf.Result" +
-      "\022)\n\005block\030\002 \001(\0132\032.org.qsn.protobuf.Block" +
-      "Dto\"R\n\026GetBlockHeightResponse\022(\n\006result\030" +
-      "\001 \001(\0132\030.org.qsn.protobuf.Result\022\016\n\006heigh" +
-      "t\030\002 \001(\003B.\n*org.qsn.api.rpc.grpc.proto.en" +
-      "tity.responseP\001b\006proto3"
+      "ult\022)\n\005block\030\002 \001(\0132\032.org.qsn.protobuf.Bl" +
+      "ockDto\"Q\n\025GetDoneHeightResponse\022(\n\006resul" +
+      "t\030\001 \001(\0132\030.org.qsn.protobuf.Result\022\016\n\006hei" +
+      "ght\030\002 \001(\003\"o\n\024GetBlockListResponse\022(\n\006res" +
+      "ult\030\001 \001(\0132\030.org.qsn.protobuf.Result\022-\n\tb" +
+      "lockList\030\002 \003(\0132\032.org.qsn.protobuf.BlockD" +
+      "toB.\n*org.qsn.api.rpc.grpc.proto.entity." +
+      "responseP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.qsn.api.rpc.grpc.proto.entity.common.ResultOuterClass.getDescriptor(),
-          org.qsn.api.rpc.grpc.proto.entity.common.block.Block.getDescriptor(),
+          org.qsn.api.rpc.grpc.proto.entity.common.block.BlockDtoOuterClass.getDescriptor(),
         });
     internal_static_org_qsn_protobuf_GetBlockHeaderByHashResponse_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -98,14 +106,20 @@ public final class BlockResponses {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_GetBlockByHeightResponse_descriptor,
         new java.lang.String[] { "Result", "Block", });
-    internal_static_org_qsn_protobuf_GetBlockHeightResponse_descriptor =
+    internal_static_org_qsn_protobuf_GetDoneHeightResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_org_qsn_protobuf_GetBlockHeightResponse_fieldAccessorTable = new
+    internal_static_org_qsn_protobuf_GetDoneHeightResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_org_qsn_protobuf_GetBlockHeightResponse_descriptor,
+        internal_static_org_qsn_protobuf_GetDoneHeightResponse_descriptor,
         new java.lang.String[] { "Result", "Height", });
+    internal_static_org_qsn_protobuf_GetBlockListResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_org_qsn_protobuf_GetBlockListResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_GetBlockListResponse_descriptor,
+        new java.lang.String[] { "Result", "BlockList", });
     org.qsn.api.rpc.grpc.proto.entity.common.ResultOuterClass.getDescriptor();
-    org.qsn.api.rpc.grpc.proto.entity.common.block.Block.getDescriptor();
+    org.qsn.api.rpc.grpc.proto.entity.common.block.BlockDtoOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

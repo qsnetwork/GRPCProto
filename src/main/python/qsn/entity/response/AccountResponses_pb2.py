@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 from qsn.entity.common import Result_pb2 as qsn_dot_entity_dot_common_dot_Result__pb2
 from qsn.entity.common import BInteger_pb2 as qsn_dot_entity_dot_common_dot_BInteger__pb2
-from qsn.entity.common.account import Account_pb2 as qsn_dot_entity_dot_common_dot_account_dot_Account__pb2
+from qsn.entity.common.account import AccountDto_pb2 as qsn_dot_entity_dot_common_dot_account_dot_AccountDto__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -22,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n*org.qsn.api.rpc.grpc.proto.entity.responseP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n*qsn/entity/response/AccountResponses.proto\x12\x10org.qsn.protobuf\x1a\x1eqsn/entity/common/Result.proto\x1a qsn/entity/common/BInteger.proto\x1a\'qsn/entity/common/account/Account.proto\"m\n\x12GetAccountResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12-\n\x07\x61\x63\x63ount\x18\x02 \x01(\x0b\x32\x1c.org.qsn.protobuf.AccountDto\"r\n\x19GetAccountBalanceResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12+\n\x07\x62\x61lance\x18\x02 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\"n\n\x17GetAccountNonceResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12)\n\x05nonce\x18\x02 \x01(\x0b\x32\x1a.org.qsn.protobuf.BIntegerB.\n*org.qsn.api.rpc.grpc.proto.entity.responseP\x01\x62\x06proto3'
+  serialized_pb=b'\n*qsn/entity/response/AccountResponses.proto\x12\x10org.qsn.protobuf\x1a\x1eqsn/entity/common/Result.proto\x1a qsn/entity/common/BInteger.proto\x1a*qsn/entity/common/account/AccountDto.proto\"m\n\x12GetAccountResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12-\n\x07\x61\x63\x63ount\x18\x02 \x01(\x0b\x32\x1c.org.qsn.protobuf.AccountDto\"r\n\x19GetAccountBalanceResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12+\n\x07\x62\x61lance\x18\x02 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\"n\n\x17GetAccountNonceResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12)\n\x05nonce\x18\x02 \x01(\x0b\x32\x1a.org.qsn.protobuf.BIntegerB.\n*org.qsn.api.rpc.grpc.proto.entity.responseP\x01\x62\x06proto3'
   ,
-  dependencies=[qsn_dot_entity_dot_common_dot_Result__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_BInteger__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_account_dot_Account__pb2.DESCRIPTOR,])
+  dependencies=[qsn_dot_entity_dot_common_dot_Result__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_BInteger__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_account_dot_AccountDto__pb2.DESCRIPTOR,])
 
 
 
@@ -63,8 +63,8 @@ _GETACCOUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=171,
-  serialized_end=280,
+  serialized_start=174,
+  serialized_end=283,
 )
 
 
@@ -102,8 +102,8 @@ _GETACCOUNTBALANCERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=282,
-  serialized_end=396,
+  serialized_start=285,
+  serialized_end=399,
 )
 
 
@@ -141,12 +141,12 @@ _GETACCOUNTNONCERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=398,
-  serialized_end=508,
+  serialized_start=401,
+  serialized_end=511,
 )
 
 _GETACCOUNTRESPONSE.fields_by_name['result'].message_type = qsn_dot_entity_dot_common_dot_Result__pb2._RESULT
-_GETACCOUNTRESPONSE.fields_by_name['account'].message_type = qsn_dot_entity_dot_common_dot_account_dot_Account__pb2._ACCOUNTDTO
+_GETACCOUNTRESPONSE.fields_by_name['account'].message_type = qsn_dot_entity_dot_common_dot_account_dot_AccountDto__pb2._ACCOUNTDTO
 _GETACCOUNTBALANCERESPONSE.fields_by_name['result'].message_type = qsn_dot_entity_dot_common_dot_Result__pb2._RESULT
 _GETACCOUNTBALANCERESPONSE.fields_by_name['balance'].message_type = qsn_dot_entity_dot_common_dot_BInteger__pb2._BINTEGER
 _GETACCOUNTNONCERESPONSE.fields_by_name['result'].message_type = qsn_dot_entity_dot_common_dot_Result__pb2._RESULT

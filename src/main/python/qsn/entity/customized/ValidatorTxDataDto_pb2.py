@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n,org.qsn.api.rpc.grpc.proto.entity.customizedP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n.qsn/entity/customized/ValidatorTxDataDto.proto\x12\x10org.qsn.protobuf\x1a qsn/entity/common/BInteger.proto\"\x9b\x01\n\x12ValidatorTxDataDto\x12\x18\n\x10validatorAddress\x18\x01 \x01(\x0c\x12\x17\n\x0fvalidatorPubKey\x18\x02 \x01(\x0c\x12\x19\n\x11\x64\x65legationAddress\x18\x03 \x01(\x0c\x12)\n\x05value\x18\x04 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\x12\x0c\n\x04name\x18\x05 \x01(\tB0\n,org.qsn.api.rpc.grpc.proto.entity.customizedP\x01\x62\x06proto3'
+  serialized_pb=b'\n.qsn/entity/customized/ValidatorTxDataDto.proto\x12\x10org.qsn.protobuf\x1a qsn/entity/common/BInteger.proto\"\x9b\x01\n\x12ValidatorTxDataDto\x12\x18\n\x10validatorAddress\x18\x01 \x01(\x0c\x12\x17\n\x0fvalidatorPubKey\x18\x02 \x01(\x0c\x12\x19\n\x11\x64\x65legationAddress\x18\x03 \x01(\x0c\x12)\n\x05stake\x18\x04 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\x12\x0c\n\x04name\x18\x05 \x01(\tB0\n,org.qsn.api.rpc.grpc.proto.entity.customizedP\x01\x62\x06proto3'
   ,
   dependencies=[qsn_dot_entity_dot_common_dot_BInteger__pb2.DESCRIPTOR,])
 
@@ -57,7 +57,7 @@ _VALIDATORTXDATADTO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='value', full_name='org.qsn.protobuf.ValidatorTxDataDto.value', index=3,
+      name='stake', full_name='org.qsn.protobuf.ValidatorTxDataDto.stake', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -86,7 +86,7 @@ _VALIDATORTXDATADTO = _descriptor.Descriptor(
   serialized_end=258,
 )
 
-_VALIDATORTXDATADTO.fields_by_name['value'].message_type = qsn_dot_entity_dot_common_dot_BInteger__pb2._BINTEGER
+_VALIDATORTXDATADTO.fields_by_name['stake'].message_type = qsn_dot_entity_dot_common_dot_BInteger__pb2._BINTEGER
 DESCRIPTOR.message_types_by_name['ValidatorTxDataDto'] = _VALIDATORTXDATADTO
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
