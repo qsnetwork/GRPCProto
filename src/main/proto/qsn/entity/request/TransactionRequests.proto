@@ -7,11 +7,10 @@ package org.qsn.protobuf;
 
 import "qsn/entity/common/BaseRequest.proto";
 import "qsn/entity/common/BInteger.proto";
-import "qsn/entity/common/transaction/TransactionDto.proto";
 
 message SendTransactionRequest{
     BaseRequest baseRequest = 1;
-    TransactionDto transaction = 2;
+    bytes rawTransaction = 2;
 }
 
 message GetTransactionReceiptRequest{
