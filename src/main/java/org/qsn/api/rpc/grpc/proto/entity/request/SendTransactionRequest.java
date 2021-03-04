@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SendTransactionRequest() {
+    rawTransaction_ = com.google.protobuf.ByteString.EMPTY;
   }
 
   @java.lang.Override
@@ -62,16 +63,8 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto.Builder subBuilder = null;
-            if (transaction_ != null) {
-              subBuilder = transaction_.toBuilder();
-            }
-            transaction_ = input.readMessage(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(transaction_);
-              transaction_ = subBuilder.buildPartial();
-            }
 
+            rawTransaction_ = input.readBytes();
             break;
           }
           default: {
@@ -132,30 +125,15 @@ private static final long serialVersionUID = 0L;
     return getBaseRequest();
   }
 
-  public static final int TRANSACTION_FIELD_NUMBER = 2;
-  private org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto transaction_;
+  public static final int RAWTRANSACTION_FIELD_NUMBER = 2;
+  private com.google.protobuf.ByteString rawTransaction_;
   /**
-   * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
-   * @return Whether the transaction field is set.
+   * <code>bytes rawTransaction = 2;</code>
+   * @return The rawTransaction.
    */
   @java.lang.Override
-  public boolean hasTransaction() {
-    return transaction_ != null;
-  }
-  /**
-   * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
-   * @return The transaction.
-   */
-  @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto getTransaction() {
-    return transaction_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto.getDefaultInstance() : transaction_;
-  }
-  /**
-   * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
-   */
-  @java.lang.Override
-  public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDtoOrBuilder getTransactionOrBuilder() {
-    return getTransaction();
+  public com.google.protobuf.ByteString getRawTransaction() {
+    return rawTransaction_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -175,8 +153,8 @@ private static final long serialVersionUID = 0L;
     if (baseRequest_ != null) {
       output.writeMessage(1, getBaseRequest());
     }
-    if (transaction_ != null) {
-      output.writeMessage(2, getTransaction());
+    if (!rawTransaction_.isEmpty()) {
+      output.writeBytes(2, rawTransaction_);
     }
     unknownFields.writeTo(output);
   }
@@ -191,9 +169,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getBaseRequest());
     }
-    if (transaction_ != null) {
+    if (!rawTransaction_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getTransaction());
+        .computeBytesSize(2, rawTransaction_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -215,11 +193,8 @@ private static final long serialVersionUID = 0L;
       if (!getBaseRequest()
           .equals(other.getBaseRequest())) return false;
     }
-    if (hasTransaction() != other.hasTransaction()) return false;
-    if (hasTransaction()) {
-      if (!getTransaction()
-          .equals(other.getTransaction())) return false;
-    }
+    if (!getRawTransaction()
+        .equals(other.getRawTransaction())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -235,10 +210,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BASEREQUEST_FIELD_NUMBER;
       hash = (53 * hash) + getBaseRequest().hashCode();
     }
-    if (hasTransaction()) {
-      hash = (37 * hash) + TRANSACTION_FIELD_NUMBER;
-      hash = (53 * hash) + getTransaction().hashCode();
-    }
+    hash = (37 * hash) + RAWTRANSACTION_FIELD_NUMBER;
+    hash = (53 * hash) + getRawTransaction().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -378,12 +351,8 @@ private static final long serialVersionUID = 0L;
         baseRequest_ = null;
         baseRequestBuilder_ = null;
       }
-      if (transactionBuilder_ == null) {
-        transaction_ = null;
-      } else {
-        transaction_ = null;
-        transactionBuilder_ = null;
-      }
+      rawTransaction_ = com.google.protobuf.ByteString.EMPTY;
+
       return this;
     }
 
@@ -415,11 +384,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.baseRequest_ = baseRequestBuilder_.build();
       }
-      if (transactionBuilder_ == null) {
-        result.transaction_ = transaction_;
-      } else {
-        result.transaction_ = transactionBuilder_.build();
-      }
+      result.rawTransaction_ = rawTransaction_;
       onBuilt();
       return result;
     }
@@ -471,8 +436,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasBaseRequest()) {
         mergeBaseRequest(other.getBaseRequest());
       }
-      if (other.hasTransaction()) {
-        mergeTransaction(other.getTransaction());
+      if (other.getRawTransaction() != com.google.protobuf.ByteString.EMPTY) {
+        setRawTransaction(other.getRawTransaction());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -622,123 +587,38 @@ private static final long serialVersionUID = 0L;
       return baseRequestBuilder_;
     }
 
-    private org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto transaction_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDtoOrBuilder> transactionBuilder_;
+    private com.google.protobuf.ByteString rawTransaction_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
-     * @return Whether the transaction field is set.
+     * <code>bytes rawTransaction = 2;</code>
+     * @return The rawTransaction.
      */
-    public boolean hasTransaction() {
-      return transactionBuilder_ != null || transaction_ != null;
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRawTransaction() {
+      return rawTransaction_;
     }
     /**
-     * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
-     * @return The transaction.
+     * <code>bytes rawTransaction = 2;</code>
+     * @param value The rawTransaction to set.
+     * @return This builder for chaining.
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto getTransaction() {
-      if (transactionBuilder_ == null) {
-        return transaction_ == null ? org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto.getDefaultInstance() : transaction_;
-      } else {
-        return transactionBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
-     */
-    public Builder setTransaction(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto value) {
-      if (transactionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        transaction_ = value;
-        onChanged();
-      } else {
-        transactionBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
-     */
-    public Builder setTransaction(
-        org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto.Builder builderForValue) {
-      if (transactionBuilder_ == null) {
-        transaction_ = builderForValue.build();
-        onChanged();
-      } else {
-        transactionBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
-     */
-    public Builder mergeTransaction(org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto value) {
-      if (transactionBuilder_ == null) {
-        if (transaction_ != null) {
-          transaction_ =
-            org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto.newBuilder(transaction_).mergeFrom(value).buildPartial();
-        } else {
-          transaction_ = value;
-        }
-        onChanged();
-      } else {
-        transactionBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
-     */
-    public Builder clearTransaction() {
-      if (transactionBuilder_ == null) {
-        transaction_ = null;
-        onChanged();
-      } else {
-        transaction_ = null;
-        transactionBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
-     */
-    public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto.Builder getTransactionBuilder() {
-      
+    public Builder setRawTransaction(com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      rawTransaction_ = value;
       onChanged();
-      return getTransactionFieldBuilder().getBuilder();
+      return this;
     }
     /**
-     * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
+     * <code>bytes rawTransaction = 2;</code>
+     * @return This builder for chaining.
      */
-    public org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDtoOrBuilder getTransactionOrBuilder() {
-      if (transactionBuilder_ != null) {
-        return transactionBuilder_.getMessageOrBuilder();
-      } else {
-        return transaction_ == null ?
-            org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto.getDefaultInstance() : transaction_;
-      }
-    }
-    /**
-     * <code>.org.qsn.protobuf.TransactionDto transaction = 2;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDtoOrBuilder> 
-        getTransactionFieldBuilder() {
-      if (transactionBuilder_ == null) {
-        transactionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDto.Builder, org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDtoOrBuilder>(
-                getTransaction(),
-                getParentForChildren(),
-                isClean());
-        transaction_ = null;
-      }
-      return transactionBuilder_;
+    public Builder clearRawTransaction() {
+      
+      rawTransaction_ = getDefaultInstance().getRawTransaction();
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
