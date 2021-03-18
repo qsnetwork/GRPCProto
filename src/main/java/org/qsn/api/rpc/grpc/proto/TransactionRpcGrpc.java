@@ -1,18 +1,10 @@
 package org.qsn.api.rpc.grpc.proto;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
@@ -244,6 +236,37 @@ public final class TransactionRpcGrpc {
     return getCreateRawWithdrawTxMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionBatchRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionBatchResponse> getSendTransactionBatchMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "sendTransactionBatch",
+      requestType = org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionBatchRequest.class,
+      responseType = org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionBatchResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionBatchRequest,
+      org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionBatchResponse> getSendTransactionBatchMethod() {
+    io.grpc.MethodDescriptor<org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionBatchRequest, org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionBatchResponse> getSendTransactionBatchMethod;
+    if ((getSendTransactionBatchMethod = TransactionRpcGrpc.getSendTransactionBatchMethod) == null) {
+      synchronized (TransactionRpcGrpc.class) {
+        if ((getSendTransactionBatchMethod = TransactionRpcGrpc.getSendTransactionBatchMethod) == null) {
+          TransactionRpcGrpc.getSendTransactionBatchMethod = getSendTransactionBatchMethod =
+              io.grpc.MethodDescriptor.<org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionBatchRequest, org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionBatchResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "sendTransactionBatch"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionBatchRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionBatchResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransactionRpcMethodDescriptorSupplier("sendTransactionBatch"))
+              .build();
+        }
+      }
+    }
+    return getSendTransactionBatchMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -341,6 +364,13 @@ public final class TransactionRpcGrpc {
       asyncUnimplementedUnaryCall(getCreateRawWithdrawTxMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void sendTransactionBatch(org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionBatchRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionBatchResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getSendTransactionBatchMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -392,6 +422,13 @@ public final class TransactionRpcGrpc {
                 org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest,
                 org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse>(
                   this, METHODID_CREATE_RAW_WITHDRAW_TX)))
+          .addMethod(
+            getSendTransactionBatchMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionBatchRequest,
+                org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionBatchResponse>(
+                  this, METHODID_SEND_TRANSACTION_BATCH)))
           .build();
     }
   }
@@ -465,6 +502,14 @@ public final class TransactionRpcGrpc {
       asyncUnaryCall(
           getChannel().newCall(getCreateRawWithdrawTxMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void sendTransactionBatch(org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionBatchRequest request,
+        io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionBatchResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getSendTransactionBatchMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -528,6 +573,13 @@ public final class TransactionRpcGrpc {
     public org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse createRawWithdrawTx(org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateRawWithdrawTxMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionBatchResponse sendTransactionBatch(org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionBatchRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getSendTransactionBatchMethod(), getCallOptions(), request);
     }
   }
 
@@ -600,6 +652,14 @@ public final class TransactionRpcGrpc {
       return futureUnaryCall(
           getChannel().newCall(getCreateRawWithdrawTxMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionBatchResponse> sendTransactionBatch(
+        org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionBatchRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getSendTransactionBatchMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEND_TRANSACTION = 0;
@@ -609,6 +669,7 @@ public final class TransactionRpcGrpc {
   private static final int METHODID_CREATE_RAW_DEPLOY_CONTRACT_TX = 4;
   private static final int METHODID_CREATE_RAW_VALIDATOR_TX = 5;
   private static final int METHODID_CREATE_RAW_WITHDRAW_TX = 6;
+  private static final int METHODID_SEND_TRANSACTION_BATCH = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -654,6 +715,10 @@ public final class TransactionRpcGrpc {
         case METHODID_CREATE_RAW_WITHDRAW_TX:
           serviceImpl.createRawWithdrawTx((org.qsn.api.rpc.grpc.proto.entity.request.CreateRawWithdrawTxRequest) request,
               (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.CreateRawWithdrawTxResponse>) responseObserver);
+          break;
+        case METHODID_SEND_TRANSACTION_BATCH:
+          serviceImpl.sendTransactionBatch((org.qsn.api.rpc.grpc.proto.entity.request.SendTransactionBatchRequest) request,
+              (io.grpc.stub.StreamObserver<org.qsn.api.rpc.grpc.proto.entity.response.SendTransactionBatchResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -723,6 +788,7 @@ public final class TransactionRpcGrpc {
               .addMethod(getCreateRawDeployContractTxMethod())
               .addMethod(getCreateRawValidatorTxMethod())
               .addMethod(getCreateRawWithdrawTxMethod())
+              .addMethod(getSendTransactionBatchMethod())
               .build();
         }
       }

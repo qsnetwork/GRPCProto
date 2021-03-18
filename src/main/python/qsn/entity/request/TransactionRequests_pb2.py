@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n)org.qsn.api.rpc.grpc.proto.entity.requestP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n,qsn/entity/request/TransactionRequests.proto\x12\x10org.qsn.protobuf\x1a#qsn/entity/common/BaseRequest.proto\x1a qsn/entity/common/BInteger.proto\"d\n\x16SendTransactionRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x16\n\x0erawTransaction\x18\x02 \x01(\x0c\"k\n\x1cGetTransactionReceiptRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x17\n\x0ftransactionHash\x18\x02 \x01(\x0c\"d\n\x15GetTransactionRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x17\n\x0ftransactionHash\x18\x02 \x01(\x0c\"\x96\x01\n\x1a\x43reateRawTransferTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0c\n\x04\x66rom\x18\x02 \x01(\x0c\x12\n\n\x02to\x18\x03 \x01(\x0c\x12*\n\x06\x61mount\x18\x04 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\"\xad\x01\n CreateRawDeployContractTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0e\n\x06sender\x18\x02 \x01(\x0c\x12\x14\n\x0c\x63ontractCode\x18\x03 \x01(\x0c\x12\x14\n\x0c\x63ontractName\x18\x04 \x01(\t\x12\x19\n\x11\x63ontractClassName\x18\x05 \x01(\t\"\xe6\x01\n\x1b\x43reateRawValidatorTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0c\n\x04type\x18\x02 \x01(\x08\x12\x18\n\x10validatorAddress\x18\x03 \x01(\x0c\x12\x17\n\x0fvalidatorPubKey\x18\x04 \x01(\x0c\x12\x19\n\x11\x64\x65legationAddress\x18\x05 \x01(\x0c\x12)\n\x05stake\x18\x06 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\x12\x0c\n\x04name\x18\x07 \x01(\t\"\x8d\x01\n\x1a\x43reateRawWithdrawTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x10\n\x08\x63oinBase\x18\x02 \x01(\x0c\x12)\n\x05value\x18\x03 \x01(\x0b\x32\x1a.org.qsn.protobuf.BIntegerB-\n)org.qsn.api.rpc.grpc.proto.entity.requestP\x01\x62\x06proto3'
+  serialized_pb=b'\n,qsn/entity/request/TransactionRequests.proto\x12\x10org.qsn.protobuf\x1a#qsn/entity/common/BaseRequest.proto\x1a qsn/entity/common/BInteger.proto\"d\n\x16SendTransactionRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x16\n\x0erawTransaction\x18\x02 \x01(\x0c\"k\n\x1cGetTransactionReceiptRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x17\n\x0ftransactionHash\x18\x02 \x01(\x0c\"d\n\x15GetTransactionRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x17\n\x0ftransactionHash\x18\x02 \x01(\x0c\"\x96\x01\n\x1a\x43reateRawTransferTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0c\n\x04\x66rom\x18\x02 \x01(\x0c\x12\n\n\x02to\x18\x03 \x01(\x0c\x12*\n\x06\x61mount\x18\x04 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\"\xad\x01\n CreateRawDeployContractTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0e\n\x06sender\x18\x02 \x01(\x0c\x12\x14\n\x0c\x63ontractCode\x18\x03 \x01(\x0c\x12\x14\n\x0c\x63ontractName\x18\x04 \x01(\t\x12\x19\n\x11\x63ontractClassName\x18\x05 \x01(\t\"\xe6\x01\n\x1b\x43reateRawValidatorTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x0c\n\x04type\x18\x02 \x01(\x08\x12\x18\n\x10validatorAddress\x18\x03 \x01(\x0c\x12\x17\n\x0fvalidatorPubKey\x18\x04 \x01(\x0c\x12\x19\n\x11\x64\x65legationAddress\x18\x05 \x01(\x0c\x12)\n\x05stake\x18\x06 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\x12\x0c\n\x04name\x18\x07 \x01(\t\"\x8d\x01\n\x1a\x43reateRawWithdrawTxRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x10\n\x08\x63oinBase\x18\x02 \x01(\x0c\x12)\n\x05value\x18\x03 \x01(\x0b\x32\x1a.org.qsn.protobuf.BInteger\"i\n\x1bSendTransactionBatchRequest\x12\x32\n\x0b\x62\x61seRequest\x18\x01 \x01(\x0b\x32\x1d.org.qsn.protobuf.BaseRequest\x12\x16\n\x0erawTransaction\x18\x02 \x01(\x0c\x42-\n)org.qsn.api.rpc.grpc.proto.entity.requestP\x01\x62\x06proto3'
   ,
   dependencies=[qsn_dot_entity_dot_common_dot_BaseRequest__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_BInteger__pb2.DESCRIPTOR,])
 
@@ -377,6 +377,45 @@ _CREATERAWWITHDRAWTXREQUEST = _descriptor.Descriptor(
   serialized_end=1154,
 )
 
+
+_SENDTRANSACTIONBATCHREQUEST = _descriptor.Descriptor(
+  name='SendTransactionBatchRequest',
+  full_name='org.qsn.protobuf.SendTransactionBatchRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='baseRequest', full_name='org.qsn.protobuf.SendTransactionBatchRequest.baseRequest', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rawTransaction', full_name='org.qsn.protobuf.SendTransactionBatchRequest.rawTransaction', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"",
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1156,
+  serialized_end=1261,
+)
+
 _SENDTRANSACTIONREQUEST.fields_by_name['baseRequest'].message_type = qsn_dot_entity_dot_common_dot_BaseRequest__pb2._BASEREQUEST
 _GETTRANSACTIONRECEIPTREQUEST.fields_by_name['baseRequest'].message_type = qsn_dot_entity_dot_common_dot_BaseRequest__pb2._BASEREQUEST
 _GETTRANSACTIONREQUEST.fields_by_name['baseRequest'].message_type = qsn_dot_entity_dot_common_dot_BaseRequest__pb2._BASEREQUEST
@@ -387,6 +426,7 @@ _CREATERAWVALIDATORTXREQUEST.fields_by_name['baseRequest'].message_type = qsn_do
 _CREATERAWVALIDATORTXREQUEST.fields_by_name['stake'].message_type = qsn_dot_entity_dot_common_dot_BInteger__pb2._BINTEGER
 _CREATERAWWITHDRAWTXREQUEST.fields_by_name['baseRequest'].message_type = qsn_dot_entity_dot_common_dot_BaseRequest__pb2._BASEREQUEST
 _CREATERAWWITHDRAWTXREQUEST.fields_by_name['value'].message_type = qsn_dot_entity_dot_common_dot_BInteger__pb2._BINTEGER
+_SENDTRANSACTIONBATCHREQUEST.fields_by_name['baseRequest'].message_type = qsn_dot_entity_dot_common_dot_BaseRequest__pb2._BASEREQUEST
 DESCRIPTOR.message_types_by_name['SendTransactionRequest'] = _SENDTRANSACTIONREQUEST
 DESCRIPTOR.message_types_by_name['GetTransactionReceiptRequest'] = _GETTRANSACTIONRECEIPTREQUEST
 DESCRIPTOR.message_types_by_name['GetTransactionRequest'] = _GETTRANSACTIONREQUEST
@@ -394,6 +434,7 @@ DESCRIPTOR.message_types_by_name['CreateRawTransferTxRequest'] = _CREATERAWTRANS
 DESCRIPTOR.message_types_by_name['CreateRawDeployContractTxRequest'] = _CREATERAWDEPLOYCONTRACTTXREQUEST
 DESCRIPTOR.message_types_by_name['CreateRawValidatorTxRequest'] = _CREATERAWVALIDATORTXREQUEST
 DESCRIPTOR.message_types_by_name['CreateRawWithdrawTxRequest'] = _CREATERAWWITHDRAWTXREQUEST
+DESCRIPTOR.message_types_by_name['SendTransactionBatchRequest'] = _SENDTRANSACTIONBATCHREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SendTransactionRequest = _reflection.GeneratedProtocolMessageType('SendTransactionRequest', (_message.Message,), {
@@ -444,6 +485,13 @@ CreateRawWithdrawTxRequest = _reflection.GeneratedProtocolMessageType('CreateRaw
   # @@protoc_insertion_point(class_scope:org.qsn.protobuf.CreateRawWithdrawTxRequest)
   })
 _sym_db.RegisterMessage(CreateRawWithdrawTxRequest)
+
+SendTransactionBatchRequest = _reflection.GeneratedProtocolMessageType('SendTransactionBatchRequest', (_message.Message,), {
+  'DESCRIPTOR' : _SENDTRANSACTIONBATCHREQUEST,
+  '__module__' : 'qsn.entity.request.TransactionRequests_pb2'
+  # @@protoc_insertion_point(class_scope:org.qsn.protobuf.SendTransactionBatchRequest)
+  })
+_sym_db.RegisterMessage(SendTransactionBatchRequest)
 
 
 DESCRIPTOR._options = None

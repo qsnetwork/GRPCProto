@@ -50,6 +50,11 @@ class TransactionRpcStub(object):
                 request_serializer=qsn_dot_entity_dot_request_dot_TransactionRequests__pb2.CreateRawWithdrawTxRequest.SerializeToString,
                 response_deserializer=qsn_dot_entity_dot_response_dot_TransactionResponses__pb2.CreateRawWithdrawTxResponse.FromString,
                 )
+        self.sendTransactionBatch = channel.unary_unary(
+                '/org.qsn.protobuf.TransactionRpc/sendTransactionBatch',
+                request_serializer=qsn_dot_entity_dot_request_dot_TransactionRequests__pb2.SendTransactionBatchRequest.SerializeToString,
+                response_deserializer=qsn_dot_entity_dot_response_dot_TransactionResponses__pb2.SendTransactionBatchResponse.FromString,
+                )
 
 
 class TransactionRpcServicer(object):
@@ -97,6 +102,12 @@ class TransactionRpcServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def sendTransactionBatch(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_TransactionRpcServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -134,6 +145,11 @@ def add_TransactionRpcServicer_to_server(servicer, server):
                     servicer.createRawWithdrawTx,
                     request_deserializer=qsn_dot_entity_dot_request_dot_TransactionRequests__pb2.CreateRawWithdrawTxRequest.FromString,
                     response_serializer=qsn_dot_entity_dot_response_dot_TransactionResponses__pb2.CreateRawWithdrawTxResponse.SerializeToString,
+            ),
+            'sendTransactionBatch': grpc.unary_unary_rpc_method_handler(
+                    servicer.sendTransactionBatch,
+                    request_deserializer=qsn_dot_entity_dot_request_dot_TransactionRequests__pb2.SendTransactionBatchRequest.FromString,
+                    response_serializer=qsn_dot_entity_dot_response_dot_TransactionResponses__pb2.SendTransactionBatchResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -261,5 +277,22 @@ class TransactionRpc(object):
         return grpc.experimental.unary_unary(request, target, '/org.qsn.protobuf.TransactionRpc/createRawWithdrawTx',
             qsn_dot_entity_dot_request_dot_TransactionRequests__pb2.CreateRawWithdrawTxRequest.SerializeToString,
             qsn_dot_entity_dot_response_dot_TransactionResponses__pb2.CreateRawWithdrawTxResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def sendTransactionBatch(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/org.qsn.protobuf.TransactionRpc/sendTransactionBatch',
+            qsn_dot_entity_dot_request_dot_TransactionRequests__pb2.SendTransactionBatchRequest.SerializeToString,
+            qsn_dot_entity_dot_response_dot_TransactionResponses__pb2.SendTransactionBatchResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

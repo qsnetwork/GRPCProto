@@ -53,3 +53,8 @@ message CreateRawWithdrawTxRequest{
     bytes coinBase = 2;
     BInteger value = 3;
 }
+
+message SendTransactionBatchRequest{
+    BaseRequest baseRequest = 1;
+    bytes rawTransaction = 2;
+}

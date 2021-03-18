@@ -42,3 +42,7 @@ message CreateRawWithdrawTxResponse{
     Result result = 1;
     TransactionDto transaction = 2;
 }
+
+message SendTransactionBatchResponse{
+    Result result = 1;
+}

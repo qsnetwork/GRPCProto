@@ -49,6 +49,11 @@ public final class TransactionRequests {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_qsn_protobuf_CreateRawWithdrawTxRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_SendTransactionBatchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_SendTransactionBatchRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -86,9 +91,11 @@ public final class TransactionRequests {
       "name\030\007 \001(\t\"\215\001\n\032CreateRawWithdrawTxReques" +
       "t\0222\n\013baseRequest\030\001 \001(\0132\035.org.qsn.protobu" +
       "f.BaseRequest\022\020\n\010coinBase\030\002 \001(\014\022)\n\005value" +
-      "\030\003 \001(\0132\032.org.qsn.protobuf.BIntegerB-\n)or" +
-      "g.qsn.api.rpc.grpc.proto.entity.requestP" +
-      "\001b\006proto3"
+      "\030\003 \001(\0132\032.org.qsn.protobuf.BInteger\"i\n\033Se" +
+      "ndTransactionBatchRequest\0222\n\013baseRequest" +
+      "\030\001 \001(\0132\035.org.qsn.protobuf.BaseRequest\022\026\n" +
+      "\016rawTransaction\030\002 \001(\014B-\n)org.qsn.api.rpc" +
+      ".grpc.proto.entity.requestP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -138,6 +145,12 @@ public final class TransactionRequests {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_CreateRawWithdrawTxRequest_descriptor,
         new java.lang.String[] { "BaseRequest", "CoinBase", "Value", });
+    internal_static_org_qsn_protobuf_SendTransactionBatchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_org_qsn_protobuf_SendTransactionBatchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_SendTransactionBatchRequest_descriptor,
+        new java.lang.String[] { "BaseRequest", "RawTransaction", });
     org.qsn.api.rpc.grpc.proto.entity.common.BaseRequestOuterClass.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.common.BIntegerOuterClass.getDescriptor();
   }
