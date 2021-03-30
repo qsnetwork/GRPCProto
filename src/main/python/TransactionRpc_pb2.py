@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n\032org.qsn.api.rpc.grpc.protoP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x14TransactionRpc.proto\x12\x10org.qsn.protobuf\x1a,qsn/entity/request/TransactionRequests.proto\x1a.qsn/entity/response/TransactionResponses.proto2\xbd\x06\n\x0eTransactionRpc\x12\x66\n\x0fsendTransaction\x12(.org.qsn.protobuf.SendTransactionRequest\x1a).org.qsn.protobuf.SendTransactionResponse\x12x\n\x15getTransactionReceipt\x12..org.qsn.protobuf.GetTransactionReceiptRequest\x1a/.org.qsn.protobuf.GetTransactionReceiptResponse\x12\x63\n\x0egetTransaction\x12\'.org.qsn.protobuf.GetTransactionRequest\x1a(.org.qsn.protobuf.GetTransactionResponse\x12r\n\x13\x63reateRawTransferTx\x12,.org.qsn.protobuf.CreateRawTransferTxRequest\x1a-.org.qsn.protobuf.CreateRawTransferTxResponse\x12\x84\x01\n\x19\x63reateRawDeployContractTx\x12\x32.org.qsn.protobuf.CreateRawDeployContractTxRequest\x1a\x33.org.qsn.protobuf.CreateRawDeployContractTxResponse\x12u\n\x14\x63reateRawValidatorTx\x12-.org.qsn.protobuf.CreateRawValidatorTxRequest\x1a..org.qsn.protobuf.CreateRawValidatorTxResponse\x12r\n\x13\x63reateRawWithdrawTx\x12,.org.qsn.protobuf.CreateRawWithdrawTxRequest\x1a-.org.qsn.protobuf.CreateRawWithdrawTxResponseB\x1e\n\x1aorg.qsn.api.rpc.grpc.protoP\x01\x62\x06proto3'
+  serialized_pb=b'\n\x14TransactionRpc.proto\x12\x10org.qsn.protobuf\x1a,qsn/entity/request/TransactionRequests.proto\x1a.qsn/entity/response/TransactionResponses.proto2\xb4\x07\n\x0eTransactionRpc\x12\x66\n\x0fsendTransaction\x12(.org.qsn.protobuf.SendTransactionRequest\x1a).org.qsn.protobuf.SendTransactionResponse\x12x\n\x15getTransactionReceipt\x12..org.qsn.protobuf.GetTransactionReceiptRequest\x1a/.org.qsn.protobuf.GetTransactionReceiptResponse\x12\x63\n\x0egetTransaction\x12\'.org.qsn.protobuf.GetTransactionRequest\x1a(.org.qsn.protobuf.GetTransactionResponse\x12r\n\x13\x63reateRawTransferTx\x12,.org.qsn.protobuf.CreateRawTransferTxRequest\x1a-.org.qsn.protobuf.CreateRawTransferTxResponse\x12\x84\x01\n\x19\x63reateRawDeployContractTx\x12\x32.org.qsn.protobuf.CreateRawDeployContractTxRequest\x1a\x33.org.qsn.protobuf.CreateRawDeployContractTxResponse\x12u\n\x14\x63reateRawValidatorTx\x12-.org.qsn.protobuf.CreateRawValidatorTxRequest\x1a..org.qsn.protobuf.CreateRawValidatorTxResponse\x12r\n\x13\x63reateRawWithdrawTx\x12,.org.qsn.protobuf.CreateRawWithdrawTxRequest\x1a-.org.qsn.protobuf.CreateRawWithdrawTxResponse\x12u\n\x14sendTransactionBatch\x12-.org.qsn.protobuf.SendTransactionBatchRequest\x1a..org.qsn.protobuf.SendTransactionBatchResponseB\x1e\n\x1aorg.qsn.api.rpc.grpc.protoP\x01\x62\x06proto3'
   ,
   dependencies=[qsn_dot_entity_dot_request_dot_TransactionRequests__pb2.DESCRIPTOR,qsn_dot_entity_dot_response_dot_TransactionResponses__pb2.DESCRIPTOR,])
 
@@ -40,7 +40,7 @@ _TRANSACTIONRPC = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=137,
-  serialized_end=966,
+  serialized_end=1085,
   methods=[
   _descriptor.MethodDescriptor(
     name='sendTransaction',
@@ -109,6 +109,16 @@ _TRANSACTIONRPC = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=qsn_dot_entity_dot_request_dot_TransactionRequests__pb2._CREATERAWWITHDRAWTXREQUEST,
     output_type=qsn_dot_entity_dot_response_dot_TransactionResponses__pb2._CREATERAWWITHDRAWTXRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='sendTransactionBatch',
+    full_name='org.qsn.protobuf.TransactionRpc.sendTransactionBatch',
+    index=7,
+    containing_service=None,
+    input_type=qsn_dot_entity_dot_request_dot_TransactionRequests__pb2._SENDTRANSACTIONBATCHREQUEST,
+    output_type=qsn_dot_entity_dot_response_dot_TransactionResponses__pb2._SENDTRANSACTIONBATCHRESPONSE,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),

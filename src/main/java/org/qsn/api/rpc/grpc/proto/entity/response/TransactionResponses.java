@@ -49,6 +49,11 @@ public final class TransactionResponses {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_qsn_protobuf_CreateRawWithdrawTxResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_qsn_protobuf_SendTransactionBatchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_qsn_protobuf_SendTransactionBatchResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -84,9 +89,10 @@ public final class TransactionResponses {
       "buf.TransactionDto\"~\n\033CreateRawWithdrawT" +
       "xResponse\022(\n\006result\030\001 \001(\0132\030.org.qsn.prot" +
       "obuf.Result\0225\n\013transaction\030\002 \001(\0132 .org.q" +
-      "sn.protobuf.TransactionDtoB.\n*org.qsn.ap" +
-      "i.rpc.grpc.proto.entity.responseP\001b\006prot" +
-      "o3"
+      "sn.protobuf.TransactionDto\"H\n\034SendTransa" +
+      "ctionBatchResponse\022(\n\006result\030\001 \001(\0132\030.org" +
+      ".qsn.protobuf.ResultB.\n*org.qsn.api.rpc." +
+      "grpc.proto.entity.responseP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -137,6 +143,12 @@ public final class TransactionResponses {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_qsn_protobuf_CreateRawWithdrawTxResponse_descriptor,
         new java.lang.String[] { "Result", "Transaction", });
+    internal_static_org_qsn_protobuf_SendTransactionBatchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_org_qsn_protobuf_SendTransactionBatchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_qsn_protobuf_SendTransactionBatchResponse_descriptor,
+        new java.lang.String[] { "Result", });
     org.qsn.api.rpc.grpc.proto.entity.common.ResultOuterClass.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionReceiptDtoOuterClass.getDescriptor();
     org.qsn.api.rpc.grpc.proto.entity.common.transaction.TransactionDtoOuterClass.getDescriptor();

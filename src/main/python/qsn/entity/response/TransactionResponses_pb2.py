@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n*org.qsn.api.rpc.grpc.proto.entity.responseP\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n.qsn/entity/response/TransactionResponses.proto\x12\x10org.qsn.protobuf\x1a\x1eqsn/entity/common/Result.proto\x1a\x39qsn/entity/common/transaction/TransactionReceiptDto.proto\x1a\x32qsn/entity/common/transaction/TransactionDto.proto\"C\n\x17SendTransactionResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\"\x8e\x01\n\x1dGetTransactionReceiptResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12\x43\n\x12transactionReceipt\x18\x02 \x01(\x0b\x32\'.org.qsn.protobuf.TransactionReceiptDto\"y\n\x16GetTransactionResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12\x35\n\x0btransaction\x18\x02 \x01(\x0b\x32 .org.qsn.protobuf.TransactionDto\"~\n\x1b\x43reateRawTransferTxResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12\x35\n\x0btransaction\x18\x02 \x01(\x0b\x32 .org.qsn.protobuf.TransactionDto\"\x84\x01\n!CreateRawDeployContractTxResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12\x35\n\x0btransaction\x18\x02 \x01(\x0b\x32 .org.qsn.protobuf.TransactionDto\"\x7f\n\x1c\x43reateRawValidatorTxResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12\x35\n\x0btransaction\x18\x02 \x01(\x0b\x32 .org.qsn.protobuf.TransactionDto\"~\n\x1b\x43reateRawWithdrawTxResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12\x35\n\x0btransaction\x18\x02 \x01(\x0b\x32 .org.qsn.protobuf.TransactionDtoB.\n*org.qsn.api.rpc.grpc.proto.entity.responseP\x01\x62\x06proto3'
+  serialized_pb=b'\n.qsn/entity/response/TransactionResponses.proto\x12\x10org.qsn.protobuf\x1a\x1eqsn/entity/common/Result.proto\x1a\x39qsn/entity/common/transaction/TransactionReceiptDto.proto\x1a\x32qsn/entity/common/transaction/TransactionDto.proto\"C\n\x17SendTransactionResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\"\x8e\x01\n\x1dGetTransactionReceiptResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12\x43\n\x12transactionReceipt\x18\x02 \x01(\x0b\x32\'.org.qsn.protobuf.TransactionReceiptDto\"y\n\x16GetTransactionResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12\x35\n\x0btransaction\x18\x02 \x01(\x0b\x32 .org.qsn.protobuf.TransactionDto\"~\n\x1b\x43reateRawTransferTxResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12\x35\n\x0btransaction\x18\x02 \x01(\x0b\x32 .org.qsn.protobuf.TransactionDto\"\x84\x01\n!CreateRawDeployContractTxResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12\x35\n\x0btransaction\x18\x02 \x01(\x0b\x32 .org.qsn.protobuf.TransactionDto\"\x7f\n\x1c\x43reateRawValidatorTxResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12\x35\n\x0btransaction\x18\x02 \x01(\x0b\x32 .org.qsn.protobuf.TransactionDto\"~\n\x1b\x43reateRawWithdrawTxResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.Result\x12\x35\n\x0btransaction\x18\x02 \x01(\x0b\x32 .org.qsn.protobuf.TransactionDto\"H\n\x1cSendTransactionBatchResponse\x12(\n\x06result\x18\x01 \x01(\x0b\x32\x18.org.qsn.protobuf.ResultB.\n*org.qsn.api.rpc.grpc.proto.entity.responseP\x01\x62\x06proto3'
   ,
   dependencies=[qsn_dot_entity_dot_common_dot_Result__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_transaction_dot_TransactionReceiptDto__pb2.DESCRIPTOR,qsn_dot_entity_dot_common_dot_transaction_dot_TransactionDto__pb2.DESCRIPTOR,])
 
@@ -294,6 +294,38 @@ _CREATERAWWITHDRAWTXRESPONSE = _descriptor.Descriptor(
   serialized_end=1066,
 )
 
+
+_SENDTRANSACTIONBATCHRESPONSE = _descriptor.Descriptor(
+  name='SendTransactionBatchResponse',
+  full_name='org.qsn.protobuf.SendTransactionBatchResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='org.qsn.protobuf.SendTransactionBatchResponse.result', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1068,
+  serialized_end=1140,
+)
+
 _SENDTRANSACTIONRESPONSE.fields_by_name['result'].message_type = qsn_dot_entity_dot_common_dot_Result__pb2._RESULT
 _GETTRANSACTIONRECEIPTRESPONSE.fields_by_name['result'].message_type = qsn_dot_entity_dot_common_dot_Result__pb2._RESULT
 _GETTRANSACTIONRECEIPTRESPONSE.fields_by_name['transactionReceipt'].message_type = qsn_dot_entity_dot_common_dot_transaction_dot_TransactionReceiptDto__pb2._TRANSACTIONRECEIPTDTO
@@ -307,6 +339,7 @@ _CREATERAWVALIDATORTXRESPONSE.fields_by_name['result'].message_type = qsn_dot_en
 _CREATERAWVALIDATORTXRESPONSE.fields_by_name['transaction'].message_type = qsn_dot_entity_dot_common_dot_transaction_dot_TransactionDto__pb2._TRANSACTIONDTO
 _CREATERAWWITHDRAWTXRESPONSE.fields_by_name['result'].message_type = qsn_dot_entity_dot_common_dot_Result__pb2._RESULT
 _CREATERAWWITHDRAWTXRESPONSE.fields_by_name['transaction'].message_type = qsn_dot_entity_dot_common_dot_transaction_dot_TransactionDto__pb2._TRANSACTIONDTO
+_SENDTRANSACTIONBATCHRESPONSE.fields_by_name['result'].message_type = qsn_dot_entity_dot_common_dot_Result__pb2._RESULT
 DESCRIPTOR.message_types_by_name['SendTransactionResponse'] = _SENDTRANSACTIONRESPONSE
 DESCRIPTOR.message_types_by_name['GetTransactionReceiptResponse'] = _GETTRANSACTIONRECEIPTRESPONSE
 DESCRIPTOR.message_types_by_name['GetTransactionResponse'] = _GETTRANSACTIONRESPONSE
@@ -314,6 +347,7 @@ DESCRIPTOR.message_types_by_name['CreateRawTransferTxResponse'] = _CREATERAWTRAN
 DESCRIPTOR.message_types_by_name['CreateRawDeployContractTxResponse'] = _CREATERAWDEPLOYCONTRACTTXRESPONSE
 DESCRIPTOR.message_types_by_name['CreateRawValidatorTxResponse'] = _CREATERAWVALIDATORTXRESPONSE
 DESCRIPTOR.message_types_by_name['CreateRawWithdrawTxResponse'] = _CREATERAWWITHDRAWTXRESPONSE
+DESCRIPTOR.message_types_by_name['SendTransactionBatchResponse'] = _SENDTRANSACTIONBATCHRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SendTransactionResponse = _reflection.GeneratedProtocolMessageType('SendTransactionResponse', (_message.Message,), {
@@ -364,6 +398,13 @@ CreateRawWithdrawTxResponse = _reflection.GeneratedProtocolMessageType('CreateRa
   # @@protoc_insertion_point(class_scope:org.qsn.protobuf.CreateRawWithdrawTxResponse)
   })
 _sym_db.RegisterMessage(CreateRawWithdrawTxResponse)
+
+SendTransactionBatchResponse = _reflection.GeneratedProtocolMessageType('SendTransactionBatchResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SENDTRANSACTIONBATCHRESPONSE,
+  '__module__' : 'qsn.entity.response.TransactionResponses_pb2'
+  # @@protoc_insertion_point(class_scope:org.qsn.protobuf.SendTransactionBatchResponse)
+  })
+_sym_db.RegisterMessage(SendTransactionBatchResponse)
 
 
 DESCRIPTOR._options = None

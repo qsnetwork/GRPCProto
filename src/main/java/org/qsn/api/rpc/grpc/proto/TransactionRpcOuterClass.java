@@ -26,7 +26,7 @@ public final class TransactionRpcOuterClass {
       "\n\024TransactionRpc.proto\022\020org.qsn.protobuf" +
       "\032,qsn/entity/request/TransactionRequests" +
       ".proto\032.qsn/entity/response/TransactionR" +
-      "esponses.proto2\275\006\n\016TransactionRpc\022f\n\017sen" +
+      "esponses.proto2\264\007\n\016TransactionRpc\022f\n\017sen" +
       "dTransaction\022(.org.qsn.protobuf.SendTran" +
       "sactionRequest\032).org.qsn.protobuf.SendTr" +
       "ansactionResponse\022x\n\025getTransactionRecei" +
@@ -47,8 +47,11 @@ public final class TransactionRpcOuterClass {
       "TxResponse\022r\n\023createRawWithdrawTx\022,.org." +
       "qsn.protobuf.CreateRawWithdrawTxRequest\032" +
       "-.org.qsn.protobuf.CreateRawWithdrawTxRe" +
-      "sponseB\036\n\032org.qsn.api.rpc.grpc.protoP\001b\006" +
-      "proto3"
+      "sponse\022u\n\024sendTransactionBatch\022-.org.qsn" +
+      ".protobuf.SendTransactionBatchRequest\032.." +
+      "org.qsn.protobuf.SendTransactionBatchRes" +
+      "ponseB\036\n\032org.qsn.api.rpc.grpc.protoP\001b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
